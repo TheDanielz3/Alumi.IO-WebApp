@@ -12,4 +12,5 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <p>Alumio is a project created by: Daniel Batista</p>
 
+    <?php echo Html::img('img/source.gif');?>
 </div>
