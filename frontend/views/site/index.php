@@ -2,16 +2,18 @@
 
 /* @var $this yii\web\View */
 
-$this->title = 'My Yii Application';
+use yii\helpers\Url;
+
+$this->title = 'Alumio';
 ?>
 <div class="site-index">
 
     <div class="jumbotron">
-        <h1>Congratulations!</h1>
+        <h1>Alumio!</h1>
 
-        <p class="lead">You have successfully created your Yii-powered application.</p>
+        <p class="lead">A tua nova caderneta escolar!</p>
 
-        <p><a class="btn btn-lg btn-success" href="http://www.yiiframework.com">Get started with Yii</a></p>
+        <p><a class="btn btn-lg btn-success" href="<?=Url::toRoute('site/login')?>">Login</a></p>
     </div>
 
     <div class="body-content">
@@ -20,27 +22,21 @@ $this->title = 'My Yii Application';
             <div class="col-lg-4">
                 <h2>Alunos</h2>
 
-                <p>Bem vindo! Se fores aluno Clina no link em baixo</p>
+                <p>Bem vindo! Se fores aluno clica no link em baixo</p>
 
                 <p><a class="btn btn-default" href="http://www.yiiframework.com/doc/">Yii Documentation &raquo;</a></p>
             </div>
             <div class="col-lg-4">
                 <h2>Professores</h2>
 
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.</p>
+                <p>Bem vindo professor! Clica no link em baixo para entar como professor</p>
 
                 <p><a class="btn btn-default" href="http://www.yiiframework.com/forum/">Yii Forum &raquo;</a></p>
             </div>
             <div class="col-lg-4">
                 <h2>Encarregados de Educaçao</h2>
 
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.</p>
+                <p>Bem Vindo Encarregados de Educação! Clica no link em baixo para saber as informaçoes do seu educando!</p>
 
                 <p><a class="btn btn-default" href="http://www.yiiframework.com/extensions/">Yii Extensions &raquo;</a></p>
             </div>
