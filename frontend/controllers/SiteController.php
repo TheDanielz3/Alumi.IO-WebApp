@@ -76,6 +76,15 @@ class SiteController extends Controller
     {
         return $this->render('index');
     }
+    /**
+     * Displays homepage for Professors.
+     *
+     * @return mixed
+     */
+    public function actionOperationprofessor()
+    {
+        return $this->render('operationprofessor');
+    }
 
     /**
      * Logs in a user.

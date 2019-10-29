@@ -24,7 +24,6 @@ $this->title = 'Alumio';
                 <h2>Alunos</h2>
 
                 <p>Bem vindo! Se fores aluno clica no link em baixo</p>
-
                 <p><a class="btn btn-default" href="<?=Url::toRoute('site/aluno-operations')?>">Aluno Login</a></p>
             </div>
             <div class="col-lg-4">

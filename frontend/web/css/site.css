@@ -35,6 +35,11 @@ body {
     color: #c55;
     font-style: italic;
 }
+.site-operations{
+    color: black;
+    font-style: normal;
+    
+}
 
 /* add sorting icons to gridview sort links */
 a.asc:after, a.desc:after {
