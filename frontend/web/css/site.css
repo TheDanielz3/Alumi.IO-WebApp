@@ -55,7 +55,9 @@ a.asc:after {
 a.desc:after {
     content: "\e152";
 }
-
+.operations-aluno{
+    color: red;
+}
 .sort-numerical a.asc:after {
     content: "\e153";
 }
