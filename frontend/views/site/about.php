@@ -13,9 +13,9 @@ $this->params['breadcrumbs'][] = $this->title;
     <p>Alumio is a project created by:</p>
     <p>Daniel Correia Batista: 2171836</p>
     <?php
-    echo "Algum hummor que nos acompanhou no nosso projeto";
+    echo "Algum humor que nos acompanhou no nosso projeto";
+    echo '<br>';
+    //Todo: Add memes of programing
     echo Html::img('img/source.gif');
     ?>
-
-    <?php echo Html::img('img/source.gif');?>
 </div>
