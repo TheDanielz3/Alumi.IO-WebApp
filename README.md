@@ -1,11 +1,13 @@
-Projeto De Curso
-Alumi.IO
+# Alumi.IO-WebApp
+
+O **Projeto de Curso Alumi.IO** tem o objetivo de simular uma caderneta escolar mas num website com a base de Yii2.
 
 ## Como iniciar um projeto em desenvolvimento
-1. -Executar Init no projeto;
-`  - php init;`
-2. Fazer o composer executar;
+1. Executar Init no projeto com : ```php init```
+1. Fazer o composer executar;
+1. Criar e configurar a base de dados;
 
-3. Criar e configurar a base de dados;
--Fazer Migraçoes da Base de Dados:
-    `php yii/migrate;`
+## Membros do Grupo
+* Daniel Correia Batista nº2171836
+* Rodrigo Manuel Alves Rodrigues nº2180620
+* Samuel Pires Brito nº2180657
