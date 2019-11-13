@@ -10,7 +10,8 @@ class DisciplinaTest extends Unit
      * @var UnitTester
      */
     protected $tester;
-    
+
+
     protected function _before()
     {
     }
@@ -31,5 +32,22 @@ class DisciplinaTest extends Unit
         $disciplina = new Disciplina();
         $disciplina->Nome = null;
         $this->assertFalse($disciplina->validate(['Nome']));
+    }
+
+    public function testRegisterOnDatabase()
+    {
+        $disciplina = new Disciplina();
+        $disciplina->Nome = 'Plataformas de Sistemas e Informacao';
+        $disciplina->safeAttributes();
+        $disciplina->save();
+
+        $this->assertEquals('Plataformas de Sistemas e Informacao', $disciplina->Nome);
+
+
+        //FixMe: Resolver o problema do record
+        $this->tester->seeRecord('frontend\models\Disciplina', [
+            'Nome' => 'Plataformas de Sistemas e Informacao'
+        ]);
+
     }
 }
