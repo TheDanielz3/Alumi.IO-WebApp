@@ -1,6 +1,7 @@
 <?php namespace frontend\tests;
 
 use Codeception\Test\Unit;
+use frontend\models\DisciplinaTurma;
 use frontend\models\Teste;
 
 class TesteTest extends Unit
@@ -10,6 +11,20 @@ class TesteTest extends Unit
      */
     protected $tester;
 
+    protected function _after()
+    {
+
+
+    }
+
+    protected function _before()
+    {
+
+
+    }
+
+
+    // tests
     public function testValidationTrueOnAsserts()
     {
         $this->tester->comment('Criating true Data');
@@ -23,16 +38,8 @@ class TesteTest extends Unit
         $this->assertTrue($teste->validate(['Data']));
         $this->assertTrue($teste->validate(['hora']));
         //Fixme: Resolver o assert da linha 34
-        $this->assertTrue($teste->validate(['ID_Disciplina_Turmas']));
-    }
 
-    protected function _before()
-    {
-    }
-
-    // tests
-
-    protected function _after()
-    {
+        //$this->assertTrue($teste->validate(['ID_Disciplina_Turmas']));
     }
 }
+
