@@ -53,6 +53,35 @@ class TesteTest extends Unit
         $this->assertFalse($teste->validate(['ID_Disciplina_Turmas']));
     }
 
-    //Todo: Fazer insercao na base de dados
+    //Todo: testar base de dados
+    public function testRegisterOnDatabase()
+    {
+        $this->tester->comment('Creating Atributs');
+        $teste = new Teste();
+        $teste->Descrição = "eu sou uma Descriçao";
+        $teste->Data = "12/10/2019";
+        $teste->hora = "12:10";
+        $teste->ID_Disciplina_Turmas = 1;
+
+        $this->tester->comment('Saving Atributes');
+        $teste->safeAttributes();
+        $teste->save();
+
+        $this->tester->comment('Checking atributes');
+        $this->assertEquals('eu sou uma Descriçao', $teste->Descrição);
+        $this->assertEquals('12/10/2019', $teste->Data);
+        $this->assertEquals('12:10', $teste->hora);
+        $this->assertEquals('1', $teste->ID_Disciplina_Turmas);
+
+
+        $this->tester->comment('Checking record');
+        $this->tester->seeRecord('frontend\models\Teste', [
+            'Descrição' => 'eu sou uma Descriçao',
+            'Data' => '12/10/2019',
+            'hora' => '12:10',
+            'ID_Disciplina_Turmas' => '1'
+        ]);
+    }
+
 }
 

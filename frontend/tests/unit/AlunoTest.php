@@ -1,7 +1,6 @@
 <?php namespace frontend\tests;
 
 use Codeception\Test\Unit;
-use common\models\User;
 use frontend\models\Aluno;
 
 class AlunoTest extends Unit
@@ -22,13 +21,11 @@ class AlunoTest extends Unit
     }
 
     // tests
-    public function CreatingAlunoValidStuff()
+    public function testCreatingAlunoValidStuff()
     {
 
         //Todo: Do the aluno
         $aluno = new Aluno();
 
-       // $aluno->
-       // $this->
     }
 }
