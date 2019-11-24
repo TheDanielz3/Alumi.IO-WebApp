@@ -1,7 +1,6 @@
 <?php namespace frontend\tests;
 
 use Codeception\Test\Unit;
-use frontend\models\DisciplinaTurma;
 use frontend\models\Teste;
 
 class TesteTest extends Unit
@@ -37,9 +36,23 @@ class TesteTest extends Unit
         $this->assertTrue($teste->validate(['Descrição']));
         $this->assertTrue($teste->validate(['Data']));
         $this->assertTrue($teste->validate(['hora']));
-        //Fixme: Resolver o assert da linha 34
-
-        //$this->assertTrue($teste->validate(['ID_Disciplina_Turmas']));
+        $this->assertTrue($teste->validate(['ID_Disciplina_Turmas']));
     }
+
+    public function testRegisterWhithBadParaments()
+    {
+        $teste = new Teste();
+        $teste->Descrição = null;
+        $teste->Data = null;
+        $teste->hora = null;
+        $teste->ID_Disciplina_Turmas = null;
+
+        $this->assertFalse($teste->validate(['Descrição']));
+        $this->assertFalse($teste->validate(['Data']));
+        $this->assertFalse($teste->validate(['hora']));
+        $this->assertFalse($teste->validate(['ID_Disciplina_Turmas']));
+    }
+
+    //Todo: Fazer insercao na base de dados
 }
 
