@@ -21,6 +21,7 @@ class m191122_123030_table_tpc extends Migration
         $this->createTable('{{%tpc}}', [
             'id' => $this->primaryKey(),
             'descricao' => $this->string(45)->notNull(),
+            'id_disciplina_turma' => $this->integer(),
         ], $tableOptions);
     }
 

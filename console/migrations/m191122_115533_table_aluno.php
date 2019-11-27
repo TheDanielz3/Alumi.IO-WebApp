@@ -20,6 +20,8 @@ class m191122_115533_table_aluno extends Migration
 
         $this->createTable('{{%aluno}}', [
             'id' => $this->primaryKey(),
+            'id_encarregado_de_educacao' => $this->integer(),
+            'id_turma' => $this->integer(),
         ], $tableOptions);
     }
 
