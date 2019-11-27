@@ -4,7 +4,6 @@ namespace frontend\models;
 
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use frontend\models\Teste;
 
 /**
  * TesteSearch represents the model behind the search form of `frontend\models\Teste`.
@@ -17,8 +16,8 @@ class TesteSearch extends Teste
     public function rules()
     {
         return [
-            [['id', 'ID_Disciplina_Turmas'], 'integer'],
-            [['Descrição', 'Data', 'hora'], 'safe'],
+            [['id', 'id_disciplina_turma'], 'integer'],
+            [['descricao', 'data', 'hora'], 'safe'],
         ];
     }
 
@@ -59,12 +58,12 @@ class TesteSearch extends Teste
         // grid filtering conditions
         $query->andFilterWhere([
             'id' => $this->id,
-            'Data' => $this->Data,
+            'data' => $this->data,
             'hora' => $this->hora,
-            'ID_Disciplina_Turmas' => $this->ID_Disciplina_Turmas,
+            'id_disciplina_turma' => $this->id_disciplina_turma,
         ]);
 
-        $query->andFilterWhere(['like', 'Descrição', $this->Descrição]);
+        $query->andFilterWhere(['like', 'descricao', $this->descricao]);
 
         return $dataProvider;
     }

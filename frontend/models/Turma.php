@@ -2,20 +2,21 @@
 
 namespace frontend\models;
 
-use Yii;
+use yii\db\ActiveQuery;
+use yii\db\ActiveRecord;
 
 /**
  * This is the model class for table "turma".
  *
  * @property int $id
- * @property int $Ano
- * @property string $Letra
+ * @property int $ano
+ * @property string $letra
  *
  * @property Aluno[] $alunos
  * @property DisciplinaTurma[] $disciplinaTurmas
  * @property Recado[] $recados
  */
-class Turma extends \yii\db\ActiveRecord
+class Turma extends ActiveRecord
 {
     /**
      * {@inheritdoc}
@@ -31,9 +32,9 @@ class Turma extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['Ano', 'Letra'], 'required'],
-            [['Ano'], 'integer'],
-            [['Letra'], 'string', 'max' => 10],
+            [['ano', 'letra'], 'required'],
+            [['ano'], 'integer'],
+            [['letra'], 'string', 'max' => 10],
         ];
     }
 
@@ -44,32 +45,32 @@ class Turma extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'Ano' => 'Ano',
-            'Letra' => 'Letra',
+            'ano' => 'Ano',
+            'letra' => 'Letra',
         ];
     }
 
     /**
-     * @return \yii\db\ActiveQuery
+     * @return ActiveQuery
      */
     public function getAlunos()
     {
-        return $this->hasMany(Aluno::className(), ['id_Turma' => 'id']);
+        return $this->hasMany(Aluno::className(), ['id_turma' => 'id']);
     }
 
     /**
-     * @return \yii\db\ActiveQuery
+     * @return ActiveQuery
      */
     public function getDisciplinaTurmas()
     {
-        return $this->hasMany(DisciplinaTurma::className(), ['ID_Turmas' => 'id']);
+        return $this->hasMany(DisciplinaTurma::className(), ['id_turma' => 'id']);
     }
 
     /**
-     * @return \yii\db\ActiveQuery
+     * @return ActiveQuery
      */
     public function getRecados()
     {
-        return $this->hasMany(Recado::className(), ['id_Turma' => 'id']);
+        return $this->hasMany(Recado::className(), ['id_turma' => 'id']);
     }
 }

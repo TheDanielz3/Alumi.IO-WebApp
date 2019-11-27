@@ -3,18 +3,18 @@
 namespace frontend\models;
 
 use common\models\User;
-use Yii;
+use yii\db\ActiveQuery;
+use yii\db\ActiveRecord;
 
 /**
  * This is the model class for table "encarregadoEducacao".
  *
- * @property int $Contacto
  * @property int $id
+ * @property int $contacto
  *
- * @property Aluno[] $alunos
  * @property User $id0
  */
-class EncarregadoEducacao extends \yii\db\ActiveRecord
+class EncarregadoEducacao extends ActiveRecord
 {
     /**
      * {@inheritdoc}
@@ -30,9 +30,8 @@ class EncarregadoEducacao extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['Contacto', 'id'], 'required'],
-            [['Contacto', 'id'], 'integer'],
-            [['id'], 'unique'],
+            [['contacto'], 'required'],
+            [['contacto'], 'integer'],
             [['id'], 'exist', 'skipOnError' => true, 'targetClass' => User::className(), 'targetAttribute' => ['id' => 'id']],
         ];
     }
@@ -43,21 +42,13 @@ class EncarregadoEducacao extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'Contacto' => 'Contacto',
             'id' => 'ID',
+            'contacto' => 'Contacto',
         ];
     }
 
     /**
-     * @return \yii\db\ActiveQuery
-     */
-    public function getAlunos()
-    {
-        return $this->hasMany(Aluno::className(), ['id_Encarregado_de_educação' => 'id']);
-    }
-
-    /**
-     * @return \yii\db\ActiveQuery
+     * @return ActiveQuery
      */
     public function getId0()
     {

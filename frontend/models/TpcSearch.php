@@ -4,12 +4,11 @@ namespace frontend\models;
 
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use frontend\models\Tpc;
 
 /**
- * TpcSearch represents the model behind the search form of `frontend\models\Tpc`.
+ * tpcSearch represents the model behind the search form of `frontend\models\Tpc`.
  */
-class TpcSearch extends Tpc
+class tpcSearch extends Tpc
 {
     /**
      * {@inheritdoc}
@@ -17,8 +16,8 @@ class TpcSearch extends Tpc
     public function rules()
     {
         return [
-            [['id', 'ID_Disciplina_Turmas'], 'integer'],
-            [['Descrição'], 'safe'],
+            [['id', 'id_disciplina_turma'], 'integer'],
+            [['descricao'], 'safe'],
         ];
     }
 
@@ -59,10 +58,10 @@ class TpcSearch extends Tpc
         // grid filtering conditions
         $query->andFilterWhere([
             'id' => $this->id,
-            'ID_Disciplina_Turmas' => $this->ID_Disciplina_Turmas,
+            'id_disciplina_turma' => $this->id_disciplina_turma,
         ]);
 
-        $query->andFilterWhere(['like', 'Descrição', $this->Descrição]);
+        $query->andFilterWhere(['like', 'descricao', $this->descricao]);
 
         return $dataProvider;
     }

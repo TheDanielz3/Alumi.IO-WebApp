@@ -4,7 +4,6 @@ namespace frontend\models;
 
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use frontend\models\Disciplina;
 
 /**
  * DisciplinaSearch represents the model behind the search form of `frontend\models\Disciplina`.
@@ -17,8 +16,8 @@ class DisciplinaSearch extends Disciplina
     public function rules()
     {
         return [
-            [['ID'], 'integer'],
-            [['Nome'], 'safe'],
+            [['id'], 'integer'],
+            [['nome'], 'safe'],
         ];
     }
 
@@ -58,10 +57,10 @@ class DisciplinaSearch extends Disciplina
 
         // grid filtering conditions
         $query->andFilterWhere([
-            'ID' => $this->ID,
+            'id' => $this->id,
         ]);
 
-        $query->andFilterWhere(['like', 'Nome', $this->Nome]);
+        $query->andFilterWhere(['like', 'nome', $this->nome]);
 
         return $dataProvider;
     }

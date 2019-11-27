@@ -2,12 +2,12 @@
 
 namespace frontend\controllers;
 
-use Yii;
 use frontend\models\Disciplina;
 use frontend\models\DisciplinaSearch;
+use Yii;
+use yii\filters\VerbFilter;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
-use yii\filters\VerbFilter;
 
 /**
  * DisciplinaController implements the CRUD actions for Disciplina model.
@@ -67,7 +67,7 @@ class DisciplinaController extends Controller
         $model = new Disciplina();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->ID]);
+            return $this->redirect(['view', 'id' => $model->id]);
         }
 
         return $this->render('create', [
@@ -87,7 +87,7 @@ class DisciplinaController extends Controller
         $model = $this->findModel($id);
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->ID]);
+            return $this->redirect(['view', 'id' => $model->id]);
         }
 
         return $this->render('update', [

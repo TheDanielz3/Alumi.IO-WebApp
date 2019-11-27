@@ -4,18 +4,18 @@ use yii\grid\GridView;
 use yii\helpers\Html;
 
 /* @var $this yii\web\View */
-/* @var $searchModel frontend\models\TesteSearch */
+/* @var $searchModel frontend\models\DisciplinaTurmaSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Testes';
+$this->title = 'Disciplina Turmas';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="teste-index">
+<div class="disciplina-turma-index">
 
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
-        <?= Html::a('Create Teste', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Create Disciplina Turma', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
 
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
@@ -27,10 +27,8 @@ $this->params['breadcrumbs'][] = $this->title;
             ['class' => 'yii\grid\SerialColumn'],
 
             'id',
-            'descricao',
-            'data',
-            'hora',
-            'id_disciplina_turma',
+            'id_disciplina',
+            'id_turma',
 
             ['class' => 'yii\grid\ActionColumn'],
         ],

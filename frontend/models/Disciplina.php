@@ -2,18 +2,19 @@
 
 namespace frontend\models;
 
-use Yii;
+use yii\db\ActiveQuery;
+use yii\db\ActiveRecord;
 
 /**
  * This is the model class for table "disciplina".
  *
- * @property int $ID
- * @property string $Nome
+ * @property int $id
+ * @property string $nome
  *
  * @property DisciplinaTurma[] $disciplinaTurmas
  * @property Professor[] $professors
  */
-class Disciplina extends \yii\db\ActiveRecord
+class Disciplina extends ActiveRecord
 {
     /**
      * {@inheritdoc}
@@ -29,8 +30,8 @@ class Disciplina extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['Nome'], 'required'],
-            [['Nome'], 'string', 'max' => 45],
+            [['nome'], 'required'],
+            [['nome'], 'string', 'max' => 50],
         ];
     }
 
@@ -40,24 +41,24 @@ class Disciplina extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'ID' => 'ID',
-            'Nome' => 'Nome',
+            'id' => 'ID',
+            'nome' => 'Nome',
         ];
     }
 
     /**
-     * @return \yii\db\ActiveQuery
+     * @return ActiveQuery
      */
     public function getDisciplinaTurmas()
     {
-        return $this->hasMany(DisciplinaTurma::className(), ['ID_Disciplinas' => 'ID']);
+        return $this->hasMany(DisciplinaTurma::className(), ['id_disciplina' => 'id']);
     }
 
     /**
-     * @return \yii\db\ActiveQuery
+     * @return ActiveQuery
      */
     public function getProfessors()
     {
-        return $this->hasMany(Professor::className(), ['ID_Disciplina' => 'ID']);
+        return $this->hasMany(Professor::className(), ['id_disciplina' => 'id']);
     }
 }

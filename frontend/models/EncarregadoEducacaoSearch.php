@@ -4,7 +4,6 @@ namespace frontend\models;
 
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use frontend\models\EncarregadoEducacao;
 
 /**
  * EncarregadoEducacaoSearch represents the model behind the search form of `frontend\models\EncarregadoEducacao`.
@@ -17,7 +16,7 @@ class EncarregadoEducacaoSearch extends EncarregadoEducacao
     public function rules()
     {
         return [
-            [['Contacto', 'id'], 'integer'],
+            [['id', 'contacto'], 'integer'],
         ];
     }
 
@@ -57,8 +56,8 @@ class EncarregadoEducacaoSearch extends EncarregadoEducacao
 
         // grid filtering conditions
         $query->andFilterWhere([
-            'Contacto' => $this->Contacto,
             'id' => $this->id,
+            'contacto' => $this->contacto,
         ]);
 
         return $dataProvider;

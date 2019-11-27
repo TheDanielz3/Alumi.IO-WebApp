@@ -3,21 +3,22 @@
 namespace frontend\models;
 
 use common\models\User;
-use Yii;
+use yii\db\ActiveQuery;
+use yii\db\ActiveRecord;
 
 /**
  * This is the model class for table "aluno".
  *
  * @property int $id
- * @property int $id_Encarregado_de_educação
- * @property int $id_Turma
+ * @property int $id_encarregado_de_educacao
+ * @property int $id_turma
  *
- * @property User $id0
- * @property EncarregadoEducacao $encarregadoDeEducação
+ * @property Encarregadoeducacao $encarregadoDeEducacao
  * @property Turma $turma
+ * @property User $id0
  * @property Recado[] $recados
  */
-class Aluno extends \yii\db\ActiveRecord
+class Aluno extends ActiveRecord
 {
     /**
      * {@inheritdoc}
@@ -33,12 +34,10 @@ class Aluno extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['id', 'id_Encarregado_de_educação', 'id_Turma'], 'required'],
-            [['id', 'id_Encarregado_de_educação', 'id_Turma'], 'integer'],
-            [['id'], 'unique'],
+            [['id_encarregado_de_educacao', 'id_turma'], 'integer'],
+            [['id_encarregado_de_educacao'], 'exist', 'skipOnError' => true, 'targetClass' => Encarregadoeducacao::className(), 'targetAttribute' => ['id_encarregado_de_educacao' => 'id']],
+            [['id_turma'], 'exist', 'skipOnError' => true, 'targetClass' => Turma::className(), 'targetAttribute' => ['id_turma' => 'id']],
             [['id'], 'exist', 'skipOnError' => true, 'targetClass' => User::className(), 'targetAttribute' => ['id' => 'id']],
-            [['id_Encarregado_de_educação'], 'exist', 'skipOnError' => true, 'targetClass' => EncarregadoEducacao::className(), 'targetAttribute' => ['id_Encarregado_de_educação' => 'id']],
-            [['id_Turma'], 'exist', 'skipOnError' => true, 'targetClass' => Turma::className(), 'targetAttribute' => ['id_Turma' => 'id']],
         ];
     }
 
@@ -49,13 +48,29 @@ class Aluno extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'id_Encarregado_de_educação' => 'Id Encarregado De Educação',
-            'id_Turma' => 'Id Turma',
+            'id_encarregado_de_educacao' => 'Id Encarregado De Educacao',
+            'id_turma' => 'Id Turma',
         ];
     }
 
     /**
-     * @return \yii\db\ActiveQuery
+     * @return ActiveQuery
+     */
+    public function getEncarregadoDeEducacao()
+    {
+        return $this->hasOne(Encarregadoeducacao::className(), ['id' => 'id_encarregado_de_educacao']);
+    }
+
+    /**
+     * @return ActiveQuery
+     */
+    public function getTurma()
+    {
+        return $this->hasOne(Turma::className(), ['id' => 'id_turma']);
+    }
+
+    /**
+     * @return ActiveQuery
      */
     public function getId0()
     {
@@ -63,26 +78,10 @@ class Aluno extends \yii\db\ActiveRecord
     }
 
     /**
-     * @return \yii\db\ActiveQuery
-     */
-    public function getEncarregadoDeEducação()
-    {
-        return $this->hasOne(EncarregadoEducacao::className(), ['id' => 'id_Encarregado_de_educação']);
-    }
-
-    /**
-     * @return \yii\db\ActiveQuery
-     */
-    public function getTurma()
-    {
-        return $this->hasOne(Turma::className(), ['id' => 'id_Turma']);
-    }
-
-    /**
-     * @return \yii\db\ActiveQuery
+     * @return ActiveQuery
      */
     public function getRecados()
     {
-        return $this->hasMany(Recado::className(), ['id_Aluno' => 'id']);
+        return $this->hasMany(Recado::className(), ['id_aluno' => 'id']);
     }
 }

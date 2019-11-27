@@ -6,9 +6,9 @@ use yii\base\Model;
 use yii\data\ActiveDataProvider;
 
 /**
- * ProfessorSearch represents the model behind the search form of `frontend\models\Professor`.
+ * DisciplinaTurmaSearch represents the model behind the search form of `frontend\models\DisciplinaTurma`.
  */
-class ProfessorSearch extends Professor
+class DisciplinaTurmaSearch extends DisciplinaTurma
 {
     /**
      * {@inheritdoc}
@@ -16,7 +16,7 @@ class ProfessorSearch extends Professor
     public function rules()
     {
         return [
-            [['id', 'id_disciplina'], 'integer'],
+            [['id', 'id_disciplina', 'id_turma'], 'integer'],
         ];
     }
 
@@ -38,7 +38,7 @@ class ProfessorSearch extends Professor
      */
     public function search($params)
     {
-        $query = Professor::find();
+        $query = DisciplinaTurma::find();
 
         // add conditions that should always apply here
 
@@ -58,6 +58,7 @@ class ProfessorSearch extends Professor
         $query->andFilterWhere([
             'id' => $this->id,
             'id_disciplina' => $this->id_disciplina,
+            'id_turma' => $this->id_turma,
         ]);
 
         return $dataProvider;

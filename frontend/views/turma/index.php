@@ -1,7 +1,7 @@
 <?php
 
-use yii\helpers\Html;
 use yii\grid\GridView;
+use yii\helpers\Html;
 
 /* @var $this yii\web\View */
 /* @var $searchModel frontend\models\TurmaSearch */
@@ -27,8 +27,8 @@ $this->params['breadcrumbs'][] = $this->title;
             ['class' => 'yii\grid\SerialColumn'],
 
             'id',
-            'Ano',
-            'Letra',
+            'ano',
+            'letra',
 
             ['class' => 'yii\grid\ActionColumn'],
         ],

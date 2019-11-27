@@ -4,7 +4,6 @@ namespace frontend\models;
 
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use frontend\models\Aluno;
 
 /**
  * AlunoSearch represents the model behind the search form of `frontend\models\Aluno`.
@@ -17,7 +16,7 @@ class AlunoSearch extends Aluno
     public function rules()
     {
         return [
-            [['id', 'id_Encarregado_de_educação', 'id_Turma'], 'integer'],
+            [['id', 'id_encarregado_de_educacao', 'id_turma'], 'integer'],
         ];
     }
 
@@ -58,8 +57,8 @@ class AlunoSearch extends Aluno
         // grid filtering conditions
         $query->andFilterWhere([
             'id' => $this->id,
-            'id_Encarregado_de_educação' => $this->id_Encarregado_de_educação,
-            'id_Turma' => $this->id_Turma,
+            'id_encarregado_de_educacao' => $this->id_encarregado_de_educacao,
+            'id_turma' => $this->id_turma,
         ]);
 
         return $dataProvider;

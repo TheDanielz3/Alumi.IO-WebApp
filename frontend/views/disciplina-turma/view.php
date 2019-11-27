@@ -5,14 +5,14 @@ use yii\web\YiiAsset;
 use yii\widgets\DetailView;
 
 /* @var $this yii\web\View */
-/* @var $model frontend\models\Recado */
+/* @var $model frontend\models\DisciplinaTurma */
 
 $this->title = $model->id;
-$this->params['breadcrumbs'][] = ['label' => 'Recados', 'url' => ['index']];
+$this->params['breadcrumbs'][] = ['label' => 'Disciplina Turmas', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 YiiAsset::register($this);
 ?>
-<div class="recado-view">
+<div class="disciplina-turma-view">
 
     <h1><?= Html::encode($this->title) ?></h1>
 
@@ -31,11 +31,8 @@ YiiAsset::register($this);
         'model' => $model,
         'attributes' => [
             'id',
-            'data',
-            'descricao',
-            'assinado',
+            'id_disciplina',
             'id_turma',
-            'id_aluno',
         ],
     ]) ?>
 
