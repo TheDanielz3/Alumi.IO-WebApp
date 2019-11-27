@@ -2,18 +2,19 @@
 
 namespace frontend\models;
 
-use Yii;
+use yii\db\ActiveQuery;
+use yii\db\ActiveRecord;
 
 /**
  * This is the model class for table "tpc".
  *
  * @property int $id
- * @property string $Descrição
- * @property int $ID_Disciplina_Turmas
+ * @property string $descricao
+ * @property int $id_disciplina_turma
  *
- * @property DisciplinaTurma $disciplinaTurmas
+ * @property Disciplinaturma $disciplinaTurma
  */
-class Tpc extends \yii\db\ActiveRecord
+class Tpc extends ActiveRecord
 {
     /**
      * {@inheritdoc}
@@ -29,10 +30,10 @@ class Tpc extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['Descrição', 'ID_Disciplina_Turmas'], 'required'],
-            [['ID_Disciplina_Turmas'], 'integer'],
-            [['Descrição'], 'string', 'max' => 45],
-            [['ID_Disciplina_Turmas'], 'exist', 'skipOnError' => true, 'targetClass' => DisciplinaTurma::className(), 'targetAttribute' => ['ID_Disciplina_Turmas' => 'ID']],
+            [['descricao'], 'required'],
+            [['id_disciplina_turma'], 'integer'],
+            [['descricao'], 'string', 'max' => 45],
+            [['id_disciplina_turma'], 'exist', 'skipOnError' => true, 'targetClass' => Disciplinaturma::className(), 'targetAttribute' => ['id_disciplina_turma' => 'id']],
         ];
     }
 
@@ -43,16 +44,16 @@ class Tpc extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'Descrição' => 'Descrição',
-            'ID_Disciplina_Turmas' => 'Id Disciplina Turmas',
+            'descricao' => 'Descricao',
+            'id_disciplina_turma' => 'Id Disciplina Turma',
         ];
     }
 
     /**
-     * @return \yii\db\ActiveQuery
+     * @return ActiveQuery
      */
-    public function getDisciplinaTurmas()
+    public function getDisciplinaTurma()
     {
-        return $this->hasOne(DisciplinaTurma::className(), ['ID' => 'ID_Disciplina_Turmas']);
+        return $this->hasOne(Disciplinaturma::className(), ['id' => 'id_disciplina_turma']);
     }
 }

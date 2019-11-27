@@ -1,7 +1,7 @@
 <?php
 
-use yii\helpers\Html;
 use yii\grid\GridView;
+use yii\helpers\Html;
 
 /* @var $this yii\web\View */
 /* @var $searchModel frontend\models\AlunoSearch */
@@ -27,8 +27,8 @@ $this->params['breadcrumbs'][] = $this->title;
             ['class' => 'yii\grid\SerialColumn'],
 
             'id',
-            'id_Encarregado_de_educação',
-            'id_Turma',
+            'id_encarregado_de_educacao',
+            'id_turma',
 
             ['class' => 'yii\grid\ActionColumn'],
         ],

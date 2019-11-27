@@ -2,21 +2,20 @@
 
 namespace frontend\models;
 
-use Yii;
+use yii\db\ActiveQuery;
+use yii\db\ActiveRecord;
 
 /**
  * This is the model class for table "disciplinaTurma".
  *
- * @property int $ID_Disciplinas
- * @property int $ID
- * @property int $ID_Turmas
+ * @property int $id
+ * @property int $id_disciplina
+ * @property int $id_turma
  *
- * @property Turma $turmas
- * @property Disciplina $disciplinas
- * @property Teste[] $testes
- * @property Tpc[] $tpcs
+ * @property Disciplina $disciplina
+ * @property Turma $turma
  */
-class DisciplinaTurma extends \yii\db\ActiveRecord
+class DisciplinaTurma extends ActiveRecord
 {
     /**
      * {@inheritdoc}
@@ -32,11 +31,9 @@ class DisciplinaTurma extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['ID_Disciplinas', 'ID', 'ID_Turmas'], 'required'],
-            [['ID_Disciplinas', 'ID', 'ID_Turmas'], 'integer'],
-            [['ID'], 'unique'],
-            [['ID_Turmas'], 'exist', 'skipOnError' => true, 'targetClass' => Turma::className(), 'targetAttribute' => ['ID_Turmas' => 'id']],
-            [['ID_Disciplinas'], 'exist', 'skipOnError' => true, 'targetClass' => Disciplina::className(), 'targetAttribute' => ['ID_Disciplinas' => 'ID']],
+            [['id_disciplina', 'id_turma'], 'integer'],
+            [['id_disciplina'], 'exist', 'skipOnError' => true, 'targetClass' => Disciplina::className(), 'targetAttribute' => ['id_disciplina' => 'id']],
+            [['id_turma'], 'exist', 'skipOnError' => true, 'targetClass' => Turma::className(), 'targetAttribute' => ['id_turma' => 'id']],
         ];
     }
 
@@ -46,41 +43,25 @@ class DisciplinaTurma extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'ID_Disciplinas' => 'Id Disciplinas',
-            'ID' => 'ID',
-            'ID_Turmas' => 'Id Turmas',
+            'id' => 'ID',
+            'id_disciplina' => 'Id Disciplina',
+            'id_turma' => 'Id Turma',
         ];
     }
 
     /**
-     * @return \yii\db\ActiveQuery
+     * @return ActiveQuery
      */
-    public function getTurmas()
+    public function getDisciplina()
     {
-        return $this->hasOne(Turma::className(), ['id' => 'ID_Turmas']);
+        return $this->hasOne(Disciplina::className(), ['id' => 'id_disciplina']);
     }
 
     /**
-     * @return \yii\db\ActiveQuery
+     * @return ActiveQuery
      */
-    public function getDisciplinas()
+    public function getTurma()
     {
-        return $this->hasOne(Disciplina::className(), ['ID' => 'ID_Disciplinas']);
-    }
-
-    /**
-     * @return \yii\db\ActiveQuery
-     */
-    public function getTestes()
-    {
-        return $this->hasMany(Teste::className(), ['ID_Disciplina_Turmas' => 'ID']);
-    }
-
-    /**
-     * @return \yii\db\ActiveQuery
-     */
-    public function getTpcs()
-    {
-        return $this->hasMany(Tpc::className(), ['ID_Disciplina_Turmas' => 'ID']);
+        return $this->hasOne(Turma::className(), ['id' => 'id_turma']);
     }
 }

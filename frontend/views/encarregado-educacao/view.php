@@ -1,15 +1,16 @@
 <?php
 
 use yii\helpers\Html;
+use yii\web\YiiAsset;
 use yii\widgets\DetailView;
 
 /* @var $this yii\web\View */
 /* @var $model frontend\models\EncarregadoEducacao */
 
 $this->title = $model->id;
-$this->params['breadcrumbs'][] = ['label' => 'Encarregados de Educacao', 'url' => ['index']];
+$this->params['breadcrumbs'][] = ['label' => 'Encarregado Educacaos', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
-\yii\web\YiiAsset::register($this);
+YiiAsset::register($this);
 ?>
 <div class="encarregado-educacao-view">
 
@@ -29,8 +30,8 @@ $this->params['breadcrumbs'][] = $this->title;
     <?= DetailView::widget([
         'model' => $model,
         'attributes' => [
-            'Contacto',
             'id',
+            'contacto',
         ],
     ]) ?>
 

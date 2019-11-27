@@ -4,7 +4,6 @@ namespace frontend\models;
 
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use frontend\models\Recado;
 
 /**
  * RecadoSearch represents the model behind the search form of `frontend\models\Recado`.
@@ -17,9 +16,9 @@ class RecadoSearch extends Recado
     public function rules()
     {
         return [
-            [['id', 'id_Turma', 'id_Aluno'], 'integer'],
-            [['Data', 'Descrição'], 'safe'],
-            [['Assinado'], 'number'],
+            [['id', 'id_turma', 'id_aluno'], 'integer'],
+            [['data', 'descricao'], 'safe'],
+            [['assinado'], 'number'],
         ];
     }
 
@@ -60,13 +59,13 @@ class RecadoSearch extends Recado
         // grid filtering conditions
         $query->andFilterWhere([
             'id' => $this->id,
-            'Data' => $this->Data,
-            'Assinado' => $this->Assinado,
-            'id_Turma' => $this->id_Turma,
-            'id_Aluno' => $this->id_Aluno,
+            'data' => $this->data,
+            'assinado' => $this->assinado,
+            'id_turma' => $this->id_turma,
+            'id_aluno' => $this->id_aluno,
         ]);
 
-        $query->andFilterWhere(['like', 'Descrição', $this->Descrição]);
+        $query->andFilterWhere(['like', 'descricao', $this->descricao]);
 
         return $dataProvider;
     }

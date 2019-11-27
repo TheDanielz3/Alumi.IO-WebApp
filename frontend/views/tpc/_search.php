@@ -4,7 +4,7 @@ use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 
 /* @var $this yii\web\View */
-/* @var $model frontend\models\TpcSearch */
+/* @var $model frontend\models\tpcSearch */
 /* @var $form yii\widgets\ActiveForm */
 ?>
 
@@ -17,9 +17,9 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'id') ?>
 
-    <?= $form->field($model, 'Descrição') ?>
+    <?= $form->field($model, 'descricao') ?>
 
-    <?= $form->field($model, 'ID_Disciplina_Turmas') ?>
+    <?= $form->field($model, 'id_disciplina_turma') ?>
 
     <div class="form-group">
         <?= Html::submitButton('Search', ['class' => 'btn btn-primary']) ?>

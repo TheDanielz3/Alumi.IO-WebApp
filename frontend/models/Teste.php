@@ -2,20 +2,21 @@
 
 namespace frontend\models;
 
-use Yii;
+use yii\db\ActiveQuery;
+use yii\db\ActiveRecord;
 
 /**
  * This is the model class for table "teste".
  *
  * @property int $id
- * @property string $Descrição
- * @property string $Data
+ * @property string $descricao
+ * @property string $data
  * @property string $hora
- * @property int $ID_Disciplina_Turmas
+ * @property int $id_disciplina_turma
  *
- * @property DisciplinaTurma $disciplinaTurmas
+ * @property Disciplinaturma $disciplinaTurma
  */
-class Teste extends \yii\db\ActiveRecord
+class Teste extends ActiveRecord
 {
     /**
      * {@inheritdoc}
@@ -31,11 +32,11 @@ class Teste extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['Descrição', 'Data', 'hora', 'ID_Disciplina_Turmas'], 'required'],
-            [['Data', 'hora'], 'safe'],
-            [['ID_Disciplina_Turmas'], 'integer'],
-            [['Descrição'], 'string', 'max' => 45],
-            [['ID_Disciplina_Turmas'], 'exist', 'skipOnError' => true, 'targetClass' => DisciplinaTurma::className(), 'targetAttribute' => ['ID_Disciplina_Turmas' => 'ID']],
+            [['descricao', 'data', 'hora'], 'required'],
+            [['data', 'hora'], 'safe'],
+            [['id_disciplina_turma'], 'integer'],
+            [['descricao'], 'string', 'max' => 45],
+            [['id_disciplina_turma'], 'exist', 'skipOnError' => true, 'targetClass' => Disciplinaturma::className(), 'targetAttribute' => ['id_disciplina_turma' => 'id']],
         ];
     }
 
@@ -46,18 +47,18 @@ class Teste extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'Descrição' => 'Descrição',
-            'Data' => 'Data',
+            'descricao' => 'Descricao',
+            'data' => 'Data',
             'hora' => 'Hora',
-            'ID_Disciplina_Turmas' => 'Id Disciplina Turmas',
+            'id_disciplina_turma' => 'Id Disciplina Turma',
         ];
     }
 
     /**
-     * @return \yii\db\ActiveQuery
+     * @return ActiveQuery
      */
-    public function getDisciplinaTurmas()
+    public function getDisciplinaTurma()
     {
-        return $this->hasOne(DisciplinaTurma::className(), ['ID' => 'ID_Disciplina_Turmas']);
+        return $this->hasOne(Disciplinaturma::className(), ['id' => 'id_disciplina_turma']);
     }
 }

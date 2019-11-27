@@ -4,7 +4,6 @@ namespace frontend\models;
 
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use frontend\models\Turma;
 
 /**
  * TurmaSearch represents the model behind the search form of `frontend\models\Turma`.
@@ -17,8 +16,8 @@ class TurmaSearch extends Turma
     public function rules()
     {
         return [
-            [['id', 'Ano'], 'integer'],
-            [['Letra'], 'safe'],
+            [['id', 'ano'], 'integer'],
+            [['letra'], 'safe'],
         ];
     }
 
@@ -59,10 +58,10 @@ class TurmaSearch extends Turma
         // grid filtering conditions
         $query->andFilterWhere([
             'id' => $this->id,
-            'Ano' => $this->Ano,
+            'ano' => $this->ano,
         ]);
 
-        $query->andFilterWhere(['like', 'Letra', $this->Letra]);
+        $query->andFilterWhere(['like', 'letra', $this->letra]);
 
         return $dataProvider;
     }

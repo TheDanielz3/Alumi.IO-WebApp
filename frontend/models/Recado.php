@@ -2,22 +2,23 @@
 
 namespace frontend\models;
 
-use Yii;
+use yii\db\ActiveQuery;
+use yii\db\ActiveRecord;
 
 /**
  * This is the model class for table "recado".
  *
  * @property int $id
- * @property string $Data
- * @property string $Descrição
- * @property double $Assinado
- * @property int $id_Turma
- * @property int $id_Aluno
+ * @property string $data
+ * @property string $descricao
+ * @property double $assinado
+ * @property int $id_turma
+ * @property int $id_aluno
  *
- * @property Turma $turma
  * @property Aluno $aluno
+ * @property Turma $turma
  */
-class Recado extends \yii\db\ActiveRecord
+class Recado extends ActiveRecord
 {
     /**
      * {@inheritdoc}
@@ -33,13 +34,13 @@ class Recado extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['Data', 'Descrição', 'Assinado'], 'required'],
-            [['Data'], 'safe'],
-            [['Assinado'], 'number'],
-            [['id_Turma', 'id_Aluno'], 'integer'],
-            [['Descrição'], 'string', 'max' => 150],
-            [['id_Turma'], 'exist', 'skipOnError' => true, 'targetClass' => Turma::className(), 'targetAttribute' => ['id_Turma' => 'id']],
-            [['id_Aluno'], 'exist', 'skipOnError' => true, 'targetClass' => Aluno::className(), 'targetAttribute' => ['id_Aluno' => 'id']],
+            [['data', 'descricao', 'assinado'], 'required'],
+            [['data'], 'safe'],
+            [['assinado'], 'number'],
+            [['id_turma', 'id_aluno'], 'integer'],
+            [['descricao'], 'string', 'max' => 150],
+            [['id_aluno'], 'exist', 'skipOnError' => true, 'targetClass' => Aluno::className(), 'targetAttribute' => ['id_aluno' => 'id']],
+            [['id_turma'], 'exist', 'skipOnError' => true, 'targetClass' => Turma::className(), 'targetAttribute' => ['id_turma' => 'id']],
         ];
     }
 
@@ -50,27 +51,27 @@ class Recado extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'Data' => 'Data',
-            'Descrição' => 'Descrição',
-            'Assinado' => 'Assinado',
-            'id_Turma' => 'Id Turma',
-            'id_Aluno' => 'Id Aluno',
+            'data' => 'Data',
+            'descricao' => 'Descricao',
+            'assinado' => 'Assinado',
+            'id_turma' => 'Id Turma',
+            'id_aluno' => 'Id Aluno',
         ];
     }
 
     /**
-     * @return \yii\db\ActiveQuery
-     */
-    public function getTurma()
-    {
-        return $this->hasOne(Turma::className(), ['id' => 'id_Turma']);
-    }
-
-    /**
-     * @return \yii\db\ActiveQuery
+     * @return ActiveQuery
      */
     public function getAluno()
     {
-        return $this->hasOne(Aluno::className(), ['id' => 'id_Aluno']);
+        return $this->hasOne(Aluno::className(), ['id' => 'id_aluno']);
+    }
+
+    /**
+     * @return ActiveQuery
+     */
+    public function getTurma()
+    {
+        return $this->hasOne(Turma::className(), ['id' => 'id_turma']);
     }
 }

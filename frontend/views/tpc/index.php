@@ -1,10 +1,10 @@
 <?php
 
-use yii\helpers\Html;
 use yii\grid\GridView;
+use yii\helpers\Html;
 
 /* @var $this yii\web\View */
-/* @var $searchModel frontend\models\TpcSearch */
+/* @var $searchModel frontend\models\tpcSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
 $this->title = 'Tpcs';
@@ -27,8 +27,8 @@ $this->params['breadcrumbs'][] = $this->title;
             ['class' => 'yii\grid\SerialColumn'],
 
             'id',
-            'Descrição',
-            'ID_Disciplina_Turmas',
+            'descricao',
+            'id_disciplina_turma',
 
             ['class' => 'yii\grid\ActionColumn'],
         ],
