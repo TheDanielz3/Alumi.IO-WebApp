@@ -2,9 +2,6 @@
 
 namespace frontend\models;
 
-use yii\db\ActiveQuery;
-use yii\db\ActiveRecord;
-
 /**
  * This is the model class for table "teste".
  *
@@ -16,7 +13,7 @@ use yii\db\ActiveRecord;
  *
  * @property Disciplinaturma $disciplinaTurma
  */
-class Teste extends ActiveRecord
+class Teste extends \yii\db\ActiveRecord
 {
     /**
      * {@inheritdoc}
@@ -32,7 +29,7 @@ class Teste extends ActiveRecord
     public function rules()
     {
         return [
-            [['descricao', 'data', 'hora'], 'required'],
+            [['descricao', 'data', 'hora', 'id_disciplina_turma'], 'required'],
             [['data', 'hora'], 'safe'],
             [['id_disciplina_turma'], 'integer'],
             [['descricao'], 'string', 'max' => 45],
@@ -55,7 +52,7 @@ class Teste extends ActiveRecord
     }
 
     /**
-     * @return ActiveQuery
+     * @return \yii\db\ActiveQuery
      */
     public function getDisciplinaTurma()
     {

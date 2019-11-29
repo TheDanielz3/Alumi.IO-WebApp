@@ -1,6 +1,5 @@
 <?php namespace frontend\tests;
 
-use Codeception\Lib\Di;
 use Codeception\Test\Unit;
 use frontend\models\Disciplina;
 
@@ -20,37 +19,38 @@ class DisciplinaTest extends Unit
     {
     }
 
+
     // tests
     public function testRegistWhithGoodParaments()
     {
         $disciplina = new Disciplina();
-        $disciplina->Nome = 'Plataformas de Sistemas e Informacao';
-        $this->assertTrue($disciplina->validate(['Nome']));
+        $disciplina->nome = 'Plataformas de Sistemas e Informacao';
+        $this->assertTrue($disciplina->validate(['nome']));
     }
     public function testRegisterWhithBadParaments()
     {
         $disciplina = new Disciplina();
-        $disciplina->Nome = null;
-        $this->assertFalse($disciplina->validate(['Nome']));
+        $disciplina->nome = null;
+        $this->assertFalse($disciplina->validate(['nome']));
     }
 
     public function testRegisterOnDatabase()
     {
         $this->tester->comment('Creating Atributs');
         $disciplina = new Disciplina();
-        $disciplina->Nome = 'Plataformas de Sistemas e Informacao';
+        $disciplina->nome = 'Plataformas de Sistemas e Informacao';
 
         $this->tester->comment('Saving Atributes');
         $disciplina->safeAttributes();
         $disciplina->save();
 
         $this->tester->comment('Checking atributes');
-        $this->assertEquals('Plataformas de Sistemas e Informacao', $disciplina->Nome);
+        $this->assertEquals('Plataformas de Sistemas e Informacao', $disciplina->nome);
 
 
         $this->tester->comment('Checking record');
         $this->tester->seeRecord('frontend\models\Disciplina', [
-            'Nome' => 'Plataformas de Sistemas e Informacao'
+            'nome' => 'Plataformas de Sistemas e Informacao'
         ]);
 
     }
