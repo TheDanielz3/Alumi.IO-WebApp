@@ -7,8 +7,3 @@ paths:
     log: console/runtime/logs
 settings:
     colors: true
-reporters:
-    report: PHPUnit_Util_Log_TeamCity
-extensions:
-    enabled:
-        - Codeception\Extension\TeamCity
