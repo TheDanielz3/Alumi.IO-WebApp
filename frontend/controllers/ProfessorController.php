@@ -69,8 +69,8 @@ class ProfessorController extends Controller
         $model = new Professor();
 
         if (Yii::$app->user->can('updateHomework')) {
-
             if ($model->load(Yii::$app->request->post()) && $model->save()) {
+
                 return $this->redirect(['view', 'id' => $model->id]);
             }
 
