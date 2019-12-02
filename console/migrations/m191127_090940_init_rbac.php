@@ -74,15 +74,6 @@ class m191127_090940_init_rbac extends Migration
                 $viewErrands->description = 'View Errands';
                 $auth->add($viewErrands);
 
-
-
-
-
-
-
-
-
-
                 // add "student" role and give the permissions bellow
                 $student= $auth->createRole('student');
                 $auth->add($student);
