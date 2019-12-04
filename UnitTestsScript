@@ -1,2 +1,2 @@
 cd /frontend
-php ../vendor/bin/codecept run unit --steps --html
+php ../vendor/bin/codecept run --steps --html

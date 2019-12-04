@@ -5,7 +5,7 @@
 use yii\helpers\Url;
 
 $this->title = 'Alumio';
-//Todo: Fazer o login do Professor (Encontra-se na torre)(ESTE apontamento apenas destina-se a Daniel)
+
 ?>
 <div class="site-index">
 
