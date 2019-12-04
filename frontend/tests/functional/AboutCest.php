@@ -9,5 +9,6 @@ class AboutCest
     {
         $I->amOnRoute('site/about');
         $I->see('About', 'h1');
+
     }
 }
