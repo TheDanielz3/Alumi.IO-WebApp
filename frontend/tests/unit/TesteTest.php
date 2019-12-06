@@ -62,18 +62,14 @@ class TesteTest extends Unit
         $teste->data = "2019-11-04";
         $teste->hora = "12:07:05";
         $teste->id_disciplina_turma = 1;
-
         $this->tester->comment('Saving Atributes');
         $teste->safeAttributes();
         $teste->save();
-
         $this->tester->comment('Checking atributes');
         $this->assertEquals('eu sou uma Descricao', $teste->descricao);
         $this->assertEquals('2019-11-04', $teste->data);
         $this->assertEquals('12:07:05', $teste->hora);
         $this->assertEquals('1', $teste->id_disciplina_turma);
-
-
         $this->tester->comment('Checking record');
         $this->tester->seeRecord('frontend\models\Teste', [
             'descricao' => 'eu sou uma Descricao',
