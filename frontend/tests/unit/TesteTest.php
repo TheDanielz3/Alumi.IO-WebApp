@@ -10,20 +10,6 @@ class TesteTest extends Unit
      */
     protected $tester;
 
-    protected function _after()
-    {
-
-
-    }
-
-    protected function _before()
-    {
-
-
-    }
-
-
-    // tests
     public function testValidationTrueOnAsserts()
     {
         $this->tester->comment('Criating true Data');
@@ -53,6 +39,7 @@ class TesteTest extends Unit
         $this->assertFalse($teste->validate(['id_disciplina_turma']));
     }
 
+    // tests
 
     public function testRegisterOnDatabase()
     {
@@ -77,6 +64,16 @@ class TesteTest extends Unit
             'hora' => '12:07:05',
             'id_disciplina_turma' => '1'
         ]);
+    }
+
+    protected function _after()
+    {
+
+    }
+
+    protected function _before()
+    {
+
     }
 
 }
