@@ -6,6 +6,7 @@ use Yii;
 use frontend\models\Professor;
 use frontend\models\ProfessorSearch;
 use yii\web\Controller;
+use yii\web\ForbiddenHttpException;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
@@ -61,18 +62,24 @@ class ProfessorController extends Controller
      * Creates a new Professor model.
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
+     * @throws ForbiddenHttpException
      */
     public function actionCreate()
     {
         $model = new Professor();
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
-        }
+        if (Yii::$app->user->can('updateHomework')) {
+            if ($model->load(Yii::$app->request->post()) && $model->save()) {
 
-        return $this->render('create', [
-            'model' => $model,
-        ]);
+                return $this->redirect(['view', 'id' => $model->id]);
+            }
+
+            return $this->render('create', [
+                'model' => $model,
+            ]);
+        } else {
+            throw new ForbiddenHttpException("You don't have permission to access this page.");
+        }
     }
 
     /**

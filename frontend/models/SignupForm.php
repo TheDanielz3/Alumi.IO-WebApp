@@ -4,6 +4,7 @@ namespace frontend\models;
 use Yii;
 use yii\base\Model;
 use common\models\User;
+use yii\helpers\VarDumper;
 
 /**
  * Signup form
@@ -13,6 +14,7 @@ class SignupForm extends Model
     public $username;
     public $email;
     public $password;
+    public $user_type;
 
 
     /**
@@ -34,6 +36,8 @@ class SignupForm extends Model
 
             ['password', 'required'],
             ['password', 'string', 'min' => 6],
+
+            ['user_type', 'required'],
         ];
     }
 
@@ -47,13 +51,19 @@ class SignupForm extends Model
         if (!$this->validate()) {
             return null;
         }
-        
+
+        $auth = Yii::$app->authManager;
+        $UserNewRole = $auth->getRole($this->user_type);
+
         $user = new User();
         $user->username = $this->username;
         $user->email = $this->email;
         $user->setPassword($this->password);
         $user->generateAuthKey();
         $user->generateEmailVerificationToken();
+        $user->save();
+
+        $auth->assign($UserNewRole, $user->id);
         return $user->save() && $this->sendEmail($user);
 
     }
