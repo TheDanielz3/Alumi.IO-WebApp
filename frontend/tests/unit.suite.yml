@@ -4,6 +4,7 @@ modules:
     enabled:
         - Asserts
         - Yii2:
-            - cleanup: false
-            - part: [orm, email, fixtures]
-
+              - cleanup: true
+              - part: [orm, email, fixtures]
+        dump:
+            -'api/tests/_data/dump.sql'
