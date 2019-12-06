@@ -32,6 +32,8 @@ class SignupCest
             'SignupForm[username]'  => 'tester',
             'SignupForm[email]'     => 'ttttt',
             'SignupForm[password]'  => 'tester_password',
+            'SignupForm[user_type]'  => 'student',
+
         ]
         );
         $I->dontSee('Username cannot be blank.', '.help-block');
@@ -45,6 +47,7 @@ class SignupCest
             'SignupForm[username]' => 'tester',
             'SignupForm[email]' => 'tester.email@example.com',
             'SignupForm[password]' => 'tester_password',
+            'SignupForm[user_type]' => 'student',
         ]);
 
         $I->seeRecord('common\models\User', [
