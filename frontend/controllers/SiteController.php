@@ -5,6 +5,7 @@ use frontend\models\ResendVerificationEmailForm;
 use frontend\models\VerifyEmailForm;
 use Yii;
 use yii\base\InvalidArgumentException;
+use yii\helpers\VarDumper;
 use yii\web\BadRequestHttpException;
 use yii\web\Controller;
 use yii\filters\VerbFilter;
@@ -99,10 +100,17 @@ class SiteController extends Controller
 
         $model = new LoginForm();
         if ($model->load(Yii::$app->request->post()) && $model->login()) {
-            return $this->goBack();
-        } else {
-            $model->password = '';
 
+            if(Yii::$app->user->can('viewErrands'))
+            {
+                return($this->render('professorOperations'));
+            }
+
+            return $this->goBack();
+
+
+        } else {
+           $model->password = '';
             return $this->render('login', [
                 'model' => $model,
             ]);
