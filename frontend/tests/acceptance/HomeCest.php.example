@@ -10,7 +10,7 @@ class HomeCest
     {
         $I->amOnPage(Url::toRoute('/site/index'));
         $I->wait(2);
-        $I->see('My Application');
+        $I->see('Alumio');
 
         $I->seeLink('About');
         $I->click('About');
