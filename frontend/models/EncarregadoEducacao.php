@@ -30,7 +30,6 @@ class EncarregadoEducacao extends ActiveRecord
     public function rules()
     {
         return [
-            [['contacto'], 'required'],
             [['contacto'], 'integer'],
             [['id'], 'exist', 'skipOnError' => true, 'targetClass' => User::className(), 'targetAttribute' => ['id' => 'id']],
         ];

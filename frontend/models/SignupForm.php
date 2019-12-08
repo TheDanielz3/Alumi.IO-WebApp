@@ -1,10 +1,12 @@
 <?php
+
 namespace frontend\models;
 
 use Yii;
 use yii\base\Model;
 use common\models\User;
-use yii\helpers\VarDumper;
+use yii\db\Exception;
+use yii\helpers\BaseVarDumper;
 
 /**
  * Signup form
@@ -45,6 +47,7 @@ class SignupForm extends Model
      * Signs user up.
      *
      * @return bool whether the creating new account was successful and email was sent
+     * @throws \Exception
      */
     public function signup()
     {
@@ -61,9 +64,29 @@ class SignupForm extends Model
         $user->setPassword($this->password);
         $user->generateAuthKey();
         $user->generateEmailVerificationToken();
+
         $user->save();
 
-        $auth->assign($UserNewRole, $user->id);
+        try {
+
+            $auth->assign($UserNewRole, $user->id);
+
+            if ($this->user_type == 'student') {
+                $userSecondaryTable = new Aluno();
+            } elseif ($this->user_type == 'teacher') {
+                $userSecondaryTable = new Professor();
+            } elseif ($this->user_type == 'guardian') {
+                $userSecondaryTable = new EncarregadoEducacao();
+            }
+
+            $userSecondaryTable->id = $user->id;
+            $userSecondaryTable->save();
+
+        } catch (\Exception $e) {
+            BaseVarDumper::dump($e);
+        }
+
+
         return $user->save() && $this->sendEmail($user);
 
     }

@@ -20,7 +20,7 @@ class m191122_112407_table_encarregados_de_educacao extends Migration
 
         $this->createTable('{{%encarregadoEducacao}}', [
             'id' => $this->primaryKey(),
-            'contacto' => $this->integer()->notNull(),
+            'contacto' => $this->integer(),
         ], $tableOptions);
     }
 
