@@ -101,9 +101,17 @@ class SiteController extends Controller
         $model = new LoginForm();
         if ($model->load(Yii::$app->request->post()) && $model->login()) {
 
-            if(Yii::$app->user->can('viewErrands'))
+            if(!Yii::$app->user->can('backendAccess') and Yii::$app->user->can('createHomework'))
             {
                 return($this->render('professorOperations'));
+            }
+            if(Yii::$app->user->can('viewErrands') and !Yii::$app->user->can('createHomework') )
+            {
+                return($this->render('encarregadosEducacaoOperations'));
+            }
+            if(!Yii::$app->user->can('viewErrands') and Yii::$app->user->can('viewHomework') )
+            {
+                return($this->render('alunoOperations'));
             }
 
             return $this->goBack();
