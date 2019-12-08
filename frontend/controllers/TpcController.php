@@ -7,6 +7,7 @@ use frontend\models\tpcSearch;
 use Yii;
 use yii\filters\VerbFilter;
 use yii\web\Controller;
+use yii\web\ForbiddenHttpException;
 use yii\web\NotFoundHttpException;
 
 /**
@@ -32,16 +33,21 @@ class TpcController extends Controller
     /**
      * Lists all Tpc models.
      * @return mixed
+     * @throws ForbiddenHttpException
      */
     public function actionIndex()
     {
-        $searchModel = new tpcSearch();
-        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+        if (Yii::$app->user->can('createHomework')) {
+            $searchModel = new tpcSearch();
+            $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
-        return $this->render('index', [
-            'searchModel' => $searchModel,
-            'dataProvider' => $dataProvider,
-        ]);
+            return $this->render('index', [
+                'searchModel' => $searchModel,
+                'dataProvider' => $dataProvider,
+            ]);
+        } else {
+            throw new ForbiddenHttpException('You are not allowed to view this page.');
+        }
     }
 
     /**
