@@ -23,7 +23,8 @@
         "fxp/composer-asset-plugin": "1.3.x-dev",
         "facebook/webdriver": "1.7.1",
         "codeception/codeception": "*",
-        "vaimo/binary-geckodriver": "^2.0"
+        "vaimo/binary-geckodriver": "^2.0",
+        "2amigos/yii2-date-picker-widget": "1.0.7"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "~2.1.0",

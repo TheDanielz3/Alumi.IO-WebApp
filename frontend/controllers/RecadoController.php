@@ -38,6 +38,8 @@ class RecadoController extends Controller
         $searchModel = new RecadoSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
+        $dataProvider->query->andWhere('id_professor =' . Yii::$app->user->identity->getId());
+
         return $this->render('index', [
             'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
