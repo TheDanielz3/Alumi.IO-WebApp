@@ -6,5 +6,3 @@ modules:
         - Yii2:
               - cleanup: true
               - part: [orm, email, fixtures]
-        dump:
-            -'api/tests/_data/dump.sql'
