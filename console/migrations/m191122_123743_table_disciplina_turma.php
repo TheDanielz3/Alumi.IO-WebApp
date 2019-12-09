@@ -20,8 +20,8 @@ class m191122_123743_table_disciplina_turma extends Migration
 
         $this->createTable('{{%disciplinaTurma}}', [
             'id' => $this->primaryKey(),
-            'id_disciplina' => $this->integer(),
-            'id_turma' => $this->integer(),
+            'id_disciplina' => $this->integer()->notNull(),
+            'id_turma' => $this->integer()->notNull(),
         ], $tableOptions);
     }
 

@@ -2,8 +2,7 @@
 
 namespace frontend\models;
 
-use yii\db\ActiveQuery;
-use yii\db\ActiveRecord;
+use Yii;
 
 /**
  * This is the model class for table "recado".
@@ -11,14 +10,15 @@ use yii\db\ActiveRecord;
  * @property int $id
  * @property string $data
  * @property string $descricao
- * @property double $assinado
- * @property int $id_turma
- * @property int $id_aluno
+ * @property float $assinado
+ * @property int|null $id_turma
+ * @property int|null $id_aluno
+ * @property int $id_professor
  *
  * @property Aluno $aluno
  * @property Turma $turma
  */
-class Recado extends ActiveRecord
+class Recado extends \yii\db\ActiveRecord
 {
     /**
      * {@inheritdoc}
@@ -34,10 +34,10 @@ class Recado extends ActiveRecord
     public function rules()
     {
         return [
-            [['data', 'descricao', 'assinado'], 'required'],
+            [['data', 'descricao', 'assinado', 'id_professor'], 'required'],
             [['data'], 'safe'],
             [['assinado'], 'number'],
-            [['id_turma', 'id_aluno'], 'integer'],
+            [['id_turma', 'id_aluno', 'id_professor'], 'integer'],
             [['descricao'], 'string', 'max' => 150],
             [['id_aluno'], 'exist', 'skipOnError' => true, 'targetClass' => Aluno::className(), 'targetAttribute' => ['id_aluno' => 'id']],
             [['id_turma'], 'exist', 'skipOnError' => true, 'targetClass' => Turma::className(), 'targetAttribute' => ['id_turma' => 'id']],
@@ -56,11 +56,12 @@ class Recado extends ActiveRecord
             'assinado' => 'Assinado',
             'id_turma' => 'Id Turma',
             'id_aluno' => 'Id Aluno',
+            'id_professor' => 'Id Professor',
         ];
     }
 
     /**
-     * @return ActiveQuery
+     * @return \yii\db\ActiveQuery
      */
     public function getAluno()
     {
@@ -68,7 +69,7 @@ class Recado extends ActiveRecord
     }
 
     /**
-     * @return ActiveQuery
+     * @return \yii\db\ActiveQuery
      */
     public function getTurma()
     {

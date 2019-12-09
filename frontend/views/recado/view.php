@@ -30,12 +30,13 @@ YiiAsset::register($this);
     <?= DetailView::widget([
         'model' => $model,
         'attributes' => [
-            'id',
+            //'id',
             'data',
             'descricao',
             'assinado',
             'id_turma',
             'id_aluno',
+            'id_professor',
         ],
     ]) ?>
 

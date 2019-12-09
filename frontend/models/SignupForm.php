@@ -17,6 +17,7 @@ class SignupForm extends Model
     public $email;
     public $password;
     public $user_type;
+    public $nome;
 
 
     /**
@@ -40,6 +41,11 @@ class SignupForm extends Model
             ['password', 'string', 'min' => 6],
 
             ['user_type', 'required'],
+
+            ['nome', 'trim'],
+            ['nome', 'required'],
+            ['nome', 'string', 'min' => 2, 'max' => 255],
+
         ];
     }
 
@@ -80,10 +86,12 @@ class SignupForm extends Model
             }
 
             $userSecondaryTable->id = $user->id;
+            $userSecondaryTable->nome = $this->nome;
             $userSecondaryTable->save();
 
         } catch (\Exception $e) {
             BaseVarDumper::dump($e);
+            exit();
         }
 
 

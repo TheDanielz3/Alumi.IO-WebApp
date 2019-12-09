@@ -25,6 +25,7 @@ class m191122_122618_table_recado extends Migration
             'assinado' => $this->double()->notNull(),
             'id_turma' => $this->integer(),
             'id_aluno' => $this->integer(),
+            'id_professor' => $this->integer()->notNull(),
         ], $tableOptions);
     }
 
