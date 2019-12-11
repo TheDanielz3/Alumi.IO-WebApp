@@ -24,7 +24,6 @@ class m191126_171434_table_fk extends Migration
         $this->addForeignKey('fk_aluno_Turma', 'aluno', 'id_turma', 'turma', 'id', 'CASCADE');
         $this->addForeignKey('fk_recado_Turma', 'recado', 'id_turma', 'turma', 'id', 'CASCADE');
         $this->addForeignKey('fk_recado_Aluno', 'recado', 'id_aluno', 'aluno', 'id', 'CASCADE');
-
     }
 
     /**

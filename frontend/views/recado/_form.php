@@ -10,6 +10,7 @@ use yii\widgets\ActiveForm;
 /* @var $model frontend\models\Recado */
 /* @var $form yii\widgets\ActiveForm */
 $id = Yii::$app->user->getId();
+$alunos = Aluno::find()->all();
 ?>
 
 <div class="recado-form">
@@ -28,7 +29,7 @@ $id = Yii::$app->user->getId();
 
     <?= $form->field($model, 'descricao')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'assinado')->textInput() ?>
+    <?= $form->field($model, 'assinado')->textInput(['type' => 'number' , 'max' => '1' , 'min' => '0']) ?>
 
     <?= $form->field($model, 'id_turma')->dropDownList(
             ArrayHelper::map(Turma::find()->all(), 'id', 'letra','ano'),[
@@ -38,6 +39,12 @@ $id = Yii::$app->user->getId();
     <?= $form->field($model, 'id_aluno')->dropDownList(
         ArrayHelper::map(Aluno::find()->all(), 'id', 'nome'),[
         'prompt' =>'Selecione a turma',]); ?>
+
+
+
+<!--    --><?//= $form->field($model, 'id_aluno')->checkboxList(
+//        ArrayHelper::map(Aluno::find()->all(), 'id', 'nome')
+//    ); ?>
 
     <?= $form->field($model, 'id_professor')->hiddenInput(['value'=> Yii::$app->user->identity->getId(), 'readonly' => true])->label(false); ?>
 
