@@ -43,19 +43,8 @@ return [
             'rules' => [
                 [
                     'class' => 'yii\rest\UrlRule',
-                    'controller' => 'v1/default',
-                    'pluralize' => false
-
-                ],
-                [
-                    'class' => 'yii\rest\UrlRule',
-                    'controller' => 'v1/turma',
-                    'pluralize' => false
-                ],
-                [
-                    'class' => 'yii\rest\UrlRule',
-                    'controller' => 'v1/recado',
-                    'pluralize' => false
+                    'controller' => ['v1/turma', 'v1/recado'],
+                    'pluralize' => false,
                 ]
             ],
         ]
