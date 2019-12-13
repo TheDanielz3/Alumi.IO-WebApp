@@ -23,6 +23,7 @@ class m191126_171434_table_fk extends Migration
         $this->addForeignKey('fk_aluno_EncarregadoEducacao', 'aluno', 'id_encarregado_de_educacao', 'encarregadoeducacao', 'id', 'CASCADE');
         $this->addForeignKey('fk_aluno_Turma', 'aluno', 'id_turma', 'turma', 'id', 'CASCADE');
         $this->addForeignKey('fk_recado_Turma', 'recado', 'id_turma', 'turma', 'id', 'CASCADE');
+        $this->addForeignKey('fk_recado_Professor', 'recado', 'id_professor', 'professor', 'id', 'CASCADE');
         $this->addForeignKey('fk_recado_Aluno', 'recado', 'id_aluno', 'aluno', 'id', 'CASCADE');
     }
 
@@ -42,6 +43,7 @@ class m191126_171434_table_fk extends Migration
         $this->dropForeignKey('fk_aluno_EncarregadoEducacao', 'aluno');
         $this->dropForeignKey('fk_aluno_Turma', 'aluno');
         $this->dropForeignKey('fk_recado_Turma', 'turma');
+        $this->dropForeignKey('fk_recado_Professor', 'turma');
         $this->dropForeignKey('fk_recado_Aluno', 'turma');
     }
 

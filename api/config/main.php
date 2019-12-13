@@ -24,7 +24,7 @@ return [
         ],
         'request' => [
             'parsers' => [
-                'application/json' => 'yii\web\JsonParser',
+                'application/json' => \yii\web\JsonParser::class,
             ]
         ],
         'log' => [
@@ -46,6 +46,16 @@ return [
                     'controller' => 'v1/default',
                     'pluralize' => false
 
+                ],
+                [
+                    'class' => 'yii\rest\UrlRule',
+                    'controller' => 'v1/turma',
+                    'pluralize' => false
+                ],
+                [
+                    'class' => 'yii\rest\UrlRule',
+                    'controller' => 'v1/recado',
+                    'pluralize' => false
                 ]
             ],
         ]
