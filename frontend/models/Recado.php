@@ -34,7 +34,7 @@ class Recado extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['data', 'descricao', 'assinado', 'id_professor'], 'required'],
+            [['data', 'descricao', 'id_professor'], 'required'],
             [['data'], 'safe'],
             [['assinado'], 'number'],
             [['id_turma', 'id_aluno', 'id_professor'], 'integer'],

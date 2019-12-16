@@ -12,6 +12,8 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <p>Alumio is a project created by:</p>
     <p>Daniel Correia Batista: 2171836</p>
+    <p>Rodrigo Manuel Alves Rodrigues: 2180620</p>
+    <p>Samuel Pires Brito: 2180657</p>
     <?php
     echo "Algum humor que nos acompanhou no nosso projeto";
     echo '<br>';

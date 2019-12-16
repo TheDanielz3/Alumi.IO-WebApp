@@ -24,6 +24,7 @@ class m191122_123450_table_teste extends Migration
             'data' => $this->date()->notNull(),
             'hora' => $this->time()->notNull(),
             'id_disciplina_turma' => $this->integer()->notNull(),
+            'id_professor' => $this->integer()->notNull(),
         ], $tableOptions);
     }
 

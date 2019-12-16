@@ -37,7 +37,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 </div>
 
             <?php ActiveForm::end(); ?>
-            New email? <?= Html::a('EmailTest', ['site/email']) ?>
+
         </div>
     </div>
 </div>

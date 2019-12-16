@@ -29,8 +29,6 @@ $alunos = Aluno::find()->all();
 
     <?= $form->field($model, 'descricao')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'assinado')->textInput(['type' => 'number' , 'max' => '1' , 'min' => '0']) ?>
-
     <?= $form->field($model, 'id_turma')->dropDownList(
             ArrayHelper::map(Turma::find()->all(), 'id', 'letra','ano'),[
                 'prompt' =>'Selecione a turma',]);
@@ -39,12 +37,6 @@ $alunos = Aluno::find()->all();
     <?= $form->field($model, 'id_aluno')->dropDownList(
         ArrayHelper::map(Aluno::find()->all(), 'id', 'nome'),[
         'prompt' =>'Selecione a turma',]); ?>
-
-
-
-<!--    --><?//= $form->field($model, 'id_aluno')->checkboxList(
-//        ArrayHelper::map(Aluno::find()->all(), 'id', 'nome')
-//    ); ?>
 
     <?= $form->field($model, 'id_professor')->hiddenInput(['value'=> Yii::$app->user->identity->getId(), 'readonly' => true])->label(false); ?>
 
