@@ -96,4 +96,5 @@ class Recado extends \yii\db\ActiveRecord
     {
         return new \api\models\query\RecadoQuery(get_called_class());
     }
+
 }

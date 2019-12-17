@@ -2,6 +2,7 @@
 
 namespace api\modules\v1;
 
+use Yii;
 use yii\base\Module;
 
 /**
@@ -22,5 +23,6 @@ class api extends Module
         parent::init();
 
         // custom initialization code goes here
+        Yii::$app->user->enableSession = false;
     }
 }
