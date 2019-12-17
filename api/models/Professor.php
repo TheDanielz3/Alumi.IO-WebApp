@@ -82,4 +82,5 @@ class Professor extends \yii\db\ActiveRecord
     {
         return new \api\models\query\ProfessorQuery(get_called_class());
     }
+
 }

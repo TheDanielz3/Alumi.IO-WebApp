@@ -2,8 +2,10 @@
 
 namespace api\modules\v1;
 
+use common\models\User;
 use Yii;
 use yii\base\Module;
+use yii\filters\auth\HttpBasicAuth;
 
 /**
  * api module definition class
@@ -25,4 +27,24 @@ class api extends Module
         // custom initialization code goes here
         Yii::$app->user->enableSession = false;
     }
+
+    public function behaviors()
+    {
+        $behaviors = parent::behaviors();
+        $behaviors['authenticator'] = [
+            'class' => HttpBasicAuth::class,
+            'auth' => [$this, 'auth']
+        ];
+        return $behaviors;
+    }
+
+    public function auth($username, $password)
+    {
+        $user = User::findByUsername($username);
+        if ($user && $user->validatePassword($password)) {
+            return $user;
+        }
+        return null;
+    }
+
 }
