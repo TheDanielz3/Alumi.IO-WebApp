@@ -45,6 +45,10 @@ return [
                     'class' => 'yii\rest\UrlRule',
                     'controller' => ['v1/turma', 'v1/recado','v1/tpc','v1/teste','v1/aluno','v1/encarregadoeducacao','v1/disciplina','v1/disciplinaturma'],
                     'pluralize' => false,
+                    'extraPatterns' => [
+                        'GET assinados' => 'assinados',
+                        'GET porassinar' => 'porassinar',
+                    ],
                 ]
             ],
         ]
