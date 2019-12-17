@@ -25,6 +25,8 @@ class m191126_171434_table_fk extends Migration
         $this->addForeignKey('fk_recado_turma', '{{%recado}}', 'id_turma', '{{%turma}}', 'id', 'CASCADE');
         $this->addForeignKey('fk_recado_professor', '{{%recado}}', 'id_professor', '{{%professor}}', 'id', 'CASCADE');
         $this->addForeignKey('fk_recado_aluno', '{{%recado}}', 'id_aluno', '{{%aluno}}', 'id', 'CASCADE');
+        $this->addForeignKey('fk_teste_professor', '{{%teste}}', 'id_professor', '{{%professor}}', 'id', 'CASCADE');
+        $this->addForeignKey('fk_tpc_professor', '{{%tpc}}', 'id_professor', '{{%professor}}', 'id', 'CASCADE');
     }
 
     /**
@@ -45,6 +47,8 @@ class m191126_171434_table_fk extends Migration
         $this->dropForeignKey('fk_recado_turma', '{{%recado}}');
         $this->dropForeignKey('fk_recado_professor', '{{%recado}}');
         $this->dropForeignKey('fk_recado_aluno', '{{%recado}}');
+        $this->dropForeignKey('fk_teste_professor', '{{%teste}}');
+        $this->dropForeignKey('fk_tpc_professor', '{{%tpc}}');
     }
 
     /*
