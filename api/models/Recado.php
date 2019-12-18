@@ -5,6 +5,7 @@ namespace api\models;
 use api\models\Aluno;
 use api\models\Professor;
 use Yii;
+use yii\behaviors\BlameableBehavior;
 
 /**
  * This is the model class for table "{{%recado}}".
@@ -37,7 +38,7 @@ class Recado extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['data', 'descricao', 'assinado', 'id_professor'], 'required'],
+            [['data', 'descricao'], 'required'],
             [['data'], 'safe'],
             [['assinado'], 'number'],
             [['id_turma', 'id_aluno', 'id_professor'], 'integer'],
@@ -45,6 +46,17 @@ class Recado extends \yii\db\ActiveRecord
             [['id_aluno'], 'exist', 'skipOnError' => true, 'targetClass' => Aluno::className(), 'targetAttribute' => ['id_aluno' => 'id']],
             [['id_professor'], 'exist', 'skipOnError' => true, 'targetClass' => Professor::className(), 'targetAttribute' => ['id_professor' => 'id']],
             [['id_turma'], 'exist', 'skipOnError' => true, 'targetClass' => Turma::className(), 'targetAttribute' => ['id_turma' => 'id']],
+        ];
+    }
+
+    public function behaviors()
+    {
+        return [
+            [
+                'class' => BlameableBehavior::class,
+                'createdByAttribute' => 'id_professor',
+                'updatedByAttribute' => false,
+            ],
         ];
     }
 
