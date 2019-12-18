@@ -11,4 +11,9 @@ class Turma extends \api\models\Turma
         return ['id','ano','letra'];
     }
 
+    public function extraFields()
+    {
+        return ['recados','disciplinaturmas','alunos'];
+    }
+
 }

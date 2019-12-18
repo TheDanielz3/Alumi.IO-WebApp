@@ -12,8 +12,10 @@ use Yii;
  * @property string $data
  * @property string $hora
  * @property int $id_disciplina_turma
+ * @property int $id_professor
  *
  * @property Disciplinaturma $disciplinaTurma
+ * @property Professor $professor
  */
 class Teste extends \yii\db\ActiveRecord
 {
@@ -31,11 +33,12 @@ class Teste extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['descricao', 'data', 'hora', 'id_disciplina_turma'], 'required'],
+            [['descricao', 'data', 'hora', 'id_disciplina_turma', 'id_professor'], 'required'],
             [['data', 'hora'], 'safe'],
-            [['id_disciplina_turma'], 'integer'],
+            [['id_disciplina_turma', 'id_professor'], 'integer'],
             [['descricao'], 'string', 'max' => 45],
             [['id_disciplina_turma'], 'exist', 'skipOnError' => true, 'targetClass' => Disciplinaturma::className(), 'targetAttribute' => ['id_disciplina_turma' => 'id']],
+            [['id_professor'], 'exist', 'skipOnError' => true, 'targetClass' => Professor::className(), 'targetAttribute' => ['id_professor' => 'id']],
         ];
     }
 
@@ -50,6 +53,7 @@ class Teste extends \yii\db\ActiveRecord
             'data' => 'Data',
             'hora' => 'Hora',
             'id_disciplina_turma' => 'Id Disciplina Turma',
+            'id_professor' => 'Id Professor',
         ];
     }
 
@@ -59,6 +63,14 @@ class Teste extends \yii\db\ActiveRecord
     public function getDisciplinaTurma()
     {
         return $this->hasOne(Disciplinaturma::className(), ['id' => 'id_disciplina_turma']);
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getProfessor()
+    {
+        return $this->hasOne(Professor::className(), ['id' => 'id_professor']);
     }
 
     /**

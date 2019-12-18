@@ -16082,3 +16082,1196 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1576587473.204
     'REQUEST_TIME' => 1576587473
 ]
+2019-12-18 08:48:18 [::1][-][-][error][yii\web\HttpException:401] yii\web\UnauthorizedHttpException: Your request was made with invalid credentials. in C:\wamp64\www\Alumio\vendor\yiisoft\yii2\filters\auth\AuthMethod.php:93
+Stack trace:
+#0 C:\wamp64\www\Alumio\vendor\yiisoft\yii2\filters\auth\AuthMethod.php(76): yii\filters\auth\AuthMethod->handleFailure(Object(yii\web\Response))
+#1 C:\wamp64\www\Alumio\vendor\yiisoft\yii2\base\ActionFilter.php(77): yii\filters\auth\AuthMethod->beforeAction(Object(yii\rest\IndexAction))
+#2 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#3 C:\wamp64\www\Alumio\vendor\yiisoft\yii2\base\Component.php(627): call_user_func(Array, Object(yii\base\ActionEvent))
+#4 C:\wamp64\www\Alumio\vendor\yiisoft\yii2\base\Module.php(700): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#5 C:\wamp64\www\Alumio\vendor\yiisoft\yii2\base\Controller.php(145): yii\base\Module->beforeAction(Object(yii\rest\IndexAction))
+#6 C:\wamp64\www\Alumio\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('index', Array)
+#7 C:\wamp64\www\Alumio\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('v1/recado/index', Array)
+#8 C:\wamp64\www\Alumio\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 C:\wamp64\www\Alumio\api\web\index.php(17): yii\base\Application->run()
+#10 {main}
+2019-12-18 08:48:15 [::1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_identity-frontend' => '8c45492de147625b3637f712ffb46f08257e4c685985dd501774672ef1a8a374a:2:{i:0;s:18:\"_identity-frontend\";i:1;s:46:\"[1,\"3Fw-MEtkIQDy1cO-2fm7m0Y56lppvTOn\",2592000]\";}'
+    'advanced-frontend' => 'b18erl39dple17941u4hvkcn80'
+    '_csrf-frontend' => '7569c988e8688081ac00dfd5da415a270b598b55ec024a9d93020d4fb09b7746a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"tmtkDTRtnGznt-Zl2C3cpy6J2CeLAPpm\";}'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost:81'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.79 Safari/537.36'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => '_identity-frontend=8c45492de147625b3637f712ffb46f08257e4c685985dd501774672ef1a8a374a%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%223Fw-MEtkIQDy1cO-2fm7m0Y56lppvTOn%22%2C2592000%5D%22%3B%7D; advanced-frontend=b18erl39dple17941u4hvkcn80; _csrf-frontend=7569c988e8688081ac00dfd5da415a270b598b55ec024a9d93020d4fb09b7746a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22tmtkDTRtnGznt-Zl2C3cpy6J2CeLAPpm%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\DockerDesktop\\version-bin;C:\\Program Files\\Docker\\Docker\\Resources\\bin;C:\\Program Files\\Python37\\Scripts\\;C:\\Program Files\\Python37\\;C:\\oracle\\product\\11.2.0\\client_1\\bin;C:\\Program Files\\Microsoft MPI\\Bin\\;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files\\dotnet\\;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\140\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\140\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\140\\DTS\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\140\\DTS\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\130\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\150\\DTS\\Binn\\;C:\\wamp64\\bin\\php\\php7.3.5;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\MEGA-X;C:\\Program Files\\nodejs\\;C:\\ProgramData\\npmglobal\\;C:\\Program Files\\PuTTY\\;C:\\Program Files\\Portugal Identity Card;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files\\Microsoft VS Code\\bin;C:\\Program Files\\MATLAB\\R2019a\\bin;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files\\Common Files\\Autodesk Shared\\;C:\\Program Files\\Git\\cmd;C:\\Users\\Administrator\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Administrator\\.dotnet\\tools'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) PHP/7.2.18 Server at localhost Port 81</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) PHP/7.2.18'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '81'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/Alumio/api/web/index.php'
+    'REMOTE_PORT' => '2045'
+    'REDIRECT_URL' => '/Alumio/api/web/v1/recado'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/Alumio/api/web/v1/recado'
+    'SCRIPT_NAME' => '/Alumio/api/web/index.php'
+    'PHP_SELF' => '/Alumio/api/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1576658895.71
+    'REQUEST_TIME' => 1576658895
+]
+2019-12-18 08:48:22 [::1][-][-][error][yii\web\HttpException:401] yii\web\UnauthorizedHttpException: Your request was made with invalid credentials. in C:\wamp64\www\Alumio\vendor\yiisoft\yii2\filters\auth\AuthMethod.php:93
+Stack trace:
+#0 C:\wamp64\www\Alumio\vendor\yiisoft\yii2\filters\auth\AuthMethod.php(76): yii\filters\auth\AuthMethod->handleFailure(Object(yii\web\Response))
+#1 C:\wamp64\www\Alumio\vendor\yiisoft\yii2\base\ActionFilter.php(77): yii\filters\auth\AuthMethod->beforeAction(Object(yii\rest\IndexAction))
+#2 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#3 C:\wamp64\www\Alumio\vendor\yiisoft\yii2\base\Component.php(627): call_user_func(Array, Object(yii\base\ActionEvent))
+#4 C:\wamp64\www\Alumio\vendor\yiisoft\yii2\base\Module.php(700): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#5 C:\wamp64\www\Alumio\vendor\yiisoft\yii2\base\Controller.php(145): yii\base\Module->beforeAction(Object(yii\rest\IndexAction))
+#6 C:\wamp64\www\Alumio\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('index', Array)
+#7 C:\wamp64\www\Alumio\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('v1/recado/index', Array)
+#8 C:\wamp64\www\Alumio\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 C:\wamp64\www\Alumio\api\web\index.php(17): yii\base\Application->run()
+#10 {main}
+2019-12-18 08:48:22 [::1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_identity-frontend' => '8c45492de147625b3637f712ffb46f08257e4c685985dd501774672ef1a8a374a:2:{i:0;s:18:\"_identity-frontend\";i:1;s:46:\"[1,\"3Fw-MEtkIQDy1cO-2fm7m0Y56lppvTOn\",2592000]\";}'
+    'advanced-frontend' => 'b18erl39dple17941u4hvkcn80'
+    '_csrf-frontend' => '7569c988e8688081ac00dfd5da415a270b598b55ec024a9d93020d4fb09b7746a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"tmtkDTRtnGznt-Zl2C3cpy6J2CeLAPpm\";}'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost:81'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.79 Safari/537.36'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => '_identity-frontend=8c45492de147625b3637f712ffb46f08257e4c685985dd501774672ef1a8a374a%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%223Fw-MEtkIQDy1cO-2fm7m0Y56lppvTOn%22%2C2592000%5D%22%3B%7D; advanced-frontend=b18erl39dple17941u4hvkcn80; _csrf-frontend=7569c988e8688081ac00dfd5da415a270b598b55ec024a9d93020d4fb09b7746a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22tmtkDTRtnGznt-Zl2C3cpy6J2CeLAPpm%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\DockerDesktop\\version-bin;C:\\Program Files\\Docker\\Docker\\Resources\\bin;C:\\Program Files\\Python37\\Scripts\\;C:\\Program Files\\Python37\\;C:\\oracle\\product\\11.2.0\\client_1\\bin;C:\\Program Files\\Microsoft MPI\\Bin\\;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files\\dotnet\\;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\140\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\140\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\140\\DTS\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\140\\DTS\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\130\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\150\\DTS\\Binn\\;C:\\wamp64\\bin\\php\\php7.3.5;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\MEGA-X;C:\\Program Files\\nodejs\\;C:\\ProgramData\\npmglobal\\;C:\\Program Files\\PuTTY\\;C:\\Program Files\\Portugal Identity Card;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files\\Microsoft VS Code\\bin;C:\\Program Files\\MATLAB\\R2019a\\bin;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files\\Common Files\\Autodesk Shared\\;C:\\Program Files\\Git\\cmd;C:\\Users\\Administrator\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Administrator\\.dotnet\\tools'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) PHP/7.2.18 Server at localhost Port 81</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) PHP/7.2.18'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '81'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/Alumio/api/web/index.php'
+    'REMOTE_PORT' => '2046'
+    'REDIRECT_URL' => '/Alumio/api/web/v1/recado'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/Alumio/api/web/v1/recado'
+    'SCRIPT_NAME' => '/Alumio/api/web/index.php'
+    'PHP_SELF' => '/Alumio/api/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1576658902.288
+    'REQUEST_TIME' => 1576658902
+]
+2019-12-18 08:51:14 [::1][-][-][error][yii\web\HttpException:401] yii\web\UnauthorizedHttpException: Your request was made with invalid credentials. in C:\wamp64\www\Alumio\vendor\yiisoft\yii2\filters\auth\AuthMethod.php:93
+Stack trace:
+#0 C:\wamp64\www\Alumio\vendor\yiisoft\yii2\filters\auth\AuthMethod.php(76): yii\filters\auth\AuthMethod->handleFailure(Object(yii\web\Response))
+#1 C:\wamp64\www\Alumio\vendor\yiisoft\yii2\base\ActionFilter.php(77): yii\filters\auth\AuthMethod->beforeAction(Object(yii\rest\IndexAction))
+#2 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#3 C:\wamp64\www\Alumio\vendor\yiisoft\yii2\base\Component.php(627): call_user_func(Array, Object(yii\base\ActionEvent))
+#4 C:\wamp64\www\Alumio\vendor\yiisoft\yii2\base\Module.php(700): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#5 C:\wamp64\www\Alumio\vendor\yiisoft\yii2\base\Controller.php(145): yii\base\Module->beforeAction(Object(yii\rest\IndexAction))
+#6 C:\wamp64\www\Alumio\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('index', Array)
+#7 C:\wamp64\www\Alumio\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('v1/recado/index', Array)
+#8 C:\wamp64\www\Alumio\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 C:\wamp64\www\Alumio\api\web\index.php(17): yii\base\Application->run()
+#10 {main}
+2019-12-18 08:51:14 [::1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_identity-frontend' => '8c45492de147625b3637f712ffb46f08257e4c685985dd501774672ef1a8a374a:2:{i:0;s:18:\"_identity-frontend\";i:1;s:46:\"[1,\"3Fw-MEtkIQDy1cO-2fm7m0Y56lppvTOn\",2592000]\";}'
+    'advanced-frontend' => 'b18erl39dple17941u4hvkcn80'
+    '_csrf-frontend' => '7569c988e8688081ac00dfd5da415a270b598b55ec024a9d93020d4fb09b7746a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"tmtkDTRtnGznt-Zl2C3cpy6J2CeLAPpm\";}'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost:81'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.79 Safari/537.36'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => '_identity-frontend=8c45492de147625b3637f712ffb46f08257e4c685985dd501774672ef1a8a374a%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%223Fw-MEtkIQDy1cO-2fm7m0Y56lppvTOn%22%2C2592000%5D%22%3B%7D; advanced-frontend=b18erl39dple17941u4hvkcn80; _csrf-frontend=7569c988e8688081ac00dfd5da415a270b598b55ec024a9d93020d4fb09b7746a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22tmtkDTRtnGznt-Zl2C3cpy6J2CeLAPpm%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\DockerDesktop\\version-bin;C:\\Program Files\\Docker\\Docker\\Resources\\bin;C:\\Program Files\\Python37\\Scripts\\;C:\\Program Files\\Python37\\;C:\\oracle\\product\\11.2.0\\client_1\\bin;C:\\Program Files\\Microsoft MPI\\Bin\\;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files\\dotnet\\;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\140\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\140\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\140\\DTS\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\140\\DTS\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\130\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\150\\DTS\\Binn\\;C:\\wamp64\\bin\\php\\php7.3.5;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\MEGA-X;C:\\Program Files\\nodejs\\;C:\\ProgramData\\npmglobal\\;C:\\Program Files\\PuTTY\\;C:\\Program Files\\Portugal Identity Card;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files\\Microsoft VS Code\\bin;C:\\Program Files\\MATLAB\\R2019a\\bin;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files\\Common Files\\Autodesk Shared\\;C:\\Program Files\\Git\\cmd;C:\\Users\\Administrator\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Administrator\\.dotnet\\tools'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) PHP/7.2.18 Server at localhost Port 81</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) PHP/7.2.18'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '81'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/Alumio/api/web/index.php'
+    'REMOTE_PORT' => '2131'
+    'REDIRECT_URL' => '/Alumio/api/web/v1/recado'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/Alumio/api/web/v1/recado'
+    'SCRIPT_NAME' => '/Alumio/api/web/index.php'
+    'PHP_SELF' => '/Alumio/api/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1576659074.173
+    'REQUEST_TIME' => 1576659074
+]
+2019-12-18 08:51:17 [::1][-][-][error][yii\web\HttpException:401] yii\web\UnauthorizedHttpException: Your request was made with invalid credentials. in C:\wamp64\www\Alumio\vendor\yiisoft\yii2\filters\auth\AuthMethod.php:93
+Stack trace:
+#0 C:\wamp64\www\Alumio\vendor\yiisoft\yii2\filters\auth\HttpBasicAuth.php(102): yii\filters\auth\AuthMethod->handleFailure(Object(yii\web\Response))
+#1 C:\wamp64\www\Alumio\vendor\yiisoft\yii2\filters\auth\AuthMethod.php(61): yii\filters\auth\HttpBasicAuth->authenticate(Object(yii\web\User), Object(yii\web\Request), Object(yii\web\Response))
+#2 C:\wamp64\www\Alumio\vendor\yiisoft\yii2\base\ActionFilter.php(77): yii\filters\auth\AuthMethod->beforeAction(Object(yii\rest\IndexAction))
+#3 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#4 C:\wamp64\www\Alumio\vendor\yiisoft\yii2\base\Component.php(627): call_user_func(Array, Object(yii\base\ActionEvent))
+#5 C:\wamp64\www\Alumio\vendor\yiisoft\yii2\base\Module.php(700): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#6 C:\wamp64\www\Alumio\vendor\yiisoft\yii2\base\Controller.php(145): yii\base\Module->beforeAction(Object(yii\rest\IndexAction))
+#7 C:\wamp64\www\Alumio\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('index', Array)
+#8 C:\wamp64\www\Alumio\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('v1/recado/index', Array)
+#9 C:\wamp64\www\Alumio\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 C:\wamp64\www\Alumio\api\web\index.php(17): yii\base\Application->run()
+#11 {main}
+2019-12-18 08:51:17 [::1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_identity-frontend' => '8c45492de147625b3637f712ffb46f08257e4c685985dd501774672ef1a8a374a:2:{i:0;s:18:\"_identity-frontend\";i:1;s:46:\"[1,\"3Fw-MEtkIQDy1cO-2fm7m0Y56lppvTOn\",2592000]\";}'
+    'advanced-frontend' => 'b18erl39dple17941u4hvkcn80'
+    '_csrf-frontend' => '7569c988e8688081ac00dfd5da415a270b598b55ec024a9d93020d4fb09b7746a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"tmtkDTRtnGznt-Zl2C3cpy6J2CeLAPpm\";}'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost:81'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.79 Safari/537.36'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => '_identity-frontend=8c45492de147625b3637f712ffb46f08257e4c685985dd501774672ef1a8a374a%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%223Fw-MEtkIQDy1cO-2fm7m0Y56lppvTOn%22%2C2592000%5D%22%3B%7D; advanced-frontend=b18erl39dple17941u4hvkcn80; _csrf-frontend=7569c988e8688081ac00dfd5da415a270b598b55ec024a9d93020d4fb09b7746a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22tmtkDTRtnGznt-Zl2C3cpy6J2CeLAPpm%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\DockerDesktop\\version-bin;C:\\Program Files\\Docker\\Docker\\Resources\\bin;C:\\Program Files\\Python37\\Scripts\\;C:\\Program Files\\Python37\\;C:\\oracle\\product\\11.2.0\\client_1\\bin;C:\\Program Files\\Microsoft MPI\\Bin\\;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files\\dotnet\\;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\140\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\140\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\140\\DTS\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\140\\DTS\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\130\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\150\\DTS\\Binn\\;C:\\wamp64\\bin\\php\\php7.3.5;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\MEGA-X;C:\\Program Files\\nodejs\\;C:\\ProgramData\\npmglobal\\;C:\\Program Files\\PuTTY\\;C:\\Program Files\\Portugal Identity Card;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files\\Microsoft VS Code\\bin;C:\\Program Files\\MATLAB\\R2019a\\bin;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files\\Common Files\\Autodesk Shared\\;C:\\Program Files\\Git\\cmd;C:\\Users\\Administrator\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Administrator\\.dotnet\\tools'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) PHP/7.2.18 Server at localhost Port 81</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) PHP/7.2.18'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '81'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/Alumio/api/web/index.php'
+    'REMOTE_PORT' => '2141'
+    'REDIRECT_URL' => '/Alumio/api/web/v1/recado'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/Alumio/api/web/v1/recado'
+    'SCRIPT_NAME' => '/Alumio/api/web/index.php'
+    'PHP_SELF' => '/Alumio/api/web/index.php'
+    'PHP_AUTH_USER' => '***'
+    'PHP_AUTH_PW' => '***'
+    'REQUEST_TIME_FLOAT' => 1576659077.261
+    'REQUEST_TIME' => 1576659077
+]
+2019-12-18 08:51:19 [::1][-][-][error][yii\web\HttpException:401] yii\web\UnauthorizedHttpException: Your request was made with invalid credentials. in C:\wamp64\www\Alumio\vendor\yiisoft\yii2\filters\auth\AuthMethod.php:93
+Stack trace:
+#0 C:\wamp64\www\Alumio\vendor\yiisoft\yii2\filters\auth\AuthMethod.php(76): yii\filters\auth\AuthMethod->handleFailure(Object(yii\web\Response))
+#1 C:\wamp64\www\Alumio\vendor\yiisoft\yii2\base\ActionFilter.php(77): yii\filters\auth\AuthMethod->beforeAction(Object(yii\rest\IndexAction))
+#2 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#3 C:\wamp64\www\Alumio\vendor\yiisoft\yii2\base\Component.php(627): call_user_func(Array, Object(yii\base\ActionEvent))
+#4 C:\wamp64\www\Alumio\vendor\yiisoft\yii2\base\Module.php(700): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#5 C:\wamp64\www\Alumio\vendor\yiisoft\yii2\base\Controller.php(145): yii\base\Module->beforeAction(Object(yii\rest\IndexAction))
+#6 C:\wamp64\www\Alumio\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('index', Array)
+#7 C:\wamp64\www\Alumio\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('v1/recado/index', Array)
+#8 C:\wamp64\www\Alumio\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 C:\wamp64\www\Alumio\api\web\index.php(17): yii\base\Application->run()
+#10 {main}
+2019-12-18 08:51:19 [::1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_identity-frontend' => '8c45492de147625b3637f712ffb46f08257e4c685985dd501774672ef1a8a374a:2:{i:0;s:18:\"_identity-frontend\";i:1;s:46:\"[1,\"3Fw-MEtkIQDy1cO-2fm7m0Y56lppvTOn\",2592000]\";}'
+    'advanced-frontend' => 'b18erl39dple17941u4hvkcn80'
+    '_csrf-frontend' => '7569c988e8688081ac00dfd5da415a270b598b55ec024a9d93020d4fb09b7746a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"tmtkDTRtnGznt-Zl2C3cpy6J2CeLAPpm\";}'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost:81'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.79 Safari/537.36'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => '_identity-frontend=8c45492de147625b3637f712ffb46f08257e4c685985dd501774672ef1a8a374a%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%223Fw-MEtkIQDy1cO-2fm7m0Y56lppvTOn%22%2C2592000%5D%22%3B%7D; advanced-frontend=b18erl39dple17941u4hvkcn80; _csrf-frontend=7569c988e8688081ac00dfd5da415a270b598b55ec024a9d93020d4fb09b7746a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22tmtkDTRtnGznt-Zl2C3cpy6J2CeLAPpm%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\DockerDesktop\\version-bin;C:\\Program Files\\Docker\\Docker\\Resources\\bin;C:\\Program Files\\Python37\\Scripts\\;C:\\Program Files\\Python37\\;C:\\oracle\\product\\11.2.0\\client_1\\bin;C:\\Program Files\\Microsoft MPI\\Bin\\;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files\\dotnet\\;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\140\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\140\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\140\\DTS\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\140\\DTS\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\130\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\150\\DTS\\Binn\\;C:\\wamp64\\bin\\php\\php7.3.5;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\MEGA-X;C:\\Program Files\\nodejs\\;C:\\ProgramData\\npmglobal\\;C:\\Program Files\\PuTTY\\;C:\\Program Files\\Portugal Identity Card;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files\\Microsoft VS Code\\bin;C:\\Program Files\\MATLAB\\R2019a\\bin;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files\\Common Files\\Autodesk Shared\\;C:\\Program Files\\Git\\cmd;C:\\Users\\Administrator\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Administrator\\.dotnet\\tools'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) PHP/7.2.18 Server at localhost Port 81</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) PHP/7.2.18'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '81'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/Alumio/api/web/index.php'
+    'REMOTE_PORT' => '2143'
+    'REDIRECT_URL' => '/Alumio/api/web/v1/recado'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/Alumio/api/web/v1/recado'
+    'SCRIPT_NAME' => '/Alumio/api/web/index.php'
+    'PHP_SELF' => '/Alumio/api/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1576659079.262
+    'REQUEST_TIME' => 1576659079
+]
+2019-12-18 08:51:22 [::1][-][-][error][yii\web\HttpException:401] yii\web\UnauthorizedHttpException: Your request was made with invalid credentials. in C:\wamp64\www\Alumio\vendor\yiisoft\yii2\filters\auth\AuthMethod.php:93
+Stack trace:
+#0 C:\wamp64\www\Alumio\vendor\yiisoft\yii2\filters\auth\HttpBasicAuth.php(102): yii\filters\auth\AuthMethod->handleFailure(Object(yii\web\Response))
+#1 C:\wamp64\www\Alumio\vendor\yiisoft\yii2\filters\auth\AuthMethod.php(61): yii\filters\auth\HttpBasicAuth->authenticate(Object(yii\web\User), Object(yii\web\Request), Object(yii\web\Response))
+#2 C:\wamp64\www\Alumio\vendor\yiisoft\yii2\base\ActionFilter.php(77): yii\filters\auth\AuthMethod->beforeAction(Object(yii\rest\IndexAction))
+#3 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#4 C:\wamp64\www\Alumio\vendor\yiisoft\yii2\base\Component.php(627): call_user_func(Array, Object(yii\base\ActionEvent))
+#5 C:\wamp64\www\Alumio\vendor\yiisoft\yii2\base\Module.php(700): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#6 C:\wamp64\www\Alumio\vendor\yiisoft\yii2\base\Controller.php(145): yii\base\Module->beforeAction(Object(yii\rest\IndexAction))
+#7 C:\wamp64\www\Alumio\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('index', Array)
+#8 C:\wamp64\www\Alumio\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('v1/recado/index', Array)
+#9 C:\wamp64\www\Alumio\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 C:\wamp64\www\Alumio\api\web\index.php(17): yii\base\Application->run()
+#11 {main}
+2019-12-18 08:51:22 [::1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_identity-frontend' => '8c45492de147625b3637f712ffb46f08257e4c685985dd501774672ef1a8a374a:2:{i:0;s:18:\"_identity-frontend\";i:1;s:46:\"[1,\"3Fw-MEtkIQDy1cO-2fm7m0Y56lppvTOn\",2592000]\";}'
+    'advanced-frontend' => 'b18erl39dple17941u4hvkcn80'
+    '_csrf-frontend' => '7569c988e8688081ac00dfd5da415a270b598b55ec024a9d93020d4fb09b7746a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"tmtkDTRtnGznt-Zl2C3cpy6J2CeLAPpm\";}'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost:81'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.79 Safari/537.36'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => '_identity-frontend=8c45492de147625b3637f712ffb46f08257e4c685985dd501774672ef1a8a374a%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%223Fw-MEtkIQDy1cO-2fm7m0Y56lppvTOn%22%2C2592000%5D%22%3B%7D; advanced-frontend=b18erl39dple17941u4hvkcn80; _csrf-frontend=7569c988e8688081ac00dfd5da415a270b598b55ec024a9d93020d4fb09b7746a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22tmtkDTRtnGznt-Zl2C3cpy6J2CeLAPpm%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\DockerDesktop\\version-bin;C:\\Program Files\\Docker\\Docker\\Resources\\bin;C:\\Program Files\\Python37\\Scripts\\;C:\\Program Files\\Python37\\;C:\\oracle\\product\\11.2.0\\client_1\\bin;C:\\Program Files\\Microsoft MPI\\Bin\\;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files\\dotnet\\;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\140\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\140\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\140\\DTS\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\140\\DTS\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\130\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\150\\DTS\\Binn\\;C:\\wamp64\\bin\\php\\php7.3.5;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\MEGA-X;C:\\Program Files\\nodejs\\;C:\\ProgramData\\npmglobal\\;C:\\Program Files\\PuTTY\\;C:\\Program Files\\Portugal Identity Card;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files\\Microsoft VS Code\\bin;C:\\Program Files\\MATLAB\\R2019a\\bin;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files\\Common Files\\Autodesk Shared\\;C:\\Program Files\\Git\\cmd;C:\\Users\\Administrator\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Administrator\\.dotnet\\tools'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) PHP/7.2.18 Server at localhost Port 81</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) PHP/7.2.18'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '81'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/Alumio/api/web/index.php'
+    'REMOTE_PORT' => '2144'
+    'REDIRECT_URL' => '/Alumio/api/web/v1/recado'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/Alumio/api/web/v1/recado'
+    'SCRIPT_NAME' => '/Alumio/api/web/index.php'
+    'PHP_SELF' => '/Alumio/api/web/index.php'
+    'PHP_AUTH_USER' => '***'
+    'PHP_AUTH_PW' => '***'
+    'REQUEST_TIME_FLOAT' => 1576659082.846
+    'REQUEST_TIME' => 1576659082
+]
+2019-12-18 08:51:34 [::1][-][-][error][yii\web\HttpException:401] yii\web\UnauthorizedHttpException: Your request was made with invalid credentials. in C:\wamp64\www\Alumio\vendor\yiisoft\yii2\filters\auth\AuthMethod.php:93
+Stack trace:
+#0 C:\wamp64\www\Alumio\vendor\yiisoft\yii2\filters\auth\AuthMethod.php(76): yii\filters\auth\AuthMethod->handleFailure(Object(yii\web\Response))
+#1 C:\wamp64\www\Alumio\vendor\yiisoft\yii2\base\ActionFilter.php(77): yii\filters\auth\AuthMethod->beforeAction(Object(yii\rest\IndexAction))
+#2 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#3 C:\wamp64\www\Alumio\vendor\yiisoft\yii2\base\Component.php(627): call_user_func(Array, Object(yii\base\ActionEvent))
+#4 C:\wamp64\www\Alumio\vendor\yiisoft\yii2\base\Module.php(700): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#5 C:\wamp64\www\Alumio\vendor\yiisoft\yii2\base\Controller.php(145): yii\base\Module->beforeAction(Object(yii\rest\IndexAction))
+#6 C:\wamp64\www\Alumio\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('index', Array)
+#7 C:\wamp64\www\Alumio\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('v1/recado/index', Array)
+#8 C:\wamp64\www\Alumio\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 C:\wamp64\www\Alumio\api\web\index.php(17): yii\base\Application->run()
+#10 {main}
+2019-12-18 08:51:34 [::1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_identity-frontend' => '8c45492de147625b3637f712ffb46f08257e4c685985dd501774672ef1a8a374a:2:{i:0;s:18:\"_identity-frontend\";i:1;s:46:\"[1,\"3Fw-MEtkIQDy1cO-2fm7m0Y56lppvTOn\",2592000]\";}'
+    'advanced-frontend' => 'b18erl39dple17941u4hvkcn80'
+    '_csrf-frontend' => '7569c988e8688081ac00dfd5da415a270b598b55ec024a9d93020d4fb09b7746a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"tmtkDTRtnGznt-Zl2C3cpy6J2CeLAPpm\";}'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost:81'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.79 Safari/537.36'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => '_identity-frontend=8c45492de147625b3637f712ffb46f08257e4c685985dd501774672ef1a8a374a%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%223Fw-MEtkIQDy1cO-2fm7m0Y56lppvTOn%22%2C2592000%5D%22%3B%7D; advanced-frontend=b18erl39dple17941u4hvkcn80; _csrf-frontend=7569c988e8688081ac00dfd5da415a270b598b55ec024a9d93020d4fb09b7746a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22tmtkDTRtnGznt-Zl2C3cpy6J2CeLAPpm%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\DockerDesktop\\version-bin;C:\\Program Files\\Docker\\Docker\\Resources\\bin;C:\\Program Files\\Python37\\Scripts\\;C:\\Program Files\\Python37\\;C:\\oracle\\product\\11.2.0\\client_1\\bin;C:\\Program Files\\Microsoft MPI\\Bin\\;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files\\dotnet\\;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\140\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\140\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\140\\DTS\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\140\\DTS\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\130\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\150\\DTS\\Binn\\;C:\\wamp64\\bin\\php\\php7.3.5;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\MEGA-X;C:\\Program Files\\nodejs\\;C:\\ProgramData\\npmglobal\\;C:\\Program Files\\PuTTY\\;C:\\Program Files\\Portugal Identity Card;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files\\Microsoft VS Code\\bin;C:\\Program Files\\MATLAB\\R2019a\\bin;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files\\Common Files\\Autodesk Shared\\;C:\\Program Files\\Git\\cmd;C:\\Users\\Administrator\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Administrator\\.dotnet\\tools'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) PHP/7.2.18 Server at localhost Port 81</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) PHP/7.2.18'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '81'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/Alumio/api/web/index.php'
+    'REMOTE_PORT' => '2154'
+    'REDIRECT_URL' => '/Alumio/api/web/v1/recado'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/Alumio/api/web/v1/recado'
+    'SCRIPT_NAME' => '/Alumio/api/web/index.php'
+    'PHP_SELF' => '/Alumio/api/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1576659094.927
+    'REQUEST_TIME' => 1576659094
+]
+2019-12-18 09:00:13 [::1][-][-][error][yii\web\HttpException:404] yii\web\NotFoundHttpException: Page not found. in C:\wamp64\www\Alumio\vendor\yiisoft\yii2\web\Request.php:284
+Stack trace:
+#0 C:\wamp64\www\Alumio\vendor\yiisoft\yii2\web\Application.php(82): yii\web\Request->resolve()
+#1 C:\wamp64\www\Alumio\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\wamp64\www\Alumio\api\web\index.php(17): yii\base\Application->run()
+#3 {main}
+2019-12-18 09:00:13 [::1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_identity-frontend' => '8c45492de147625b3637f712ffb46f08257e4c685985dd501774672ef1a8a374a:2:{i:0;s:18:\"_identity-frontend\";i:1;s:46:\"[1,\"3Fw-MEtkIQDy1cO-2fm7m0Y56lppvTOn\",2592000]\";}'
+    'advanced-frontend' => 'b18erl39dple17941u4hvkcn80'
+    '_csrf-frontend' => '7569c988e8688081ac00dfd5da415a270b598b55ec024a9d93020d4fb09b7746a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"tmtkDTRtnGznt-Zl2C3cpy6J2CeLAPpm\";}'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost:81'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.79 Safari/537.36'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => '_identity-frontend=8c45492de147625b3637f712ffb46f08257e4c685985dd501774672ef1a8a374a%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%223Fw-MEtkIQDy1cO-2fm7m0Y56lppvTOn%22%2C2592000%5D%22%3B%7D; advanced-frontend=b18erl39dple17941u4hvkcn80; _csrf-frontend=7569c988e8688081ac00dfd5da415a270b598b55ec024a9d93020d4fb09b7746a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22tmtkDTRtnGznt-Zl2C3cpy6J2CeLAPpm%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\DockerDesktop\\version-bin;C:\\Program Files\\Docker\\Docker\\Resources\\bin;C:\\Program Files\\Python37\\Scripts\\;C:\\Program Files\\Python37\\;C:\\oracle\\product\\11.2.0\\client_1\\bin;C:\\Program Files\\Microsoft MPI\\Bin\\;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files\\dotnet\\;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\140\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\140\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\140\\DTS\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\140\\DTS\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\130\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\150\\DTS\\Binn\\;C:\\wamp64\\bin\\php\\php7.3.5;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\MEGA-X;C:\\Program Files\\nodejs\\;C:\\ProgramData\\npmglobal\\;C:\\Program Files\\PuTTY\\;C:\\Program Files\\Portugal Identity Card;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files\\Microsoft VS Code\\bin;C:\\Program Files\\MATLAB\\R2019a\\bin;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files\\Common Files\\Autodesk Shared\\;C:\\Program Files\\Git\\cmd;C:\\Users\\Administrator\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Administrator\\.dotnet\\tools'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) PHP/7.2.18 Server at localhost Port 81</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) PHP/7.2.18'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '81'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/Alumio/api/web/index.php'
+    'REMOTE_PORT' => '2366'
+    'REDIRECT_URL' => '/Alumio/api/web/v1/recado/assinado'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/Alumio/api/web/v1/recado/assinado'
+    'SCRIPT_NAME' => '/Alumio/api/web/index.php'
+    'PHP_SELF' => '/Alumio/api/web/index.php'
+    'PHP_AUTH_USER' => '***'
+    'PHP_AUTH_PW' => '***'
+    'REQUEST_TIME_FLOAT' => 1576659613.065
+    'REQUEST_TIME' => 1576659613
+]
+2019-12-18 09:03:52 [::1][1][-][error][yii\base\UnknownPropertyException] yii\base\UnknownPropertyException: Getting unknown property: api\resource\Turma::aluno in C:\wamp64\www\Alumio\vendor\yiisoft\yii2\base\Component.php:154
+Stack trace:
+#0 C:\wamp64\www\Alumio\vendor\yiisoft\yii2\db\BaseActiveRecord.php(298): yii\base\Component->__get('aluno')
+#1 C:\wamp64\www\Alumio\vendor\yiisoft\yii2\base\ArrayableTrait.php(126): yii\db\BaseActiveRecord->__get('aluno')
+#2 C:\wamp64\www\Alumio\vendor\yiisoft\yii2\rest\Serializer.php(292): yii\base\Model->toArray(Array, Array)
+#3 C:\wamp64\www\Alumio\vendor\yiisoft\yii2\rest\Serializer.php(188): yii\rest\Serializer->serializeModels(Array)
+#4 C:\wamp64\www\Alumio\vendor\yiisoft\yii2\rest\Serializer.php(152): yii\rest\Serializer->serializeDataProvider(Object(yii\data\ActiveDataProvider))
+#5 C:\wamp64\www\Alumio\vendor\yiisoft\yii2\rest\Controller.php(99): yii\rest\Serializer->serialize(Object(yii\data\ActiveDataProvider))
+#6 C:\wamp64\www\Alumio\vendor\yiisoft\yii2\rest\Controller.php(77): yii\rest\Controller->serializeData(Object(yii\data\ActiveDataProvider))
+#7 C:\wamp64\www\Alumio\vendor\yiisoft\yii2\base\Controller.php(159): yii\rest\Controller->afterAction(Object(yii\rest\IndexAction), Object(yii\data\ActiveDataProvider))
+#8 C:\wamp64\www\Alumio\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('index', Array)
+#9 C:\wamp64\www\Alumio\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('v1/turma/index', Array)
+#10 C:\wamp64\www\Alumio\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 C:\wamp64\www\Alumio\api\web\index.php(17): yii\base\Application->run()
+#12 {main}
+2019-12-18 09:03:52 [::1][1][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_identity-frontend' => '8c45492de147625b3637f712ffb46f08257e4c685985dd501774672ef1a8a374a:2:{i:0;s:18:\"_identity-frontend\";i:1;s:46:\"[1,\"3Fw-MEtkIQDy1cO-2fm7m0Y56lppvTOn\",2592000]\";}'
+    'advanced-frontend' => 'b18erl39dple17941u4hvkcn80'
+    '_csrf-frontend' => '7569c988e8688081ac00dfd5da415a270b598b55ec024a9d93020d4fb09b7746a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"tmtkDTRtnGznt-Zl2C3cpy6J2CeLAPpm\";}'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost:81'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.79 Safari/537.36'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => '_identity-frontend=8c45492de147625b3637f712ffb46f08257e4c685985dd501774672ef1a8a374a%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%223Fw-MEtkIQDy1cO-2fm7m0Y56lppvTOn%22%2C2592000%5D%22%3B%7D; advanced-frontend=b18erl39dple17941u4hvkcn80; _csrf-frontend=7569c988e8688081ac00dfd5da415a270b598b55ec024a9d93020d4fb09b7746a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22tmtkDTRtnGznt-Zl2C3cpy6J2CeLAPpm%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\DockerDesktop\\version-bin;C:\\Program Files\\Docker\\Docker\\Resources\\bin;C:\\Program Files\\Python37\\Scripts\\;C:\\Program Files\\Python37\\;C:\\oracle\\product\\11.2.0\\client_1\\bin;C:\\Program Files\\Microsoft MPI\\Bin\\;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files\\dotnet\\;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\140\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\140\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\140\\DTS\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\140\\DTS\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\130\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\150\\DTS\\Binn\\;C:\\wamp64\\bin\\php\\php7.3.5;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\MEGA-X;C:\\Program Files\\nodejs\\;C:\\ProgramData\\npmglobal\\;C:\\Program Files\\PuTTY\\;C:\\Program Files\\Portugal Identity Card;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files\\Microsoft VS Code\\bin;C:\\Program Files\\MATLAB\\R2019a\\bin;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files\\Common Files\\Autodesk Shared\\;C:\\Program Files\\Git\\cmd;C:\\Users\\Administrator\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Administrator\\.dotnet\\tools'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) PHP/7.2.18 Server at localhost Port 81</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) PHP/7.2.18'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '81'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/Alumio/api/web/index.php'
+    'REMOTE_PORT' => '2502'
+    'REDIRECT_URL' => '/Alumio/api/web/v1/turma'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/Alumio/api/web/v1/turma'
+    'SCRIPT_NAME' => '/Alumio/api/web/index.php'
+    'PHP_SELF' => '/Alumio/api/web/index.php'
+    'PHP_AUTH_USER' => '***'
+    'PHP_AUTH_PW' => '***'
+    'REQUEST_TIME_FLOAT' => 1576659832.084
+    'REQUEST_TIME' => 1576659832
+]
+2019-12-18 09:13:08 [::1][1][-][error][yii\base\InvalidArgumentException] yii\base\InvalidArgumentException: Relation names are case sensitive. api\resource\Tpc has a relation named "disciplinaTurma" instead of "disciplinaturma". in C:\wamp64\www\Alumio\vendor\yiisoft\yii2\db\ActiveRelationTrait.php:182
+Stack trace:
+#0 C:\wamp64\www\Alumio\vendor\yiisoft\yii2\db\BaseActiveRecord.php(301): yii\db\ActiveQuery->findFor('disciplinaturma', Object(api\resource\Tpc))
+#1 C:\wamp64\www\Alumio\vendor\yiisoft\yii2\base\ArrayableTrait.php(126): yii\db\BaseActiveRecord->__get('disciplinaturma')
+#2 C:\wamp64\www\Alumio\vendor\yiisoft\yii2\rest\Serializer.php(292): yii\base\Model->toArray(Array, Array)
+#3 C:\wamp64\www\Alumio\vendor\yiisoft\yii2\rest\Serializer.php(188): yii\rest\Serializer->serializeModels(Array)
+#4 C:\wamp64\www\Alumio\vendor\yiisoft\yii2\rest\Serializer.php(152): yii\rest\Serializer->serializeDataProvider(Object(yii\data\ActiveDataProvider))
+#5 C:\wamp64\www\Alumio\vendor\yiisoft\yii2\rest\Controller.php(99): yii\rest\Serializer->serialize(Object(yii\data\ActiveDataProvider))
+#6 C:\wamp64\www\Alumio\vendor\yiisoft\yii2\rest\Controller.php(77): yii\rest\Controller->serializeData(Object(yii\data\ActiveDataProvider))
+#7 C:\wamp64\www\Alumio\vendor\yiisoft\yii2\base\Controller.php(159): yii\rest\Controller->afterAction(Object(yii\rest\IndexAction), Object(yii\data\ActiveDataProvider))
+#8 C:\wamp64\www\Alumio\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('index', Array)
+#9 C:\wamp64\www\Alumio\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('v1/tpc/index', Array)
+#10 C:\wamp64\www\Alumio\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 C:\wamp64\www\Alumio\api\web\index.php(17): yii\base\Application->run()
+#12 {main}
+2019-12-18 09:13:07 [::1][1][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_identity-frontend' => '8c45492de147625b3637f712ffb46f08257e4c685985dd501774672ef1a8a374a:2:{i:0;s:18:\"_identity-frontend\";i:1;s:46:\"[1,\"3Fw-MEtkIQDy1cO-2fm7m0Y56lppvTOn\",2592000]\";}'
+    'advanced-frontend' => 'b18erl39dple17941u4hvkcn80'
+    '_csrf-frontend' => '7569c988e8688081ac00dfd5da415a270b598b55ec024a9d93020d4fb09b7746a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"tmtkDTRtnGznt-Zl2C3cpy6J2CeLAPpm\";}'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost:81'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.79 Safari/537.36'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => '_identity-frontend=8c45492de147625b3637f712ffb46f08257e4c685985dd501774672ef1a8a374a%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%223Fw-MEtkIQDy1cO-2fm7m0Y56lppvTOn%22%2C2592000%5D%22%3B%7D; advanced-frontend=b18erl39dple17941u4hvkcn80; _csrf-frontend=7569c988e8688081ac00dfd5da415a270b598b55ec024a9d93020d4fb09b7746a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22tmtkDTRtnGznt-Zl2C3cpy6J2CeLAPpm%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\DockerDesktop\\version-bin;C:\\Program Files\\Docker\\Docker\\Resources\\bin;C:\\Program Files\\Python37\\Scripts\\;C:\\Program Files\\Python37\\;C:\\oracle\\product\\11.2.0\\client_1\\bin;C:\\Program Files\\Microsoft MPI\\Bin\\;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files\\dotnet\\;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\140\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\140\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\140\\DTS\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\140\\DTS\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\130\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\150\\DTS\\Binn\\;C:\\wamp64\\bin\\php\\php7.3.5;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\MEGA-X;C:\\Program Files\\nodejs\\;C:\\ProgramData\\npmglobal\\;C:\\Program Files\\PuTTY\\;C:\\Program Files\\Portugal Identity Card;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files\\Microsoft VS Code\\bin;C:\\Program Files\\MATLAB\\R2019a\\bin;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files\\Common Files\\Autodesk Shared\\;C:\\Program Files\\Git\\cmd;C:\\Users\\Administrator\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Administrator\\.dotnet\\tools'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) PHP/7.2.18 Server at localhost Port 81</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) PHP/7.2.18'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '81'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/Alumio/api/web/index.php'
+    'REMOTE_PORT' => '2819'
+    'REDIRECT_URL' => '/Alumio/api/web/v1/tpc'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/Alumio/api/web/v1/tpc'
+    'SCRIPT_NAME' => '/Alumio/api/web/index.php'
+    'PHP_SELF' => '/Alumio/api/web/index.php'
+    'PHP_AUTH_USER' => '***'
+    'PHP_AUTH_PW' => '***'
+    'REQUEST_TIME_FLOAT' => 1576660387.16
+    'REQUEST_TIME' => 1576660387
+]
+2019-12-18 09:16:11 [::1][1][-][error][yii\base\InvalidArgumentException] yii\base\InvalidArgumentException: Relation names are case sensitive. api\resource\Disciplinaturma has a relation named "disciplina" instead of "Disciplina". in C:\wamp64\www\Alumio\vendor\yiisoft\yii2\db\ActiveRelationTrait.php:182
+Stack trace:
+#0 C:\wamp64\www\Alumio\vendor\yiisoft\yii2\db\BaseActiveRecord.php(301): yii\db\ActiveQuery->findFor('Disciplina', Object(api\resource\Disciplinaturma))
+#1 C:\wamp64\www\Alumio\vendor\yiisoft\yii2\base\ArrayableTrait.php(126): yii\db\BaseActiveRecord->__get('Disciplina')
+#2 C:\wamp64\www\Alumio\vendor\yiisoft\yii2\base\ArrayableTrait.php(132): yii\base\Model->toArray(Array, Array)
+#3 C:\wamp64\www\Alumio\vendor\yiisoft\yii2\rest\Serializer.php(292): yii\base\Model->toArray(Array, Array)
+#4 C:\wamp64\www\Alumio\vendor\yiisoft\yii2\rest\Serializer.php(188): yii\rest\Serializer->serializeModels(Array)
+#5 C:\wamp64\www\Alumio\vendor\yiisoft\yii2\rest\Serializer.php(152): yii\rest\Serializer->serializeDataProvider(Object(yii\data\ActiveDataProvider))
+#6 C:\wamp64\www\Alumio\vendor\yiisoft\yii2\rest\Controller.php(99): yii\rest\Serializer->serialize(Object(yii\data\ActiveDataProvider))
+#7 C:\wamp64\www\Alumio\vendor\yiisoft\yii2\rest\Controller.php(77): yii\rest\Controller->serializeData(Object(yii\data\ActiveDataProvider))
+#8 C:\wamp64\www\Alumio\vendor\yiisoft\yii2\base\Controller.php(159): yii\rest\Controller->afterAction(Object(yii\rest\IndexAction), Object(yii\data\ActiveDataProvider))
+#9 C:\wamp64\www\Alumio\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('index', Array)
+#10 C:\wamp64\www\Alumio\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('v1/tpc/index', Array)
+#11 C:\wamp64\www\Alumio\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 C:\wamp64\www\Alumio\api\web\index.php(17): yii\base\Application->run()
+#13 {main}
+2019-12-18 09:16:10 [::1][1][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_identity-frontend' => '8c45492de147625b3637f712ffb46f08257e4c685985dd501774672ef1a8a374a:2:{i:0;s:18:\"_identity-frontend\";i:1;s:46:\"[1,\"3Fw-MEtkIQDy1cO-2fm7m0Y56lppvTOn\",2592000]\";}'
+    'advanced-frontend' => 'b18erl39dple17941u4hvkcn80'
+    '_csrf-frontend' => '7569c988e8688081ac00dfd5da415a270b598b55ec024a9d93020d4fb09b7746a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"tmtkDTRtnGznt-Zl2C3cpy6J2CeLAPpm\";}'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost:81'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.79 Safari/537.36'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => '_identity-frontend=8c45492de147625b3637f712ffb46f08257e4c685985dd501774672ef1a8a374a%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%223Fw-MEtkIQDy1cO-2fm7m0Y56lppvTOn%22%2C2592000%5D%22%3B%7D; advanced-frontend=b18erl39dple17941u4hvkcn80; _csrf-frontend=7569c988e8688081ac00dfd5da415a270b598b55ec024a9d93020d4fb09b7746a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22tmtkDTRtnGznt-Zl2C3cpy6J2CeLAPpm%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\DockerDesktop\\version-bin;C:\\Program Files\\Docker\\Docker\\Resources\\bin;C:\\Program Files\\Python37\\Scripts\\;C:\\Program Files\\Python37\\;C:\\oracle\\product\\11.2.0\\client_1\\bin;C:\\Program Files\\Microsoft MPI\\Bin\\;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files\\dotnet\\;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\140\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\140\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\140\\DTS\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\140\\DTS\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\130\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\150\\DTS\\Binn\\;C:\\wamp64\\bin\\php\\php7.3.5;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\MEGA-X;C:\\Program Files\\nodejs\\;C:\\ProgramData\\npmglobal\\;C:\\Program Files\\PuTTY\\;C:\\Program Files\\Portugal Identity Card;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files\\Microsoft VS Code\\bin;C:\\Program Files\\MATLAB\\R2019a\\bin;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files\\Common Files\\Autodesk Shared\\;C:\\Program Files\\Git\\cmd;C:\\Users\\Administrator\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Administrator\\.dotnet\\tools'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) PHP/7.2.18 Server at localhost Port 81</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) PHP/7.2.18'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '81'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/Alumio/api/web/index.php'
+    'REMOTE_PORT' => '2908'
+    'REDIRECT_URL' => '/Alumio/api/web/v1/tpc'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/Alumio/api/web/v1/tpc'
+    'SCRIPT_NAME' => '/Alumio/api/web/index.php'
+    'PHP_SELF' => '/Alumio/api/web/index.php'
+    'PHP_AUTH_USER' => '***'
+    'PHP_AUTH_PW' => '***'
+    'REQUEST_TIME_FLOAT' => 1576660570.979
+    'REQUEST_TIME' => 1576660570
+]
+2019-12-18 09:19:49 [::1][1][-][error][yii\base\UnknownPropertyException] yii\base\UnknownPropertyException: Getting unknown property: api\resource\Teste::professor in C:\wamp64\www\Alumio\vendor\yiisoft\yii2\base\Component.php:154
+Stack trace:
+#0 C:\wamp64\www\Alumio\vendor\yiisoft\yii2\db\BaseActiveRecord.php(298): yii\base\Component->__get('professor')
+#1 C:\wamp64\www\Alumio\vendor\yiisoft\yii2\base\ArrayableTrait.php(126): yii\db\BaseActiveRecord->__get('professor')
+#2 C:\wamp64\www\Alumio\vendor\yiisoft\yii2\rest\Serializer.php(292): yii\base\Model->toArray(Array, Array)
+#3 C:\wamp64\www\Alumio\vendor\yiisoft\yii2\rest\Serializer.php(188): yii\rest\Serializer->serializeModels(Array)
+#4 C:\wamp64\www\Alumio\vendor\yiisoft\yii2\rest\Serializer.php(152): yii\rest\Serializer->serializeDataProvider(Object(yii\data\ActiveDataProvider))
+#5 C:\wamp64\www\Alumio\vendor\yiisoft\yii2\rest\Controller.php(99): yii\rest\Serializer->serialize(Object(yii\data\ActiveDataProvider))
+#6 C:\wamp64\www\Alumio\vendor\yiisoft\yii2\rest\Controller.php(77): yii\rest\Controller->serializeData(Object(yii\data\ActiveDataProvider))
+#7 C:\wamp64\www\Alumio\vendor\yiisoft\yii2\base\Controller.php(159): yii\rest\Controller->afterAction(Object(yii\rest\IndexAction), Object(yii\data\ActiveDataProvider))
+#8 C:\wamp64\www\Alumio\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('index', Array)
+#9 C:\wamp64\www\Alumio\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('v1/teste/index', Array)
+#10 C:\wamp64\www\Alumio\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 C:\wamp64\www\Alumio\api\web\index.php(17): yii\base\Application->run()
+#12 {main}
+2019-12-18 09:19:48 [::1][1][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_identity-frontend' => '8c45492de147625b3637f712ffb46f08257e4c685985dd501774672ef1a8a374a:2:{i:0;s:18:\"_identity-frontend\";i:1;s:46:\"[1,\"3Fw-MEtkIQDy1cO-2fm7m0Y56lppvTOn\",2592000]\";}'
+    'advanced-frontend' => 'b18erl39dple17941u4hvkcn80'
+    '_csrf-frontend' => '7569c988e8688081ac00dfd5da415a270b598b55ec024a9d93020d4fb09b7746a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"tmtkDTRtnGznt-Zl2C3cpy6J2CeLAPpm\";}'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost:81'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.79 Safari/537.36'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => '_identity-frontend=8c45492de147625b3637f712ffb46f08257e4c685985dd501774672ef1a8a374a%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%223Fw-MEtkIQDy1cO-2fm7m0Y56lppvTOn%22%2C2592000%5D%22%3B%7D; advanced-frontend=b18erl39dple17941u4hvkcn80; _csrf-frontend=7569c988e8688081ac00dfd5da415a270b598b55ec024a9d93020d4fb09b7746a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22tmtkDTRtnGznt-Zl2C3cpy6J2CeLAPpm%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\DockerDesktop\\version-bin;C:\\Program Files\\Docker\\Docker\\Resources\\bin;C:\\Program Files\\Python37\\Scripts\\;C:\\Program Files\\Python37\\;C:\\oracle\\product\\11.2.0\\client_1\\bin;C:\\Program Files\\Microsoft MPI\\Bin\\;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files\\dotnet\\;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\140\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\140\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\140\\DTS\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\140\\DTS\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\130\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\150\\DTS\\Binn\\;C:\\wamp64\\bin\\php\\php7.3.5;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\MEGA-X;C:\\Program Files\\nodejs\\;C:\\ProgramData\\npmglobal\\;C:\\Program Files\\PuTTY\\;C:\\Program Files\\Portugal Identity Card;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files\\Microsoft VS Code\\bin;C:\\Program Files\\MATLAB\\R2019a\\bin;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files\\Common Files\\Autodesk Shared\\;C:\\Program Files\\Git\\cmd;C:\\Users\\Administrator\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Administrator\\.dotnet\\tools'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) PHP/7.2.18 Server at localhost Port 81</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) PHP/7.2.18'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '81'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/Alumio/api/web/index.php'
+    'REMOTE_PORT' => '3016'
+    'REDIRECT_URL' => '/Alumio/api/web/v1/teste'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/Alumio/api/web/v1/teste'
+    'SCRIPT_NAME' => '/Alumio/api/web/index.php'
+    'PHP_SELF' => '/Alumio/api/web/index.php'
+    'PHP_AUTH_USER' => '***'
+    'PHP_AUTH_PW' => '***'
+    'REQUEST_TIME_FLOAT' => 1576660788.508
+    'REQUEST_TIME' => 1576660788
+]
+2019-12-18 09:20:29 [::1][1][-][error][yii\base\UnknownPropertyException] yii\base\UnknownPropertyException: Getting unknown property: api\resource\Teste::professor in C:\wamp64\www\Alumio\vendor\yiisoft\yii2\base\Component.php:154
+Stack trace:
+#0 C:\wamp64\www\Alumio\vendor\yiisoft\yii2\db\BaseActiveRecord.php(298): yii\base\Component->__get('professor')
+#1 C:\wamp64\www\Alumio\vendor\yiisoft\yii2\base\ArrayableTrait.php(126): yii\db\BaseActiveRecord->__get('professor')
+#2 C:\wamp64\www\Alumio\vendor\yiisoft\yii2\rest\Serializer.php(292): yii\base\Model->toArray(Array, Array)
+#3 C:\wamp64\www\Alumio\vendor\yiisoft\yii2\rest\Serializer.php(188): yii\rest\Serializer->serializeModels(Array)
+#4 C:\wamp64\www\Alumio\vendor\yiisoft\yii2\rest\Serializer.php(152): yii\rest\Serializer->serializeDataProvider(Object(yii\data\ActiveDataProvider))
+#5 C:\wamp64\www\Alumio\vendor\yiisoft\yii2\rest\Controller.php(99): yii\rest\Serializer->serialize(Object(yii\data\ActiveDataProvider))
+#6 C:\wamp64\www\Alumio\vendor\yiisoft\yii2\rest\Controller.php(77): yii\rest\Controller->serializeData(Object(yii\data\ActiveDataProvider))
+#7 C:\wamp64\www\Alumio\vendor\yiisoft\yii2\base\Controller.php(159): yii\rest\Controller->afterAction(Object(yii\rest\IndexAction), Object(yii\data\ActiveDataProvider))
+#8 C:\wamp64\www\Alumio\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('index', Array)
+#9 C:\wamp64\www\Alumio\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('v1/teste/index', Array)
+#10 C:\wamp64\www\Alumio\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 C:\wamp64\www\Alumio\api\web\index.php(17): yii\base\Application->run()
+#12 {main}
+2019-12-18 09:20:28 [::1][1][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_identity-frontend' => '8c45492de147625b3637f712ffb46f08257e4c685985dd501774672ef1a8a374a:2:{i:0;s:18:\"_identity-frontend\";i:1;s:46:\"[1,\"3Fw-MEtkIQDy1cO-2fm7m0Y56lppvTOn\",2592000]\";}'
+    'advanced-frontend' => 'b18erl39dple17941u4hvkcn80'
+    '_csrf-frontend' => '7569c988e8688081ac00dfd5da415a270b598b55ec024a9d93020d4fb09b7746a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"tmtkDTRtnGznt-Zl2C3cpy6J2CeLAPpm\";}'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost:81'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.79 Safari/537.36'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => '_identity-frontend=8c45492de147625b3637f712ffb46f08257e4c685985dd501774672ef1a8a374a%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%223Fw-MEtkIQDy1cO-2fm7m0Y56lppvTOn%22%2C2592000%5D%22%3B%7D; advanced-frontend=b18erl39dple17941u4hvkcn80; _csrf-frontend=7569c988e8688081ac00dfd5da415a270b598b55ec024a9d93020d4fb09b7746a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22tmtkDTRtnGznt-Zl2C3cpy6J2CeLAPpm%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\DockerDesktop\\version-bin;C:\\Program Files\\Docker\\Docker\\Resources\\bin;C:\\Program Files\\Python37\\Scripts\\;C:\\Program Files\\Python37\\;C:\\oracle\\product\\11.2.0\\client_1\\bin;C:\\Program Files\\Microsoft MPI\\Bin\\;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files\\dotnet\\;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\140\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\140\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\140\\DTS\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\140\\DTS\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\130\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\150\\DTS\\Binn\\;C:\\wamp64\\bin\\php\\php7.3.5;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\MEGA-X;C:\\Program Files\\nodejs\\;C:\\ProgramData\\npmglobal\\;C:\\Program Files\\PuTTY\\;C:\\Program Files\\Portugal Identity Card;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files\\Microsoft VS Code\\bin;C:\\Program Files\\MATLAB\\R2019a\\bin;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files\\Common Files\\Autodesk Shared\\;C:\\Program Files\\Git\\cmd;C:\\Users\\Administrator\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Administrator\\.dotnet\\tools'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) PHP/7.2.18 Server at localhost Port 81</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) PHP/7.2.18'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '81'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/Alumio/api/web/index.php'
+    'REMOTE_PORT' => '3022'
+    'REDIRECT_URL' => '/Alumio/api/web/v1/teste'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/Alumio/api/web/v1/teste'
+    'SCRIPT_NAME' => '/Alumio/api/web/index.php'
+    'PHP_SELF' => '/Alumio/api/web/index.php'
+    'PHP_AUTH_USER' => '***'
+    'PHP_AUTH_PW' => '***'
+    'REQUEST_TIME_FLOAT' => 1576660828.242
+    'REQUEST_TIME' => 1576660828
+]
+2019-12-18 09:20:36 [::1][-][-][error][yii\web\HttpException:404] yii\web\NotFoundHttpException: Page not found. in C:\wamp64\www\Alumio\vendor\yiisoft\yii2\web\Request.php:284
+Stack trace:
+#0 C:\wamp64\www\Alumio\vendor\yiisoft\yii2\web\Application.php(82): yii\web\Request->resolve()
+#1 C:\wamp64\www\Alumio\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\wamp64\www\Alumio\api\web\index.php(17): yii\base\Application->run()
+#3 {main}
+2019-12-18 09:20:36 [::1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_identity-frontend' => '8c45492de147625b3637f712ffb46f08257e4c685985dd501774672ef1a8a374a:2:{i:0;s:18:\"_identity-frontend\";i:1;s:46:\"[1,\"3Fw-MEtkIQDy1cO-2fm7m0Y56lppvTOn\",2592000]\";}'
+    'advanced-frontend' => 'b18erl39dple17941u4hvkcn80'
+    '_csrf-frontend' => '7569c988e8688081ac00dfd5da415a270b598b55ec024a9d93020d4fb09b7746a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"tmtkDTRtnGznt-Zl2C3cpy6J2CeLAPpm\";}'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost:81'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.79 Safari/537.36'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => '_identity-frontend=8c45492de147625b3637f712ffb46f08257e4c685985dd501774672ef1a8a374a%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%223Fw-MEtkIQDy1cO-2fm7m0Y56lppvTOn%22%2C2592000%5D%22%3B%7D; advanced-frontend=b18erl39dple17941u4hvkcn80; _csrf-frontend=7569c988e8688081ac00dfd5da415a270b598b55ec024a9d93020d4fb09b7746a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22tmtkDTRtnGznt-Zl2C3cpy6J2CeLAPpm%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\DockerDesktop\\version-bin;C:\\Program Files\\Docker\\Docker\\Resources\\bin;C:\\Program Files\\Python37\\Scripts\\;C:\\Program Files\\Python37\\;C:\\oracle\\product\\11.2.0\\client_1\\bin;C:\\Program Files\\Microsoft MPI\\Bin\\;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files\\dotnet\\;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\140\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\140\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\140\\DTS\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\140\\DTS\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\130\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\150\\DTS\\Binn\\;C:\\wamp64\\bin\\php\\php7.3.5;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\MEGA-X;C:\\Program Files\\nodejs\\;C:\\ProgramData\\npmglobal\\;C:\\Program Files\\PuTTY\\;C:\\Program Files\\Portugal Identity Card;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files\\Microsoft VS Code\\bin;C:\\Program Files\\MATLAB\\R2019a\\bin;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files\\Common Files\\Autodesk Shared\\;C:\\Program Files\\Git\\cmd;C:\\Users\\Administrator\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Administrator\\.dotnet\\tools'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) PHP/7.2.18 Server at localhost Port 81</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) PHP/7.2.18'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '81'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/Alumio/api/web/index.php'
+    'REMOTE_PORT' => '3026'
+    'REDIRECT_URL' => '/Alumio/api/web/v1/gii'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/Alumio/api/web/v1/gii'
+    'SCRIPT_NAME' => '/Alumio/api/web/index.php'
+    'PHP_SELF' => '/Alumio/api/web/index.php'
+    'PHP_AUTH_USER' => '***'
+    'PHP_AUTH_PW' => '***'
+    'REQUEST_TIME_FLOAT' => 1576660836.146
+    'REQUEST_TIME' => 1576660836
+]
+2019-12-18 09:20:43 [::1][-][-][error][yii\base\InvalidConfigException] yii\base\InvalidConfigException: yii\web\Request::cookieValidationKey must be configured with a secret key. in C:\wamp64\www\Alumio\vendor\yiisoft\yii2\web\Request.php:1645
+Stack trace:
+#0 C:\wamp64\www\Alumio\vendor\yiisoft\yii2\web\Request.php(1627): yii\web\Request->loadCookies()
+#1 C:\wamp64\www\Alumio\vendor\yiisoft\yii2\web\Request.php(1715): yii\web\Request->getCookies()
+#2 C:\wamp64\www\Alumio\vendor\yiisoft\yii2\web\Request.php(1697): yii\web\Request->loadCsrfToken()
+#3 C:\wamp64\www\Alumio\vendor\yiisoft\yii2\helpers\BaseHtml.php(305): yii\web\Request->getCsrfToken()
+#4 C:\wamp64\www\Alumio\vendor\yiisoft\yii2\base\View.php(434) : eval()'d code(1): yii\helpers\BaseHtml::csrfMetaTags()
+#5 C:\wamp64\www\Alumio\vendor\yiisoft\yii2\base\View.php(434): eval()
+#6 C:\wamp64\www\Alumio\vendor\yiisoft\yii2\base\View.php(391): yii\base\View->evaluateDynamicContent('return yii\\help...')
+#7 C:\wamp64\www\Alumio\vendor\yiisoft\yii2\web\View.php(363): yii\base\View->renderDynamic('return yii\\help...')
+#8 C:\wamp64\www\Alumio\vendor\yiisoft\yii2-gii\src\views\layouts\main.php(18): yii\web\View->registerCsrfMetaTags()
+#9 C:\wamp64\www\Alumio\vendor\yiisoft\yii2\base\View.php(348): require('C:\\wamp64\\www\\A...')
+#10 C:\wamp64\www\Alumio\vendor\yiisoft\yii2\base\View.php(257): yii\base\View->renderPhpFile('C:\\wamp64\\www\\A...', Array)
+#11 C:\wamp64\www\Alumio\vendor\yiisoft\yii2\base\Controller.php(401): yii\base\View->renderFile('C:\\wamp64\\www\\A...', Array, Object(yii\gii\controllers\DefaultController))
+#12 C:\wamp64\www\Alumio\vendor\yiisoft\yii2\base\Controller.php(387): yii\base\Controller->renderContent('<div class="def...')
+#13 C:\wamp64\www\Alumio\vendor\yiisoft\yii2-gii\src\controllers\DefaultController.php(46): yii\base\Controller->render('index')
+#14 [internal function]: yii\gii\controllers\DefaultController->actionIndex()
+#15 C:\wamp64\www\Alumio\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#16 C:\wamp64\www\Alumio\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#17 C:\wamp64\www\Alumio\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('index', Array)
+#18 C:\wamp64\www\Alumio\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('gii/default/ind...', Array)
+#19 C:\wamp64\www\Alumio\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#20 C:\wamp64\www\Alumio\api\web\index.php(17): yii\base\Application->run()
+#21 {main}
+2019-12-18 09:20:38 [::1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_identity-frontend' => '8c45492de147625b3637f712ffb46f08257e4c685985dd501774672ef1a8a374a:2:{i:0;s:18:\"_identity-frontend\";i:1;s:46:\"[1,\"3Fw-MEtkIQDy1cO-2fm7m0Y56lppvTOn\",2592000]\";}'
+    'advanced-frontend' => 'b18erl39dple17941u4hvkcn80'
+    '_csrf-frontend' => '7569c988e8688081ac00dfd5da415a270b598b55ec024a9d93020d4fb09b7746a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"tmtkDTRtnGznt-Zl2C3cpy6J2CeLAPpm\";}'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost:81'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.79 Safari/537.36'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => '_identity-frontend=8c45492de147625b3637f712ffb46f08257e4c685985dd501774672ef1a8a374a%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%223Fw-MEtkIQDy1cO-2fm7m0Y56lppvTOn%22%2C2592000%5D%22%3B%7D; advanced-frontend=b18erl39dple17941u4hvkcn80; _csrf-frontend=7569c988e8688081ac00dfd5da415a270b598b55ec024a9d93020d4fb09b7746a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22tmtkDTRtnGznt-Zl2C3cpy6J2CeLAPpm%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\DockerDesktop\\version-bin;C:\\Program Files\\Docker\\Docker\\Resources\\bin;C:\\Program Files\\Python37\\Scripts\\;C:\\Program Files\\Python37\\;C:\\oracle\\product\\11.2.0\\client_1\\bin;C:\\Program Files\\Microsoft MPI\\Bin\\;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files\\dotnet\\;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\140\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\140\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\140\\DTS\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\140\\DTS\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\130\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\150\\DTS\\Binn\\;C:\\wamp64\\bin\\php\\php7.3.5;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\MEGA-X;C:\\Program Files\\nodejs\\;C:\\ProgramData\\npmglobal\\;C:\\Program Files\\PuTTY\\;C:\\Program Files\\Portugal Identity Card;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files\\Microsoft VS Code\\bin;C:\\Program Files\\MATLAB\\R2019a\\bin;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files\\Common Files\\Autodesk Shared\\;C:\\Program Files\\Git\\cmd;C:\\Users\\Administrator\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Administrator\\.dotnet\\tools'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) PHP/7.2.18 Server at localhost Port 81</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) PHP/7.2.18'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '81'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/Alumio/api/web/index.php'
+    'REMOTE_PORT' => '3026'
+    'REDIRECT_URL' => '/Alumio/api/web/gii'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/Alumio/api/web/gii'
+    'SCRIPT_NAME' => '/Alumio/api/web/index.php'
+    'PHP_SELF' => '/Alumio/api/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1576660838.933
+    'REQUEST_TIME' => 1576660838
+]
+2019-12-18 09:23:57 [::1][-][-][error][yii\web\HttpException:404] yii\web\NotFoundHttpException: Page not found. in C:\wamp64\www\Alumio\vendor\yiisoft\yii2\web\Request.php:284
+Stack trace:
+#0 C:\wamp64\www\Alumio\vendor\yiisoft\yii2\web\Application.php(82): yii\web\Request->resolve()
+#1 C:\wamp64\www\Alumio\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\wamp64\www\Alumio\api\web\index.php(17): yii\base\Application->run()
+#3 {main}
+2019-12-18 09:23:57 [::1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_identity-frontend' => '8c45492de147625b3637f712ffb46f08257e4c685985dd501774672ef1a8a374a:2:{i:0;s:18:\"_identity-frontend\";i:1;s:46:\"[1,\"3Fw-MEtkIQDy1cO-2fm7m0Y56lppvTOn\",2592000]\";}'
+    'advanced-frontend' => 'b18erl39dple17941u4hvkcn80'
+    '_csrf-frontend' => '7569c988e8688081ac00dfd5da415a270b598b55ec024a9d93020d4fb09b7746a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"tmtkDTRtnGznt-Zl2C3cpy6J2CeLAPpm\";}'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost:81'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.79 Safari/537.36'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => '_identity-frontend=8c45492de147625b3637f712ffb46f08257e4c685985dd501774672ef1a8a374a%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%223Fw-MEtkIQDy1cO-2fm7m0Y56lppvTOn%22%2C2592000%5D%22%3B%7D; advanced-frontend=b18erl39dple17941u4hvkcn80; _csrf-frontend=7569c988e8688081ac00dfd5da415a270b598b55ec024a9d93020d4fb09b7746a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22tmtkDTRtnGznt-Zl2C3cpy6J2CeLAPpm%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\DockerDesktop\\version-bin;C:\\Program Files\\Docker\\Docker\\Resources\\bin;C:\\Program Files\\Python37\\Scripts\\;C:\\Program Files\\Python37\\;C:\\oracle\\product\\11.2.0\\client_1\\bin;C:\\Program Files\\Microsoft MPI\\Bin\\;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files\\dotnet\\;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\140\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\140\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\140\\DTS\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\140\\DTS\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\130\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\150\\DTS\\Binn\\;C:\\wamp64\\bin\\php\\php7.3.5;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\MEGA-X;C:\\Program Files\\nodejs\\;C:\\ProgramData\\npmglobal\\;C:\\Program Files\\PuTTY\\;C:\\Program Files\\Portugal Identity Card;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files\\Microsoft VS Code\\bin;C:\\Program Files\\MATLAB\\R2019a\\bin;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files\\Common Files\\Autodesk Shared\\;C:\\Program Files\\Git\\cmd;C:\\Users\\Administrator\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Administrator\\.dotnet\\tools'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) PHP/7.2.18 Server at localhost Port 81</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) PHP/7.2.18'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '81'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/Alumio/api/web/index.php'
+    'REMOTE_PORT' => '3196'
+    'REDIRECT_URL' => '/Alumio/api/web/v1/aluno´~'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/Alumio/api/web/v1/aluno%C2%B4~'
+    'SCRIPT_NAME' => '/Alumio/api/web/index.php'
+    'PHP_SELF' => '/Alumio/api/web/index.php'
+    'PHP_AUTH_USER' => '***'
+    'PHP_AUTH_PW' => '***'
+    'REQUEST_TIME_FLOAT' => 1576661037.014
+    'REQUEST_TIME' => 1576661037
+]
+2019-12-18 09:29:22 [::1][1][-][error][yii\base\InvalidArgumentException] yii\base\InvalidArgumentException: Relation names are case sensitive. api\resource\Disciplinaturma has a relation named "disciplina" instead of "Disciplina". in C:\wamp64\www\Alumio\vendor\yiisoft\yii2\db\ActiveRelationTrait.php:182
+Stack trace:
+#0 C:\wamp64\www\Alumio\vendor\yiisoft\yii2\db\BaseActiveRecord.php(301): yii\db\ActiveQuery->findFor('Disciplina', Object(api\resource\Disciplinaturma))
+#1 C:\wamp64\www\Alumio\vendor\yiisoft\yii2\base\ArrayableTrait.php(126): yii\db\BaseActiveRecord->__get('Disciplina')
+#2 C:\wamp64\www\Alumio\vendor\yiisoft\yii2\rest\Serializer.php(292): yii\base\Model->toArray(Array, Array)
+#3 C:\wamp64\www\Alumio\vendor\yiisoft\yii2\rest\Serializer.php(188): yii\rest\Serializer->serializeModels(Array)
+#4 C:\wamp64\www\Alumio\vendor\yiisoft\yii2\rest\Serializer.php(152): yii\rest\Serializer->serializeDataProvider(Object(yii\data\ActiveDataProvider))
+#5 C:\wamp64\www\Alumio\vendor\yiisoft\yii2\rest\Controller.php(99): yii\rest\Serializer->serialize(Object(yii\data\ActiveDataProvider))
+#6 C:\wamp64\www\Alumio\vendor\yiisoft\yii2\rest\Controller.php(77): yii\rest\Controller->serializeData(Object(yii\data\ActiveDataProvider))
+#7 C:\wamp64\www\Alumio\vendor\yiisoft\yii2\base\Controller.php(159): yii\rest\Controller->afterAction(Object(yii\rest\IndexAction), Object(yii\data\ActiveDataProvider))
+#8 C:\wamp64\www\Alumio\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('index', Array)
+#9 C:\wamp64\www\Alumio\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('v1/disciplinatu...', Array)
+#10 C:\wamp64\www\Alumio\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 C:\wamp64\www\Alumio\api\web\index.php(17): yii\base\Application->run()
+#12 {main}
+2019-12-18 09:29:21 [::1][1][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_identity-frontend' => '8c45492de147625b3637f712ffb46f08257e4c685985dd501774672ef1a8a374a:2:{i:0;s:18:\"_identity-frontend\";i:1;s:46:\"[1,\"3Fw-MEtkIQDy1cO-2fm7m0Y56lppvTOn\",2592000]\";}'
+    'advanced-frontend' => 'b18erl39dple17941u4hvkcn80'
+    '_csrf-frontend' => '7569c988e8688081ac00dfd5da415a270b598b55ec024a9d93020d4fb09b7746a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"tmtkDTRtnGznt-Zl2C3cpy6J2CeLAPpm\";}'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost:81'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.79 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => '_identity-frontend=8c45492de147625b3637f712ffb46f08257e4c685985dd501774672ef1a8a374a%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%223Fw-MEtkIQDy1cO-2fm7m0Y56lppvTOn%22%2C2592000%5D%22%3B%7D; advanced-frontend=b18erl39dple17941u4hvkcn80; _csrf-frontend=7569c988e8688081ac00dfd5da415a270b598b55ec024a9d93020d4fb09b7746a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22tmtkDTRtnGznt-Zl2C3cpy6J2CeLAPpm%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\DockerDesktop\\version-bin;C:\\Program Files\\Docker\\Docker\\Resources\\bin;C:\\Program Files\\Python37\\Scripts\\;C:\\Program Files\\Python37\\;C:\\oracle\\product\\11.2.0\\client_1\\bin;C:\\Program Files\\Microsoft MPI\\Bin\\;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files\\dotnet\\;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\140\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\140\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\140\\DTS\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\140\\DTS\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\130\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\150\\DTS\\Binn\\;C:\\wamp64\\bin\\php\\php7.3.5;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\MEGA-X;C:\\Program Files\\nodejs\\;C:\\ProgramData\\npmglobal\\;C:\\Program Files\\PuTTY\\;C:\\Program Files\\Portugal Identity Card;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files\\Microsoft VS Code\\bin;C:\\Program Files\\MATLAB\\R2019a\\bin;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files\\Common Files\\Autodesk Shared\\;C:\\Program Files\\Git\\cmd;C:\\Users\\Administrator\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Administrator\\.dotnet\\tools'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) PHP/7.2.18 Server at localhost Port 81</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) PHP/7.2.18'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '81'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/Alumio/api/web/index.php'
+    'REMOTE_PORT' => '3286'
+    'REDIRECT_URL' => '/Alumio/api/web/v1/disciplinaturma'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/Alumio/api/web/v1/disciplinaturma'
+    'SCRIPT_NAME' => '/Alumio/api/web/index.php'
+    'PHP_SELF' => '/Alumio/api/web/index.php'
+    'PHP_AUTH_USER' => '***'
+    'PHP_AUTH_PW' => '***'
+    'REQUEST_TIME_FLOAT' => 1576661361.15
+    'REQUEST_TIME' => 1576661361
+]

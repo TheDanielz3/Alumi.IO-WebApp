@@ -15,4 +15,5 @@ class Recado extends \api\models\Recado
      {
          return ['id_professor','id_turma','id_aluno'];
      }
+
 }

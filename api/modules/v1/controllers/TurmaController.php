@@ -9,5 +9,7 @@ use yii\rest\ActiveController;
 
 class TurmaController extends ActiveController
 {
+
     public $modelClass = Turma::class;
+
 }
