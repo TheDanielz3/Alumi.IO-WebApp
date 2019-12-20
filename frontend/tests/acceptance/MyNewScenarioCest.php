@@ -12,9 +12,10 @@ class MyNewScenarioCest
     // tests
     public function tryToTest(AcceptanceTester $I)
     {
+        $I->wantTo('verify stuff');
         $I->amOnPage(Url::toRoute('/site/index'));
         $I->wait(3);
-        $I->seeInTitle('Alumio');
+        $I->see("Alumio");
 
     }
 }

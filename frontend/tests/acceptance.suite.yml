@@ -3,7 +3,9 @@ actor: AcceptanceTester
 modules:
     enabled:
         - WebDriver:
-            url: http://localhost:8888
-            browser: firefox
+            url: 'http://localhost/'
+            port: 8888
+            browser: chrome
+        - \Helper\Acceptance
         - Yii2:
             part: init
