@@ -2,10 +2,10 @@
 
 namespace api\models;
 
-use api\models\Aluno;
-use api\models\Professor;
-use Yii;
+use api\models\query\RecadoQuery;
 use yii\behaviors\BlameableBehavior;
+use yii\db\ActiveQuery;
+use yii\db\ActiveRecord;
 
 /**
  * This is the model class for table "{{%recado}}".
@@ -22,7 +22,7 @@ use yii\behaviors\BlameableBehavior;
  * @property Professor $professor
  * @property Turma $turma
  */
-class Recado extends \yii\db\ActiveRecord
+class Recado extends ActiveRecord
 {
     /**
      * {@inheritdoc}
@@ -49,6 +49,9 @@ class Recado extends \yii\db\ActiveRecord
         ];
     }
 
+    /**
+     * @return array
+     */
     public function behaviors()
     {
         return [
@@ -77,7 +80,7 @@ class Recado extends \yii\db\ActiveRecord
     }
 
     /**
-     * @return \yii\db\ActiveQuery
+     * @return ActiveQuery
      */
     public function getAluno()
     {
@@ -85,7 +88,7 @@ class Recado extends \yii\db\ActiveRecord
     }
 
     /**
-     * @return \yii\db\ActiveQuery
+     * @return ActiveQuery
      */
     public function getProfessor()
     {
@@ -93,7 +96,7 @@ class Recado extends \yii\db\ActiveRecord
     }
 
     /**
-     * @return \yii\db\ActiveQuery
+     * @return ActiveQuery
      */
     public function getTurma()
     {
@@ -102,11 +105,11 @@ class Recado extends \yii\db\ActiveRecord
 
     /**
      * {@inheritdoc}
-     * @return \api\models\query\RecadoQuery the active query used by this AR class.
+     * @return RecadoQuery the active query used by this AR class.
      */
     public static function find()
     {
-        return new \api\models\query\RecadoQuery(get_called_class());
+        return new RecadoQuery(get_called_class());
     }
 
 }

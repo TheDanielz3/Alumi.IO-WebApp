@@ -2,10 +2,14 @@
 
 namespace api\modules\v1;
 
+use api\models\Recado;
+use api\models\Teste;
+use api\models\Tpc;
 use common\models\User;
 use Yii;
 use yii\base\Module;
 use yii\filters\auth\HttpBasicAuth;
+use yii\web\ForbiddenHttpException;
 
 /**
  * api module definition class

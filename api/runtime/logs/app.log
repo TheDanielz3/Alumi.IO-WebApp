@@ -18685,3 +18685,2482 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1576665136.101
     'REQUEST_TIME' => 1576665136
 ]
+2019-12-20 15:43:14 [::1][-][-][error][yii\web\HttpException:401] yii\web\UnauthorizedHttpException: Your request was made with invalid credentials. in C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\filters\auth\AuthMethod.php:93
+Stack trace:
+#0 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\filters\auth\AuthMethod.php(76): yii\filters\auth\AuthMethod->handleFailure(Object(yii\web\Response))
+#1 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\ActionFilter.php(77): yii\filters\auth\AuthMethod->beforeAction(Object(yii\rest\IndexAction))
+#2 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#3 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Component.php(627): call_user_func(Array, Object(yii\base\ActionEvent))
+#4 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Module.php(700): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#5 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Controller.php(145): yii\base\Module->beforeAction(Object(yii\rest\IndexAction))
+#6 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('index', Array)
+#7 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('v1/recado/index', Array)
+#8 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 C:\wamp64\www\Alumi.IO-WebApp\api\web\index.php(17): yii\base\Application->run()
+#10 {main}
+2019-12-20 15:43:13 [::1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'CONTENT_TYPE' => 'application/json'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.20.1'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => 'e2e67aeb-cab9-40e2-83d7-be72e64f4072'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'c:\\devkitPro\\msys2\\usr\\bin;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\wamp64\\bin\\php\\php7.3.5;C:\\Program Files\\Git\\cmd;C:\\Program Files\\dotnet\\;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\Samuel\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Samuel\\.dotnet\\tools'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) PHP/7.2.18 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) PHP/7.2.18'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/Alumi.IO-WebApp/api/web/index.php'
+    'REMOTE_PORT' => '50372'
+    'REDIRECT_URL' => '/Alumi.IO-WebApp/api/web/v1/recado'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/Alumi.IO-WebApp/api/web/v1/recado'
+    'SCRIPT_NAME' => '/Alumi.IO-WebApp/api/web/index.php'
+    'PHP_SELF' => '/Alumi.IO-WebApp/api/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1576856593.35
+    'REQUEST_TIME' => 1576856593
+]
+2019-12-20 15:43:24 [::1][-][-][error][yii\web\HttpException:401] yii\web\UnauthorizedHttpException: Your request was made with invalid credentials. in C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\filters\auth\AuthMethod.php:93
+Stack trace:
+#0 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\filters\auth\AuthMethod.php(76): yii\filters\auth\AuthMethod->handleFailure(Object(yii\web\Response))
+#1 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\ActionFilter.php(77): yii\filters\auth\AuthMethod->beforeAction(Object(yii\rest\IndexAction))
+#2 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#3 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Component.php(627): call_user_func(Array, Object(yii\base\ActionEvent))
+#4 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Module.php(700): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#5 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Controller.php(145): yii\base\Module->beforeAction(Object(yii\rest\IndexAction))
+#6 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('index', Array)
+#7 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('v1/recado/index', Array)
+#8 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 C:\wamp64\www\Alumi.IO-WebApp\api\web\index.php(17): yii\base\Application->run()
+#10 {main}
+2019-12-20 15:43:24 [::1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'CONTENT_TYPE' => 'application/json'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.20.1'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => '5609fdb3-96e8-479b-b646-44f7cede8366'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'c:\\devkitPro\\msys2\\usr\\bin;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\wamp64\\bin\\php\\php7.3.5;C:\\Program Files\\Git\\cmd;C:\\Program Files\\dotnet\\;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\Samuel\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Samuel\\.dotnet\\tools'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) PHP/7.2.18 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) PHP/7.2.18'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/Alumi.IO-WebApp/api/web/index.php'
+    'REMOTE_PORT' => '50377'
+    'REDIRECT_URL' => '/Alumi.IO-WebApp/api/web/v1/recado'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/Alumi.IO-WebApp/api/web/v1/recado'
+    'SCRIPT_NAME' => '/Alumi.IO-WebApp/api/web/index.php'
+    'PHP_SELF' => '/Alumi.IO-WebApp/api/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1576856604.771
+    'REQUEST_TIME' => 1576856604
+]
+2019-12-20 15:43:50 [::1][1][-][error][yii\web\HttpException:403] yii\web\ForbiddenHttpException: You are not the owner of this Recado in C:\wamp64\www\Alumi.IO-WebApp\api\modules\v1\controllers\RecadoController.php:38
+Stack trace:
+#0 [internal function]: api\modules\v1\controllers\RecadoController->checkAccess('index')
+#1 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\rest\IndexAction.php(79): call_user_func(Array, 'index')
+#2 [internal function]: yii\rest\IndexAction->run()
+#3 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Action.php(94): call_user_func_array(Array, Array)
+#4 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\Action->runWithParams(Array)
+#5 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('index', Array)
+#6 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('v1/recado/index', Array)
+#7 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#8 C:\wamp64\www\Alumi.IO-WebApp\api\web\index.php(17): yii\base\Application->run()
+#9 {main}
+2019-12-20 15:43:49 [::1][1][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'CONTENT_TYPE' => 'application/json'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.20.1'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => 'ed11fe01-9eb2-47f9-863d-5081b6c16491'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'c:\\devkitPro\\msys2\\usr\\bin;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\wamp64\\bin\\php\\php7.3.5;C:\\Program Files\\Git\\cmd;C:\\Program Files\\dotnet\\;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\Samuel\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Samuel\\.dotnet\\tools'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) PHP/7.2.18 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) PHP/7.2.18'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/Alumi.IO-WebApp/api/web/index.php'
+    'REMOTE_PORT' => '50393'
+    'REDIRECT_URL' => '/Alumi.IO-WebApp/api/web/v1/recado'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/Alumi.IO-WebApp/api/web/v1/recado'
+    'SCRIPT_NAME' => '/Alumi.IO-WebApp/api/web/index.php'
+    'PHP_SELF' => '/Alumi.IO-WebApp/api/web/index.php'
+    'PHP_AUTH_USER' => '***'
+    'PHP_AUTH_PW' => '***'
+    'REQUEST_TIME_FLOAT' => 1576856629.238
+    'REQUEST_TIME' => 1576856629
+]
+2019-12-20 15:48:24 [::1][2][-][error][yii\web\HttpException:403] yii\web\ForbiddenHttpException: You are not the owner of this Recado in C:\wamp64\www\Alumi.IO-WebApp\api\modules\v1\controllers\RecadoController.php:38
+Stack trace:
+#0 [internal function]: api\modules\v1\controllers\RecadoController->checkAccess('update', Object(api\resource\Recado))
+#1 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\rest\UpdateAction.php(43): call_user_func(Array, 'update', Object(api\resource\Recado))
+#2 [internal function]: yii\rest\UpdateAction->run('1')
+#3 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Action.php(94): call_user_func_array(Array, Array)
+#4 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\Action->runWithParams(Array)
+#5 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('update', Array)
+#6 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('v1/recado/updat...', Array)
+#7 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#8 C:\wamp64\www\Alumi.IO-WebApp\api\web\index.php(17): yii\base\Application->run()
+#9 {main}
+2019-12-20 15:48:23 [::1][2][-][info][application] $_GET = [
+    'id' => '1'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'CONTENT_TYPE' => 'application/json'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.20.1'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => 'bc530df3-d605-4da5-9f85-43e02e00dae2'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'CONTENT_LENGTH' => '81'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'c:\\devkitPro\\msys2\\usr\\bin;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\wamp64\\bin\\php\\php7.3.5;C:\\Program Files\\Git\\cmd;C:\\Program Files\\dotnet\\;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\Samuel\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Samuel\\.dotnet\\tools'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) PHP/7.2.18 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) PHP/7.2.18'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/Alumi.IO-WebApp/api/web/index.php'
+    'REMOTE_PORT' => '50426'
+    'REDIRECT_URL' => '/Alumi.IO-WebApp/api/web/v1/recado/1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'PUT'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/Alumi.IO-WebApp/api/web/v1/recado/1'
+    'SCRIPT_NAME' => '/Alumi.IO-WebApp/api/web/index.php'
+    'PHP_SELF' => '/Alumi.IO-WebApp/api/web/index.php'
+    'PHP_AUTH_USER' => '***'
+    'PHP_AUTH_PW' => '***'
+    'REQUEST_TIME_FLOAT' => 1576856903.577
+    'REQUEST_TIME' => 1576856903
+]
+2019-12-20 15:48:47 [::1][1][-][error][yii\web\HttpException:403] yii\web\ForbiddenHttpException: You are not the owner of this Recado in C:\wamp64\www\Alumi.IO-WebApp\api\modules\v1\controllers\RecadoController.php:38
+Stack trace:
+#0 [internal function]: api\modules\v1\controllers\RecadoController->checkAccess('update', Object(api\resource\Recado))
+#1 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\rest\UpdateAction.php(43): call_user_func(Array, 'update', Object(api\resource\Recado))
+#2 [internal function]: yii\rest\UpdateAction->run('1')
+#3 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Action.php(94): call_user_func_array(Array, Array)
+#4 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\Action->runWithParams(Array)
+#5 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('update', Array)
+#6 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('v1/recado/updat...', Array)
+#7 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#8 C:\wamp64\www\Alumi.IO-WebApp\api\web\index.php(17): yii\base\Application->run()
+#9 {main}
+2019-12-20 15:48:46 [::1][1][-][info][application] $_GET = [
+    'id' => '1'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'CONTENT_TYPE' => 'application/json'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.20.1'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => '3dc9d9b1-7908-4c05-a37b-6eb0af3a84cf'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'CONTENT_LENGTH' => '85'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'c:\\devkitPro\\msys2\\usr\\bin;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\wamp64\\bin\\php\\php7.3.5;C:\\Program Files\\Git\\cmd;C:\\Program Files\\dotnet\\;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\Samuel\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Samuel\\.dotnet\\tools'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) PHP/7.2.18 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) PHP/7.2.18'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/Alumi.IO-WebApp/api/web/index.php'
+    'REMOTE_PORT' => '50431'
+    'REDIRECT_URL' => '/Alumi.IO-WebApp/api/web/v1/recado/1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'PUT'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/Alumi.IO-WebApp/api/web/v1/recado/1'
+    'SCRIPT_NAME' => '/Alumi.IO-WebApp/api/web/index.php'
+    'PHP_SELF' => '/Alumi.IO-WebApp/api/web/index.php'
+    'PHP_AUTH_USER' => '***'
+    'PHP_AUTH_PW' => '***'
+    'REQUEST_TIME_FLOAT' => 1576856926.771
+    'REQUEST_TIME' => 1576856926
+]
+2019-12-20 15:48:54 [::1][1][-][error][yii\web\HttpException:403] yii\web\ForbiddenHttpException: You are not the owner of this Recado in C:\wamp64\www\Alumi.IO-WebApp\api\modules\v1\controllers\RecadoController.php:38
+Stack trace:
+#0 [internal function]: api\modules\v1\controllers\RecadoController->checkAccess('update', Object(api\resource\Recado))
+#1 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\rest\UpdateAction.php(43): call_user_func(Array, 'update', Object(api\resource\Recado))
+#2 [internal function]: yii\rest\UpdateAction->run('1')
+#3 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Action.php(94): call_user_func_array(Array, Array)
+#4 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\Action->runWithParams(Array)
+#5 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('update', Array)
+#6 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('v1/recado/updat...', Array)
+#7 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#8 C:\wamp64\www\Alumi.IO-WebApp\api\web\index.php(17): yii\base\Application->run()
+#9 {main}
+2019-12-20 15:48:54 [::1][1][-][info][application] $_GET = [
+    'id' => '1'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'CONTENT_TYPE' => 'application/json'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.20.1'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => '55a3d75b-62f4-46c9-a7e7-19ab713c09bd'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'CONTENT_LENGTH' => '85'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'c:\\devkitPro\\msys2\\usr\\bin;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\wamp64\\bin\\php\\php7.3.5;C:\\Program Files\\Git\\cmd;C:\\Program Files\\dotnet\\;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\Samuel\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Samuel\\.dotnet\\tools'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) PHP/7.2.18 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) PHP/7.2.18'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/Alumi.IO-WebApp/api/web/index.php'
+    'REMOTE_PORT' => '50434'
+    'REDIRECT_URL' => '/Alumi.IO-WebApp/api/web/v1/recado/1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'PUT'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/Alumi.IO-WebApp/api/web/v1/recado/1'
+    'SCRIPT_NAME' => '/Alumi.IO-WebApp/api/web/index.php'
+    'PHP_SELF' => '/Alumi.IO-WebApp/api/web/index.php'
+    'PHP_AUTH_USER' => '***'
+    'PHP_AUTH_PW' => '***'
+    'REQUEST_TIME_FLOAT' => 1576856934.22
+    'REQUEST_TIME' => 1576856934
+]
+2019-12-20 15:49:18 [::1][1][-][error][yii\db\Exception] PDOException: SQLSTATE[22007]: Invalid datetime format: 1292 Incorrect datetime value: '2019-20-02' for column 'data' at row 1 in C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\db\Command.php:1290
+Stack trace:
+#0 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\db\Command.php(1290): PDOStatement->execute()
+#1 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\db\Command.php(1091): yii\db\Command->internalExecute('UPDATE `recado`...')
+#2 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\db\ActiveRecord.php(332): yii\db\Command->execute()
+#3 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\db\BaseActiveRecord.php(810): yii\db\ActiveRecord::updateAll(Array, Array)
+#4 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\db\ActiveRecord.php(676): yii\db\BaseActiveRecord->updateInternal(NULL)
+#5 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\db\BaseActiveRecord.php(681): yii\db\ActiveRecord->update(true, NULL)
+#6 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\rest\UpdateAction.php(48): yii\db\BaseActiveRecord->save()
+#7 [internal function]: yii\rest\UpdateAction->run('1')
+#8 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Action.php(94): call_user_func_array(Array, Array)
+#9 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\Action->runWithParams(Array)
+#10 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('update', Array)
+#11 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('v1/recado/updat...', Array)
+#12 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 C:\wamp64\www\Alumi.IO-WebApp\api\web\index.php(17): yii\base\Application->run()
+#14 {main}
+
+Next yii\db\Exception: SQLSTATE[22007]: Invalid datetime format: 1292 Incorrect datetime value: '2019-20-02' for column 'data' at row 1
+The SQL being executed was: UPDATE `recado` SET `data`='2019-20-02', `descricao`='Nova Descrição 2.0', `assinado`=0 WHERE `id`=1 in C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\db\Schema.php:674
+Stack trace:
+#0 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\db\Command.php(1295): yii\db\Schema->convertException(Object(PDOException), 'UPDATE `recado`...')
+#1 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\db\Command.php(1091): yii\db\Command->internalExecute('UPDATE `recado`...')
+#2 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\db\ActiveRecord.php(332): yii\db\Command->execute()
+#3 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\db\BaseActiveRecord.php(810): yii\db\ActiveRecord::updateAll(Array, Array)
+#4 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\db\ActiveRecord.php(676): yii\db\BaseActiveRecord->updateInternal(NULL)
+#5 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\db\BaseActiveRecord.php(681): yii\db\ActiveRecord->update(true, NULL)
+#6 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\rest\UpdateAction.php(48): yii\db\BaseActiveRecord->save()
+#7 [internal function]: yii\rest\UpdateAction->run('1')
+#8 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Action.php(94): call_user_func_array(Array, Array)
+#9 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\Action->runWithParams(Array)
+#10 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('update', Array)
+#11 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('v1/recado/updat...', Array)
+#12 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 C:\wamp64\www\Alumi.IO-WebApp\api\web\index.php(17): yii\base\Application->run()
+#14 {main}
+Additional Information:
+Array
+(
+    [0] => 22007
+    [1] => 1292
+    [2] => Incorrect datetime value: '2019-20-02' for column 'data' at row 1
+)
+
+2019-12-20 15:49:18 [::1][1][-][info][application] $_GET = [
+    'id' => '1'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'CONTENT_TYPE' => 'application/json'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.20.1'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => '62f93086-f51b-4fd9-9e4a-e7755a4e305e'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'CONTENT_LENGTH' => '85'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'c:\\devkitPro\\msys2\\usr\\bin;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\wamp64\\bin\\php\\php7.3.5;C:\\Program Files\\Git\\cmd;C:\\Program Files\\dotnet\\;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\Samuel\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Samuel\\.dotnet\\tools'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) PHP/7.2.18 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) PHP/7.2.18'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/Alumi.IO-WebApp/api/web/index.php'
+    'REMOTE_PORT' => '50438'
+    'REDIRECT_URL' => '/Alumi.IO-WebApp/api/web/v1/recado/1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'PUT'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/Alumi.IO-WebApp/api/web/v1/recado/1'
+    'SCRIPT_NAME' => '/Alumi.IO-WebApp/api/web/index.php'
+    'PHP_SELF' => '/Alumi.IO-WebApp/api/web/index.php'
+    'PHP_AUTH_USER' => '***'
+    'PHP_AUTH_PW' => '***'
+    'REQUEST_TIME_FLOAT' => 1576856958.199
+    'REQUEST_TIME' => 1576856958
+]
+2019-12-20 15:50:02 [::1][2][-][error][yii\web\HttpException:403] yii\web\ForbiddenHttpException: You are not the owner of this Recado in C:\wamp64\www\Alumi.IO-WebApp\api\modules\v1\controllers\RecadoController.php:38
+Stack trace:
+#0 [internal function]: api\modules\v1\controllers\RecadoController->checkAccess('update', Object(api\resource\Recado))
+#1 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\rest\UpdateAction.php(43): call_user_func(Array, 'update', Object(api\resource\Recado))
+#2 [internal function]: yii\rest\UpdateAction->run('1')
+#3 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Action.php(94): call_user_func_array(Array, Array)
+#4 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\Action->runWithParams(Array)
+#5 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('update', Array)
+#6 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('v1/recado/updat...', Array)
+#7 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#8 C:\wamp64\www\Alumi.IO-WebApp\api\web\index.php(17): yii\base\Application->run()
+#9 {main}
+2019-12-20 15:50:01 [::1][2][-][info][application] $_GET = [
+    'id' => '1'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'CONTENT_TYPE' => 'application/json'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.20.1'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => '4d87e59a-e533-46bd-8bc4-cb86b0036d26'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'CONTENT_LENGTH' => '85'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'c:\\devkitPro\\msys2\\usr\\bin;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\wamp64\\bin\\php\\php7.3.5;C:\\Program Files\\Git\\cmd;C:\\Program Files\\dotnet\\;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\Samuel\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Samuel\\.dotnet\\tools'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) PHP/7.2.18 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) PHP/7.2.18'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/Alumi.IO-WebApp/api/web/index.php'
+    'REMOTE_PORT' => '50447'
+    'REDIRECT_URL' => '/Alumi.IO-WebApp/api/web/v1/recado/1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'PUT'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/Alumi.IO-WebApp/api/web/v1/recado/1'
+    'SCRIPT_NAME' => '/Alumi.IO-WebApp/api/web/index.php'
+    'PHP_SELF' => '/Alumi.IO-WebApp/api/web/index.php'
+    'PHP_AUTH_USER' => '***'
+    'PHP_AUTH_PW' => '***'
+    'REQUEST_TIME_FLOAT' => 1576857001.877
+    'REQUEST_TIME' => 1576857001
+]
+2019-12-20 15:50:29 [::1][2][-][error][yii\web\HttpException:403] yii\web\ForbiddenHttpException: You are not the owner of this Recado in C:\wamp64\www\Alumi.IO-WebApp\api\modules\v1\controllers\RecadoController.php:38
+Stack trace:
+#0 [internal function]: api\modules\v1\controllers\RecadoController->checkAccess('update', Object(api\resource\Recado))
+#1 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\rest\UpdateAction.php(43): call_user_func(Array, 'update', Object(api\resource\Recado))
+#2 [internal function]: yii\rest\UpdateAction->run('1')
+#3 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Action.php(94): call_user_func_array(Array, Array)
+#4 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\Action->runWithParams(Array)
+#5 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('update', Array)
+#6 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('v1/recado/updat...', Array)
+#7 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#8 C:\wamp64\www\Alumi.IO-WebApp\api\web\index.php(17): yii\base\Application->run()
+#9 {main}
+2019-12-20 15:50:29 [::1][2][-][info][application] $_GET = [
+    'id' => '1'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'CONTENT_TYPE' => 'application/json'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.20.1'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => '0f5ef72f-0d46-40e5-b7d3-f42ab906e7ba'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'CONTENT_LENGTH' => '85'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'c:\\devkitPro\\msys2\\usr\\bin;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\wamp64\\bin\\php\\php7.3.5;C:\\Program Files\\Git\\cmd;C:\\Program Files\\dotnet\\;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\Samuel\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Samuel\\.dotnet\\tools'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) PHP/7.2.18 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) PHP/7.2.18'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/Alumi.IO-WebApp/api/web/index.php'
+    'REMOTE_PORT' => '50476'
+    'REDIRECT_URL' => '/Alumi.IO-WebApp/api/web/v1/recado/1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'PUT'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/Alumi.IO-WebApp/api/web/v1/recado/1'
+    'SCRIPT_NAME' => '/Alumi.IO-WebApp/api/web/index.php'
+    'PHP_SELF' => '/Alumi.IO-WebApp/api/web/index.php'
+    'PHP_AUTH_USER' => '***'
+    'PHP_AUTH_PW' => '***'
+    'REQUEST_TIME_FLOAT' => 1576857029.351
+    'REQUEST_TIME' => 1576857029
+]
+2019-12-20 15:50:31 [::1][2][-][error][yii\web\HttpException:403] yii\web\ForbiddenHttpException: You are not the owner of this Recado in C:\wamp64\www\Alumi.IO-WebApp\api\modules\v1\controllers\RecadoController.php:38
+Stack trace:
+#0 [internal function]: api\modules\v1\controllers\RecadoController->checkAccess('update', Object(api\resource\Recado))
+#1 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\rest\UpdateAction.php(43): call_user_func(Array, 'update', Object(api\resource\Recado))
+#2 [internal function]: yii\rest\UpdateAction->run('1')
+#3 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Action.php(94): call_user_func_array(Array, Array)
+#4 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\Action->runWithParams(Array)
+#5 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('update', Array)
+#6 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('v1/recado/updat...', Array)
+#7 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#8 C:\wamp64\www\Alumi.IO-WebApp\api\web\index.php(17): yii\base\Application->run()
+#9 {main}
+2019-12-20 15:50:30 [::1][2][-][info][application] $_GET = [
+    'id' => '1'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'CONTENT_TYPE' => 'application/json'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.20.1'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => 'c0ac2efa-916a-4cf5-9c6f-65e1dc4200cb'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'CONTENT_LENGTH' => '85'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'c:\\devkitPro\\msys2\\usr\\bin;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\wamp64\\bin\\php\\php7.3.5;C:\\Program Files\\Git\\cmd;C:\\Program Files\\dotnet\\;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\Samuel\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Samuel\\.dotnet\\tools'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) PHP/7.2.18 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) PHP/7.2.18'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/Alumi.IO-WebApp/api/web/index.php'
+    'REMOTE_PORT' => '50476'
+    'REDIRECT_URL' => '/Alumi.IO-WebApp/api/web/v1/recado/1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'PUT'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/Alumi.IO-WebApp/api/web/v1/recado/1'
+    'SCRIPT_NAME' => '/Alumi.IO-WebApp/api/web/index.php'
+    'PHP_SELF' => '/Alumi.IO-WebApp/api/web/index.php'
+    'PHP_AUTH_USER' => '***'
+    'PHP_AUTH_PW' => '***'
+    'REQUEST_TIME_FLOAT' => 1576857030.952
+    'REQUEST_TIME' => 1576857030
+]
+2019-12-20 15:52:17 [::1][2][-][error][yii\web\HttpException:403] yii\web\ForbiddenHttpException: You are not the owner of this Recado in C:\wamp64\www\Alumi.IO-WebApp\api\modules\v1\controllers\RecadoController.php:38
+Stack trace:
+#0 [internal function]: api\modules\v1\controllers\RecadoController->checkAccess('update', Object(api\resource\Recado))
+#1 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\rest\UpdateAction.php(43): call_user_func(Array, 'update', Object(api\resource\Recado))
+#2 [internal function]: yii\rest\UpdateAction->run('1')
+#3 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Action.php(94): call_user_func_array(Array, Array)
+#4 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\Action->runWithParams(Array)
+#5 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('update', Array)
+#6 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('v1/recado/updat...', Array)
+#7 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#8 C:\wamp64\www\Alumi.IO-WebApp\api\web\index.php(17): yii\base\Application->run()
+#9 {main}
+2019-12-20 15:52:16 [::1][2][-][info][application] $_GET = [
+    'id' => '1'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'CONTENT_TYPE' => 'application/json'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.20.1'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => '24f213a0-e87a-4b99-96da-21712ecc98cb'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'CONTENT_LENGTH' => '85'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'c:\\devkitPro\\msys2\\usr\\bin;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\wamp64\\bin\\php\\php7.3.5;C:\\Program Files\\Git\\cmd;C:\\Program Files\\dotnet\\;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\Samuel\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Samuel\\.dotnet\\tools'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) PHP/7.2.18 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) PHP/7.2.18'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/Alumi.IO-WebApp/api/web/index.php'
+    'REMOTE_PORT' => '50497'
+    'REDIRECT_URL' => '/Alumi.IO-WebApp/api/web/v1/recado/1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'PUT'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/Alumi.IO-WebApp/api/web/v1/recado/1'
+    'SCRIPT_NAME' => '/Alumi.IO-WebApp/api/web/index.php'
+    'PHP_SELF' => '/Alumi.IO-WebApp/api/web/index.php'
+    'PHP_AUTH_USER' => '***'
+    'PHP_AUTH_PW' => '***'
+    'REQUEST_TIME_FLOAT' => 1576857136.581
+    'REQUEST_TIME' => 1576857136
+]
+2019-12-20 15:52:20 [::1][2][-][error][yii\web\HttpException:403] yii\web\ForbiddenHttpException: You are not the owner of this Recado in C:\wamp64\www\Alumi.IO-WebApp\api\modules\v1\controllers\RecadoController.php:38
+Stack trace:
+#0 [internal function]: api\modules\v1\controllers\RecadoController->checkAccess('update', Object(api\resource\Recado))
+#1 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\rest\UpdateAction.php(43): call_user_func(Array, 'update', Object(api\resource\Recado))
+#2 [internal function]: yii\rest\UpdateAction->run('1')
+#3 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Action.php(94): call_user_func_array(Array, Array)
+#4 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\Action->runWithParams(Array)
+#5 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('update', Array)
+#6 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('v1/recado/updat...', Array)
+#7 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#8 C:\wamp64\www\Alumi.IO-WebApp\api\web\index.php(17): yii\base\Application->run()
+#9 {main}
+2019-12-20 15:52:19 [::1][2][-][info][application] $_GET = [
+    'id' => '1'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'CONTENT_TYPE' => 'application/json'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.20.1'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => '9afb24cd-eae9-4fa0-bbc9-5fcc16cf3a04'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'CONTENT_LENGTH' => '85'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'c:\\devkitPro\\msys2\\usr\\bin;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\wamp64\\bin\\php\\php7.3.5;C:\\Program Files\\Git\\cmd;C:\\Program Files\\dotnet\\;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\Samuel\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Samuel\\.dotnet\\tools'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) PHP/7.2.18 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) PHP/7.2.18'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/Alumi.IO-WebApp/api/web/index.php'
+    'REMOTE_PORT' => '50497'
+    'REDIRECT_URL' => '/Alumi.IO-WebApp/api/web/v1/recado/1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'PUT'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/Alumi.IO-WebApp/api/web/v1/recado/1'
+    'SCRIPT_NAME' => '/Alumi.IO-WebApp/api/web/index.php'
+    'PHP_SELF' => '/Alumi.IO-WebApp/api/web/index.php'
+    'PHP_AUTH_USER' => '***'
+    'PHP_AUTH_PW' => '***'
+    'REQUEST_TIME_FLOAT' => 1576857139.537
+    'REQUEST_TIME' => 1576857139
+]
+2019-12-20 15:52:51 [::1][2][-][error][yii\web\HttpException:403] yii\web\ForbiddenHttpException: You are not the owner of this Recado in C:\wamp64\www\Alumi.IO-WebApp\api\modules\v1\controllers\RecadoController.php:38
+Stack trace:
+#0 [internal function]: api\modules\v1\controllers\RecadoController->checkAccess('update', Object(api\resource\Recado))
+#1 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\rest\UpdateAction.php(43): call_user_func(Array, 'update', Object(api\resource\Recado))
+#2 [internal function]: yii\rest\UpdateAction->run('1')
+#3 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Action.php(94): call_user_func_array(Array, Array)
+#4 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\Action->runWithParams(Array)
+#5 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('update', Array)
+#6 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('v1/recado/updat...', Array)
+#7 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#8 C:\wamp64\www\Alumi.IO-WebApp\api\web\index.php(17): yii\base\Application->run()
+#9 {main}
+2019-12-20 15:52:51 [::1][2][-][info][application] $_GET = [
+    'id' => '1'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'CONTENT_TYPE' => 'application/json'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.20.1'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => 'b5178575-92ca-49ed-b431-fdf4a77fdf9d'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'CONTENT_LENGTH' => '85'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'c:\\devkitPro\\msys2\\usr\\bin;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\wamp64\\bin\\php\\php7.3.5;C:\\Program Files\\Git\\cmd;C:\\Program Files\\dotnet\\;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\Samuel\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Samuel\\.dotnet\\tools'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) PHP/7.2.18 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) PHP/7.2.18'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/Alumi.IO-WebApp/api/web/index.php'
+    'REMOTE_PORT' => '50503'
+    'REDIRECT_URL' => '/Alumi.IO-WebApp/api/web/v1/recado/1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'PUT'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/Alumi.IO-WebApp/api/web/v1/recado/1'
+    'SCRIPT_NAME' => '/Alumi.IO-WebApp/api/web/index.php'
+    'PHP_SELF' => '/Alumi.IO-WebApp/api/web/index.php'
+    'PHP_AUTH_USER' => '***'
+    'PHP_AUTH_PW' => '***'
+    'REQUEST_TIME_FLOAT' => 1576857171.088
+    'REQUEST_TIME' => 1576857171
+]
+2019-12-20 15:52:54 [::1][2][-][error][yii\web\HttpException:403] yii\web\ForbiddenHttpException: You are not the owner of this Recado in C:\wamp64\www\Alumi.IO-WebApp\api\modules\v1\controllers\RecadoController.php:38
+Stack trace:
+#0 [internal function]: api\modules\v1\controllers\RecadoController->checkAccess('update', Object(api\resource\Recado))
+#1 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\rest\UpdateAction.php(43): call_user_func(Array, 'update', Object(api\resource\Recado))
+#2 [internal function]: yii\rest\UpdateAction->run('1')
+#3 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Action.php(94): call_user_func_array(Array, Array)
+#4 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\Action->runWithParams(Array)
+#5 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('update', Array)
+#6 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('v1/recado/updat...', Array)
+#7 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#8 C:\wamp64\www\Alumi.IO-WebApp\api\web\index.php(17): yii\base\Application->run()
+#9 {main}
+2019-12-20 15:52:53 [::1][2][-][info][application] $_GET = [
+    'id' => '1'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'CONTENT_TYPE' => 'application/json'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.20.1'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => '507ab320-41e2-4960-9c74-14466a636aa7'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'CONTENT_LENGTH' => '85'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'c:\\devkitPro\\msys2\\usr\\bin;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\wamp64\\bin\\php\\php7.3.5;C:\\Program Files\\Git\\cmd;C:\\Program Files\\dotnet\\;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\Samuel\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Samuel\\.dotnet\\tools'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) PHP/7.2.18 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) PHP/7.2.18'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/Alumi.IO-WebApp/api/web/index.php'
+    'REMOTE_PORT' => '50503'
+    'REDIRECT_URL' => '/Alumi.IO-WebApp/api/web/v1/recado/1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'PUT'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/Alumi.IO-WebApp/api/web/v1/recado/1'
+    'SCRIPT_NAME' => '/Alumi.IO-WebApp/api/web/index.php'
+    'PHP_SELF' => '/Alumi.IO-WebApp/api/web/index.php'
+    'PHP_AUTH_USER' => '***'
+    'PHP_AUTH_PW' => '***'
+    'REQUEST_TIME_FLOAT' => 1576857173.825
+    'REQUEST_TIME' => 1576857173
+]
+2019-12-20 15:53:58 [::1][2][-][error][yii\web\HttpException:403] yii\web\ForbiddenHttpException: You are not the owner of this Recado in C:\wamp64\www\Alumi.IO-WebApp\api\modules\v1\controllers\RecadoController.php:38
+Stack trace:
+#0 [internal function]: api\modules\v1\controllers\RecadoController->checkAccess('update', Object(api\resource\Recado))
+#1 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\rest\UpdateAction.php(43): call_user_func(Array, 'update', Object(api\resource\Recado))
+#2 [internal function]: yii\rest\UpdateAction->run('1')
+#3 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Action.php(94): call_user_func_array(Array, Array)
+#4 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\Action->runWithParams(Array)
+#5 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('update', Array)
+#6 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('v1/recado/updat...', Array)
+#7 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#8 C:\wamp64\www\Alumi.IO-WebApp\api\web\index.php(17): yii\base\Application->run()
+#9 {main}
+2019-12-20 15:53:58 [::1][2][-][info][application] $_GET = [
+    'id' => '1'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'CONTENT_TYPE' => 'application/json'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.20.1'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => '731a8081-88a2-4a3e-97cb-c887fe7d11c0'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'CONTENT_LENGTH' => '85'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'c:\\devkitPro\\msys2\\usr\\bin;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\wamp64\\bin\\php\\php7.3.5;C:\\Program Files\\Git\\cmd;C:\\Program Files\\dotnet\\;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\Samuel\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Samuel\\.dotnet\\tools'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) PHP/7.2.18 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) PHP/7.2.18'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/Alumi.IO-WebApp/api/web/index.php'
+    'REMOTE_PORT' => '50558'
+    'REDIRECT_URL' => '/Alumi.IO-WebApp/api/web/v1/recado/1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'PUT'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/Alumi.IO-WebApp/api/web/v1/recado/1'
+    'SCRIPT_NAME' => '/Alumi.IO-WebApp/api/web/index.php'
+    'PHP_SELF' => '/Alumi.IO-WebApp/api/web/index.php'
+    'PHP_AUTH_USER' => '***'
+    'PHP_AUTH_PW' => '***'
+    'REQUEST_TIME_FLOAT' => 1576857238.199
+    'REQUEST_TIME' => 1576857238
+]
+2019-12-20 15:54:08 [::1][1][-][error][yii\web\HttpException:403] yii\web\ForbiddenHttpException: You are not the owner of this Recado in C:\wamp64\www\Alumi.IO-WebApp\api\modules\v1\controllers\RecadoController.php:38
+Stack trace:
+#0 [internal function]: api\modules\v1\controllers\RecadoController->checkAccess('update', Object(api\resource\Recado))
+#1 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\rest\UpdateAction.php(43): call_user_func(Array, 'update', Object(api\resource\Recado))
+#2 [internal function]: yii\rest\UpdateAction->run('1')
+#3 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Action.php(94): call_user_func_array(Array, Array)
+#4 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\Action->runWithParams(Array)
+#5 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('update', Array)
+#6 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('v1/recado/updat...', Array)
+#7 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#8 C:\wamp64\www\Alumi.IO-WebApp\api\web\index.php(17): yii\base\Application->run()
+#9 {main}
+2019-12-20 15:54:07 [::1][1][-][info][application] $_GET = [
+    'id' => '1'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'CONTENT_TYPE' => 'application/json'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.20.1'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => 'd5fa5960-8d40-46b1-b1c6-e4f16b80ef64'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'CONTENT_LENGTH' => '85'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'c:\\devkitPro\\msys2\\usr\\bin;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\wamp64\\bin\\php\\php7.3.5;C:\\Program Files\\Git\\cmd;C:\\Program Files\\dotnet\\;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\Samuel\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Samuel\\.dotnet\\tools'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) PHP/7.2.18 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) PHP/7.2.18'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/Alumi.IO-WebApp/api/web/index.php'
+    'REMOTE_PORT' => '50562'
+    'REDIRECT_URL' => '/Alumi.IO-WebApp/api/web/v1/recado/1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'PUT'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/Alumi.IO-WebApp/api/web/v1/recado/1'
+    'SCRIPT_NAME' => '/Alumi.IO-WebApp/api/web/index.php'
+    'PHP_SELF' => '/Alumi.IO-WebApp/api/web/index.php'
+    'PHP_AUTH_USER' => '***'
+    'PHP_AUTH_PW' => '***'
+    'REQUEST_TIME_FLOAT' => 1576857247.666
+    'REQUEST_TIME' => 1576857247
+]
+2019-12-20 15:54:30 [::1][2][-][error][yii\web\HttpException:403] yii\web\ForbiddenHttpException: You are not the owner of this Recado in C:\wamp64\www\Alumi.IO-WebApp\api\modules\v1\controllers\RecadoController.php:38
+Stack trace:
+#0 [internal function]: api\modules\v1\controllers\RecadoController->checkAccess('update', Object(api\resource\Recado))
+#1 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\rest\UpdateAction.php(43): call_user_func(Array, 'update', Object(api\resource\Recado))
+#2 [internal function]: yii\rest\UpdateAction->run('1')
+#3 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Action.php(94): call_user_func_array(Array, Array)
+#4 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\Action->runWithParams(Array)
+#5 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('update', Array)
+#6 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('v1/recado/updat...', Array)
+#7 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#8 C:\wamp64\www\Alumi.IO-WebApp\api\web\index.php(17): yii\base\Application->run()
+#9 {main}
+2019-12-20 15:54:29 [::1][2][-][info][application] $_GET = [
+    'id' => '1'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'CONTENT_TYPE' => 'application/json'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.20.1'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => '6397be23-a8af-4751-b68b-351ad17b1204'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'CONTENT_LENGTH' => '85'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'c:\\devkitPro\\msys2\\usr\\bin;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\wamp64\\bin\\php\\php7.3.5;C:\\Program Files\\Git\\cmd;C:\\Program Files\\dotnet\\;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\Samuel\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Samuel\\.dotnet\\tools'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) PHP/7.2.18 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) PHP/7.2.18'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/Alumi.IO-WebApp/api/web/index.php'
+    'REMOTE_PORT' => '50568'
+    'REDIRECT_URL' => '/Alumi.IO-WebApp/api/web/v1/recado/1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'PUT'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/Alumi.IO-WebApp/api/web/v1/recado/1'
+    'SCRIPT_NAME' => '/Alumi.IO-WebApp/api/web/index.php'
+    'PHP_SELF' => '/Alumi.IO-WebApp/api/web/index.php'
+    'PHP_AUTH_USER' => '***'
+    'PHP_AUTH_PW' => '***'
+    'REQUEST_TIME_FLOAT' => 1576857269.855
+    'REQUEST_TIME' => 1576857269
+]
+2019-12-20 15:56:55 [::1][2][-][error][yii\web\HttpException:403] yii\web\ForbiddenHttpException: You are not the owner of this Recado! in C:\wamp64\www\Alumi.IO-WebApp\api\modules\v1\controllers\RecadoController.php:39
+Stack trace:
+#0 [internal function]: api\modules\v1\controllers\RecadoController->checkAccess('update', Object(api\resource\Recado))
+#1 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\rest\UpdateAction.php(43): call_user_func(Array, 'update', Object(api\resource\Recado))
+#2 [internal function]: yii\rest\UpdateAction->run('1')
+#3 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Action.php(94): call_user_func_array(Array, Array)
+#4 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\Action->runWithParams(Array)
+#5 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('update', Array)
+#6 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('v1/recado/updat...', Array)
+#7 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#8 C:\wamp64\www\Alumi.IO-WebApp\api\web\index.php(17): yii\base\Application->run()
+#9 {main}
+2019-12-20 15:56:54 [::1][2][-][info][application] $_GET = [
+    'id' => '1'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'CONTENT_TYPE' => 'application/json'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.20.1'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => '3c779dd7-a53d-4032-9657-aff1ba127ae1'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'CONTENT_LENGTH' => '85'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'c:\\devkitPro\\msys2\\usr\\bin;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\wamp64\\bin\\php\\php7.3.5;C:\\Program Files\\Git\\cmd;C:\\Program Files\\dotnet\\;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\Samuel\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Samuel\\.dotnet\\tools'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) PHP/7.2.18 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) PHP/7.2.18'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/Alumi.IO-WebApp/api/web/index.php'
+    'REMOTE_PORT' => '50602'
+    'REDIRECT_URL' => '/Alumi.IO-WebApp/api/web/v1/recado/1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'PUT'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/Alumi.IO-WebApp/api/web/v1/recado/1'
+    'SCRIPT_NAME' => '/Alumi.IO-WebApp/api/web/index.php'
+    'PHP_SELF' => '/Alumi.IO-WebApp/api/web/index.php'
+    'PHP_AUTH_USER' => '***'
+    'PHP_AUTH_PW' => '***'
+    'REQUEST_TIME_FLOAT' => 1576857414.872
+    'REQUEST_TIME' => 1576857414
+]
+2019-12-20 16:02:43 [::1][-][-][error][Error] Error: Class 'api\modules\v1\User' not found in C:\wamp64\www\Alumi.IO-WebApp\api\modules\v1\api.php:46
+Stack trace:
+#0 [internal function]: api\modules\v1\api->auth('conta2', 'conta2')
+#1 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\filters\auth\HttpBasicAuth.php(99): call_user_func(Array, 'conta2', 'conta2')
+#2 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\filters\auth\AuthMethod.php(61): yii\filters\auth\HttpBasicAuth->authenticate(Object(yii\web\User), Object(yii\web\Request), Object(yii\web\Response))
+#3 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\ActionFilter.php(77): yii\filters\auth\AuthMethod->beforeAction(Object(yii\rest\UpdateAction))
+#4 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#5 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Component.php(627): call_user_func(Array, Object(yii\base\ActionEvent))
+#6 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Module.php(700): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#7 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Controller.php(145): yii\base\Module->beforeAction(Object(yii\rest\UpdateAction))
+#8 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('update', Array)
+#9 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('v1/recado/updat...', Array)
+#10 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 C:\wamp64\www\Alumi.IO-WebApp\api\web\index.php(17): yii\base\Application->run()
+#12 {main}
+2019-12-20 16:02:43 [::1][-][-][info][application] $_GET = [
+    'id' => '1'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'CONTENT_TYPE' => 'application/json'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.20.1'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => '73a21feb-66e6-4d26-9f82-2b2ef6901c58'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'CONTENT_LENGTH' => '85'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'c:\\devkitPro\\msys2\\usr\\bin;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\wamp64\\bin\\php\\php7.3.5;C:\\Program Files\\Git\\cmd;C:\\Program Files\\dotnet\\;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\Samuel\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Samuel\\.dotnet\\tools'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) PHP/7.2.18 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) PHP/7.2.18'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/Alumi.IO-WebApp/api/web/index.php'
+    'REMOTE_PORT' => '50657'
+    'REDIRECT_URL' => '/Alumi.IO-WebApp/api/web/v1/recado/1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'PUT'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/Alumi.IO-WebApp/api/web/v1/recado/1'
+    'SCRIPT_NAME' => '/Alumi.IO-WebApp/api/web/index.php'
+    'PHP_SELF' => '/Alumi.IO-WebApp/api/web/index.php'
+    'PHP_AUTH_USER' => '***'
+    'PHP_AUTH_PW' => '***'
+    'REQUEST_TIME_FLOAT' => 1576857763.703
+    'REQUEST_TIME' => 1576857763
+]
+2019-12-20 16:02:49 [::1][-][-][error][Error] Error: Class 'api\modules\v1\User' not found in C:\wamp64\www\Alumi.IO-WebApp\api\modules\v1\api.php:46
+Stack trace:
+#0 [internal function]: api\modules\v1\api->auth('conta2', 'conta2')
+#1 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\filters\auth\HttpBasicAuth.php(99): call_user_func(Array, 'conta2', 'conta2')
+#2 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\filters\auth\AuthMethod.php(61): yii\filters\auth\HttpBasicAuth->authenticate(Object(yii\web\User), Object(yii\web\Request), Object(yii\web\Response))
+#3 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\ActionFilter.php(77): yii\filters\auth\AuthMethod->beforeAction(Object(yii\rest\UpdateAction))
+#4 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#5 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Component.php(627): call_user_func(Array, Object(yii\base\ActionEvent))
+#6 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Module.php(700): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#7 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Controller.php(145): yii\base\Module->beforeAction(Object(yii\rest\UpdateAction))
+#8 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('update', Array)
+#9 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('v1/recado/updat...', Array)
+#10 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 C:\wamp64\www\Alumi.IO-WebApp\api\web\index.php(17): yii\base\Application->run()
+#12 {main}
+2019-12-20 16:02:49 [::1][-][-][info][application] $_GET = [
+    'id' => '1'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'CONTENT_TYPE' => 'application/json'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.20.1'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => 'c4e77434-43dc-4622-bcc1-1846abd9d98a'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'CONTENT_LENGTH' => '85'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'c:\\devkitPro\\msys2\\usr\\bin;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\wamp64\\bin\\php\\php7.3.5;C:\\Program Files\\Git\\cmd;C:\\Program Files\\dotnet\\;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\Samuel\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Samuel\\.dotnet\\tools'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) PHP/7.2.18 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) PHP/7.2.18'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/Alumi.IO-WebApp/api/web/index.php'
+    'REMOTE_PORT' => '50659'
+    'REDIRECT_URL' => '/Alumi.IO-WebApp/api/web/v1/recado/1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'PUT'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/Alumi.IO-WebApp/api/web/v1/recado/1'
+    'SCRIPT_NAME' => '/Alumi.IO-WebApp/api/web/index.php'
+    'PHP_SELF' => '/Alumi.IO-WebApp/api/web/index.php'
+    'PHP_AUTH_USER' => '***'
+    'PHP_AUTH_PW' => '***'
+    'REQUEST_TIME_FLOAT' => 1576857769.035
+    'REQUEST_TIME' => 1576857769
+]
+2019-12-20 16:03:33 [::1][-][-][error][Error] Error: Class 'api\modules\v1\User' not found in C:\wamp64\www\Alumi.IO-WebApp\api\modules\v1\api.php:46
+Stack trace:
+#0 [internal function]: api\modules\v1\api->auth('conta2', 'conta2')
+#1 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\filters\auth\HttpBasicAuth.php(99): call_user_func(Array, 'conta2', 'conta2')
+#2 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\filters\auth\AuthMethod.php(61): yii\filters\auth\HttpBasicAuth->authenticate(Object(yii\web\User), Object(yii\web\Request), Object(yii\web\Response))
+#3 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\ActionFilter.php(77): yii\filters\auth\AuthMethod->beforeAction(Object(yii\rest\UpdateAction))
+#4 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#5 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Component.php(627): call_user_func(Array, Object(yii\base\ActionEvent))
+#6 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Module.php(700): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#7 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Controller.php(145): yii\base\Module->beforeAction(Object(yii\rest\UpdateAction))
+#8 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('update', Array)
+#9 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('v1/recado/updat...', Array)
+#10 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 C:\wamp64\www\Alumi.IO-WebApp\api\web\index.php(17): yii\base\Application->run()
+#12 {main}
+2019-12-20 16:03:33 [::1][-][-][info][application] $_GET = [
+    'id' => '1'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'CONTENT_TYPE' => 'application/json'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.20.1'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => '035bb110-316a-49c5-b325-82d558929b96'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'CONTENT_LENGTH' => '85'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'c:\\devkitPro\\msys2\\usr\\bin;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\wamp64\\bin\\php\\php7.3.5;C:\\Program Files\\Git\\cmd;C:\\Program Files\\dotnet\\;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\Samuel\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Samuel\\.dotnet\\tools'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) PHP/7.2.18 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) PHP/7.2.18'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/Alumi.IO-WebApp/api/web/index.php'
+    'REMOTE_PORT' => '50663'
+    'REDIRECT_URL' => '/Alumi.IO-WebApp/api/web/v1/recado/1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'PUT'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/Alumi.IO-WebApp/api/web/v1/recado/1'
+    'SCRIPT_NAME' => '/Alumi.IO-WebApp/api/web/index.php'
+    'PHP_SELF' => '/Alumi.IO-WebApp/api/web/index.php'
+    'PHP_AUTH_USER' => '***'
+    'PHP_AUTH_PW' => '***'
+    'REQUEST_TIME_FLOAT' => 1576857813.561
+    'REQUEST_TIME' => 1576857813
+]
+2019-12-20 16:05:19 [::1][2][-][error][yii\web\HttpException:403] yii\web\ForbiddenHttpException: You are not the owner of this Recado! in C:\wamp64\www\Alumi.IO-WebApp\api\modules\v1\controllers\RecadoController.php:26
+Stack trace:
+#0 [internal function]: api\modules\v1\controllers\RecadoController->checkAccess('update', Object(api\resource\Recado))
+#1 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\rest\UpdateAction.php(43): call_user_func(Array, 'update', Object(api\resource\Recado))
+#2 [internal function]: yii\rest\UpdateAction->run('1')
+#3 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Action.php(94): call_user_func_array(Array, Array)
+#4 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\Action->runWithParams(Array)
+#5 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('update', Array)
+#6 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('v1/recado/updat...', Array)
+#7 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#8 C:\wamp64\www\Alumi.IO-WebApp\api\web\index.php(17): yii\base\Application->run()
+#9 {main}
+2019-12-20 16:05:18 [::1][2][-][info][application] $_GET = [
+    'id' => '1'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'CONTENT_TYPE' => 'application/json'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.20.1'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => '46f65272-8e34-4def-a941-b8b8026dee27'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'CONTENT_LENGTH' => '85'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'c:\\devkitPro\\msys2\\usr\\bin;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\wamp64\\bin\\php\\php7.3.5;C:\\Program Files\\Git\\cmd;C:\\Program Files\\dotnet\\;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\Samuel\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Samuel\\.dotnet\\tools'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) PHP/7.2.18 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) PHP/7.2.18'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/Alumi.IO-WebApp/api/web/index.php'
+    'REMOTE_PORT' => '50673'
+    'REDIRECT_URL' => '/Alumi.IO-WebApp/api/web/v1/recado/1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'PUT'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/Alumi.IO-WebApp/api/web/v1/recado/1'
+    'SCRIPT_NAME' => '/Alumi.IO-WebApp/api/web/index.php'
+    'PHP_SELF' => '/Alumi.IO-WebApp/api/web/index.php'
+    'PHP_AUTH_USER' => '***'
+    'PHP_AUTH_PW' => '***'
+    'REQUEST_TIME_FLOAT' => 1576857918.547
+    'REQUEST_TIME' => 1576857918
+]
+2019-12-20 16:11:04 [::1][-][-][error][yii\web\HttpException:401] yii\web\UnauthorizedHttpException: Your request was made with invalid credentials. in C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\filters\auth\AuthMethod.php:93
+Stack trace:
+#0 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\filters\auth\AuthMethod.php(76): yii\filters\auth\AuthMethod->handleFailure(Object(yii\web\Response))
+#1 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\ActionFilter.php(77): yii\filters\auth\AuthMethod->beforeAction(Object(yii\rest\CreateAction))
+#2 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#3 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Component.php(627): call_user_func(Array, Object(yii\base\ActionEvent))
+#4 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Module.php(700): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#5 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Controller.php(145): yii\base\Module->beforeAction(Object(yii\rest\CreateAction))
+#6 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('create', Array)
+#7 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('v1/aluno/create', Array)
+#8 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 C:\wamp64\www\Alumi.IO-WebApp\api\web\index.php(17): yii\base\Application->run()
+#10 {main}
+2019-12-20 16:11:03 [::1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'CONTENT_TYPE' => 'application/json'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.20.1'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => '163755df-988a-4a58-b5ba-cd0f7df80e5e'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'CONTENT_LENGTH' => '121'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'c:\\devkitPro\\msys2\\usr\\bin;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\wamp64\\bin\\php\\php7.3.5;C:\\Program Files\\Git\\cmd;C:\\Program Files\\dotnet\\;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\Samuel\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Samuel\\.dotnet\\tools'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) PHP/7.2.18 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) PHP/7.2.18'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/Alumi.IO-WebApp/api/web/index.php'
+    'REMOTE_PORT' => '50739'
+    'REDIRECT_URL' => '/Alumi.IO-WebApp/api/web/v1/aluno'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/Alumi.IO-WebApp/api/web/v1/aluno'
+    'SCRIPT_NAME' => '/Alumi.IO-WebApp/api/web/index.php'
+    'PHP_SELF' => '/Alumi.IO-WebApp/api/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1576858263.957
+    'REQUEST_TIME' => 1576858263
+]
+2019-12-20 16:11:17 [::1][2][-][error][yii\web\HttpException:403] yii\web\ForbiddenHttpException: You are not allowed to make the action "create" this model. in C:\wamp64\www\Alumi.IO-WebApp\api\modules\v1\controllers\AlunoController.php:21
+Stack trace:
+#0 [internal function]: api\modules\v1\controllers\AlunoController->checkAccess('create')
+#1 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\rest\CreateAction.php(43): call_user_func(Array, 'create')
+#2 [internal function]: yii\rest\CreateAction->run()
+#3 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Action.php(94): call_user_func_array(Array, Array)
+#4 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\Action->runWithParams(Array)
+#5 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('create', Array)
+#6 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('v1/aluno/create', Array)
+#7 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#8 C:\wamp64\www\Alumi.IO-WebApp\api\web\index.php(17): yii\base\Application->run()
+#9 {main}
+2019-12-20 16:11:16 [::1][2][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'CONTENT_TYPE' => 'application/json'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.20.1'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => 'dce589f8-c600-4fa7-b5c0-8277398633dd'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'CONTENT_LENGTH' => '121'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'c:\\devkitPro\\msys2\\usr\\bin;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\wamp64\\bin\\php\\php7.3.5;C:\\Program Files\\Git\\cmd;C:\\Program Files\\dotnet\\;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\Samuel\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Samuel\\.dotnet\\tools'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) PHP/7.2.18 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) PHP/7.2.18'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/Alumi.IO-WebApp/api/web/index.php'
+    'REMOTE_PORT' => '50742'
+    'REDIRECT_URL' => '/Alumi.IO-WebApp/api/web/v1/aluno'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/Alumi.IO-WebApp/api/web/v1/aluno'
+    'SCRIPT_NAME' => '/Alumi.IO-WebApp/api/web/index.php'
+    'PHP_SELF' => '/Alumi.IO-WebApp/api/web/index.php'
+    'PHP_AUTH_USER' => '***'
+    'PHP_AUTH_PW' => '***'
+    'REQUEST_TIME_FLOAT' => 1576858276.95
+    'REQUEST_TIME' => 1576858276
+]
+2019-12-20 16:11:29 [::1][2][-][error][yii\web\HttpException:403] yii\web\ForbiddenHttpException: You are not allowed to make the action \"create\" this model. in C:\wamp64\www\Alumi.IO-WebApp\api\modules\v1\controllers\AlunoController.php:21
+Stack trace:
+#0 [internal function]: api\modules\v1\controllers\AlunoController->checkAccess('create')
+#1 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\rest\CreateAction.php(43): call_user_func(Array, 'create')
+#2 [internal function]: yii\rest\CreateAction->run()
+#3 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Action.php(94): call_user_func_array(Array, Array)
+#4 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\Action->runWithParams(Array)
+#5 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('create', Array)
+#6 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('v1/aluno/create', Array)
+#7 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#8 C:\wamp64\www\Alumi.IO-WebApp\api\web\index.php(17): yii\base\Application->run()
+#9 {main}
+2019-12-20 16:11:28 [::1][2][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'CONTENT_TYPE' => 'application/json'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.20.1'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => '583d183c-b89e-49e0-b2fe-824204d23ef8'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'CONTENT_LENGTH' => '121'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'c:\\devkitPro\\msys2\\usr\\bin;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\wamp64\\bin\\php\\php7.3.5;C:\\Program Files\\Git\\cmd;C:\\Program Files\\dotnet\\;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\Samuel\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Samuel\\.dotnet\\tools'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) PHP/7.2.18 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) PHP/7.2.18'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/Alumi.IO-WebApp/api/web/index.php'
+    'REMOTE_PORT' => '50746'
+    'REDIRECT_URL' => '/Alumi.IO-WebApp/api/web/v1/aluno'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/Alumi.IO-WebApp/api/web/v1/aluno'
+    'SCRIPT_NAME' => '/Alumi.IO-WebApp/api/web/index.php'
+    'PHP_SELF' => '/Alumi.IO-WebApp/api/web/index.php'
+    'PHP_AUTH_USER' => '***'
+    'PHP_AUTH_PW' => '***'
+    'REQUEST_TIME_FLOAT' => 1576858288.905
+    'REQUEST_TIME' => 1576858288
+]
+2019-12-20 16:11:43 [::1][2][-][error][yii\web\HttpException:403] yii\web\ForbiddenHttpException: You are not allowed to make the action "create" this model. in C:\wamp64\www\Alumi.IO-WebApp\api\modules\v1\controllers\AlunoController.php:21
+Stack trace:
+#0 [internal function]: api\modules\v1\controllers\AlunoController->checkAccess('create')
+#1 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\rest\CreateAction.php(43): call_user_func(Array, 'create')
+#2 [internal function]: yii\rest\CreateAction->run()
+#3 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Action.php(94): call_user_func_array(Array, Array)
+#4 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\Action->runWithParams(Array)
+#5 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('create', Array)
+#6 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('v1/aluno/create', Array)
+#7 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#8 C:\wamp64\www\Alumi.IO-WebApp\api\web\index.php(17): yii\base\Application->run()
+#9 {main}
+2019-12-20 16:11:42 [::1][2][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'CONTENT_TYPE' => 'application/json'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.20.1'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => 'dda216db-34e3-424e-b5dd-998943be0a23'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'CONTENT_LENGTH' => '121'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'c:\\devkitPro\\msys2\\usr\\bin;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\wamp64\\bin\\php\\php7.3.5;C:\\Program Files\\Git\\cmd;C:\\Program Files\\dotnet\\;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\Samuel\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Samuel\\.dotnet\\tools'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) PHP/7.2.18 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) PHP/7.2.18'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/Alumi.IO-WebApp/api/web/index.php'
+    'REMOTE_PORT' => '50750'
+    'REDIRECT_URL' => '/Alumi.IO-WebApp/api/web/v1/aluno'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/Alumi.IO-WebApp/api/web/v1/aluno'
+    'SCRIPT_NAME' => '/Alumi.IO-WebApp/api/web/index.php'
+    'PHP_SELF' => '/Alumi.IO-WebApp/api/web/index.php'
+    'PHP_AUTH_USER' => '***'
+    'PHP_AUTH_PW' => '***'
+    'REQUEST_TIME_FLOAT' => 1576858302.865
+    'REQUEST_TIME' => 1576858302
+]
+2019-12-20 16:11:55 [::1][2][-][error][yii\web\HttpException:403] yii\web\ForbiddenHttpException: You are not allowed to make the action create this model. in C:\wamp64\www\Alumi.IO-WebApp\api\modules\v1\controllers\AlunoController.php:21
+Stack trace:
+#0 [internal function]: api\modules\v1\controllers\AlunoController->checkAccess('create')
+#1 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\rest\CreateAction.php(43): call_user_func(Array, 'create')
+#2 [internal function]: yii\rest\CreateAction->run()
+#3 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Action.php(94): call_user_func_array(Array, Array)
+#4 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\Action->runWithParams(Array)
+#5 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('create', Array)
+#6 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('v1/aluno/create', Array)
+#7 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#8 C:\wamp64\www\Alumi.IO-WebApp\api\web\index.php(17): yii\base\Application->run()
+#9 {main}
+2019-12-20 16:11:54 [::1][2][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'CONTENT_TYPE' => 'application/json'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.20.1'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => '8e7631c9-f14d-4d6f-806a-66fdda2a7519'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'CONTENT_LENGTH' => '121'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'c:\\devkitPro\\msys2\\usr\\bin;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\wamp64\\bin\\php\\php7.3.5;C:\\Program Files\\Git\\cmd;C:\\Program Files\\dotnet\\;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\Samuel\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Samuel\\.dotnet\\tools'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) PHP/7.2.18 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) PHP/7.2.18'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/Alumi.IO-WebApp/api/web/index.php'
+    'REMOTE_PORT' => '50754'
+    'REDIRECT_URL' => '/Alumi.IO-WebApp/api/web/v1/aluno'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/Alumi.IO-WebApp/api/web/v1/aluno'
+    'SCRIPT_NAME' => '/Alumi.IO-WebApp/api/web/index.php'
+    'PHP_SELF' => '/Alumi.IO-WebApp/api/web/index.php'
+    'PHP_AUTH_USER' => '***'
+    'PHP_AUTH_PW' => '***'
+    'REQUEST_TIME_FLOAT' => 1576858314.862
+    'REQUEST_TIME' => 1576858314
+]
+2019-12-20 16:12:06 [::1][2][-][error][yii\web\HttpException:403] yii\web\ForbiddenHttpException: You are not allowed to make the action create in this model. in C:\wamp64\www\Alumi.IO-WebApp\api\modules\v1\controllers\AlunoController.php:21
+Stack trace:
+#0 [internal function]: api\modules\v1\controllers\AlunoController->checkAccess('create')
+#1 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\rest\CreateAction.php(43): call_user_func(Array, 'create')
+#2 [internal function]: yii\rest\CreateAction->run()
+#3 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Action.php(94): call_user_func_array(Array, Array)
+#4 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\Action->runWithParams(Array)
+#5 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('create', Array)
+#6 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('v1/aluno/create', Array)
+#7 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#8 C:\wamp64\www\Alumi.IO-WebApp\api\web\index.php(17): yii\base\Application->run()
+#9 {main}
+2019-12-20 16:12:06 [::1][2][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'CONTENT_TYPE' => 'application/json'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.20.1'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => '8fed8bff-71ff-4466-ab9c-84b7d0f25647'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'CONTENT_LENGTH' => '121'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'c:\\devkitPro\\msys2\\usr\\bin;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\wamp64\\bin\\php\\php7.3.5;C:\\Program Files\\Git\\cmd;C:\\Program Files\\dotnet\\;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\Samuel\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Samuel\\.dotnet\\tools'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) PHP/7.2.18 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) PHP/7.2.18'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/Alumi.IO-WebApp/api/web/index.php'
+    'REMOTE_PORT' => '50758'
+    'REDIRECT_URL' => '/Alumi.IO-WebApp/api/web/v1/aluno'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/Alumi.IO-WebApp/api/web/v1/aluno'
+    'SCRIPT_NAME' => '/Alumi.IO-WebApp/api/web/index.php'
+    'PHP_SELF' => '/Alumi.IO-WebApp/api/web/index.php'
+    'PHP_AUTH_USER' => '***'
+    'PHP_AUTH_PW' => '***'
+    'REQUEST_TIME_FLOAT' => 1576858326.33
+    'REQUEST_TIME' => 1576858326
+]
+2019-12-20 16:12:28 [::1][2][-][error][yii\web\HttpException:404] yii\web\NotFoundHttpException: Object not found: 1 in C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\rest\Action.php:104
+Stack trace:
+#0 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\rest\UpdateAction.php(40): yii\rest\Action->findModel('1')
+#1 [internal function]: yii\rest\UpdateAction->run('1')
+#2 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Action.php(94): call_user_func_array(Array, Array)
+#3 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\Action->runWithParams(Array)
+#4 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('update', Array)
+#5 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('v1/aluno/update', Array)
+#6 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 C:\wamp64\www\Alumi.IO-WebApp\api\web\index.php(17): yii\base\Application->run()
+#8 {main}
+2019-12-20 16:12:28 [::1][2][-][info][application] $_GET = [
+    'id' => '1'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'CONTENT_TYPE' => 'application/json'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.20.1'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => '7f916cc3-5212-4130-90cc-850ef54b9275'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'CONTENT_LENGTH' => '121'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'c:\\devkitPro\\msys2\\usr\\bin;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\wamp64\\bin\\php\\php7.3.5;C:\\Program Files\\Git\\cmd;C:\\Program Files\\dotnet\\;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\Samuel\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Samuel\\.dotnet\\tools'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) PHP/7.2.18 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) PHP/7.2.18'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/Alumi.IO-WebApp/api/web/index.php'
+    'REMOTE_PORT' => '50767'
+    'REDIRECT_URL' => '/Alumi.IO-WebApp/api/web/v1/aluno/1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'PUT'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/Alumi.IO-WebApp/api/web/v1/aluno/1'
+    'SCRIPT_NAME' => '/Alumi.IO-WebApp/api/web/index.php'
+    'PHP_SELF' => '/Alumi.IO-WebApp/api/web/index.php'
+    'PHP_AUTH_USER' => '***'
+    'PHP_AUTH_PW' => '***'
+    'REQUEST_TIME_FLOAT' => 1576858348.277
+    'REQUEST_TIME' => 1576858348
+]
+2019-12-20 16:12:47 [::1][2][-][error][yii\web\HttpException:404] yii\web\NotFoundHttpException: Object not found: 1 in C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\rest\Action.php:104
+Stack trace:
+#0 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\rest\UpdateAction.php(40): yii\rest\Action->findModel('1')
+#1 [internal function]: yii\rest\UpdateAction->run('1')
+#2 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Action.php(94): call_user_func_array(Array, Array)
+#3 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\Action->runWithParams(Array)
+#4 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('update', Array)
+#5 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('v1/aluno/update', Array)
+#6 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 C:\wamp64\www\Alumi.IO-WebApp\api\web\index.php(17): yii\base\Application->run()
+#8 {main}
+2019-12-20 16:12:46 [::1][2][-][info][application] $_GET = [
+    'id' => '1'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'CONTENT_TYPE' => 'application/json'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.20.1'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => 'e4fbdb68-5038-4db5-8dde-226e427afe00'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'CONTENT_LENGTH' => '121'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'c:\\devkitPro\\msys2\\usr\\bin;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\wamp64\\bin\\php\\php7.3.5;C:\\Program Files\\Git\\cmd;C:\\Program Files\\dotnet\\;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\Samuel\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Samuel\\.dotnet\\tools'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) PHP/7.2.18 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) PHP/7.2.18'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/Alumi.IO-WebApp/api/web/index.php'
+    'REMOTE_PORT' => '50773'
+    'REDIRECT_URL' => '/Alumi.IO-WebApp/api/web/v1/aluno/1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'PUT'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/Alumi.IO-WebApp/api/web/v1/aluno/1'
+    'SCRIPT_NAME' => '/Alumi.IO-WebApp/api/web/index.php'
+    'PHP_SELF' => '/Alumi.IO-WebApp/api/web/index.php'
+    'PHP_AUTH_USER' => '***'
+    'PHP_AUTH_PW' => '***'
+    'REQUEST_TIME_FLOAT' => 1576858366.567
+    'REQUEST_TIME' => 1576858366
+]
+2019-12-20 16:12:49 [::1][2][-][error][yii\web\HttpException:404] yii\web\NotFoundHttpException: Object not found: 1 in C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\rest\Action.php:104
+Stack trace:
+#0 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\rest\UpdateAction.php(40): yii\rest\Action->findModel('1')
+#1 [internal function]: yii\rest\UpdateAction->run('1')
+#2 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Action.php(94): call_user_func_array(Array, Array)
+#3 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\Action->runWithParams(Array)
+#4 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('update', Array)
+#5 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('v1/aluno/update', Array)
+#6 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 C:\wamp64\www\Alumi.IO-WebApp\api\web\index.php(17): yii\base\Application->run()
+#8 {main}
+2019-12-20 16:12:49 [::1][2][-][info][application] $_GET = [
+    'id' => '1'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'CONTENT_TYPE' => 'application/json'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.20.1'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => '28417f6b-ff6c-412a-a04d-36b093b786ce'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'CONTENT_LENGTH' => '121'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'c:\\devkitPro\\msys2\\usr\\bin;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\wamp64\\bin\\php\\php7.3.5;C:\\Program Files\\Git\\cmd;C:\\Program Files\\dotnet\\;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\Samuel\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Samuel\\.dotnet\\tools'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) PHP/7.2.18 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) PHP/7.2.18'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/Alumi.IO-WebApp/api/web/index.php'
+    'REMOTE_PORT' => '50773'
+    'REDIRECT_URL' => '/Alumi.IO-WebApp/api/web/v1/aluno/1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'PUT'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/Alumi.IO-WebApp/api/web/v1/aluno/1'
+    'SCRIPT_NAME' => '/Alumi.IO-WebApp/api/web/index.php'
+    'PHP_SELF' => '/Alumi.IO-WebApp/api/web/index.php'
+    'PHP_AUTH_USER' => '***'
+    'PHP_AUTH_PW' => '***'
+    'REQUEST_TIME_FLOAT' => 1576858369.096
+    'REQUEST_TIME' => 1576858369
+]
+2019-12-20 16:12:54 [::1][2][-][error][yii\web\HttpException:403] yii\web\ForbiddenHttpException: You are not allowed to make the action update in this model. in C:\wamp64\www\Alumi.IO-WebApp\api\modules\v1\controllers\AlunoController.php:21
+Stack trace:
+#0 [internal function]: api\modules\v1\controllers\AlunoController->checkAccess('update', Object(api\resource\Aluno))
+#1 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\rest\UpdateAction.php(43): call_user_func(Array, 'update', Object(api\resource\Aluno))
+#2 [internal function]: yii\rest\UpdateAction->run('3')
+#3 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Action.php(94): call_user_func_array(Array, Array)
+#4 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\Action->runWithParams(Array)
+#5 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('update', Array)
+#6 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('v1/aluno/update', Array)
+#7 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#8 C:\wamp64\www\Alumi.IO-WebApp\api\web\index.php(17): yii\base\Application->run()
+#9 {main}
+2019-12-20 16:12:54 [::1][2][-][info][application] $_GET = [
+    'id' => '3'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'CONTENT_TYPE' => 'application/json'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.20.1'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => 'f03d671e-f157-4a39-8dde-3067be8912ba'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'CONTENT_LENGTH' => '121'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'c:\\devkitPro\\msys2\\usr\\bin;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\wamp64\\bin\\php\\php7.3.5;C:\\Program Files\\Git\\cmd;C:\\Program Files\\dotnet\\;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\Samuel\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Samuel\\.dotnet\\tools'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) PHP/7.2.18 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) PHP/7.2.18'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/Alumi.IO-WebApp/api/web/index.php'
+    'REMOTE_PORT' => '50773'
+    'REDIRECT_URL' => '/Alumi.IO-WebApp/api/web/v1/aluno/3'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'PUT'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/Alumi.IO-WebApp/api/web/v1/aluno/3'
+    'SCRIPT_NAME' => '/Alumi.IO-WebApp/api/web/index.php'
+    'PHP_SELF' => '/Alumi.IO-WebApp/api/web/index.php'
+    'PHP_AUTH_USER' => '***'
+    'PHP_AUTH_PW' => '***'
+    'REQUEST_TIME_FLOAT' => 1576858374.181
+    'REQUEST_TIME' => 1576858374
+]
+2019-12-20 16:13:00 [::1][2][-][error][yii\web\HttpException:403] yii\web\ForbiddenHttpException: You are not allowed to make the action delete in this model. in C:\wamp64\www\Alumi.IO-WebApp\api\modules\v1\controllers\AlunoController.php:21
+Stack trace:
+#0 [internal function]: api\modules\v1\controllers\AlunoController->checkAccess('delete', Object(api\resource\Aluno))
+#1 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\rest\DeleteAction.php(33): call_user_func(Array, 'delete', Object(api\resource\Aluno))
+#2 [internal function]: yii\rest\DeleteAction->run('3')
+#3 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Action.php(94): call_user_func_array(Array, Array)
+#4 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\Action->runWithParams(Array)
+#5 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('delete', Array)
+#6 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('v1/aluno/delete', Array)
+#7 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#8 C:\wamp64\www\Alumi.IO-WebApp\api\web\index.php(17): yii\base\Application->run()
+#9 {main}
+2019-12-20 16:12:59 [::1][2][-][info][application] $_GET = [
+    'id' => '3'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'CONTENT_TYPE' => 'application/json'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.20.1'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => '57f8f923-a81b-4d05-9b93-8a9c29edaa2e'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'CONTENT_LENGTH' => '121'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'c:\\devkitPro\\msys2\\usr\\bin;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\wamp64\\bin\\php\\php7.3.5;C:\\Program Files\\Git\\cmd;C:\\Program Files\\dotnet\\;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\Samuel\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Samuel\\.dotnet\\tools'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) PHP/7.2.18 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) PHP/7.2.18'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/Alumi.IO-WebApp/api/web/index.php'
+    'REMOTE_PORT' => '50773'
+    'REDIRECT_URL' => '/Alumi.IO-WebApp/api/web/v1/aluno/3'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'DELETE'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/Alumi.IO-WebApp/api/web/v1/aluno/3'
+    'SCRIPT_NAME' => '/Alumi.IO-WebApp/api/web/index.php'
+    'PHP_SELF' => '/Alumi.IO-WebApp/api/web/index.php'
+    'PHP_AUTH_USER' => '***'
+    'PHP_AUTH_PW' => '***'
+    'REQUEST_TIME_FLOAT' => 1576858379.758
+    'REQUEST_TIME' => 1576858379
+]
+2019-12-20 16:17:42 [::1][-][-][error][yii\web\HttpException:401] yii\web\UnauthorizedHttpException: Your request was made with invalid credentials. in C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\filters\auth\AuthMethod.php:93
+Stack trace:
+#0 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\filters\auth\AuthMethod.php(76): yii\filters\auth\AuthMethod->handleFailure(Object(yii\web\Response))
+#1 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\ActionFilter.php(77): yii\filters\auth\AuthMethod->beforeAction(Object(yii\rest\ViewAction))
+#2 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#3 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Component.php(627): call_user_func(Array, Object(yii\base\ActionEvent))
+#4 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Module.php(700): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#5 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Controller.php(145): yii\base\Module->beforeAction(Object(yii\rest\ViewAction))
+#6 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('view', Array)
+#7 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('v1/recado/view', Array)
+#8 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 C:\wamp64\www\Alumi.IO-WebApp\api\web\index.php(17): yii\base\Application->run()
+#10 {main}
+2019-12-20 16:17:42 [::1][-][-][info][application] $_GET = [
+    'id' => '1'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'CONTENT_TYPE' => 'application/json'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.20.1'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => 'a6733c7a-fd6d-4c43-bee0-92a8720b60b9'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'c:\\devkitPro\\msys2\\usr\\bin;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\wamp64\\bin\\php\\php7.3.5;C:\\Program Files\\Git\\cmd;C:\\Program Files\\dotnet\\;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\Samuel\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Samuel\\.dotnet\\tools'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) PHP/7.2.18 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) PHP/7.2.18'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/Alumi.IO-WebApp/api/web/index.php'
+    'REMOTE_PORT' => '50801'
+    'REDIRECT_URL' => '/Alumi.IO-WebApp/api/web/v1/recado/1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/Alumi.IO-WebApp/api/web/v1/recado/1'
+    'SCRIPT_NAME' => '/Alumi.IO-WebApp/api/web/index.php'
+    'PHP_SELF' => '/Alumi.IO-WebApp/api/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1576858662.415
+    'REQUEST_TIME' => 1576858662
+]
+2019-12-20 16:18:27 [::1][1][-][error][yii\web\HttpException:400] yii\web\BadRequestHttpException: Invalid JSON data in request body: Syntax error. in C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\web\JsonParser.php:55
+Stack trace:
+#0 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\web\Request.php(561): yii\web\JsonParser->parse('{\n    "data": "...', 'application/jso...')
+#1 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\rest\CreateAction.php(51): yii\web\Request->getBodyParams()
+#2 [internal function]: yii\rest\CreateAction->run()
+#3 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Action.php(94): call_user_func_array(Array, Array)
+#4 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\Action->runWithParams(Array)
+#5 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('create', Array)
+#6 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('v1/recado/creat...', Array)
+#7 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#8 C:\wamp64\www\Alumi.IO-WebApp\api\web\index.php(17): yii\base\Application->run()
+#9 {main}
+2019-12-20 16:18:26 [::1][1][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'CONTENT_TYPE' => 'application/json'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.20.1'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => 'ed117258-7b1d-45df-b5df-759d31580bc6'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'CONTENT_LENGTH' => '80'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'c:\\devkitPro\\msys2\\usr\\bin;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\wamp64\\bin\\php\\php7.3.5;C:\\Program Files\\Git\\cmd;C:\\Program Files\\dotnet\\;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\Samuel\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Samuel\\.dotnet\\tools'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) PHP/7.2.18 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) PHP/7.2.18'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/Alumi.IO-WebApp/api/web/index.php'
+    'REMOTE_PORT' => '50811'
+    'REDIRECT_URL' => '/Alumi.IO-WebApp/api/web/v1/recado'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/Alumi.IO-WebApp/api/web/v1/recado'
+    'SCRIPT_NAME' => '/Alumi.IO-WebApp/api/web/index.php'
+    'PHP_SELF' => '/Alumi.IO-WebApp/api/web/index.php'
+    'PHP_AUTH_USER' => '***'
+    'PHP_AUTH_PW' => '***'
+    'REQUEST_TIME_FLOAT' => 1576858706.892
+    'REQUEST_TIME' => 1576858706
+]
+2019-12-20 16:18:48 [::1][2][-][error][yii\web\HttpException:403] yii\web\ForbiddenHttpException: You are not the owner of this Recado! in C:\wamp64\www\Alumi.IO-WebApp\api\modules\v1\controllers\RecadoController.php:26
+Stack trace:
+#0 [internal function]: api\modules\v1\controllers\RecadoController->checkAccess('update', Object(api\resource\Recado))
+#1 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\rest\UpdateAction.php(43): call_user_func(Array, 'update', Object(api\resource\Recado))
+#2 [internal function]: yii\rest\UpdateAction->run('1')
+#3 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Action.php(94): call_user_func_array(Array, Array)
+#4 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\Action->runWithParams(Array)
+#5 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('update', Array)
+#6 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('v1/recado/updat...', Array)
+#7 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#8 C:\wamp64\www\Alumi.IO-WebApp\api\web\index.php(17): yii\base\Application->run()
+#9 {main}
+2019-12-20 16:18:48 [::1][2][-][info][application] $_GET = [
+    'id' => '1'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'CONTENT_TYPE' => 'application/json'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.20.1'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => '0fa2781b-b70d-4c0a-aaad-804548aa3c83'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'CONTENT_LENGTH' => '85'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'c:\\devkitPro\\msys2\\usr\\bin;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\wamp64\\bin\\php\\php7.3.5;C:\\Program Files\\Git\\cmd;C:\\Program Files\\dotnet\\;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\Samuel\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Samuel\\.dotnet\\tools'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) PHP/7.2.18 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) PHP/7.2.18'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/Alumi.IO-WebApp/api/web/index.php'
+    'REMOTE_PORT' => '50818'
+    'REDIRECT_URL' => '/Alumi.IO-WebApp/api/web/v1/recado/1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'PUT'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/Alumi.IO-WebApp/api/web/v1/recado/1'
+    'SCRIPT_NAME' => '/Alumi.IO-WebApp/api/web/index.php'
+    'PHP_SELF' => '/Alumi.IO-WebApp/api/web/index.php'
+    'PHP_AUTH_USER' => '***'
+    'PHP_AUTH_PW' => '***'
+    'REQUEST_TIME_FLOAT' => 1576858728.187
+    'REQUEST_TIME' => 1576858728
+]
+2019-12-20 16:18:59 [::1][-][-][error][yii\web\HttpException:401] yii\web\UnauthorizedHttpException: Your request was made with invalid credentials. in C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\filters\auth\AuthMethod.php:93
+Stack trace:
+#0 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\filters\auth\AuthMethod.php(76): yii\filters\auth\AuthMethod->handleFailure(Object(yii\web\Response))
+#1 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\ActionFilter.php(77): yii\filters\auth\AuthMethod->beforeAction(Object(yii\rest\DeleteAction))
+#2 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#3 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Component.php(627): call_user_func(Array, Object(yii\base\ActionEvent))
+#4 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Module.php(700): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#5 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Controller.php(145): yii\base\Module->beforeAction(Object(yii\rest\DeleteAction))
+#6 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('delete', Array)
+#7 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('v1/recado/delet...', Array)
+#8 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 C:\wamp64\www\Alumi.IO-WebApp\api\web\index.php(17): yii\base\Application->run()
+#10 {main}
+2019-12-20 16:18:59 [::1][-][-][info][application] $_GET = [
+    'id' => '2'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'CONTENT_TYPE' => 'application/json'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.20.1'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => '15bbde05-1b1a-4f15-a7b0-994c38f850b3'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'CONTENT_LENGTH' => '0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'c:\\devkitPro\\msys2\\usr\\bin;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\wamp64\\bin\\php\\php7.3.5;C:\\Program Files\\Git\\cmd;C:\\Program Files\\dotnet\\;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\Samuel\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Samuel\\.dotnet\\tools'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) PHP/7.2.18 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) PHP/7.2.18'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/Alumi.IO-WebApp/api/web/index.php'
+    'REMOTE_PORT' => '50822'
+    'REDIRECT_URL' => '/Alumi.IO-WebApp/api/web/v1/recado/2'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'DELETE'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/Alumi.IO-WebApp/api/web/v1/recado/2'
+    'SCRIPT_NAME' => '/Alumi.IO-WebApp/api/web/index.php'
+    'PHP_SELF' => '/Alumi.IO-WebApp/api/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1576858739.49
+    'REQUEST_TIME' => 1576858739
+]
+2019-12-20 16:19:10 [::1][2][-][error][yii\web\HttpException:403] yii\web\ForbiddenHttpException: You are not the owner of this Recado! in C:\wamp64\www\Alumi.IO-WebApp\api\modules\v1\controllers\RecadoController.php:26
+Stack trace:
+#0 [internal function]: api\modules\v1\controllers\RecadoController->checkAccess('delete', Object(api\resource\Recado))
+#1 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\rest\DeleteAction.php(33): call_user_func(Array, 'delete', Object(api\resource\Recado))
+#2 [internal function]: yii\rest\DeleteAction->run('2')
+#3 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Action.php(94): call_user_func_array(Array, Array)
+#4 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\Action->runWithParams(Array)
+#5 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('delete', Array)
+#6 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('v1/recado/delet...', Array)
+#7 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#8 C:\wamp64\www\Alumi.IO-WebApp\api\web\index.php(17): yii\base\Application->run()
+#9 {main}
+2019-12-20 16:19:09 [::1][2][-][info][application] $_GET = [
+    'id' => '2'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'CONTENT_TYPE' => 'application/json'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.20.1'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => 'cfdbeb0a-32aa-4431-a8b7-1c6deb38ef10'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'CONTENT_LENGTH' => '0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'c:\\devkitPro\\msys2\\usr\\bin;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\wamp64\\bin\\php\\php7.3.5;C:\\Program Files\\Git\\cmd;C:\\Program Files\\dotnet\\;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\Samuel\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Samuel\\.dotnet\\tools'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) PHP/7.2.18 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) PHP/7.2.18'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/Alumi.IO-WebApp/api/web/index.php'
+    'REMOTE_PORT' => '50826'
+    'REDIRECT_URL' => '/Alumi.IO-WebApp/api/web/v1/recado/2'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'DELETE'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/Alumi.IO-WebApp/api/web/v1/recado/2'
+    'SCRIPT_NAME' => '/Alumi.IO-WebApp/api/web/index.php'
+    'PHP_SELF' => '/Alumi.IO-WebApp/api/web/index.php'
+    'PHP_AUTH_USER' => '***'
+    'PHP_AUTH_PW' => '***'
+    'REQUEST_TIME_FLOAT' => 1576858749.923
+    'REQUEST_TIME' => 1576858749
+]

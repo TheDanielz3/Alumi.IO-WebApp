@@ -2,7 +2,10 @@
 
 namespace api\models;
 
-use Yii;
+use api\models\query\TesteQuery;
+use yii\behaviors\BlameableBehavior;
+use yii\db\ActiveQuery;
+use yii\db\ActiveRecord;
 
 /**
  * This is the model class for table "{{%teste}}".
@@ -17,7 +20,7 @@ use Yii;
  * @property Disciplinaturma $disciplinaTurma
  * @property Professor $professor
  */
-class Teste extends \yii\db\ActiveRecord
+class Teste extends ActiveRecord
 {
     /**
      * {@inheritdoc}
@@ -33,7 +36,7 @@ class Teste extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['descricao', 'data', 'hora', 'id_disciplina_turma', 'id_professor'], 'required'],
+            [['descricao', 'data', 'hora', 'id_disciplina_turma'], 'required'],
             [['data', 'hora'], 'safe'],
             [['id_disciplina_turma', 'id_professor'], 'integer'],
             [['descricao'], 'string', 'max' => 45],
@@ -58,7 +61,21 @@ class Teste extends \yii\db\ActiveRecord
     }
 
     /**
-     * @return \yii\db\ActiveQuery
+     * @return array
+     */
+    public function behaviors()
+    {
+        return [
+            [
+                'class' => BlameableBehavior::class,
+                'createdByAttribute' => 'id_professor',
+                'updatedByAttribute' => false,
+            ],
+        ];
+    }
+
+    /**
+     * @return ActiveQuery
      */
     public function getDisciplinaTurma()
     {
@@ -66,7 +83,7 @@ class Teste extends \yii\db\ActiveRecord
     }
 
     /**
-     * @return \yii\db\ActiveQuery
+     * @return ActiveQuery
      */
     public function getProfessor()
     {
@@ -75,10 +92,10 @@ class Teste extends \yii\db\ActiveRecord
 
     /**
      * {@inheritdoc}
-     * @return \api\models\query\TesteQuery the active query used by this AR class.
+     * @return TesteQuery the active query used by this AR class.
      */
     public static function find()
     {
-        return new \api\models\query\TesteQuery(get_called_class());
+        return new TesteQuery(get_called_class());
     }
 }

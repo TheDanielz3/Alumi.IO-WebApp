@@ -2,7 +2,10 @@
 
 namespace api\models;
 
-use Yii;
+use api\models\query\TpcQuery;
+use yii\behaviors\BlameableBehavior;
+use yii\db\ActiveQuery;
+use yii\db\ActiveRecord;
 
 /**
  * This is the model class for table "{{%tpc}}".
@@ -15,7 +18,7 @@ use Yii;
  * @property Disciplinaturma $disciplinaTurma
  * @property Professor $professor
  */
-class Tpc extends \yii\db\ActiveRecord
+class Tpc extends ActiveRecord
 {
     /**
      * {@inheritdoc}
@@ -31,7 +34,7 @@ class Tpc extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['descricao', 'id_disciplina_turma', 'id_professor'], 'required'],
+            [['descricao', 'id_disciplina_turma'], 'required'],
             [['id_disciplina_turma', 'id_professor'], 'integer'],
             [['descricao'], 'string', 'max' => 45],
             [['id_disciplina_turma'], 'exist', 'skipOnError' => true, 'targetClass' => Disciplinaturma::className(), 'targetAttribute' => ['id_disciplina_turma' => 'id']],
@@ -53,7 +56,21 @@ class Tpc extends \yii\db\ActiveRecord
     }
 
     /**
-     * @return \yii\db\ActiveQuery
+     * @return array
+     */
+    public function behaviors()
+    {
+        return [
+            [
+                'class' => BlameableBehavior::class,
+                'createdByAttribute' => 'id_professor',
+                'updatedByAttribute' => false,
+            ],
+        ];
+    }
+
+    /**
+     * @return ActiveQuery
      */
     public function getDisciplinaTurma()
     {
@@ -61,7 +78,7 @@ class Tpc extends \yii\db\ActiveRecord
     }
 
     /**
-     * @return \yii\db\ActiveQuery
+     * @return ActiveQuery
      */
     public function getProfessor()
     {
@@ -70,10 +87,10 @@ class Tpc extends \yii\db\ActiveRecord
 
     /**
      * {@inheritdoc}
-     * @return \api\models\query\TpcQuery the active query used by this AR class.
+     * @return TpcQuery the active query used by this AR class.
      */
     public static function find()
     {
-        return new \api\models\query\TpcQuery(get_called_class());
+        return new TpcQuery(get_called_class());
     }
 }
