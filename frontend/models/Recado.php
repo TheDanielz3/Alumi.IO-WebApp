@@ -1,21 +1,26 @@
 <?php
 
-namespace frontend\models;
+namespace app\models;
 
 use Yii;
+use yii\behaviors\BlameableBehavior;
+use yii\behaviors\TimestampBehavior;
+use yii\helpers\Html;
 
 /**
- * This is the model class for table "recado".
+ * This is the model class for table "{{%recado}}".
  *
  * @property int $id
- * @property string $data
+ * @property string $topico
  * @property string $descricao
  * @property float $assinado
+ * @property int $data_hora
  * @property int|null $id_turma
  * @property int|null $id_aluno
  * @property int $id_professor
  *
  * @property Aluno $aluno
+ * @property Professor $professor
  * @property Turma $turma
  */
 class Recado extends \yii\db\ActiveRecord
@@ -25,7 +30,7 @@ class Recado extends \yii\db\ActiveRecord
      */
     public static function tableName()
     {
-        return 'recado';
+        return '{{%recado}}';
     }
 
     /**
@@ -34,12 +39,13 @@ class Recado extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['data', 'descricao', 'id_professor'], 'required'],
-            [['data'], 'safe'],
+            [['topico', 'descricao'], 'required'],
             [['assinado'], 'number'],
-            [['id_turma', 'id_aluno', 'id_professor'], 'integer'],
-            [['descricao'], 'string', 'max' => 150],
+            [['data_hora', 'id_turma', 'id_aluno', 'id_professor'], 'integer'],
+            [['topico'], 'string', 'max' => 50],
+            [['descricao'], 'string', 'max' => 200],
             [['id_aluno'], 'exist', 'skipOnError' => true, 'targetClass' => Aluno::className(), 'targetAttribute' => ['id_aluno' => 'id']],
+            [['id_professor'], 'exist', 'skipOnError' => true, 'targetClass' => Professor::className(), 'targetAttribute' => ['id_professor' => 'id']],
             [['id_turma'], 'exist', 'skipOnError' => true, 'targetClass' => Turma::className(), 'targetAttribute' => ['id_turma' => 'id']],
         ];
     }
@@ -51,12 +57,29 @@ class Recado extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'data' => 'Data',
+            'topico' => 'Topico',
             'descricao' => 'Descricao',
             'assinado' => 'Assinado',
+            'data_hora' => 'Data Hora',
             'id_turma' => 'Id Turma',
             'id_aluno' => 'Id Aluno',
             'id_professor' => 'Id Professor',
+        ];
+    }
+
+    public function behaviors()
+    {
+        return [
+            [
+                'class' => TimestampBehavior::class,
+                'createdAtAttribute' => 'data_hora',
+                'updatedAtAttribute' => false,
+            ],
+            [
+                'class' => BlameableBehavior::class,
+                'createdByAttribute' => 'id_professor',
+                'updatedByAttribute' => false,
+            ]
         ];
     }
 
@@ -71,8 +94,24 @@ class Recado extends \yii\db\ActiveRecord
     /**
      * @return \yii\db\ActiveQuery
      */
+    public function getProfessor()
+    {
+        return $this->hasOne(Professor::className(), ['id' => 'id_professor']);
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
     public function getTurma()
     {
         return $this->hasOne(Turma::className(), ['id' => 'id_turma']);
+    }
+
+    public function getEncondedTopico(){
+        return Html::encode($this->topico) ;
+    }
+
+    public function getEncondedDescricao(){
+        return Html::encode($this->descricao) ;
     }
 }

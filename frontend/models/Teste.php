@@ -1,17 +1,20 @@
 <?php
 
-namespace frontend\models;
+namespace app\models;
+
+use Yii;
 
 /**
- * This is the model class for table "teste".
+ * This is the model class for table "{{%teste}}".
  *
  * @property int $id
  * @property string $descricao
- * @property string $data
- * @property string $hora
+ * @property int $data_hora
  * @property int $id_disciplina_turma
+ * @property int $id_professor
  *
  * @property Disciplinaturma $disciplinaTurma
+ * @property Professor $professor
  */
 class Teste extends \yii\db\ActiveRecord
 {
@@ -20,7 +23,7 @@ class Teste extends \yii\db\ActiveRecord
      */
     public static function tableName()
     {
-        return 'teste';
+        return '{{%teste}}';
     }
 
     /**
@@ -29,11 +32,11 @@ class Teste extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['descricao', 'data', 'hora', 'id_disciplina_turma'], 'required'],
-            [['data', 'hora'], 'safe'],
-            [['id_disciplina_turma'], 'integer'],
+            [['descricao', 'data_hora', 'id_disciplina_turma', 'id_professor'], 'required'],
+            [['data_hora', 'id_disciplina_turma', 'id_professor'], 'integer'],
             [['descricao'], 'string', 'max' => 45],
             [['id_disciplina_turma'], 'exist', 'skipOnError' => true, 'targetClass' => Disciplinaturma::className(), 'targetAttribute' => ['id_disciplina_turma' => 'id']],
+            [['id_professor'], 'exist', 'skipOnError' => true, 'targetClass' => Professor::className(), 'targetAttribute' => ['id_professor' => 'id']],
         ];
     }
 
@@ -45,9 +48,9 @@ class Teste extends \yii\db\ActiveRecord
         return [
             'id' => 'ID',
             'descricao' => 'Descricao',
-            'data' => 'Data',
-            'hora' => 'Hora',
+            'data_hora' => 'Data Hora',
             'id_disciplina_turma' => 'Id Disciplina Turma',
+            'id_professor' => 'Id Professor',
         ];
     }
 
@@ -57,5 +60,13 @@ class Teste extends \yii\db\ActiveRecord
     public function getDisciplinaTurma()
     {
         return $this->hasOne(Disciplinaturma::className(), ['id' => 'id_disciplina_turma']);
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getProfessor()
+    {
+        return $this->hasOne(Professor::className(), ['id' => 'id_professor']);
     }
 }

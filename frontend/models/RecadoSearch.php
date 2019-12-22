@@ -1,13 +1,14 @@
 <?php
 
-namespace frontend\models;
+namespace app\models;
 
 use Yii;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
+use app\models\Recado;
 
 /**
- * RecadoSearch represents the model behind the search form of `frontend\models\Recado`.
+ * RecadoSearch represents the model behind the search form of `app\models\Recado`.
  */
 class RecadoSearch extends Recado
 {
@@ -17,8 +18,8 @@ class RecadoSearch extends Recado
     public function rules()
     {
         return [
-            [['id', 'id_turma', 'id_aluno'], 'integer'],
-            [['data', 'descricao'], 'safe'],
+            [['id', 'data_hora', 'id_turma', 'id_aluno', 'id_professor'], 'integer'],
+            [['topico', 'descricao'], 'safe'],
             [['assinado'], 'number'],
         ];
     }
@@ -41,7 +42,7 @@ class RecadoSearch extends Recado
      */
     public function search($params)
     {
-        $query = Recado::find();
+        $query = Recado::find()->orderBy(['data_hora' => SORT_DESC])->andWhere('id_professor=' .  Yii::$app->user->id);
 
         // add conditions that should always apply here
 
@@ -60,13 +61,15 @@ class RecadoSearch extends Recado
         // grid filtering conditions
         $query->andFilterWhere([
             'id' => $this->id,
-            'data' => $this->data,
             'assinado' => $this->assinado,
+            'data_hora' => $this->data_hora,
             'id_turma' => $this->id_turma,
             'id_aluno' => $this->id_aluno,
+            'id_professor' => $this->id_professor,
         ]);
 
-        $query->andFilterWhere(['like', 'descricao', $this->descricao]);
+        $query->andFilterWhere(['like', 'topico', $this->topico])
+            ->andFilterWhere(['like', 'descricao', $this->descricao]);
 
         return $dataProvider;
     }

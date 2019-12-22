@@ -21,8 +21,7 @@ class m191122_123450_table_teste extends Migration
         $this->createTable('{{%teste}}', [
             'id' => $this->primaryKey(),
             'descricao' => $this->string(45)->notNull(),
-            'data' => $this->date()->notNull(),
-            'hora' => $this->time()->notNull(),
+            'data_hora' => $this->integer()->notNull(),
             'id_disciplina_turma' => $this->integer()->notNull(),
             'id_professor' => $this->integer()->notNull(),
         ], $tableOptions);

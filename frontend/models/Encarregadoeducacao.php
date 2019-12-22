@@ -1,27 +1,28 @@
 <?php
 
-namespace frontend\models;
+namespace app\models;
 
 use common\models\User;
-use yii\db\ActiveQuery;
-use yii\db\ActiveRecord;
+use Yii;
 
 /**
- * This is the model class for table "encarregadoEducacao".
+ * This is the model class for table "{{%encarregadoeducacao}}".
  *
  * @property int $id
- * @property int $contacto
+ * @property int|null $contacto
+ * @property string|null $nome
  *
+ * @property Aluno[] $alunos
  * @property User $id0
  */
-class EncarregadoEducacao extends ActiveRecord
+class Encarregadoeducacao extends \yii\db\ActiveRecord
 {
     /**
      * {@inheritdoc}
      */
     public static function tableName()
     {
-        return 'encarregadoEducacao';
+        return '{{%encarregadoeducacao}}';
     }
 
     /**
@@ -31,6 +32,7 @@ class EncarregadoEducacao extends ActiveRecord
     {
         return [
             [['contacto'], 'integer'],
+            [['nome'], 'string', 'max' => 255],
             [['id'], 'exist', 'skipOnError' => true, 'targetClass' => User::className(), 'targetAttribute' => ['id' => 'id']],
         ];
     }
@@ -43,11 +45,20 @@ class EncarregadoEducacao extends ActiveRecord
         return [
             'id' => 'ID',
             'contacto' => 'Contacto',
+            'nome' => 'Nome',
         ];
     }
 
     /**
-     * @return ActiveQuery
+     * @return \yii\db\ActiveQuery
+     */
+    public function getAlunos()
+    {
+        return $this->hasMany(Aluno::className(), ['id_encarregado_de_educacao' => 'id']);
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
      */
     public function getId0()
     {

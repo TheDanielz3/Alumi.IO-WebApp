@@ -20,9 +20,10 @@ class m191122_122618_table_recado extends Migration
 
         $this->createTable('{{%recado}}', [
             'id' => $this->primaryKey(),
-            'data' => $this->dateTime()->notNull(),
-            'descricao' => $this->string(150)->notNull(),
+            'topico' => $this->string(50)->notNull(),
+            'descricao' => $this->string(200)->notNull(),
             'assinado' => $this->double()->notNull()->defaultValue(0),
+            'data_hora' => $this->integer()->notNull(),
             'id_turma' => $this->integer(),
             'id_aluno' => $this->integer(),
             'id_professor' => $this->integer()->notNull(),

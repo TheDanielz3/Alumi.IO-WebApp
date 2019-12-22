@@ -4,7 +4,7 @@ use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 
 /* @var $this yii\web\View */
-/* @var $model frontend\models\RecadoSearch */
+/* @var $model app\models\RecadoSearch */
 /* @var $form yii\widgets\ActiveForm */
 ?>
 
@@ -17,15 +17,19 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'id') ?>
 
-    <?= $form->field($model, 'data') ?>
+    <?= $form->field($model, 'topico') ?>
 
     <?= $form->field($model, 'descricao') ?>
 
     <?= $form->field($model, 'assinado') ?>
 
-    <?= $form->field($model, 'id_turma') ?>
+    <?= $form->field($model, 'data_hora') ?>
+
+    <?php // echo $form->field($model, 'id_turma') ?>
 
     <?php // echo $form->field($model, 'id_aluno') ?>
+
+    <?php // echo $form->field($model, 'id_professor') ?>
 
     <div class="form-group">
         <?= Html::submitButton('Search', ['class' => 'btn btn-primary']) ?>

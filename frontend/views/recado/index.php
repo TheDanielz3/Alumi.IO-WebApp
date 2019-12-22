@@ -1,10 +1,10 @@
 <?php
 
-use yii\grid\GridView;
 use yii\helpers\Html;
+use yii\widgets\ListView;
 
 /* @var $this yii\web\View */
-/* @var $searchModel frontend\models\RecadoSearch */
+/* @var $searchModel app\models\RecadoSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
 $this->title = 'Recados';
@@ -20,22 +20,10 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
-    <?= GridView::widget([
+    <?= ListView::widget([
         'dataProvider' => $dataProvider,
-        'filterModel' => $searchModel,
-        'columns' => [
-            ['class' => 'yii\grid\SerialColumn'],
-
-            //'id',
-            'descricao',
-            'data',
-            'assinado',
-            //'id_turma',
-            //'id_aluno',
-            //'id_professor',
-
-            ['class' => 'yii\grid\ActionColumn'],
-        ],
+//        'filterModel' => $searchModel,
+        'itemView' => '_recado_item'
     ]); ?>
 
 

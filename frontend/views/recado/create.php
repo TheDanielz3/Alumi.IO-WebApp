@@ -3,7 +3,7 @@
 use yii\helpers\Html;
 
 /* @var $this yii\web\View */
-/* @var $model frontend\models\Recado */
+/* @var $model app\models\Recado */
 
 $this->title = 'Create Recado';
 $this->params['breadcrumbs'][] = ['label' => 'Recados', 'url' => ['index']];

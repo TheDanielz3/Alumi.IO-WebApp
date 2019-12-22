@@ -1,31 +1,32 @@
 <?php
 
-namespace frontend\models;
+namespace app\models;
 
 use common\models\User;
-use yii\db\ActiveQuery;
-use yii\db\ActiveRecord;
+use Yii;
 
 /**
- * This is the model class for table "aluno".
+ * This is the model class for table "{{%aluno}}".
  *
  * @property int $id
- * @property int $id_encarregado_de_educacao
- * @property int $id_turma
+ * @property int|null $id_encarregado_de_educacao
+ * @property int|null $id_turma
+ * @property string|null $nome
+ * @property int|null $numero_estudante
  *
  * @property Encarregadoeducacao $encarregadoDeEducacao
  * @property Turma $turma
  * @property User $id0
  * @property Recado[] $recados
  */
-class Aluno extends ActiveRecord
+class Aluno extends \yii\db\ActiveRecord
 {
     /**
      * {@inheritdoc}
      */
     public static function tableName()
     {
-        return 'aluno';
+        return '{{%aluno}}';
     }
 
     /**
@@ -34,7 +35,8 @@ class Aluno extends ActiveRecord
     public function rules()
     {
         return [
-            [['id_encarregado_de_educacao', 'id_turma'], 'integer'],
+            [['id_encarregado_de_educacao', 'id_turma', 'numero_estudante'], 'integer'],
+            [['nome'], 'string', 'max' => 255],
             [['id_encarregado_de_educacao'], 'exist', 'skipOnError' => true, 'targetClass' => Encarregadoeducacao::className(), 'targetAttribute' => ['id_encarregado_de_educacao' => 'id']],
             [['id_turma'], 'exist', 'skipOnError' => true, 'targetClass' => Turma::className(), 'targetAttribute' => ['id_turma' => 'id']],
             [['id'], 'exist', 'skipOnError' => true, 'targetClass' => User::className(), 'targetAttribute' => ['id' => 'id']],
@@ -50,11 +52,13 @@ class Aluno extends ActiveRecord
             'id' => 'ID',
             'id_encarregado_de_educacao' => 'Id Encarregado De Educacao',
             'id_turma' => 'Id Turma',
+            'nome' => 'Nome',
+            'numero_estudante' => 'Numero Estudante',
         ];
     }
 
     /**
-     * @return ActiveQuery
+     * @return \yii\db\ActiveQuery
      */
     public function getEncarregadoDeEducacao()
     {
@@ -62,7 +66,7 @@ class Aluno extends ActiveRecord
     }
 
     /**
-     * @return ActiveQuery
+     * @return \yii\db\ActiveQuery
      */
     public function getTurma()
     {
@@ -70,7 +74,7 @@ class Aluno extends ActiveRecord
     }
 
     /**
-     * @return ActiveQuery
+     * @return \yii\db\ActiveQuery
      */
     public function getId0()
     {
@@ -78,7 +82,7 @@ class Aluno extends ActiveRecord
     }
 
     /**
-     * @return ActiveQuery
+     * @return \yii\db\ActiveQuery
      */
     public function getRecados()
     {

@@ -3,7 +3,7 @@
 use yii\helpers\Html;
 
 /* @var $this yii\web\View */
-/* @var $model frontend\models\Recado */
+/* @var $model app\models\Recado */
 
 $this->title = 'Update Recado: ' . $model->id;
 $this->params['breadcrumbs'][] = ['label' => 'Recados', 'url' => ['index']];

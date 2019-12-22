@@ -1,27 +1,26 @@
 <?php
 
-namespace frontend\models;
+namespace app\models;
 
-use yii\db\ActiveQuery;
-use yii\db\ActiveRecord;
+use Yii;
 
 /**
- * This is the model class for table "disciplina".
+ * This is the model class for table "{{%disciplina}}".
  *
  * @property int $id
  * @property string $nome
  *
- * @property DisciplinaTurma[] $disciplinaTurmas
+ * @property Disciplinaturma[] $disciplinaturmas
  * @property Professor[] $professors
  */
-class Disciplina extends ActiveRecord
+class Disciplina extends \yii\db\ActiveRecord
 {
     /**
      * {@inheritdoc}
      */
     public static function tableName()
     {
-        return 'disciplina';
+        return '{{%disciplina}}';
     }
 
     /**
@@ -47,15 +46,15 @@ class Disciplina extends ActiveRecord
     }
 
     /**
-     * @return ActiveQuery
+     * @return \yii\db\ActiveQuery
      */
-    public function getDisciplinaTurmas()
+    public function getDisciplinaturmas()
     {
-        return $this->hasMany(DisciplinaTurma::className(), ['id_disciplina' => 'id']);
+        return $this->hasMany(Disciplinaturma::className(), ['id_disciplina' => 'id']);
     }
 
     /**
-     * @return ActiveQuery
+     * @return \yii\db\ActiveQuery
      */
     public function getProfessors()
     {

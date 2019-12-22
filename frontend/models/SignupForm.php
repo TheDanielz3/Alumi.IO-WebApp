@@ -2,6 +2,9 @@
 
 namespace frontend\models;
 
+use app\models\Aluno;
+use app\models\Encarregadoeducacao;
+use app\models\Professor;
 use Yii;
 use yii\base\Model;
 use common\models\User;

@@ -1,28 +1,29 @@
 <?php
 
-namespace frontend\models;
+namespace app\models;
 
 use common\models\User;
-use yii\db\ActiveQuery;
-use yii\db\ActiveRecord;
+use Yii;
 
 /**
- * This is the model class for table "professor".
+ * This is the model class for table "{{%professor}}".
  *
  * @property int $id
- * @property int $id_disciplina
+ * @property int|null $id_disciplina
+ * @property string|null $nome
  *
  * @property Disciplina $disciplina
  * @property User $id0
+ * @property Recado[] $recados
  */
-class Professor extends ActiveRecord
+class Professor extends \yii\db\ActiveRecord
 {
     /**
      * {@inheritdoc}
      */
     public static function tableName()
     {
-        return 'professor';
+        return '{{%professor}}';
     }
 
     /**
@@ -32,6 +33,7 @@ class Professor extends ActiveRecord
     {
         return [
             [['id_disciplina'], 'integer'],
+            [['nome'], 'string', 'max' => 255],
             [['id_disciplina'], 'exist', 'skipOnError' => true, 'targetClass' => Disciplina::className(), 'targetAttribute' => ['id_disciplina' => 'id']],
             [['id'], 'exist', 'skipOnError' => true, 'targetClass' => User::className(), 'targetAttribute' => ['id' => 'id']],
         ];
@@ -45,11 +47,12 @@ class Professor extends ActiveRecord
         return [
             'id' => 'ID',
             'id_disciplina' => 'Id Disciplina',
+            'nome' => 'Nome',
         ];
     }
 
     /**
-     * @return ActiveQuery
+     * @return \yii\db\ActiveQuery
      */
     public function getDisciplina()
     {
@@ -57,10 +60,18 @@ class Professor extends ActiveRecord
     }
 
     /**
-     * @return ActiveQuery
+     * @return \yii\db\ActiveQuery
      */
     public function getId0()
     {
         return $this->hasOne(User::className(), ['id' => 'id']);
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getRecados()
+    {
+        return $this->hasMany(Recado::className(), ['id_professor' => 'id']);
     }
 }

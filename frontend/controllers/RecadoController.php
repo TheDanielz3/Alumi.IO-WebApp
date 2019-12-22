@@ -2,10 +2,15 @@
 
 namespace frontend\controllers;
 
+use app\models\Aluno;
 use Yii;
-use frontend\models\Recado;
-use frontend\models\RecadoSearch;
+use app\models\Recado;
+use app\models\RecadoSearch;
+use yii\filters\AccessControl;
+use yii\helpers\BaseVarDumper;
+use yii\helpers\VarDumper;
 use yii\web\Controller;
+use yii\web\ForbiddenHttpException;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
@@ -20,6 +25,17 @@ class RecadoController extends Controller
     public function behaviors()
     {
         return [
+            [
+                'class' => AccessControl::class,
+                'only' => ['create', 'update', 'delete', 'view', 'index'],
+                'rules' => [
+                    [
+                        'actions' => ['create', 'update', 'delete', 'view', 'index'],
+                        'allow' => true,
+                        'roles' => ['teacher', 'admin'],
+                    ]
+                ]
+            ],
             'verbs' => [
                 'class' => VerbFilter::className(),
                 'actions' => [
@@ -37,8 +53,6 @@ class RecadoController extends Controller
     {
         $searchModel = new RecadoSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
-
-        $dataProvider->query->andWhere('id_professor =' . Yii::$app->user->identity->getId());
 
         return $this->render('index', [
             'searchModel' => $searchModel,
@@ -83,10 +97,15 @@ class RecadoController extends Controller
      * @param integer $id
      * @return mixed
      * @throws NotFoundHttpException if the model cannot be found
+     * @throws ForbiddenHttpException
      */
     public function actionUpdate($id)
     {
         $model = $this->findModel($id);
+
+        if ($model->id_professor !== Yii::$app->user->id) {
+            throw new ForbiddenHttpException("You don't have permission do edit this Recado");
+        }
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->id]);
@@ -102,11 +121,20 @@ class RecadoController extends Controller
      * If deletion is successful, the browser will be redirected to the 'index' page.
      * @param integer $id
      * @return mixed
+     * @throws ForbiddenHttpException
      * @throws NotFoundHttpException if the model cannot be found
+     * @throws \Throwable
+     * @throws \yii\db\StaleObjectException
      */
     public function actionDelete($id)
     {
-        $this->findModel($id)->delete();
+        $model = $this->findModel($id);
+
+        if ($model->id_professor !== Yii::$app->user->id) {
+            throw new ForbiddenHttpException("You don't have permission do remove this Recado");
+        }
+
+        $model->delete();
 
         return $this->redirect(['index']);
     }

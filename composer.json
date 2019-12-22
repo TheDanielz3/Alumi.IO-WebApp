@@ -24,7 +24,8 @@
         "facebook/webdriver": "1.7.1",
         "codeception/codeception": "*",
         "vaimo/binary-geckodriver": "^2.0",
-        "2amigos/yii2-date-picker-widget": "1.0.7"
+        "2amigos/yii2-date-picker-widget": "1.0.7",
+        "unclead/yii2-multiple-input": "3.0.x-dev"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "~2.1.0",

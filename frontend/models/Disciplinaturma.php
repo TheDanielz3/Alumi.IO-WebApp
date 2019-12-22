@@ -1,12 +1,11 @@
 <?php
 
-namespace frontend\models;
+namespace app\models;
 
-use yii\db\ActiveQuery;
-use yii\db\ActiveRecord;
+use Yii;
 
 /**
- * This is the model class for table "disciplinaTurma".
+ * This is the model class for table "{{%disciplinaturma}}".
  *
  * @property int $id
  * @property int $id_disciplina
@@ -14,15 +13,17 @@ use yii\db\ActiveRecord;
  *
  * @property Disciplina $disciplina
  * @property Turma $turma
+ * @property Teste[] $testes
+ * @property Tpc[] $tpcs
  */
-class DisciplinaTurma extends ActiveRecord
+class Disciplinaturma extends \yii\db\ActiveRecord
 {
     /**
      * {@inheritdoc}
      */
     public static function tableName()
     {
-        return 'disciplinaTurma';
+        return '{{%disciplinaturma}}';
     }
 
     /**
@@ -31,6 +32,7 @@ class DisciplinaTurma extends ActiveRecord
     public function rules()
     {
         return [
+            [['id_disciplina', 'id_turma'], 'required'],
             [['id_disciplina', 'id_turma'], 'integer'],
             [['id_disciplina'], 'exist', 'skipOnError' => true, 'targetClass' => Disciplina::className(), 'targetAttribute' => ['id_disciplina' => 'id']],
             [['id_turma'], 'exist', 'skipOnError' => true, 'targetClass' => Turma::className(), 'targetAttribute' => ['id_turma' => 'id']],
@@ -50,7 +52,7 @@ class DisciplinaTurma extends ActiveRecord
     }
 
     /**
-     * @return ActiveQuery
+     * @return \yii\db\ActiveQuery
      */
     public function getDisciplina()
     {
@@ -58,10 +60,26 @@ class DisciplinaTurma extends ActiveRecord
     }
 
     /**
-     * @return ActiveQuery
+     * @return \yii\db\ActiveQuery
      */
     public function getTurma()
     {
         return $this->hasOne(Turma::className(), ['id' => 'id_turma']);
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getTestes()
+    {
+        return $this->hasMany(Teste::className(), ['id_disciplina_turma' => 'id']);
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getTpcs()
+    {
+        return $this->hasMany(Tpc::className(), ['id_disciplina_turma' => 'id']);
     }
 }
