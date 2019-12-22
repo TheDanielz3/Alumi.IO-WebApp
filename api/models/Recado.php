@@ -2,18 +2,18 @@
 
 namespace api\models;
 
-use api\models\query\RecadoQuery;
+use Yii;
 use yii\behaviors\BlameableBehavior;
-use yii\db\ActiveQuery;
-use yii\db\ActiveRecord;
+use yii\behaviors\TimestampBehavior;
 
 /**
  * This is the model class for table "{{%recado}}".
  *
  * @property int $id
- * @property string $data
+ * @property string $topico
  * @property string $descricao
  * @property float $assinado
+ * @property int $data_hora
  * @property int|null $id_turma
  * @property int|null $id_aluno
  * @property int $id_professor
@@ -22,7 +22,7 @@ use yii\db\ActiveRecord;
  * @property Professor $professor
  * @property Turma $turma
  */
-class Recado extends ActiveRecord
+class Recado extends \yii\db\ActiveRecord
 {
     /**
      * {@inheritdoc}
@@ -38,28 +38,14 @@ class Recado extends ActiveRecord
     public function rules()
     {
         return [
-            [['data', 'descricao'], 'required'],
-            [['data'], 'safe'],
+            [['topico', 'descricao'], 'required'],
             [['assinado'], 'number'],
-            [['id_turma', 'id_aluno', 'id_professor'], 'integer'],
-            [['descricao'], 'string', 'max' => 150],
+            [['data_hora', 'id_turma', 'id_aluno', 'id_professor'], 'integer'],
+            [['topico'], 'string', 'max' => 50],
+            [['descricao'], 'string', 'max' => 200],
             [['id_aluno'], 'exist', 'skipOnError' => true, 'targetClass' => Aluno::className(), 'targetAttribute' => ['id_aluno' => 'id']],
             [['id_professor'], 'exist', 'skipOnError' => true, 'targetClass' => Professor::className(), 'targetAttribute' => ['id_professor' => 'id']],
             [['id_turma'], 'exist', 'skipOnError' => true, 'targetClass' => Turma::className(), 'targetAttribute' => ['id_turma' => 'id']],
-        ];
-    }
-
-    /**
-     * @return array
-     */
-    public function behaviors()
-    {
-        return [
-            [
-                'class' => BlameableBehavior::class,
-                'createdByAttribute' => 'id_professor',
-                'updatedByAttribute' => false,
-            ],
         ];
     }
 
@@ -70,17 +56,34 @@ class Recado extends ActiveRecord
     {
         return [
             'id' => 'ID',
-            'data' => 'Data',
+            'topico' => 'Topico',
             'descricao' => 'Descricao',
             'assinado' => 'Assinado',
+            'data_hora' => 'Data Hora',
             'id_turma' => 'Id Turma',
             'id_aluno' => 'Id Aluno',
             'id_professor' => 'Id Professor',
         ];
     }
 
+    public function behaviors()
+    {
+        return [
+            [
+                'class' => TimestampBehavior::class,
+                'createdAtAttribute' => 'data_hora',
+                'updatedAtAttribute' => false,
+            ],
+            [
+                'class' => BlameableBehavior::class,
+                'createdByAttribute' => 'id_professor',
+                'updatedByAttribute' => false,
+            ]
+        ];
+    }
+
     /**
-     * @return ActiveQuery
+     * @return \yii\db\ActiveQuery
      */
     public function getAluno()
     {
@@ -88,7 +91,7 @@ class Recado extends ActiveRecord
     }
 
     /**
-     * @return ActiveQuery
+     * @return \yii\db\ActiveQuery
      */
     public function getProfessor()
     {
@@ -96,7 +99,7 @@ class Recado extends ActiveRecord
     }
 
     /**
-     * @return ActiveQuery
+     * @return \yii\db\ActiveQuery
      */
     public function getTurma()
     {
@@ -105,11 +108,14 @@ class Recado extends ActiveRecord
 
     /**
      * {@inheritdoc}
-     * @return RecadoQuery the active query used by this AR class.
+     * @return \api\models\query\RecadoQuery the active query used by this AR class.
      */
     public static function find()
     {
-        return new RecadoQuery(get_called_class());
+        return new \api\models\query\RecadoQuery(get_called_class());
     }
 
+    public function getDataHora(){
+        return Yii::$app->formatter->asRelativeTime($this->data_hora) ;
+    }
 }

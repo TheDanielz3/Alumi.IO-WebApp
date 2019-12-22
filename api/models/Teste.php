@@ -2,25 +2,23 @@
 
 namespace api\models;
 
-use api\models\query\TesteQuery;
+use Yii;
 use yii\behaviors\BlameableBehavior;
-use yii\db\ActiveQuery;
-use yii\db\ActiveRecord;
+use yii\behaviors\TimestampBehavior;
 
 /**
  * This is the model class for table "{{%teste}}".
  *
  * @property int $id
  * @property string $descricao
- * @property string $data
- * @property string $hora
+ * @property int $data_hora
  * @property int $id_disciplina_turma
  * @property int $id_professor
  *
  * @property Disciplinaturma $disciplinaTurma
  * @property Professor $professor
  */
-class Teste extends ActiveRecord
+class Teste extends \yii\db\ActiveRecord
 {
     /**
      * {@inheritdoc}
@@ -36,12 +34,27 @@ class Teste extends ActiveRecord
     public function rules()
     {
         return [
-            [['descricao', 'data', 'hora', 'id_disciplina_turma'], 'required'],
-            [['data', 'hora'], 'safe'],
-            [['id_disciplina_turma', 'id_professor'], 'integer'],
+            [['descricao', 'id_disciplina_turma'], 'required'],
+            [['data_hora', 'id_disciplina_turma', 'id_professor'], 'integer'],
             [['descricao'], 'string', 'max' => 45],
             [['id_disciplina_turma'], 'exist', 'skipOnError' => true, 'targetClass' => Disciplinaturma::className(), 'targetAttribute' => ['id_disciplina_turma' => 'id']],
             [['id_professor'], 'exist', 'skipOnError' => true, 'targetClass' => Professor::className(), 'targetAttribute' => ['id_professor' => 'id']],
+        ];
+    }
+
+    public function behaviors()
+    {
+        return [
+            [
+                'class' => TimestampBehavior::class,
+                'createdAtAttribute' => 'data_hora',
+                'updatedAtAttribute' => false,
+            ],
+            [
+                'class' => BlameableBehavior::class,
+                'createdByAttribute' => 'id_professor',
+                'updatedByAttribute' => false,
+            ]
         ];
     }
 
@@ -53,29 +66,14 @@ class Teste extends ActiveRecord
         return [
             'id' => 'ID',
             'descricao' => 'Descricao',
-            'data' => 'Data',
-            'hora' => 'Hora',
+            'data_hora' => 'Data Hora',
             'id_disciplina_turma' => 'Id Disciplina Turma',
             'id_professor' => 'Id Professor',
         ];
     }
 
     /**
-     * @return array
-     */
-    public function behaviors()
-    {
-        return [
-            [
-                'class' => BlameableBehavior::class,
-                'createdByAttribute' => 'id_professor',
-                'updatedByAttribute' => false,
-            ],
-        ];
-    }
-
-    /**
-     * @return ActiveQuery
+     * @return \yii\db\ActiveQuery
      */
     public function getDisciplinaTurma()
     {
@@ -83,7 +81,7 @@ class Teste extends ActiveRecord
     }
 
     /**
-     * @return ActiveQuery
+     * @return \yii\db\ActiveQuery
      */
     public function getProfessor()
     {
@@ -92,10 +90,14 @@ class Teste extends ActiveRecord
 
     /**
      * {@inheritdoc}
-     * @return TesteQuery the active query used by this AR class.
+     * @return \api\models\query\TesteQuery the active query used by this AR class.
      */
     public static function find()
     {
-        return new TesteQuery(get_called_class());
+        return new \api\models\query\TesteQuery(get_called_class());
+    }
+
+    public function getDataHora(){
+        return Yii::$app->formatter->asRelativeTime($this->data_hora) ;
     }
 }
