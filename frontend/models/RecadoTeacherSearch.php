@@ -5,12 +5,12 @@ namespace app\models;
 use Yii;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use app\models\Recado;
+use app\models\RecadoTeacher;
 
 /**
- * RecadoSearch represents the model behind the search form of `app\models\Recado`.
+ * RecadoTeacherSearch represents the model behind the search form of `app\models\RecadoTeacher`.
  */
-class RecadoSearch extends Recado
+class RecadoTeacherSearch extends RecadoTeacher
 {
     /**
      * {@inheritdoc}
@@ -42,7 +42,7 @@ class RecadoSearch extends Recado
      */
     public function search($params)
     {
-        $query = Recado::find()->orderBy(['data_hora' => SORT_DESC])->andWhere('id_professor=' .  Yii::$app->user->id);
+        $query = RecadoTeacher::find()->orderBy(['data_hora' => SORT_DESC])->andWhere('id_professor=' .  Yii::$app->user->id);
 
         // add conditions that should always apply here
 

@@ -23,7 +23,7 @@ use yii\helpers\Html;
  * @property Professor $professor
  * @property Turma $turma
  */
-class Recado extends \yii\db\ActiveRecord
+class RecadoTeacher extends \yii\db\ActiveRecord
 {
     /**
      * {@inheritdoc}

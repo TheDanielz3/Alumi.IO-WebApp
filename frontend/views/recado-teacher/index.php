@@ -4,13 +4,13 @@ use yii\helpers\Html;
 use yii\widgets\ListView;
 
 /* @var $this yii\web\View */
-/* @var $searchModel app\models\RecadoSearch */
+/* @var $searchModel app\models\RecadoTeacherSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
 $this->title = 'Recados';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="recado-index">
+<div class="recado-teacher-index">
 
     <h1><?= Html::encode($this->title) ?></h1>
 

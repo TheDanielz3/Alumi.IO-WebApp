@@ -3,13 +3,14 @@
 use yii\helpers\Html;
 
 /* @var $this yii\web\View */
-/* @var $model app\models\Recado */
+/* @var $model app\models\RecadoTeacher */
 
-$this->title = 'Create Recado';
+$this->title = 'Update Recado: ' . $model->id;
 $this->params['breadcrumbs'][] = ['label' => 'Recados', 'url' => ['index']];
-$this->params['breadcrumbs'][] = $this->title;
+$this->params['breadcrumbs'][] = ['label' => $model->id, 'url' => ['view', 'id' => $model->id]];
+$this->params['breadcrumbs'][] = 'Update';
 ?>
-<div class="recado-create">
+<div class="recado-teacher-update">
 
     <h1><?= Html::encode($this->title) ?></h1>
 

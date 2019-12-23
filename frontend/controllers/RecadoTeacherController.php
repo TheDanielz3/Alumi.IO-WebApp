@@ -2,22 +2,19 @@
 
 namespace frontend\controllers;
 
-use app\models\Aluno;
 use Yii;
-use app\models\Recado;
-use app\models\RecadoSearch;
+use app\models\RecadoTeacher;
+use app\models\RecadoTeacherSearch;
 use yii\filters\AccessControl;
-use yii\helpers\BaseVarDumper;
-use yii\helpers\VarDumper;
 use yii\web\Controller;
 use yii\web\ForbiddenHttpException;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
 /**
- * RecadoController implements the CRUD actions for Recado model.
+ * RecadoTeacherController implements the CRUD actions for RecadoTeacher model.
  */
-class RecadoController extends Controller
+class RecadoTeacherController extends Controller
 {
     /**
      * {@inheritdoc}
@@ -46,12 +43,12 @@ class RecadoController extends Controller
     }
 
     /**
-     * Lists all Recado models.
+     * Lists all RecadoTeacher models.
      * @return mixed
      */
     public function actionIndex()
     {
-        $searchModel = new RecadoSearch();
+        $searchModel = new RecadoTeacherSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
         return $this->render('index', [
@@ -61,7 +58,7 @@ class RecadoController extends Controller
     }
 
     /**
-     * Displays a single Recado model.
+     * Displays a single RecadoTeacher model.
      * @param integer $id
      * @return mixed
      * @throws NotFoundHttpException if the model cannot be found
@@ -74,13 +71,13 @@ class RecadoController extends Controller
     }
 
     /**
-     * Creates a new Recado model.
+     * Creates a new RecadoTeacher model.
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
     public function actionCreate()
     {
-        $model = new Recado();
+        $model = new RecadoTeacher();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->id]);
@@ -92,7 +89,7 @@ class RecadoController extends Controller
     }
 
     /**
-     * Updates an existing Recado model.
+     * Updates an existing RecadoTeacher model.
      * If update is successful, the browser will be redirected to the 'view' page.
      * @param integer $id
      * @return mixed
@@ -117,7 +114,7 @@ class RecadoController extends Controller
     }
 
     /**
-     * Deletes an existing Recado model.
+     * Deletes an existing RecadoTeacher model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
      * @param integer $id
      * @return mixed
@@ -140,15 +137,15 @@ class RecadoController extends Controller
     }
 
     /**
-     * Finds the Recado model based on its primary key value.
+     * Finds the RecadoTeacher model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
      * @param integer $id
-     * @return Recado the loaded model
+     * @return RecadoTeacher the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
     protected function findModel($id)
     {
-        if (($model = Recado::findOne($id)) !== null) {
+        if (($model = RecadoTeacher::findOne($id)) !== null) {
             return $model;
         }
 

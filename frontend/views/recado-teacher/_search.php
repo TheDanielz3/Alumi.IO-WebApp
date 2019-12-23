@@ -4,11 +4,11 @@ use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 
 /* @var $this yii\web\View */
-/* @var $model app\models\RecadoSearch */
+/* @var $model app\models\RecadoTeacherSearch */
 /* @var $form yii\widgets\ActiveForm */
 ?>
 
-<div class="recado-search">
+<div class="recado-teacher-search">
 
     <?php $form = ActiveForm::begin([
         'action' => ['index'],

@@ -5,11 +5,11 @@ use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 
 /* @var $this yii\web\View */
-/* @var $model app\models\Recado */
+/* @var $model app\models\RecadoTeacher */
 /* @var $form yii\widgets\ActiveForm */
 ?>
 
-<div class="recado-form">
+<div class="recado-teacher-form">
 
     <?php $form = ActiveForm::begin(); ?>
 
@@ -24,7 +24,6 @@ use yii\widgets\ActiveForm;
     <?= $form->field($model, 'id_aluno')->dropDownList(
         ArrayHelper::map(\app\models\Aluno::find()->all(), 'id', 'nome'),['prompt' => ' -- Select the Student --']
     )->label('Student') ?>
-
 
     <div class="form-group">
         <?= Html::submitButton('Save', ['class' => 'btn btn-success']) ?>

@@ -1,17 +1,16 @@
 <?php
 
 use yii\helpers\Html;
-use yii\widgets\DetailView;
 
 /* @var $this yii\web\View */
-/* @var $model app\models\Recado */
+/* @var $model app\models\RecadoTeacher */
 
 $this->title = $model->id;
 $this->params['breadcrumbs'][] = ['label' => 'Recados', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 \yii\web\YiiAsset::register($this);
 ?>
-<div class="recado-view">
+<div class="recado-teacher-view">
 
     <h1><?= $model->getEncondedTopico() ?></h1>
 
