@@ -4,8 +4,7 @@ modules:
     enabled:
         - WebDriver:
             url: 'http://localhost/'
-            port: 8888
+            port: 80
             browser: chrome
-        - \Helper\Acceptance
         - Yii2:
             part: init

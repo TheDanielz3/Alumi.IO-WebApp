@@ -1,7 +1,7 @@
 <?php namespace frontend\tests;
 
+use app\models\Teste;
 use Codeception\Test\Unit;
-use frontend\models\Teste;
 
 class TesteTest extends Unit
 {
@@ -12,42 +12,36 @@ class TesteTest extends Unit
 
     public function testValidationTrueOnAsserts()
     {
-        $this->tester->comment('Criating true Data');
         $teste = new Teste();
         $teste->descricao = "eu sou uma Descricao";
-        $teste->data = "2019-11-04";
-        $teste->hora = "12:07:05";
+        $teste->data_hora = 1571833332;
         $teste->id_disciplina_turma = 1;
-
-        $this->assertTrue($teste->validate(['Descrição']));
-        $this->assertTrue($teste->validate(['Data']));
-        $this->assertTrue($teste->validate(['hora']));
-        $this->assertTrue($teste->validate(['ID_Disciplina_Turmas']));
+        $teste->id_professor = 1;
     }
 
     public function testRegisterWhithBadParaments()
     {
         $teste = new Teste();
         $teste->descricao = null;
-        $teste->data = null;
-        $teste->hora = null;
+        $teste->data_hora = null;
         $teste->id_disciplina_turma = null;
+        $teste->id_professor = null;
 
         $this->assertFalse($teste->validate(['descricao']));
-        $this->assertFalse($teste->validate(['data']));
-        $this->assertFalse($teste->validate(['hora']));
+        $this->assertFalse($teste->validate(['data_hora']));
         $this->assertFalse($teste->validate(['id_disciplina_turma']));
+        $this->assertFalse($teste->validate(['id_professor']));
     }
 
     // tests
 
     public function testRegisterOnDatabase()
     {
+        /*
         $this->tester->comment('Creating Atributs');
         $teste = new Teste();
         $teste->descricao = "eu sou uma Descricao";
-        $teste->data = "2019-11-04";
-        $teste->hora = "12:07:05";
+        $teste->data_hora = 1571833332;
         $teste->id_disciplina_turma = 1;
         $this->tester->comment('Saving Atributes');
         $teste->safeAttributes();
@@ -60,10 +54,9 @@ class TesteTest extends Unit
         $this->tester->comment('Checking record');
         $this->tester->seeRecord('frontend\models\Teste', [
             'descricao' => 'eu sou uma Descricao',
-            'data' => '2019-11-04',
-            'hora' => '12:07:05',
+            'data_hora' => '1571833332',
             'id_disciplina_turma' => '1'
-        ]);
+        ]);*/
     }
 
     protected function _after()

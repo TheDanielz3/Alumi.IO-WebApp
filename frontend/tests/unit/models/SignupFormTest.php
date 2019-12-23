@@ -33,6 +33,7 @@ class SignupFormTest extends Unit
             'email' => 'some_email@example.com',
             'password' => 'some_password',
             'user_type' => 'student',
+            'nome' => 'student name',
         ]);
 
         $user = $model->signup();

@@ -48,6 +48,7 @@ class SignupCest
             'SignupForm[email]' => 'tester.email@example.com',
             'SignupForm[password]' => 'tester_password',
             'SignupForm[user_type]' => 'student',
+            'SignupForm[nome]' => 'student name',
         ]);
 
         $I->seeRecord('common\models\User', [

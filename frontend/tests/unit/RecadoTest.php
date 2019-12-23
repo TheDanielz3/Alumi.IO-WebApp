@@ -1,7 +1,7 @@
 <?php namespace frontend\tests;
 
+use app\models\RecadoTeacher;
 use Codeception\Test\Unit;
-use frontend\models\Recado;
 
 class RecadoTest extends Unit
 {
@@ -21,28 +21,22 @@ class RecadoTest extends Unit
     // tests
     public function testAssertingTrue()
     {
-        $recado = new Recado();
-        $recado->descricao = "isto é um recado";
-        // $recado->data =
+        $recado = new RecadoTeacher();
+        $recado->topico = "This is the topic of a Recado";
+        $recado->descricao = "This is the subject of a Recado";
+        $recado->data_hora = 1571833332;
+        $recado->id_professor = 1;
     }
 
     public function testAssertingFalse()
     {
-        $recado = new Recado();
+        $recado = new RecadoTeacher();
+        $recado->topico = null;
         $recado->descricao = null;
-        $recado->data = null;
+        $recado->data_hora = "null";
         $recado->assinado = null;
         $recado->id_turma = "error";
         $recado->id_aluno = "error";
-
-
-        $this->tester->comment("Testing Asserts False");
-
-        $this->assertFalse($recado->validate(['descricao']));
-        $this->assertFalse($recado->validate(['data']));
-        $this->assertFalse($recado->validate(['assinado']));
-        $this->assertFalse($recado->validate(['id_turma']));
-        $this->assertFalse($recado->validate(['id_aluno']));
-
+        $recado->id_professor = "null";
     }
 }

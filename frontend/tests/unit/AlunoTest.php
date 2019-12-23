@@ -1,7 +1,7 @@
 <?php namespace frontend\tests;
 
+use app\models\Aluno;
 use Codeception\Test\Unit;
-use frontend\models\Aluno;
 
 class AlunoTest extends Unit
 {

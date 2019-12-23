@@ -1,6 +1,8 @@
 <?php namespace frontend\tests;
 
-use frontend\models\Turma;
+
+
+use app\models\Turma;
 
 class TurmaTest extends \Codeception\Test\Unit
 {

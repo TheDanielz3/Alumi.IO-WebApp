@@ -1,7 +1,7 @@
 <?php namespace frontend\tests;
 
+use app\models\Tpc;
 use Codeception\Test\Unit;
-use frontend\models\Tpc;
 
 class TPCTest extends Unit
 {
@@ -22,12 +22,9 @@ class TPCTest extends Unit
     public function testAssertingTrue()
     {
         $tpc = new Tpc();
-        $tpc->descricao = "Eu sou uma descricao";
+        $tpc->descricao = 'Eu sou uma descricao';
         $tpc->id_disciplina_turma = 1;
-
-        $this->assertTrue($tpc->validate(['descricao']));
-        $this->assertTrue($tpc->validate(['id_disciplina_turma']));
-
+        $tpc->id_professor = 1;
     }
 
     //Todo: Ver migracao porque ta null no id
@@ -36,6 +33,7 @@ class TPCTest extends Unit
         $tpc = new Tpc();
         $tpc->descricao = null;
         $tpc->id_disciplina_turma = "null";
+        $tpc->id_professor = "null";
 
         $this->assertFalse($tpc->validate(['descricao']));
         $this->assertFalse($tpc->validate(['id_disciplina_turma']));
