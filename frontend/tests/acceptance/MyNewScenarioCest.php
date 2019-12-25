@@ -7,15 +7,13 @@ class MyNewScenarioCest
 {
     public function _before(AcceptanceTester $I)
     {
+        $I->amOnPage(Url::toRoute('/site/index'));
     }
 
     // tests
     public function tryToTest(AcceptanceTester $I)
     {
-        $I->wantTo('verify stuff');
-        $I->amOnPage(Url::toRoute('/site/index'));
-        $I->wait(3);
-        $I->see("Alumio");
-
+        $I->see("Alumi.IO");
+        $I->click("Signup");
     }
 }

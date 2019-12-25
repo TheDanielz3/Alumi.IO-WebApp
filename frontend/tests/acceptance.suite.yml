@@ -3,8 +3,9 @@ actor: AcceptanceTester
 modules:
     enabled:
         - WebDriver:
-            url: 'http://localhost/'
-            port: 80
+            url: 'http://localhost:8080/'
             browser: chrome
         - Yii2:
-            part: init
+            part: orm
+            entryScript: index-test.php
+            cleanup: true
