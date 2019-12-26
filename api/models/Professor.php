@@ -8,12 +8,13 @@ use Yii;
  * This is the model class for table "{{%professor}}".
  *
  * @property int $id
- * @property int|null $id_disciplina
  * @property string|null $nome
  *
- * @property Disciplina $disciplina
+ * @property Disciplinaturma[] $disciplinaturmas
  * @property User $id0
  * @property Recado[] $recados
+ * @property Teste[] $testes
+ * @property Tpc[] $tpcs
  */
 class Professor extends \yii\db\ActiveRecord
 {
@@ -31,9 +32,7 @@ class Professor extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['id_disciplina'], 'integer'],
             [['nome'], 'string', 'max' => 255],
-            [['id_disciplina'], 'exist', 'skipOnError' => true, 'targetClass' => Disciplina::className(), 'targetAttribute' => ['id_disciplina' => 'id']],
             [['id'], 'exist', 'skipOnError' => true, 'targetClass' => User::className(), 'targetAttribute' => ['id' => 'id']],
         ];
     }
@@ -45,7 +44,6 @@ class Professor extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'id_disciplina' => 'Id Disciplina',
             'nome' => 'Nome',
         ];
     }
@@ -53,9 +51,9 @@ class Professor extends \yii\db\ActiveRecord
     /**
      * @return \yii\db\ActiveQuery
      */
-    public function getDisciplina()
+    public function getDisciplinaturmas()
     {
-        return $this->hasOne(Disciplina::className(), ['id' => 'id_disciplina']);
+        return $this->hasMany(Disciplinaturma::className(), ['id_professor' => 'id']);
     }
 
     /**
@@ -75,6 +73,22 @@ class Professor extends \yii\db\ActiveRecord
     }
 
     /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getTestes()
+    {
+        return $this->hasMany(Teste::className(), ['id_professor' => 'id']);
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getTpcs()
+    {
+        return $this->hasMany(Tpc::className(), ['id_professor' => 'id']);
+    }
+
+    /**
      * {@inheritdoc}
      * @return \api\models\query\ProfessorQuery the active query used by this AR class.
      */
@@ -82,5 +96,4 @@ class Professor extends \yii\db\ActiveRecord
     {
         return new \api\models\query\ProfessorQuery(get_called_class());
     }
-
 }

@@ -13,7 +13,6 @@ use Yii;
  *
  * @property Aluno[] $alunos
  * @property Disciplinaturma[] $disciplinaturmas
- * @property Recado[] $recados
  */
 class Turma extends \yii\db\ActiveRecord
 {
@@ -63,14 +62,6 @@ class Turma extends \yii\db\ActiveRecord
     public function getDisciplinaturmas()
     {
         return $this->hasMany(Disciplinaturma::className(), ['id_turma' => 'id']);
-    }
-
-    /**
-     * @return \yii\db\ActiveQuery
-     */
-    public function getRecados()
-    {
-        return $this->hasMany(Recado::className(), ['id_turma' => 'id']);
     }
 
     /**

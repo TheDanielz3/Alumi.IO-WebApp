@@ -8,12 +8,12 @@ class Recado extends \api\models\Recado
 {
      public function fields()
      {
-         return ['id','datahora','descricao','assinado','turma','aluno','professor'];
+         return ['id','datahora','descricao','assinado','disciplinaTurma','aluno','professor'];
      }
 
      public function extraFields()
      {
-         return ['id_professor','id_turma','id_aluno','data_hora'];
+         return ['id_professor','id_disciplina_turma','id_aluno','data_hora'];
      }
 
 }

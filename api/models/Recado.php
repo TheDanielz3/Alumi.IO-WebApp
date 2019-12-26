@@ -14,13 +14,13 @@ use yii\behaviors\TimestampBehavior;
  * @property string $descricao
  * @property float $assinado
  * @property int $data_hora
- * @property int|null $id_turma
+ * @property int $id_disciplina_turma
  * @property int|null $id_aluno
  * @property int $id_professor
  *
  * @property Aluno $aluno
  * @property Professor $professor
- * @property Turma $turma
+ * @property Disciplinaturma $disciplinaTurma
  */
 class Recado extends \yii\db\ActiveRecord
 {
@@ -38,14 +38,14 @@ class Recado extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['topico', 'descricao'], 'required'],
+            [['topico', 'descricao', 'id_disciplina_turma'], 'required'],
             [['assinado'], 'number'],
-            [['data_hora', 'id_turma', 'id_aluno', 'id_professor'], 'integer'],
+            [['data_hora', 'id_disciplina_turma', 'id_aluno', 'id_professor'], 'integer'],
             [['topico'], 'string', 'max' => 50],
             [['descricao'], 'string', 'max' => 200],
             [['id_aluno'], 'exist', 'skipOnError' => true, 'targetClass' => Aluno::className(), 'targetAttribute' => ['id_aluno' => 'id']],
             [['id_professor'], 'exist', 'skipOnError' => true, 'targetClass' => Professor::className(), 'targetAttribute' => ['id_professor' => 'id']],
-            [['id_turma'], 'exist', 'skipOnError' => true, 'targetClass' => Turma::className(), 'targetAttribute' => ['id_turma' => 'id']],
+            [['id_disciplina_turma'], 'exist', 'skipOnError' => true, 'targetClass' => Disciplinaturma::className(), 'targetAttribute' => ['id_disciplina_turma' => 'id']],
         ];
     }
 
@@ -60,7 +60,7 @@ class Recado extends \yii\db\ActiveRecord
             'descricao' => 'Descricao',
             'assinado' => 'Assinado',
             'data_hora' => 'Data Hora',
-            'id_turma' => 'Id Turma',
+            'id_disciplina_turma' => 'Id Disciplina Turma',
             'id_aluno' => 'Id Aluno',
             'id_professor' => 'Id Professor',
         ];
@@ -101,9 +101,9 @@ class Recado extends \yii\db\ActiveRecord
     /**
      * @return \yii\db\ActiveQuery
      */
-    public function getTurma()
+    public function getDisciplinaTurma()
     {
-        return $this->hasOne(Turma::className(), ['id' => 'id_turma']);
+        return $this->hasOne(Disciplinaturma::className(), ['id' => 'id_disciplina_turma']);
     }
 
     /**
@@ -115,7 +115,8 @@ class Recado extends \yii\db\ActiveRecord
         return new \api\models\query\RecadoQuery(get_called_class());
     }
 
-    public function getDataHora(){
-        return Yii::$app->formatter->asRelativeTime($this->data_hora) ;
+    public function getDataHora()
+    {
+        return Yii::$app->formatter->asRelativeTime($this->data_hora);
     }
 }

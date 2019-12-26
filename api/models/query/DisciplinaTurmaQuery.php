@@ -7,7 +7,7 @@ namespace api\models\query;
  *
  * @see \api\models\Disciplinaturma
  */
-class DisciplinaTurmaQuery extends \yii\db\ActiveQuery
+class DisciplinaturmaQuery extends \yii\db\ActiveQuery
 {
     /*public function active()
     {

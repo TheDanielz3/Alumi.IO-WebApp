@@ -11,7 +11,6 @@ use Yii;
  * @property string $nome
  *
  * @property Disciplinaturma[] $disciplinaturmas
- * @property Professor[] $professors
  */
 class Disciplina extends \yii\db\ActiveRecord
 {
@@ -51,14 +50,6 @@ class Disciplina extends \yii\db\ActiveRecord
     public function getDisciplinaturmas()
     {
         return $this->hasMany(Disciplinaturma::className(), ['id_disciplina' => 'id']);
-    }
-
-    /**
-     * @return \yii\db\ActiveQuery
-     */
-    public function getProfessors()
-    {
-        return $this->hasMany(Professor::className(), ['id_disciplina' => 'id']);
     }
 
     /**
