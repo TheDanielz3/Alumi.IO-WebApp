@@ -19,9 +19,9 @@ $this->params['breadcrumbs'][] = $this->title;
             Sended: <b> <?php echo Yii::$app->formatter->asRelativeTime($model->data_hora) ?></b>
         </small>
         <br>
-        <?php if ($model->turma !== null) { ?>
+        <?php if ($model->disciplinaTurma !== null) { ?>
             <small>
-                To the class: <b> <?php echo $model->turma->getAnoLetra() ?></b>
+                To the class: <b> <?php echo $model->disciplinaTurma->getAnoLetraTurma() ?></b>
             </small>
             <br>
         <?php } ?>

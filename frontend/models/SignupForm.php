@@ -97,9 +97,7 @@ class SignupForm extends Model
             exit();
         }
 
-
         return $user->save() && $this->sendEmail($user);
-
     }
 
     /**

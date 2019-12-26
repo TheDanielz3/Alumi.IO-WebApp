@@ -1,11 +1,12 @@
 <?php
 namespace frontend\controllers;
 
+use app\models\Aluno;
+use app\models\RecadoTeacher;
 use frontend\models\ResendVerificationEmailForm;
 use frontend\models\VerifyEmailForm;
 use Yii;
 use yii\base\InvalidArgumentException;
-use yii\helpers\VarDumper;
 use yii\web\BadRequestHttpException;
 use yii\web\Controller;
 use yii\filters\VerbFilter;
@@ -14,6 +15,7 @@ use common\models\LoginForm;
 use frontend\models\PasswordResetRequestForm;
 use frontend\models\ResetPasswordForm;
 use frontend\models\SignupForm;
+use yii\web\Response;
 
 /**
  * Site controller
@@ -225,7 +227,7 @@ class SiteController extends Controller
      *
      * @param string $token
      * @throws BadRequestHttpException
-     * @return yii\web\Response
+     * @return Response
      */
     public function actionVerifyEmail($token)
     {
@@ -266,7 +268,6 @@ class SiteController extends Controller
         ]);
     }
 
-
     /*public function actionEmail()
     {
         Yii::$app->mailer->compose()
@@ -278,9 +279,7 @@ class SiteController extends Controller
 
     }*/
 
-
     public function actionDashboard(){
-
 
         if (array_keys(Yii::$app->authManager->getRolesByUser(Yii::$app->user->id))[0] == 'teacher'){
             return $this->render('professorOperations');
@@ -291,6 +290,22 @@ class SiteController extends Controller
         }
 
         return $this->goHome();
+    }
+
+    public function actionSubCat()
+    {
+        Yii::$app->response->format = Response::FORMAT_JSON;
+        $out = [];
+        if (isset($_POST['depdrop_parents'])) {
+            $parents = $_POST['depdrop_parents'];
+            if ($parents != null) {
+                $cat_id = $parents[0];
+                $out = Aluno::getSubCatList( RecadoTeacher::getIDTurma($cat_id));
+
+                return ['output'=> $out , 'selected'=>''];
+            }
+        }
+        return ['output'=>'', 'selected'=>''];
     }
 
 }

@@ -18,7 +18,7 @@ class RecadoTeacherSearch extends RecadoTeacher
     public function rules()
     {
         return [
-            [['id', 'data_hora', 'id_turma', 'id_aluno', 'id_professor'], 'integer'],
+            [['id', 'data_hora', 'id_disciplina_turma', 'id_aluno', 'id_professor'], 'integer'],
             [['topico', 'descricao'], 'safe'],
             [['assinado'], 'number'],
         ];
@@ -63,7 +63,7 @@ class RecadoTeacherSearch extends RecadoTeacher
             'id' => $this->id,
             'assinado' => $this->assinado,
             'data_hora' => $this->data_hora,
-            'id_turma' => $this->id_turma,
+            'id_disciplina_turma' => $this->id_disciplina_turma,
             'id_aluno' => $this->id_aluno,
             'id_professor' => $this->id_professor,
         ]);

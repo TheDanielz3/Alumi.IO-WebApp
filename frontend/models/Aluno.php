@@ -17,7 +17,7 @@ use Yii;
  * @property Encarregadoeducacao $encarregadoDeEducacao
  * @property Turma $turma
  * @property User $id0
- * @property Recado[] $recados
+ * @property RecadoTeacher[] $recados
  */
 class Aluno extends \yii\db\ActiveRecord
 {
@@ -86,6 +86,28 @@ class Aluno extends \yii\db\ActiveRecord
      */
     public function getRecados()
     {
-        return $this->hasMany(Recado::className(), ['id_aluno' => 'id']);
+        return $this->hasMany(RecadoTeacher::className(), ['id_aluno' => 'id']);
+    }
+
+    public static function getSubCatList($cat_id)
+    {
+
+        $subCategories = self::find()
+            ->select(['id', 'nome as name'])
+            ->andWhere(['id_turma' => $cat_id])
+            ->asArray()
+            ->all();
+
+        return $subCategories;
+    }
+
+    public static function getSubCategories($cat_id)
+    {
+        return self::find()
+            ->select(['nome as name', 'id'])
+            ->andWhere(['id_turma' => $cat_id])
+            ->indexBy('id')
+            ->column();
+
     }
 }

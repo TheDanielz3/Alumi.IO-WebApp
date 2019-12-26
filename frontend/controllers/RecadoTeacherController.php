@@ -24,10 +24,8 @@ class RecadoTeacherController extends Controller
         return [
             [
                 'class' => AccessControl::class,
-                'only' => ['create', 'update', 'delete', 'view', 'index'],
                 'rules' => [
                     [
-                        'actions' => ['create', 'update', 'delete', 'view', 'index'],
                         'allow' => true,
                         'roles' => ['teacher', 'admin'],
                     ]

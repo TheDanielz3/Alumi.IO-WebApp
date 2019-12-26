@@ -22,18 +22,19 @@ class TPCTest extends Unit
     public function testAssertingTrue()
     {
         $tpc = new Tpc();
-        $tpc->descricao = 'Eu sou uma descricao';
+        $tpc->descricao = "Eu sou uma descricao";
         $tpc->id_disciplina_turma = 1;
-        $tpc->id_professor = 1;
+
+        $this->assertTrue($tpc->validate(['descricao']));
+        $this->assertTrue($tpc->validate(['id_disciplina_turma']));
+
     }
 
-    //Todo: Ver migracao porque ta null no id
     public function testAssertingFalse()
     {
         $tpc = new Tpc();
         $tpc->descricao = null;
         $tpc->id_disciplina_turma = "null";
-        $tpc->id_professor = "null";
 
         $this->assertFalse($tpc->validate(['descricao']));
         $this->assertFalse($tpc->validate(['id_disciplina_turma']));

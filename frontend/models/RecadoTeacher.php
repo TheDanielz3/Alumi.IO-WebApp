@@ -15,13 +15,13 @@ use yii\helpers\Html;
  * @property string $descricao
  * @property float $assinado
  * @property int $data_hora
- * @property int|null $id_turma
+ * @property int $id_disciplina_turma
  * @property int|null $id_aluno
  * @property int $id_professor
  *
  * @property Aluno $aluno
  * @property Professor $professor
- * @property Turma $turma
+ * @property Disciplinaturma $disciplinaTurma
  */
 class RecadoTeacher extends \yii\db\ActiveRecord
 {
@@ -39,15 +39,14 @@ class RecadoTeacher extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['topico', 'descricao'], 'required'],
+            [['topico', 'descricao', 'id_disciplina_turma'], 'required'],
             [['assinado'], 'number'],
-            [['data_hora', 'id_turma', 'id_aluno', 'id_professor'], 'integer'],
+            [['data_hora', 'id_disciplina_turma', 'id_aluno', 'id_professor'], 'integer'],
             [['topico'], 'string', 'max' => 50],
             [['descricao'], 'string', 'max' => 200],
             [['id_aluno'], 'exist', 'skipOnError' => true, 'targetClass' => Aluno::className(), 'targetAttribute' => ['id_aluno' => 'id']],
             [['id_professor'], 'exist', 'skipOnError' => true, 'targetClass' => Professor::className(), 'targetAttribute' => ['id_professor' => 'id']],
-            [['id_turma'], 'exist', 'skipOnError' => true, 'targetClass' => Turma::className(), 'targetAttribute' => ['id_turma' => 'id']],
-        ];
+            [['id_disciplina_turma'], 'exist', 'skipOnError' => true, 'targetClass' => Disciplinaturma::className(), 'targetAttribute' => ['id_disciplina_turma' => 'id']],];
     }
 
     /**
@@ -61,7 +60,7 @@ class RecadoTeacher extends \yii\db\ActiveRecord
             'descricao' => 'Descricao',
             'assinado' => 'Assinado',
             'data_hora' => 'Data Hora',
-            'id_turma' => 'Id Turma',
+            'id_disciplina_turma' => 'Id Disciplina Turma',
             'id_aluno' => 'Id Aluno',
             'id_professor' => 'Id Professor',
         ];
@@ -94,24 +93,43 @@ class RecadoTeacher extends \yii\db\ActiveRecord
     /**
      * @return \yii\db\ActiveQuery
      */
-    public function getProfessor()
+    public function getDisciplinaTurma()
     {
-        return $this->hasOne(Professor::className(), ['id' => 'id_professor']);
+        return $this->hasOne(Disciplinaturma::className(), ['id' => 'id_disciplina_turma']);
     }
 
     /**
      * @return \yii\db\ActiveQuery
      */
-    public function getTurma()
+    public function getProfessor()
     {
-        return $this->hasOne(Turma::className(), ['id' => 'id_turma']);
+        return $this->hasOne(Professor::className(), ['id' => 'id_professor']);
     }
 
-    public function getEncondedTopico(){
-        return Html::encode($this->topico) ;
+    public function getEncondedTopico()
+    {
+        return Html::encode($this->topico);
     }
 
-    public function getEncondedDescricao(){
-        return Html::encode($this->descricao) ;
+    public function getEncondedDescricao()
+    {
+        return Html::encode($this->descricao);
+    }
+
+    public static function getProfessorsClasses($id_professor)
+    {
+        $classesIDS = Disciplinaturma::find()->andWhere('id_professor=' . $id_professor)->all();
+
+        return $classesIDS;
+    }
+
+    public static function getIDTurma($id_disciplina_turma)
+    {
+
+        if (!empty($id_disciplina_turma)) {
+            $id_turma = Disciplinaturma::find()->andWhere('id=' . $id_disciplina_turma)->one();
+            return $id_turma->id_turma;
+        }
+        return null;
     }
 }

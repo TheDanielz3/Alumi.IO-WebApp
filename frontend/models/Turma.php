@@ -70,7 +70,7 @@ class Turma extends \yii\db\ActiveRecord
      */
     public function getRecados()
     {
-        return $this->hasMany(Recado::className(), ['id_turma' => 'id']);
+        return $this->hasMany(RecadoTeacher::className(), ['id_turma' => 'id']);
     }
 
     public function getAnoLetra(){

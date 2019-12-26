@@ -22,6 +22,7 @@ class m191122_123743_table_disciplina_turma extends Migration
             'id' => $this->primaryKey(),
             'id_disciplina' => $this->integer()->notNull(),
             'id_turma' => $this->integer()->notNull(),
+            'id_professor' => $this->integer()->notNull(),
         ], $tableOptions);
     }
 
