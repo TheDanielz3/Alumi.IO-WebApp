@@ -1,4 +1,5 @@
 <?php
+
 namespace frontend\controllers;
 
 use app\models\Aluno;
@@ -78,6 +79,7 @@ class SiteController extends Controller
     {
         return $this->render('index');
     }
+
     /**
      * Displays homepage for Professors.
      *
@@ -102,37 +104,37 @@ class SiteController extends Controller
         $model = new LoginForm();
         if ($model->load(Yii::$app->request->post()) && $model->login()) {
 
-            if(!Yii::$app->user->can('backendAccess') and Yii::$app->user->can('createHomework'))
-            {
-                return($this->render('professorOperations'));
+            if (!Yii::$app->user->can('backendAccess') and Yii::$app->user->can('createHomework')) {
+                return ($this->render('professorOperations'));
             }
-            if(Yii::$app->user->can('viewErrands') and !Yii::$app->user->can('createHomework') )
-            {
-                return($this->render('encarregadosEducacaoOperations'));
+            if (Yii::$app->user->can('viewErrands') and !Yii::$app->user->can('createHomework')) {
+                return ($this->render('encarregadosEducacaoOperations'));
             }
-            if(!Yii::$app->user->can('viewErrands') and Yii::$app->user->can('viewHomework') )
-            {
-                return($this->render('alunoOperations'));
+            if (!Yii::$app->user->can('viewErrands') and Yii::$app->user->can('viewHomework')) {
+                return ($this->render('alunoOperations'));
             }
 
             return $this->goBack();
 
 
         } else {
-           $model->password = '';
+            $model->password = '';
             return $this->render('login', [
                 'model' => $model,
             ]);
         }
     }
+
     public function actionEncarregadosEducacaoOperations()
     {
         return $this->render('encarregadosEducacaoOperations');
     }
+
     public function actionAlunoOperations()
     {
         return $this->render('alunoOperations');
     }
+
     /**
      * Logs out the current user.
      *
@@ -226,8 +228,8 @@ class SiteController extends Controller
      * Verify email address
      *
      * @param string $token
-     * @throws BadRequestHttpException
      * @return Response
+     * @throws BadRequestHttpException
      */
     public function actionVerifyEmail($token)
     {
@@ -279,16 +281,17 @@ class SiteController extends Controller
 
     }*/
 
-    public function actionDashboard(){
-
-        if (array_keys(Yii::$app->authManager->getRolesByUser(Yii::$app->user->id))[0] == 'teacher'){
-            return $this->render('professorOperations');
-        }elseif(array_keys(Yii::$app->authManager->getRolesByUser(Yii::$app->user->id))[0] == 'guardian'){
-            return $this->render('encarregadosEducacaoOperations.php');
-        }elseif(array_keys(Yii::$app->authManager->getRolesByUser(Yii::$app->user->id))[0] == 'student'){
-            return $this->render('alunoOperations.php');
+    public function actionDashboard()
+    {
+        if (!Yii::$app->user->isGuest) {
+            if (array_keys(Yii::$app->authManager->getRolesByUser(Yii::$app->user->id))[0] == 'teacher') {
+                return $this->render('professorOperations');
+            } elseif (array_keys(Yii::$app->authManager->getRolesByUser(Yii::$app->user->id))[0] == 'guardian') {
+                return $this->render('encarregadosEducacaoOperations.php');
+            } elseif (array_keys(Yii::$app->authManager->getRolesByUser(Yii::$app->user->id))[0] == 'student') {
+                return $this->render('alunoOperations.php');
+            }
         }
-
         return $this->goHome();
     }
 
@@ -300,12 +303,12 @@ class SiteController extends Controller
             $parents = $_POST['depdrop_parents'];
             if ($parents != null) {
                 $cat_id = $parents[0];
-                $out = Aluno::getSubCatList( RecadoTeacher::getIDTurma($cat_id));
+                $out = Aluno::getSubCatList(RecadoTeacher::getIDTurma($cat_id));
 
-                return ['output'=> $out , 'selected'=>''];
+                return ['output' => $out, 'selected' => ''];
             }
         }
-        return ['output'=>'', 'selected'=>''];
+        return ['output' => '', 'selected' => ''];
     }
 
 }
