@@ -18,12 +18,13 @@ class TPCTest extends Unit
     {
     }
 
-    // tests
     public function testAssertingTrue()
     {
         $tpc = new Tpc();
         $tpc->descricao = "Eu sou uma descricao";
         $tpc->id_disciplina_turma = 1;
+
+        //Fixed maybe
 
         $this->assertTrue($tpc->validate(['descricao']));
         $this->assertTrue($tpc->validate(['id_disciplina_turma']));
