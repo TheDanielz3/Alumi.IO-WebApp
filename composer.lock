@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a880d2242a84983c64d07d717d709e00",
+    "content-hash": "17e2e5cb6b492fad7e04b5cb2b7c9a29",
     "packages": [
         {
             "name": "2amigos/yii2-date-picker-widget",
@@ -66,6 +66,55 @@
                 "yii2"
             ],
             "time": "2017-07-05T05:52:03+00:00"
+        },
+        {
+            "name": "alexantr/yii2-datetimepicker",
+            "version": "1.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/alexantr/yii2-datetimepicker.git",
+                "reference": "5bd467cb974f2d376535f3810b9108e63f7a86bc"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/alexantr/yii2-datetimepicker/zipball/5bd467cb974f2d376535f3810b9108e63f7a86bc",
+                "reference": "5bd467cb974f2d376535f3810b9108e63f7a86bc",
+                "shasum": ""
+            },
+            "require": {
+                "npm-asset/flatpickr": "^4.3",
+                "yiisoft/yii2": "~2.0.6"
+            },
+            "type": "yii2-extension",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "alexantr\\datetimepicker\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Alex Yashkin",
+                    "email": "alex@yashkin.by"
+                }
+            ],
+            "description": "Datetime picker input widget for Yii 2",
+            "keywords": [
+                "DateTimePicker",
+                "datetime-picker",
+                "flatpickr",
+                "widget",
+                "yii2"
+            ],
+            "time": "2018-06-21T15:53:24+00:00"
         },
         {
             "name": "almasaeed2010/adminlte",
@@ -237,7 +286,7 @@
             "version": "3.4.1",
             "source": {
                 "type": "git",
-                "url": "git@github.com:jquery/jquery-dist.git",
+                "url": "https://github.com/jquery/jquery-dist.git",
                 "reference": "15bc73803f76bc53b654b9fdbbbc096f56d7c03d"
             },
             "dist": {
@@ -1596,6 +1645,18 @@
                 "object graph"
             ],
             "time": "2019-12-15T19:12:40+00:00"
+        },
+        {
+            "name": "npm-asset/flatpickr",
+            "version": "4.6.3",
+            "dist": {
+                "type": "tar",
+                "url": "https://registry.npmjs.org/flatpickr/-/flatpickr-4.6.3.tgz"
+            },
+            "type": "npm-asset",
+            "license": [
+                "MIT"
+            ]
         },
         {
             "name": "phar-io/manifest",

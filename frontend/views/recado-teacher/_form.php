@@ -20,7 +20,7 @@ use yii\widgets\ActiveForm;
     <?= $form->field($model, 'descricao')->textarea(['maxlength' => true])->label('Message') ?>
 
     <?= $form->field($model, 'id_disciplina_turma')->dropDownList(
-        ArrayHelper::map(\app\models\RecadoTeacher::getProfessorsClasses(Yii::$app->user->id),'id', 'anoLetraTurma'),
+        ArrayHelper::map(\app\models\Disciplinaturma::getCurrentProfessorClassesIDS(Yii::$app->user->id),'id', 'anoLetraDisciplina'),
         ['prompt' => ' -- Select the Class --', 'id' => 'id_disciplina_turma']
     )   ->label('Class') ?>
 

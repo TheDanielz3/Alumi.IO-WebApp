@@ -14,25 +14,6 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <h1><?= $model->getEncondedTopico() ?></h1>
 
-    <p class="text-muted">
-        <small>
-            Sended: <b> <?php echo Yii::$app->formatter->asRelativeTime($model->data_hora) ?></b>
-        </small>
-        <br>
-        <?php if ($model->disciplinaTurma !== null) { ?>
-            <small>
-                To the class: <b> <?php echo $model->disciplinaTurma->getAnoLetraTurma() ?></b>
-            </small>
-            <br>
-        <?php } ?>
-        <?php if ($model->aluno !== null) { ?>
-            <small>
-                To the student: <b> <?php echo $model->aluno->nome ?></b>
-            </small>
-            <br>
-        <?php } ?>
-    </p>
-
     <p>
         <?= Html::a('Update', ['update', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
         <?= Html::a('Delete', ['delete', 'id' => $model->id], [
@@ -44,10 +25,31 @@ $this->params['breadcrumbs'][] = $this->title;
         ]) ?>
     </p>
 
+    <p class="text-muted">
+        <small>
+            Sended: <b> <?php echo Yii::$app->formatter->asRelativeTime($model->data_hora) ?></b>
+        </small>
+        <br>
+        <?php if ($model->disciplinaTurma !== null) { ?>
+            <small>
+                To the class: <b> <?php echo $model->disciplinaTurma->getAnoLetraDisciplina() ?></b>
+            </small>
+            <br>
+        <?php } ?>
+        <?php if ($model->aluno !== null) { ?>
+            <small>
+                To the student: <b> <?php echo $model->aluno->nome ?></b>
+            </small>
+            <br>
+        <?php } ?>
+    </p>
+
     <div>
-        <?php
-        echo $model->getEncondedDescricao();
-        ?>
+        <h4>
+            <?php
+            echo $model->getEncondedDescricao();
+            ?>
+        </h4>
     </div>
 
     <br>

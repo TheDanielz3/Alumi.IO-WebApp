@@ -3,8 +3,8 @@
 namespace frontend\controllers;
 
 use Yii;
-use app\models\RecadoTeacher;
-use app\models\RecadoTeacherSearch;
+use app\models\TesteTeacher;
+use app\models\TesteTeacherSearch;
 use yii\filters\AccessControl;
 use yii\web\Controller;
 use yii\web\ForbiddenHttpException;
@@ -12,9 +12,9 @@ use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
 /**
- * RecadoTeacherController implements the CRUD actions for RecadoTeacher model.
+ * TesteTeacherController implements the CRUD actions for TesteTeacher model.
  */
-class RecadoTeacherController extends Controller
+class TesteTeacherController extends Controller
 {
     /**
      * {@inheritdoc}
@@ -41,12 +41,12 @@ class RecadoTeacherController extends Controller
     }
 
     /**
-     * Lists all RecadoTeacher models.
+     * Lists all TesteTeacher models.
      * @return mixed
      */
     public function actionIndex()
     {
-        $searchModel = new RecadoTeacherSearch();
+        $searchModel = new TesteTeacherSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
         return $this->render('index', [
@@ -56,7 +56,7 @@ class RecadoTeacherController extends Controller
     }
 
     /**
-     * Displays a single RecadoTeacher model.
+     * Displays a single TesteTeacher model.
      * @param integer $id
      * @return mixed
      * @throws NotFoundHttpException if the model cannot be found
@@ -65,7 +65,7 @@ class RecadoTeacherController extends Controller
     public function actionView($id)
     {
         if ($this->findModel($id)->id_professor !== Yii::$app->user->id) {
-            throw new ForbiddenHttpException("You don't have permission do view this Recado");
+            throw new ForbiddenHttpException("You don't have permission do view this Teste");
         }
 
         return $this->render('view', [
@@ -74,15 +74,17 @@ class RecadoTeacherController extends Controller
     }
 
     /**
-     * Creates a new RecadoTeacher model.
+     * Creates a new TesteTeacher model.
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
     public function actionCreate()
     {
-        $model = new RecadoTeacher();
+        $model = new TesteTeacher();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
+            $model->data_hora = strtotime($model->data_hora);
+            $model->save();
             return $this->redirect(['view', 'id' => $model->id]);
         }
 
@@ -92,7 +94,7 @@ class RecadoTeacherController extends Controller
     }
 
     /**
-     * Updates an existing RecadoTeacher model.
+     * Updates an existing TesteTeacher model.
      * If update is successful, the browser will be redirected to the 'view' page.
      * @param integer $id
      * @return mixed
@@ -104,7 +106,7 @@ class RecadoTeacherController extends Controller
         $model = $this->findModel($id);
 
         if ($model->id_professor !== Yii::$app->user->id) {
-            throw new ForbiddenHttpException("You don't have permission do edit this Recado");
+            throw new ForbiddenHttpException("You don't have permission do edit this Teste");
         }
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
@@ -117,21 +119,19 @@ class RecadoTeacherController extends Controller
     }
 
     /**
-     * Deletes an existing RecadoTeacher model.
+     * Deletes an existing TesteTeacher model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
      * @param integer $id
      * @return mixed
-     * @throws ForbiddenHttpException
      * @throws NotFoundHttpException if the model cannot be found
-     * @throws \Throwable
-     * @throws \yii\db\StaleObjectException
+     * @throws ForbiddenHttpException
      */
     public function actionDelete($id)
     {
         $model = $this->findModel($id);
 
         if ($model->id_professor !== Yii::$app->user->id) {
-            throw new ForbiddenHttpException("You don't have permission do remove this Recado");
+            throw new ForbiddenHttpException("You don't have permission do remove this Teste");
         }
 
         $model->delete();
@@ -140,15 +140,15 @@ class RecadoTeacherController extends Controller
     }
 
     /**
-     * Finds the RecadoTeacher model based on its primary key value.
+     * Finds the TesteTeacher model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
      * @param integer $id
-     * @return RecadoTeacher the loaded model
+     * @return TesteTeacher the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
     protected function findModel($id)
     {
-        if (($model = RecadoTeacher::findOne($id)) !== null) {
+        if (($model = TesteTeacher::findOne($id)) !== null) {
             return $model;
         }
 

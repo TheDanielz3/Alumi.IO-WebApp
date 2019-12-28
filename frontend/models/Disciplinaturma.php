@@ -104,8 +104,15 @@ class Disciplinaturma extends \yii\db\ActiveRecord
         return $this->hasMany(Tpc::className(), ['id_disciplina_turma' => 'id']);
     }
 
-    public function getAnoLetraTurma()
+    public function getAnoLetraDisciplina()
     {
-        return $this->turma->getAnoLetra();
+        return $this->turma->getAnoLetra() . " - " . $this->disciplina->nome;
+    }
+
+    public static function getCurrentProfessorClassesIDS($id_professor)
+    {
+        $classesIDS = Disciplinaturma::find()->andWhere('id_professor=' . $id_professor)->all();
+
+        return $classesIDS;
     }
 }

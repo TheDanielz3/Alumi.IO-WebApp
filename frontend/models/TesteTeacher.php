@@ -3,6 +3,9 @@
 namespace app\models;
 
 use Yii;
+use yii\behaviors\BlameableBehavior;
+use yii\behaviors\TimestampBehavior;
+use yii\helpers\Html;
 
 /**
  * This is the model class for table "{{%teste}}".
@@ -16,7 +19,7 @@ use Yii;
  * @property Disciplinaturma $disciplinaTurma
  * @property Professor $professor
  */
-class Teste extends \yii\db\ActiveRecord
+class TesteTeacher extends \yii\db\ActiveRecord
 {
     /**
      * {@inheritdoc}
@@ -32,8 +35,9 @@ class Teste extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['descricao', 'data_hora', 'id_disciplina_turma', 'id_professor'], 'required'],
-            [['data_hora', 'id_disciplina_turma', 'id_professor'], 'integer'],
+            [['descricao', 'data_hora', 'id_disciplina_turma'], 'required'],
+            [['id_disciplina_turma', 'id_professor'], 'integer'],
+            [['data_hora'], 'safe'],
             [['descricao'], 'string', 'max' => 45],
             [['id_disciplina_turma'], 'exist', 'skipOnError' => true, 'targetClass' => Disciplinaturma::className(), 'targetAttribute' => ['id_disciplina_turma' => 'id']],
             [['id_professor'], 'exist', 'skipOnError' => true, 'targetClass' => Professor::className(), 'targetAttribute' => ['id_professor' => 'id']],
@@ -54,6 +58,17 @@ class Teste extends \yii\db\ActiveRecord
         ];
     }
 
+    public function behaviors()
+    {
+        return [
+            [
+                'class' => BlameableBehavior::class,
+                'createdByAttribute' => 'id_professor',
+                'updatedByAttribute' => false,
+            ]
+        ];
+    }
+
     /**
      * @return \yii\db\ActiveQuery
      */
@@ -68,5 +83,10 @@ class Teste extends \yii\db\ActiveRecord
     public function getProfessor()
     {
         return $this->hasOne(Professor::className(), ['id' => 'id_professor']);
+    }
+
+    public function getEncondedDescricao()
+    {
+        return Html::encode($this->descricao);
     }
 }

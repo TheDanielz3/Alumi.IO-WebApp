@@ -6,6 +6,7 @@ use Yii;
 use yii\behaviors\BlameableBehavior;
 use yii\behaviors\TimestampBehavior;
 use yii\helpers\Html;
+use yii\helpers\VarDumper;
 
 /**
  * This is the model class for table "{{%recado}}".
@@ -41,7 +42,8 @@ class RecadoTeacher extends \yii\db\ActiveRecord
         return [
             [['topico', 'descricao', 'id_disciplina_turma'], 'required'],
             [['assinado'], 'number'],
-            [['data_hora', 'id_disciplina_turma', 'id_aluno', 'id_professor'], 'integer'],
+            [['data_hora'],'safe'],
+            [[ 'id_disciplina_turma', 'id_aluno', 'id_professor'], 'integer'],
             [['topico'], 'string', 'max' => 50],
             [['descricao'], 'string', 'max' => 200],
             [['id_aluno'], 'exist', 'skipOnError' => true, 'targetClass' => Aluno::className(), 'targetAttribute' => ['id_aluno' => 'id']],
@@ -114,13 +116,6 @@ class RecadoTeacher extends \yii\db\ActiveRecord
     public function getEncondedDescricao()
     {
         return Html::encode($this->descricao);
-    }
-
-    public static function getProfessorsClasses($id_professor)
-    {
-        $classesIDS = Disciplinaturma::find()->andWhere('id_professor=' . $id_professor)->all();
-
-        return $classesIDS;
     }
 
     public static function getIDTurma($id_disciplina_turma)
