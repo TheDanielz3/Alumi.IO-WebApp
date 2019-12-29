@@ -3,6 +3,7 @@
 namespace app\models;
 
 use Yii;
+use yii\helpers\Html;
 
 /**
  * This is the model class for table "{{%turma}}".
@@ -74,6 +75,6 @@ class Turma extends \yii\db\ActiveRecord
     }
 
     public function getAnoLetra(){
-        return $this->ano .'º ' . $this->letra;
+        return Html::encode($this->ano .'º ' . $this->letra);
     }
 }

@@ -120,11 +120,11 @@ class RecadoTeacher extends \yii\db\ActiveRecord
 
     public static function getIDTurma($id_disciplina_turma)
     {
-
         if (!empty($id_disciplina_turma)) {
-            $id_turma = Disciplinaturma::find()->andWhere('id=' . $id_disciplina_turma)->one();
-            return $id_turma->id_turma;
+            $desciplinaTurma = Disciplinaturma::find()->andWhere('id=' . $id_disciplina_turma)->one();
+            return Html::encode($desciplinaTurma->id_turma);
         }
+
         return null;
     }
 }

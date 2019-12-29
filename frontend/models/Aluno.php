@@ -108,6 +108,5 @@ class Aluno extends \yii\db\ActiveRecord
             ->andWhere(['id_turma' => $cat_id])
             ->indexBy('id')
             ->column();
-
     }
 }

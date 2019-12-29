@@ -5,6 +5,7 @@ namespace frontend\controllers;
 use Yii;
 use app\models\RecadoTeacher;
 use app\models\RecadoTeacherSearch;
+use yii\db\StaleObjectException;
 use yii\filters\AccessControl;
 use yii\web\Controller;
 use yii\web\ForbiddenHttpException;
@@ -124,7 +125,7 @@ class RecadoTeacherController extends Controller
      * @throws ForbiddenHttpException
      * @throws NotFoundHttpException if the model cannot be found
      * @throws \Throwable
-     * @throws \yii\db\StaleObjectException
+     * @throws StaleObjectException
      */
     public function actionDelete($id)
     {

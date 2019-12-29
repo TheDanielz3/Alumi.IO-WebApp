@@ -24,6 +24,7 @@ $this->params['breadcrumbs'][] = $this->title;
             ],
         ]) ?>
     </p>
+    <br>
 
     <p class="text-muted">
         <small>

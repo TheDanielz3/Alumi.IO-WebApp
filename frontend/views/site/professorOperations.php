@@ -13,6 +13,6 @@ $this->params['breadcrumbs'][] = $this->title;
     <br>
     <p><a class="btn btn-lg btn-primary" href="<?= Url::toRoute('recado-teacher/index') ?>">Management Recados</a></p>
     <p><a class="btn btn-lg btn-primary" href="<?= Url::toRoute('teste-teacher/index') ?>">Management Testes</a></p>
-    <p><a class="btn btn-lg btn-primary" href="<?= Url::toRoute('#') ?>">Management TPC's</a></p>
+    <p><a class="btn btn-lg btn-primary" href="<?= Url::toRoute('tpc-teacher/index') ?>">Management TPC's</a></p>
 
 </div>

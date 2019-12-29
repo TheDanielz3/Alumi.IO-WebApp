@@ -3,6 +3,7 @@
 namespace app\models;
 
 use Yii;
+use yii\helpers\Html;
 
 /**
  * This is the model class for table "{{%disciplinaturma}}".
@@ -16,8 +17,8 @@ use Yii;
  * @property Professor $professor
  * @property Turma $turma
  * @property Professor[] $professors
- * @property Teste[] $testes
- * @property Tpc[] $tpcs
+ * @property TesteTeacher[] $testes
+ * @property TpcTeacher[] $tpcs
  */
 class Disciplinaturma extends \yii\db\ActiveRecord
 {
@@ -93,7 +94,7 @@ class Disciplinaturma extends \yii\db\ActiveRecord
      */
     public function getTestes()
     {
-        return $this->hasMany(Teste::className(), ['id_disciplina_turma' => 'id']);
+        return $this->hasMany(TesteTeacher::className(), ['id_disciplina_turma' => 'id']);
     }
 
     /**
@@ -101,18 +102,18 @@ class Disciplinaturma extends \yii\db\ActiveRecord
      */
     public function getTpcs()
     {
-        return $this->hasMany(Tpc::className(), ['id_disciplina_turma' => 'id']);
+        return $this->hasMany(TpcTeacher::className(), ['id_disciplina_turma' => 'id']);
     }
 
     public function getAnoLetraDisciplina()
     {
-        return $this->turma->getAnoLetra() . " - " . $this->disciplina->nome;
+        return Html::encode($this->turma->getAnoLetra() . " - " . $this->disciplina->nome);
     }
 
     public static function getCurrentProfessorClassesIDS($id_professor)
     {
         $classesIDS = Disciplinaturma::find()->andWhere('id_professor=' . $id_professor)->all();
 
-        return $classesIDS;
+        return  $classesIDS;
     }
 }

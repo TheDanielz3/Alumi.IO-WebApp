@@ -25,13 +25,13 @@ $this->params['breadcrumbs'][] = $this->title;
             ],
         ]) ?>
     </p>
+    <br>
 
     <p class="text-muted">
         <small>
             At: <b> <?php echo Yii::$app->formatter->asDatetime($model->data_hora) ?></b>
         </small>
     </p>
-
 
     <h4><?= $model->getEncondedDescricao() ?></h4>
 
