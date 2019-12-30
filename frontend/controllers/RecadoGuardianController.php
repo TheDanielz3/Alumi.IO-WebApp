@@ -92,9 +92,7 @@ class RecadoGuardianController extends Controller
      */
     public function actionUpdate($id)
     {
-
         $model = $this->findModel($id);
-
 
         if ($model->id_aluno !== null) {
             $model->assinado = 1;

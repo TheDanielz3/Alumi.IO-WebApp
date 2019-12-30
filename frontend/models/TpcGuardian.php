@@ -3,6 +3,7 @@
 namespace app\models;
 
 use Yii;
+use yii\helpers\Html;
 
 /**
  * This is the model class for table "{{%tpc}}".
@@ -66,5 +67,34 @@ class TpcGuardian extends \yii\db\ActiveRecord
     public function getProfessor()
     {
         return $this->hasOne(Professor::className(), ['id' => 'id_professor']);
+    }
+
+    public function getEncondedDescricao()
+    {
+        return Html::encode($this->descricao);
+    }
+
+    public static function getValidTpc(){
+
+        $queryAllMyAlunos = Aluno::find()
+            ->andWhere(['id_encarregado_de_educacao' => Yii::$app->user->id])->all();
+
+        for ($i = 0; $i < count($queryAllMyAlunos); $i++) {
+            $IDTurmaAllMyAlunos[$i] = $queryAllMyAlunos[$i]->id_turma;
+            $IDAllMyAlunos[$i] = $queryAllMyAlunos[$i]->id;
+        }
+
+        $queryAllDisciplinaTurmas = Disciplinaturma::find()
+            ->andWhere(['id_turma' => $IDTurmaAllMyAlunos])->all();
+
+        for ($i = 0; $i < count($queryAllDisciplinaTurmas); $i++) {
+            $IDDisciplinaTurmas[$i] = $queryAllDisciplinaTurmas[$i]->id;
+        }
+
+        $validTpc = TpcGuardian::find()
+            ->orderBy(['id' => SORT_DESC])
+            ->andWhere(['id_disciplina_turma' => $IDDisciplinaTurmas]);
+
+        return $validTpc;
     }
 }

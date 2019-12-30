@@ -1,18 +1,18 @@
 <?php
 
-use app\models\RecadoGuardian;
+use app\models\TesteGuardian;
 use yii\helpers\Html;
 use yii\helpers\StringHelper;
 use yii\helpers\Url;
 
 /**
- * @var $model RecadoGuardian
+ * @var $model TesteGuardian
  */
 ?>
 
 <div>
-    <a href="<?php echo Url::to(['recado-teacher/view','id' => $model->id]) ?> ">
-        <h3><?php echo $model->getEncondedTopico() ?></h3>
+    <a href="<?php echo Url::to(['teste-guardian/view','id' => $model->id]) ?> ">
+        <h3><?php echo $model->disciplinaTurma->getAnoLetraDisciplina() ?></h3>
     </a>
     <div>
         <?php echo StringHelper::truncateWords($model->getEncondedDescricao(),'20')  ?>
@@ -20,7 +20,7 @@ use yii\helpers\Url;
     <br>
     <p class="text-muted text-right">
         <small>
-            Sended: <b> <?php echo Yii::$app->formatter->asRelativeTime($model->data_hora) ?></b>
+            At: <b> <?php echo Yii::$app->formatter->asDatetime($model->data_hora) ?></b>
         </small>
         <br>
     </p>

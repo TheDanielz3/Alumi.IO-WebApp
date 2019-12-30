@@ -40,7 +40,7 @@ class TpcGuardianSearch extends TpcGuardian
      */
     public function search($params)
     {
-        $query = TpcGuardian::find();
+        $query = TpcGuardian::getValidTpc();
 
         // add conditions that should always apply here
 

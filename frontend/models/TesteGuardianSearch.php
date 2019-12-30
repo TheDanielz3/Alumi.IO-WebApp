@@ -40,7 +40,8 @@ class TesteGuardianSearch extends TesteGuardian
      */
     public function search($params)
     {
-        $query = TesteGuardian::find();
+
+        $query = TesteGuardian::getValidTestes();
 
         // add conditions that should always apply here
 

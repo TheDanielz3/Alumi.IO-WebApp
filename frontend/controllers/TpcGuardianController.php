@@ -2,10 +2,13 @@
 
 namespace frontend\controllers;
 
+use app\models\TesteGuardian;
 use Yii;
 use app\models\TpcGuardian;
 use app\models\TpcGuardianSearch;
+use yii\filters\AccessControl;
 use yii\web\Controller;
+use yii\web\ForbiddenHttpException;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
@@ -20,11 +23,14 @@ class TpcGuardianController extends Controller
     public function behaviors()
     {
         return [
-            'verbs' => [
-                'class' => VerbFilter::className(),
-                'actions' => [
-                    'delete' => ['POST'],
-                ],
+            [
+                'class' => AccessControl::class,
+                'rules' => [
+                    [
+                        'allow' => true,
+                        'roles' => ['guardian', 'admin'],
+                    ]
+                ]
             ],
         ];
     }
@@ -49,64 +55,24 @@ class TpcGuardianController extends Controller
      * @param integer $id
      * @return mixed
      * @throws NotFoundHttpException if the model cannot be found
+     * @throws ForbiddenHttpException
      */
     public function actionView($id)
     {
+
+        $validRecados = TpcGuardian::getValidTpc()->all();
+
+        for ($i = 0; $i < count($validRecados); $i++) {
+            $currentValidIDS[$i] = $validRecados[$i]->id;
+        }
+
+        if (!in_array($this->findModel($id)->id,$currentValidIDS)) {
+            throw new ForbiddenHttpException("You don't have permission do view this TPC");
+        }
+
         return $this->render('view', [
             'model' => $this->findModel($id),
         ]);
-    }
-
-    /**
-     * Creates a new TpcGuardian model.
-     * If creation is successful, the browser will be redirected to the 'view' page.
-     * @return mixed
-     */
-    public function actionCreate()
-    {
-        $model = new TpcGuardian();
-
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
-        }
-
-        return $this->render('create', [
-            'model' => $model,
-        ]);
-    }
-
-    /**
-     * Updates an existing TpcGuardian model.
-     * If update is successful, the browser will be redirected to the 'view' page.
-     * @param integer $id
-     * @return mixed
-     * @throws NotFoundHttpException if the model cannot be found
-     */
-    public function actionUpdate($id)
-    {
-        $model = $this->findModel($id);
-
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
-        }
-
-        return $this->render('update', [
-            'model' => $model,
-        ]);
-    }
-
-    /**
-     * Deletes an existing TpcGuardian model.
-     * If deletion is successful, the browser will be redirected to the 'index' page.
-     * @param integer $id
-     * @return mixed
-     * @throws NotFoundHttpException if the model cannot be found
-     */
-    public function actionDelete($id)
-    {
-        $this->findModel($id)->delete();
-
-        return $this->redirect(['index']);
     }
 
     /**

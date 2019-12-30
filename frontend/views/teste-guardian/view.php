@@ -7,34 +7,20 @@ use yii\widgets\DetailView;
 /* @var $model app\models\TesteGuardian */
 
 $this->title = $model->id;
-$this->params['breadcrumbs'][] = ['label' => 'Teste Guardians', 'url' => ['index']];
+$this->params['breadcrumbs'][] = ['label' => 'Teste', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 \yii\web\YiiAsset::register($this);
 ?>
 <div class="teste-guardian-view">
 
-    <h1><?= Html::encode($this->title) ?></h1>
+    <h1><?= $model->disciplinaTurma->getAnoLetraDisciplina()  ?></h1>
 
-    <p>
-        <?= Html::a('Update', ['update', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
-        <?= Html::a('Delete', ['delete', 'id' => $model->id], [
-            'class' => 'btn btn-danger',
-            'data' => [
-                'confirm' => 'Are you sure you want to delete this item?',
-                'method' => 'post',
-            ],
-        ]) ?>
-    </p>
-
-    <?= DetailView::widget([
-        'model' => $model,
-        'attributes' => [
-            'id',
-            'descricao',
-            'data_hora',
-            'id_disciplina_turma',
-            'id_professor',
-        ],
-    ]) ?>
+    <h3 class="text-muted">
+        <small>
+            At: <b> <?php echo Yii::$app->formatter->asDatetime($model->data_hora) ?></b>
+        </small>
+    </h3>
+    <br>
+    <h4> Description: <?= $model->getEncondedDescricao() ?></h4>
 
 </div>
