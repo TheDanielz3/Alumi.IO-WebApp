@@ -2,6 +2,7 @@
 namespace backend\controllers;
 
 use Yii;
+use yii\helpers\VarDumper;
 use yii\web\Controller;
 use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
@@ -76,7 +77,10 @@ class SiteController extends Controller
 
         $model = new LoginForm();
         if ($model->load(Yii::$app->request->post()) && $model->login()) {
-            return $this->goBack();
+            if (array_keys(Yii::$app->authManager->getRolesByUser(Yii::$app->user->id))[0] == 'admin') {
+                return $this->goBack();
+            }
+            return $this->actionLogout();
         } else {
             $model->password = '';
 
