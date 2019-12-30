@@ -1,5 +1,6 @@
 <?php
 
+use app\models\Disciplinaturma;
 use kartik\depdrop\DepDrop;
 use yii\helpers\ArrayHelper;
 use yii\helpers\Html;
@@ -20,17 +21,17 @@ use yii\widgets\ActiveForm;
     <?= $form->field($model, 'descricao')->textarea(['maxlength' => true])->label('Message') ?>
 
     <?= $form->field($model, 'id_disciplina_turma')->dropDownList(
-        ArrayHelper::map(\app\models\Disciplinaturma::getCurrentProfessorClassesIDS(Yii::$app->user->id),'id', 'anoLetraDisciplina'),
+        ArrayHelper::map(Disciplinaturma::getCurrentProfessorClassesIDS(Yii::$app->user->id), 'id', 'anoLetraDisciplina'),
         ['prompt' => ' -- Select the Class --', 'id' => 'id_disciplina_turma']
-    )   ->label('Class') ?>
+    )->label('Class') ?>
 
     <?= $form->field($model, 'id_aluno')->widget(DepDrop::class, [
-        'options'=>['id'=>'id_aluno', 'prompt' => 'Select a Class First'],
+        'options' => ['id' => 'id_aluno', 'prompt' => 'Select a Class First'],
         'data' => \app\models\Aluno::getSubCategories($model->getIDTurma($model->id_disciplina_turma)),
-        'pluginOptions'=>[
-            'depends'=>['id_disciplina_turma'],
-            'placeholder'=>'-- Send to the whole Class --',
-            'url'=>Url::to(['site/sub-cat'])
+        'pluginOptions' => [
+            'depends' => ['id_disciplina_turma'],
+            'placeholder' => '-- Send to the whole Class --',
+            'url' => Url::to(['site/sub-cat'])
         ]
     ]);
     ?>

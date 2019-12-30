@@ -8,7 +8,7 @@ $this->title = 'Dashboard Professor';
 $this->params['breadcrumbs'][] = $this->title;
 
 ?>
-<div class="site-operations">
+<div class="dashboard">
     <h1><?= Html::encode($this->title) ?></h1>
     <br>
     <p><a class="btn btn-lg btn-primary" href="<?= Url::toRoute('recado-teacher/index') ?>">Management Recados</a></p>

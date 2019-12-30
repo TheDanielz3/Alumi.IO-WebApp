@@ -80,15 +80,6 @@ class SiteController extends Controller
         return $this->render('index');
     }
 
-    /**
-     * Displays homepage for Professors.
-     *
-     * @return mixed
-     */
-    public function actionProfessorOperations()
-    {
-        return $this->render('professorOperations');
-    }
 
     /**
      * Logs in a user.
@@ -103,20 +94,7 @@ class SiteController extends Controller
 
         $model = new LoginForm();
         if ($model->load(Yii::$app->request->post()) && $model->login()) {
-
-            if (!Yii::$app->user->can('backendAccess') and Yii::$app->user->can('createHomework')) {
-                return ($this->render('professorOperations'));
-            }
-            if (Yii::$app->user->can('viewErrands') and !Yii::$app->user->can('createHomework')) {
-                return ($this->render('encarregadosEducacaoOperations'));
-            }
-            if (!Yii::$app->user->can('viewErrands') and Yii::$app->user->can('viewHomework')) {
-                return ($this->render('alunoOperations'));
-            }
-
-            return $this->goBack();
-
-
+            return $this->actionDashboard();
         } else {
             $model->password = '';
             return $this->render('login', [
@@ -125,15 +103,7 @@ class SiteController extends Controller
         }
     }
 
-    public function actionEncarregadosEducacaoOperations()
-    {
-        return $this->render('encarregadosEducacaoOperations');
-    }
 
-    public function actionAlunoOperations()
-    {
-        return $this->render('alunoOperations');
-    }
 
     /**
      * Logs out the current user.
@@ -281,6 +251,9 @@ class SiteController extends Controller
 
     }*/
 
+    /**
+     * @return string|Response
+     */
     public function actionDashboard()
     {
         if (!Yii::$app->user->isGuest) {
@@ -295,6 +268,9 @@ class SiteController extends Controller
         return $this->goHome();
     }
 
+    /**
+     * @return array
+     */
     public function actionSubCat()
     {
         Yii::$app->response->format = Response::FORMAT_JSON;

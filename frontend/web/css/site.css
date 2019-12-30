@@ -35,10 +35,9 @@ body {
     color: #c55;
     font-style: italic;
 }
-.site-operations{
+.dashboard{
     color: black;
     font-style: normal;
-    
 }
 
 /* add sorting icons to gridview sort links */
@@ -59,9 +58,6 @@ a.asc:after {
 
 a.desc:after {
     content: "\e152";
-}
-.operations-aluno{
-    color: red;
 }
 .sort-numerical a.asc:after {
     content: "\e153";
