@@ -2,7 +2,7 @@
 use yii\helpers\Html;
 use yii\bootstrap\ActiveForm;
 use yii\helpers\Url;
-$this->title = 'Operations Aluno';
+$this->title = 'Dashboard Aluno';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="dashboard">
