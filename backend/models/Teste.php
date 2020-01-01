@@ -1,13 +1,11 @@
 <?php
 
-namespace app\models;
+namespace backend\models;
 
-use api\models\Teste;
 use Yii;
-use yii\helpers\Html;
 
 /**
- * This is the model class for table "{{%teste}}".
+ * This is the model class for table "teste".
  *
  * @property int $id
  * @property string $descricao
@@ -18,14 +16,14 @@ use yii\helpers\Html;
  * @property Disciplinaturma $disciplinaTurma
  * @property Professor $professor
  */
-class TesteGuardian extends \yii\db\ActiveRecord
+class Teste extends \yii\db\ActiveRecord
 {
     /**
      * {@inheritdoc}
      */
     public static function tableName()
     {
-        return '{{%teste}}';
+        return 'teste';
     }
 
     /**
@@ -35,7 +33,8 @@ class TesteGuardian extends \yii\db\ActiveRecord
     {
         return [
             [['descricao', 'data_hora', 'id_disciplina_turma', 'id_professor'], 'required'],
-            [['data_hora', 'id_disciplina_turma', 'id_professor'], 'integer'],
+            [['data_hora'], 'safe'],
+            [['id_disciplina_turma', 'id_professor'], 'integer'],
             [['descricao'], 'string', 'max' => 45],
             [['id_disciplina_turma'], 'exist', 'skipOnError' => true, 'targetClass' => Disciplinaturma::className(), 'targetAttribute' => ['id_disciplina_turma' => 'id']],
             [['id_professor'], 'exist', 'skipOnError' => true, 'targetClass' => Professor::className(), 'targetAttribute' => ['id_professor' => 'id']],
@@ -70,33 +69,5 @@ class TesteGuardian extends \yii\db\ActiveRecord
     public function getProfessor()
     {
         return $this->hasOne(Professor::className(), ['id' => 'id_professor']);
-    }
-
-    public function getEncondedDescricao()
-    {
-        return Html::encode($this->descricao);
-    }
-
-    public static function getValidTestes(){
-
-        $queryAllMyAlunos = Aluno::find()
-            ->andWhere(['id_encarregado_de_educacao' => Yii::$app->user->id])->all();
-
-        for ($i = 0; $i < count($queryAllMyAlunos); $i++) {
-            $IDTurmaAllMyAlunos[$i] = $queryAllMyAlunos[$i]->id_turma;
-        }
-
-        $queryAllDisciplinaTurmas = Disciplinaturma::find()
-            ->andWhere(['id_turma' => $IDTurmaAllMyAlunos])->all();
-
-        for ($i = 0; $i < count($queryAllDisciplinaTurmas); $i++) {
-            $IDDisciplinaTurmas[$i] = $queryAllDisciplinaTurmas[$i]->id;
-        }
-
-        $validRecados = TesteGuardian::find()
-            ->orderBy(['data_hora' => SORT_DESC])
-            ->andWhere(['id_disciplina_turma' => $IDDisciplinaTurmas]);
-
-        return $validRecados;
     }
 }

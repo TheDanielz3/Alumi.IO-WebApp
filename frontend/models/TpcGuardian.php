@@ -81,7 +81,6 @@ class TpcGuardian extends \yii\db\ActiveRecord
 
         for ($i = 0; $i < count($queryAllMyAlunos); $i++) {
             $IDTurmaAllMyAlunos[$i] = $queryAllMyAlunos[$i]->id_turma;
-            $IDAllMyAlunos[$i] = $queryAllMyAlunos[$i]->id;
         }
 
         $queryAllDisciplinaTurmas = Disciplinaturma::find()

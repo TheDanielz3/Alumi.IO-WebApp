@@ -2,43 +2,26 @@
 
 /* @var $this yii\web\View */
 
-$this->title = 'My Yii Application';
-?>
+$this->title = 'Backend Office';
+
+use yii\helpers\Html;
+use yii\helpers\Url; ?>
+
 <div class="site-index">
+    <h1><?= Html::encode($this->title) ?></h1>
+    <br>
+    <h2>Access Tables:</h2>
+    <br>
 
-    <div class="jumbotron">
-        <h1>Congratulations!</h1>
-
-        <p class="lead">You have successfully created your Yii-powered application.</p>
-
-        <p><a class="btn btn-lg btn-success" href="http://www.yiiframework.com">Get started with Yii</a></p>
-    </div>
-
-    <div class="body-content">
-
-        <div class="row">
-            <div class="col-lg-4">
-                <h2>Heading</h2>
-
-                <p></p>
-
-                <p><a class="btn btn-default" href=""></a></p>
-            </div>
-            <div class="col-lg-4">
-                <h2>Heading</h2>
-
-                <p></p>
-
-                <p><a class="btn btn-default" href=""></a></p>
-            </div>
-            <div class="col-lg-4">
-                <h2>Heading</h2>
-
-                <p></p>
-
-                <p><a class="btn btn-default" href=""></a></p>
-            </div>
-        </div>
-
+    <div class="btn-group btn-group-toggle btn-group-lg">
+        <a href="<?= Url::toRoute('aluno/index') ?>" class="btn btn-primary">Alunos</a>
+        <a href="<?= Url::toRoute('disciplina/index') ?>" class="btn btn-primary">Disciplinas</a>
+        <a href="<?= Url::toRoute('disciplinaturma/index') ?>" class="btn btn-primary">Disciplina_Turmas</a>
+        <a href="<?= Url::toRoute('encarregadoeducacao/index') ?>" class="btn btn-primary">Encarregados de Educação</a>
+        <a href="<?= Url::toRoute('professor/index') ?>" class="btn btn-primary">Professores</a>
+        <a href="<?= Url::toRoute('recado/index') ?>" class="btn btn-primary">Recados</a>
+        <a href="<?= Url::toRoute('teste/index') ?>" class="btn btn-primary">Testes</a>
+        <a href="<?= Url::toRoute('tpc/index') ?>" class="btn btn-primary">TPC's</a>
+        <a href="<?= Url::toRoute('turma/index') ?>" class="btn btn-primary">Turmas</a>
     </div>
 </div>

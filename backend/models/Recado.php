@@ -1,31 +1,33 @@
 <?php
 
-namespace app\models;
+namespace backend\models;
 
-use api\models\Teste;
 use Yii;
-use yii\helpers\Html;
 
 /**
- * This is the model class for table "{{%teste}}".
+ * This is the model class for table "recado".
  *
  * @property int $id
+ * @property string $topico
  * @property string $descricao
+ * @property float $assinado
  * @property int $data_hora
  * @property int $id_disciplina_turma
+ * @property int|null $id_aluno
  * @property int $id_professor
  *
+ * @property Aluno $aluno
  * @property Disciplinaturma $disciplinaTurma
  * @property Professor $professor
  */
-class TesteGuardian extends \yii\db\ActiveRecord
+class Recado extends \yii\db\ActiveRecord
 {
     /**
      * {@inheritdoc}
      */
     public static function tableName()
     {
-        return '{{%teste}}';
+        return 'recado';
     }
 
     /**
@@ -34,9 +36,13 @@ class TesteGuardian extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['descricao', 'data_hora', 'id_disciplina_turma', 'id_professor'], 'required'],
-            [['data_hora', 'id_disciplina_turma', 'id_professor'], 'integer'],
-            [['descricao'], 'string', 'max' => 45],
+            [['topico', 'descricao', 'data_hora', 'id_disciplina_turma', 'id_professor', 'assinado'], 'required'],
+            [['assinado'], 'number' , 'max' => 1, 'min' => 0],
+            [['id_disciplina_turma', 'id_aluno', 'id_professor'], 'integer'],
+            [['data_hora'], 'safe'],
+            [['topico'], 'string', 'max' => 50],
+            [['descricao'], 'string', 'max' => 200],
+            [['id_aluno'], 'exist', 'skipOnError' => true, 'targetClass' => Aluno::className(), 'targetAttribute' => ['id_aluno' => 'id']],
             [['id_disciplina_turma'], 'exist', 'skipOnError' => true, 'targetClass' => Disciplinaturma::className(), 'targetAttribute' => ['id_disciplina_turma' => 'id']],
             [['id_professor'], 'exist', 'skipOnError' => true, 'targetClass' => Professor::className(), 'targetAttribute' => ['id_professor' => 'id']],
         ];
@@ -49,11 +55,22 @@ class TesteGuardian extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
+            'topico' => 'Topico',
             'descricao' => 'Descricao',
+            'assinado' => 'Assinado',
             'data_hora' => 'Data Hora',
             'id_disciplina_turma' => 'Id Disciplina Turma',
+            'id_aluno' => 'Id Aluno',
             'id_professor' => 'Id Professor',
         ];
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getAluno()
+    {
+        return $this->hasOne(Aluno::className(), ['id' => 'id_aluno']);
     }
 
     /**
@@ -70,33 +87,5 @@ class TesteGuardian extends \yii\db\ActiveRecord
     public function getProfessor()
     {
         return $this->hasOne(Professor::className(), ['id' => 'id_professor']);
-    }
-
-    public function getEncondedDescricao()
-    {
-        return Html::encode($this->descricao);
-    }
-
-    public static function getValidTestes(){
-
-        $queryAllMyAlunos = Aluno::find()
-            ->andWhere(['id_encarregado_de_educacao' => Yii::$app->user->id])->all();
-
-        for ($i = 0; $i < count($queryAllMyAlunos); $i++) {
-            $IDTurmaAllMyAlunos[$i] = $queryAllMyAlunos[$i]->id_turma;
-        }
-
-        $queryAllDisciplinaTurmas = Disciplinaturma::find()
-            ->andWhere(['id_turma' => $IDTurmaAllMyAlunos])->all();
-
-        for ($i = 0; $i < count($queryAllDisciplinaTurmas); $i++) {
-            $IDDisciplinaTurmas[$i] = $queryAllDisciplinaTurmas[$i]->id;
-        }
-
-        $validRecados = TesteGuardian::find()
-            ->orderBy(['data_hora' => SORT_DESC])
-            ->andWhere(['id_disciplina_turma' => $IDDisciplinaTurmas]);
-
-        return $validRecados;
     }
 }

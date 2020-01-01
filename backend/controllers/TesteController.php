@@ -1,21 +1,19 @@
 <?php
 
-namespace frontend\controllers;
+namespace backend\controllers;
 
 use Yii;
-use app\models\TesteTeacher;
-use app\models\TesteTeacherSearch;
-use yii\db\StaleObjectException;
+use backend\models\Teste;
+use backend\models\TesteSearch;
 use yii\filters\AccessControl;
 use yii\web\Controller;
-use yii\web\ForbiddenHttpException;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
 /**
- * TesteTeacherController implements the CRUD actions for TesteTeacher model.
+ * TesteController implements the CRUD actions for Teste model.
  */
-class TesteTeacherController extends Controller
+class TesteController extends Controller
 {
     /**
      * {@inheritdoc}
@@ -28,12 +26,12 @@ class TesteTeacherController extends Controller
                 'rules' => [
                     [
                         'allow' => true,
-                        'roles' => ['teacher', 'admin'],
+                        'roles' => ['admin'],
                     ]
                 ]
             ],
             'verbs' => [
-                'class' => VerbFilter::className(),
+                'class' => VerbFilter::class,
                 'actions' => [
                     'delete' => ['POST'],
                 ],
@@ -42,12 +40,12 @@ class TesteTeacherController extends Controller
     }
 
     /**
-     * Lists all TesteTeacher models.
+     * Lists all Teste models.
      * @return mixed
      */
     public function actionIndex()
     {
-        $searchModel = new TesteTeacherSearch();
+        $searchModel = new TesteSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
         return $this->render('index', [
@@ -57,31 +55,26 @@ class TesteTeacherController extends Controller
     }
 
     /**
-     * Displays a single TesteTeacher model.
+     * Displays a single Teste model.
      * @param integer $id
      * @return mixed
      * @throws NotFoundHttpException if the model cannot be found
-     * @throws ForbiddenHttpException
      */
     public function actionView($id)
     {
-        if ($this->findModel($id)->id_professor !== Yii::$app->user->id) {
-            throw new ForbiddenHttpException("You don't have permission do view this Teste");
-        }
-
         return $this->render('view', [
             'model' => $this->findModel($id),
         ]);
     }
 
     /**
-     * Creates a new TesteTeacher model.
+     * Creates a new Teste model.
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
     public function actionCreate()
     {
-        $model = new TesteTeacher();
+        $model = new Teste();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             $model->data_hora = strtotime($model->data_hora);
@@ -95,20 +88,15 @@ class TesteTeacherController extends Controller
     }
 
     /**
-     * Updates an existing TesteTeacher model.
+     * Updates an existing Teste model.
      * If update is successful, the browser will be redirected to the 'view' page.
      * @param integer $id
      * @return mixed
      * @throws NotFoundHttpException if the model cannot be found
-     * @throws ForbiddenHttpException
      */
     public function actionUpdate($id)
     {
         $model = $this->findModel($id);
-
-        if ($model->id_professor !== Yii::$app->user->id) {
-            throw new ForbiddenHttpException("You don't have permission do edit this Teste");
-        }
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             $model->data_hora = strtotime($model->data_hora);
@@ -124,38 +112,29 @@ class TesteTeacherController extends Controller
     }
 
     /**
-     * Deletes an existing TesteTeacher model.
+     * Deletes an existing Teste model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
      * @param integer $id
      * @return mixed
-     * @throws ForbiddenHttpException
      * @throws NotFoundHttpException if the model cannot be found
-     * @throws \Throwable
-     * @throws StaleObjectException
      */
     public function actionDelete($id)
     {
-        $model = $this->findModel($id);
-
-        if ($model->id_professor !== Yii::$app->user->id) {
-            throw new ForbiddenHttpException("You don't have permission do remove this Teste");
-        }
-
-        $model->delete();
+        $this->findModel($id)->delete();
 
         return $this->redirect(['index']);
     }
 
     /**
-     * Finds the TesteTeacher model based on its primary key value.
+     * Finds the Teste model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
      * @param integer $id
-     * @return TesteTeacher the loaded model
+     * @return Teste the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
     protected function findModel($id)
     {
-        if (($model = TesteTeacher::findOne($id)) !== null) {
+        if (($model = Teste::findOne($id)) !== null) {
             return $model;
         }
 
