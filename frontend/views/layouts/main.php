@@ -1,6 +1,7 @@
 <?php
 
 /* @var $this \yii\web\View */
+
 /* @var $content string */
 
 use yii\helpers\Html;
@@ -30,19 +31,21 @@ AppAsset::register($this);
     <?php
     NavBar::begin([
         'brandLabel' => Yii::$app->name,
-        'brandUrl' => Yii::$app->homeUrl,
+        'brandUrl' =>  Yii::$app->homeUrl,
         'options' => [
             'class' => 'navbar-inverse navbar-fixed-top',
         ],
     ]);
     $menuItems = [
-        ['label' => 'About', 'url' => ['/site/about']],
+        ['label' => ''],
     ];
     if (Yii::$app->user->isGuest) {
+        $menuItems[] = ['label' => 'Index', 'url' => ['/site/index']];
+        $menuItems[] = ['label' => 'About', 'url' => ['/site/about']];
         $menuItems[] = ['label' => 'Signup', 'url' => ['/site/signup']];
         $menuItems[] = ['label' => 'Login', 'url' => ['/site/login']];
     } else {
-        $menuItems[] = ['label' => 'Dashboard', 'url' => ['/site/dashboard']];
+        $menuItems[] = ['label' => 'About', 'url' => ['/site/about']];
         $menuItems[] = '<li>'
             . Html::beginForm(['/site/logout'], 'post')
             . Html::submitButton(
