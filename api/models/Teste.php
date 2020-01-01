@@ -34,7 +34,7 @@ class Teste extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['descricao', 'id_disciplina_turma'], 'required'],
+            [['descricao', 'id_disciplina_turma','data_hora'], 'required'],
             [['data_hora', 'id_disciplina_turma', 'id_professor'], 'integer'],
             [['descricao'], 'string', 'max' => 45],
             [['id_disciplina_turma'], 'exist', 'skipOnError' => true, 'targetClass' => Disciplinaturma::className(), 'targetAttribute' => ['id_disciplina_turma' => 'id']],
@@ -45,11 +45,6 @@ class Teste extends \yii\db\ActiveRecord
     public function behaviors()
     {
         return [
-            [
-                'class' => TimestampBehavior::class,
-                'createdAtAttribute' => 'data_hora',
-                'updatedAtAttribute' => false,
-            ],
             [
                 'class' => BlameableBehavior::class,
                 'createdByAttribute' => 'id_professor',
