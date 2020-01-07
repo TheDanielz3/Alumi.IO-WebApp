@@ -7,6 +7,7 @@ use app\mosquitto\phpMQTT;
 use yii\behaviors\BlameableBehavior;
 use yii\db\ActiveQuery;
 use yii\db\ActiveRecord;
+use yii\helpers\Json;
 
 /**
  * This is the model class for table "{{%tpc}}".
@@ -106,7 +107,7 @@ class Tpc extends ActiveRecord
         $myObj->descricao = $this->descricao;
         $myObj->id_disciplina_turma = $this->id_disciplina_turma;
         $myObj->id_professor = $this->id_professor;
-        $myJSON = json_encode($myObj);
+        $myJSON = Json::encode($myObj);
 
         if($insert)
             $this->FazPublish("INSERT",$myJSON);
@@ -122,7 +123,7 @@ class Tpc extends ActiveRecord
         $prod_id = $this->id;
         $myObj= new Tpc();
         $myObj->id=$prod_id;
-        $myJSON = json_encode($myObj);
+        $myJSON = Json::encode($myObj);
         $this->FazPublish("DELETE",$myJSON);
     }
 

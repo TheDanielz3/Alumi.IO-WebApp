@@ -6,6 +6,7 @@ use app\mosquitto\phpMQTT;
 use Yii;
 use yii\behaviors\BlameableBehavior;
 use yii\behaviors\TimestampBehavior;
+use yii\helpers\Json;
 
 /**
  * This is the model class for table "{{%recado}}".
@@ -136,7 +137,7 @@ class Recado extends \yii\db\ActiveRecord
         $myObj->id_disciplina_turma = $this->id_disciplina_turma;
         $myObj->id_aluno = $this->id_aluno;
         $myObj->id_professor = $this->id_professor;
-        $myJSON = json_encode($myObj);
+        $myJSON = Json::encode($myObj);
 
         if($insert)
             $this->FazPublish("INSERT",$myJSON);
@@ -152,7 +153,7 @@ class Recado extends \yii\db\ActiveRecord
         $prod_id = $this->id;
         $myObj= new Recado();
         $myObj->id=$prod_id;
-        $myJSON = json_encode($myObj);
+        $myJSON = Json::encode($myObj);
         $this->FazPublish("DELETE",$myJSON);
     }
 
