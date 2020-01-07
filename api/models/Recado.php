@@ -2,6 +2,7 @@
 
 namespace api\models;
 
+use app\mosquitto\phpMQTT;
 use Yii;
 use yii\behaviors\BlameableBehavior;
 use yii\behaviors\TimestampBehavior;
@@ -45,7 +46,7 @@ class Recado extends \yii\db\ActiveRecord
             [['descricao'], 'string', 'max' => 200],
             [['id_aluno'], 'exist', 'skipOnError' => true, 'targetClass' => Aluno::className(), 'targetAttribute' => ['id_aluno' => 'id']],
             [['id_professor'], 'exist', 'skipOnError' => true, 'targetClass' => Professor::className(), 'targetAttribute' => ['id_professor' => 'id']],
-            [['id_disciplina_turma'], 'exist', 'skipOnError' => true, 'targetClass' => Disciplinaturma::className(), 'targetAttribute' => ['id_disciplina_turmac' => 'id']],
+            [['id_disciplina_turma'], 'exist', 'skipOnError' => true, 'targetClass' => Disciplinaturma::className(), 'targetAttribute' => ['id_disciplina_turma' => 'id']],
         ];
     }
 
@@ -119,4 +120,55 @@ class Recado extends \yii\db\ActiveRecord
     {
         return Yii::$app->formatter->asRelativeTime($this->data_hora);
     }
+
+    public function afterSave($insert, $changedAttributes)
+    {
+        parent::afterSave($insert, $changedAttributes);
+
+        $myObj = new Recado();
+
+
+        $myObj->id = $this->id;
+        $myObj->topico = $this->topico;
+        $myObj->descricao = $this->descricao;
+        $myObj->assinado = $this->assinado;
+        $myObj->data_hora = $this->data_hora;
+        $myObj->id_disciplina_turma = $this->id_disciplina_turma;
+        $myObj->id_aluno = $this->id_aluno;
+        $myObj->id_professor = $this->id_professor;
+        $myJSON = json_encode($myObj);
+
+        if($insert)
+            $this->FazPublish("INSERT",$myJSON);
+        else
+            $this->FazPublish("UPDATE",$myJSON);
+
+
+    }
+
+    public function afterDelete()
+    {
+        parent::afterDelete();
+        $prod_id = $this->id;
+        $myObj= new Recado();
+        $myObj->id=$prod_id;
+        $myJSON = json_encode($myObj);
+        $this->FazPublish("DELETE",$myJSON);
+    }
+
+    public function FazPublish($canal,$msg){
+        $server = "127.0.0.1";
+        $port = 1883;
+        $username = ""; // set your username
+        $password = ""; // set your password
+        $client_id = uniqid(); // unique!
+        $mqtt = new phpMQTT($server, $port, $client_id);
+        if ($mqtt->connect(true, NULL, $username, $password))
+        {
+            $mqtt->publish($canal, $msg, 0);
+            $mqtt->close();
+        }
+        else { file_put_contents("debug.output","Time out!"); }
+    }
+
 }

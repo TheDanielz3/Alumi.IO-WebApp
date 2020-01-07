@@ -2,6 +2,7 @@
 
 namespace api\models;
 
+use app\mosquitto\phpMQTT;
 use Yii;
 use yii\behaviors\BlameableBehavior;
 use yii\behaviors\TimestampBehavior;
@@ -94,5 +95,52 @@ class Teste extends \yii\db\ActiveRecord
 
     public function getDataHora(){
         return Yii::$app->formatter->asRelativeTime($this->data_hora) ;
+    }
+
+    public function afterSave($insert, $changedAttributes)
+    {
+        parent::afterSave($insert, $changedAttributes);
+
+        $myObj = new Teste();
+
+
+        $myObj->id = $this->id;
+        $myObj->descricao = $this->descricao;
+        $myObj->data_hora = $this->data_hora;
+        $myObj->id_disciplina_turma = $this->id_disciplina_turma;
+        $myObj->id_professor = $this->id_professor;
+        $myJSON = json_encode($myObj);
+
+        if($insert)
+            $this->FazPublish("INSERT",$myJSON);
+        else
+            $this->FazPublish("UPDATE",$myJSON);
+
+
+    }
+
+    public function afterDelete()
+    {
+        parent::afterDelete();
+        $prod_id = $this->id;
+        $myObj= new Teste();
+        $myObj->id=$prod_id;
+        $myJSON = json_encode($myObj);
+        $this->FazPublish("DELETE",$myJSON);
+    }
+
+    public function FazPublish($canal,$msg){
+        $server = "127.0.0.1";
+        $port = 1883;
+        $username = ""; // set your username
+        $password = ""; // set your password
+        $client_id = uniqid(); // unique!
+        $mqtt = new phpMQTT($server, $port, $client_id);
+        if ($mqtt->connect(true, NULL, $username, $password))
+        {
+            $mqtt->publish($canal, $msg, 0);
+            $mqtt->close();
+        }
+        else { file_put_contents("debug.output","Time out!"); }
     }
 }

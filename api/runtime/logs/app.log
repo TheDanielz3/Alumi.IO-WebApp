@@ -22835,3 +22835,766 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1577373539.943
     'REQUEST_TIME' => 1577373539
 ]
+2020-01-07 14:05:34 [::1][-][-][error][yii\web\HttpException:401] yii\web\UnauthorizedHttpException: Your request was made with invalid credentials. in C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\filters\auth\AuthMethod.php:93
+Stack trace:
+#0 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\filters\auth\AuthMethod.php(76): yii\filters\auth\AuthMethod->handleFailure(Object(yii\web\Response))
+#1 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\ActionFilter.php(77): yii\filters\auth\AuthMethod->beforeAction(Object(yii\base\InlineAction))
+#2 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#3 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Component.php(627): call_user_func(Array, Object(yii\base\ActionEvent))
+#4 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Module.php(700): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#5 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Controller.php(145): yii\base\Module->beforeAction(Object(yii\base\InlineAction))
+#6 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('index', Array)
+#7 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('v1/recado/index', Array)
+#8 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 C:\wamp64\www\Alumi.IO-WebApp\api\web\index.php(17): yii\base\Application->run()
+#10 {main}
+2020-01-07 14:05:31 [::1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'curl/7.53.1'
+    'HTTP_ACCEPT' => '*/*'
+    'PATH' => 'c:\\devkitPro\\msys2\\usr\\bin;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\wamp64\\bin\\php\\php7.3.5;C:\\Program Files\\Git\\cmd;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\dotnet\\;C:\\Users\\Samuel\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Samuel\\.dotnet\\tools'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) PHP/7.3.12 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) PHP/7.3.12'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/Alumi.IO-WebApp/api/web/index.php'
+    'REMOTE_PORT' => '50529'
+    'REDIRECT_URL' => '/Alumi.IO-WebApp/api/web/v1/recado'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/Alumi.IO-WebApp/api/web/v1/recado'
+    'SCRIPT_NAME' => '/Alumi.IO-WebApp/api/web/index.php'
+    'PHP_SELF' => '/Alumi.IO-WebApp/api/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1578405930.346
+    'REQUEST_TIME' => 1578405930
+]
+2020-01-07 14:07:17 [::1][-][-][error][yii\web\HttpException:401] yii\web\UnauthorizedHttpException: Your request was made with invalid credentials. in C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\filters\auth\AuthMethod.php:93
+Stack trace:
+#0 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\filters\auth\AuthMethod.php(76): yii\filters\auth\AuthMethod->handleFailure(Object(yii\web\Response))
+#1 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\ActionFilter.php(77): yii\filters\auth\AuthMethod->beforeAction(Object(yii\base\InlineAction))
+#2 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#3 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Component.php(627): call_user_func(Array, Object(yii\base\ActionEvent))
+#4 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Module.php(700): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#5 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Controller.php(145): yii\base\Module->beforeAction(Object(yii\base\InlineAction))
+#6 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('index', Array)
+#7 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('v1/recado/index', Array)
+#8 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 C:\wamp64\www\Alumi.IO-WebApp\api\web\index.php(17): yii\base\Application->run()
+#10 {main}
+2020-01-07 14:07:17 [::1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'Phpstorm-ec2f2421' => '140a38e4-8f90-4fdf-a858-e831048f2232'
+    'Phpstorm-54105100' => '563b3dd1-4c36-4a20-8f92-90cb690c0579'
+    '_identity-frontend' => '7ff78851aaf8821b32e2889d995af06963c10790e990544c85d38e76471f22aea:2:{i:0;s:18:\"_identity-frontend\";i:1;s:47:\"[12,\"3gAfdtcPyK420r6TuChGPfUm3xXYbFiW\",2592000]\";}'
+    '_identity-backend' => '36aa03bf0d914d6fcb67aed8bfe9dba27407284aaacde19b48057975db8f7cd8a:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[6,\"mMSIRWPg1WsHtjyIjruXql8Yz9Wru6aF\",2592000]\";}'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.88 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => 'Phpstorm-ec2f2421=140a38e4-8f90-4fdf-a858-e831048f2232; Phpstorm-54105100=563b3dd1-4c36-4a20-8f92-90cb690c0579; _identity-frontend=7ff78851aaf8821b32e2889d995af06963c10790e990544c85d38e76471f22aea%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A47%3A%22%5B12%2C%223gAfdtcPyK420r6TuChGPfUm3xXYbFiW%22%2C2592000%5D%22%3B%7D; _identity-backend=36aa03bf0d914d6fcb67aed8bfe9dba27407284aaacde19b48057975db8f7cd8a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B6%2C%22mMSIRWPg1WsHtjyIjruXql8Yz9Wru6aF%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'c:\\devkitPro\\msys2\\usr\\bin;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\wamp64\\bin\\php\\php7.3.5;C:\\Program Files\\Git\\cmd;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\dotnet\\;C:\\Users\\Samuel\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Samuel\\.dotnet\\tools'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) PHP/7.3.12 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) PHP/7.3.12'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/Alumi.IO-WebApp/api/web/index.php'
+    'REMOTE_PORT' => '50548'
+    'REDIRECT_URL' => '/Alumi.IO-WebApp/api/web/v1/recado'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/Alumi.IO-WebApp/api/web/v1/recado'
+    'SCRIPT_NAME' => '/Alumi.IO-WebApp/api/web/index.php'
+    'PHP_SELF' => '/Alumi.IO-WebApp/api/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1578406037.006
+    'REQUEST_TIME' => 1578406037
+]
+2020-01-07 14:07:18 [::1][-][-][error][yii\web\HttpException:401] yii\web\UnauthorizedHttpException: Your request was made with invalid credentials. in C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\filters\auth\AuthMethod.php:93
+Stack trace:
+#0 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\filters\auth\HttpBasicAuth.php(102): yii\filters\auth\AuthMethod->handleFailure(Object(yii\web\Response))
+#1 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\filters\auth\AuthMethod.php(59): yii\filters\auth\HttpBasicAuth->authenticate(Object(yii\web\User), Object(yii\web\Request), Object(yii\web\Response))
+#2 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\ActionFilter.php(77): yii\filters\auth\AuthMethod->beforeAction(Object(yii\base\InlineAction))
+#3 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#4 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Component.php(627): call_user_func(Array, Object(yii\base\ActionEvent))
+#5 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Module.php(700): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#6 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Controller.php(145): yii\base\Module->beforeAction(Object(yii\base\InlineAction))
+#7 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('index', Array)
+#8 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('v1/recado/index', Array)
+#9 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 C:\wamp64\www\Alumi.IO-WebApp\api\web\index.php(17): yii\base\Application->run()
+#11 {main}
+2020-01-07 14:07:18 [::1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'Phpstorm-ec2f2421' => '140a38e4-8f90-4fdf-a858-e831048f2232'
+    'Phpstorm-54105100' => '563b3dd1-4c36-4a20-8f92-90cb690c0579'
+    '_identity-frontend' => '7ff78851aaf8821b32e2889d995af06963c10790e990544c85d38e76471f22aea:2:{i:0;s:18:\"_identity-frontend\";i:1;s:47:\"[12,\"3gAfdtcPyK420r6TuChGPfUm3xXYbFiW\",2592000]\";}'
+    '_identity-backend' => '36aa03bf0d914d6fcb67aed8bfe9dba27407284aaacde19b48057975db8f7cd8a:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[6,\"mMSIRWPg1WsHtjyIjruXql8Yz9Wru6aF\",2592000]\";}'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.88 Safari/537.36'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => 'Phpstorm-ec2f2421=140a38e4-8f90-4fdf-a858-e831048f2232; Phpstorm-54105100=563b3dd1-4c36-4a20-8f92-90cb690c0579; _identity-frontend=7ff78851aaf8821b32e2889d995af06963c10790e990544c85d38e76471f22aea%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A47%3A%22%5B12%2C%223gAfdtcPyK420r6TuChGPfUm3xXYbFiW%22%2C2592000%5D%22%3B%7D; _identity-backend=36aa03bf0d914d6fcb67aed8bfe9dba27407284aaacde19b48057975db8f7cd8a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B6%2C%22mMSIRWPg1WsHtjyIjruXql8Yz9Wru6aF%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'c:\\devkitPro\\msys2\\usr\\bin;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\wamp64\\bin\\php\\php7.3.5;C:\\Program Files\\Git\\cmd;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\dotnet\\;C:\\Users\\Samuel\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Samuel\\.dotnet\\tools'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) PHP/7.3.12 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) PHP/7.3.12'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/Alumi.IO-WebApp/api/web/index.php'
+    'REMOTE_PORT' => '50548'
+    'REDIRECT_URL' => '/Alumi.IO-WebApp/api/web/v1/recado'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/Alumi.IO-WebApp/api/web/v1/recado'
+    'SCRIPT_NAME' => '/Alumi.IO-WebApp/api/web/index.php'
+    'PHP_SELF' => '/Alumi.IO-WebApp/api/web/index.php'
+    'PHP_AUTH_USER' => '***'
+    'PHP_AUTH_PW' => '***'
+    'REQUEST_TIME_FLOAT' => 1578406038.374
+    'REQUEST_TIME' => 1578406038
+]
+2020-01-07 14:07:20 [::1][-][-][error][yii\web\HttpException:401] yii\web\UnauthorizedHttpException: Your request was made with invalid credentials. in C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\filters\auth\AuthMethod.php:93
+Stack trace:
+#0 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\filters\auth\AuthMethod.php(76): yii\filters\auth\AuthMethod->handleFailure(Object(yii\web\Response))
+#1 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\ActionFilter.php(77): yii\filters\auth\AuthMethod->beforeAction(Object(yii\base\InlineAction))
+#2 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#3 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Component.php(627): call_user_func(Array, Object(yii\base\ActionEvent))
+#4 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Module.php(700): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#5 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Controller.php(145): yii\base\Module->beforeAction(Object(yii\base\InlineAction))
+#6 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('index', Array)
+#7 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('v1/recado/index', Array)
+#8 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 C:\wamp64\www\Alumi.IO-WebApp\api\web\index.php(17): yii\base\Application->run()
+#10 {main}
+2020-01-07 14:07:20 [::1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'Phpstorm-ec2f2421' => '140a38e4-8f90-4fdf-a858-e831048f2232'
+    'Phpstorm-54105100' => '563b3dd1-4c36-4a20-8f92-90cb690c0579'
+    '_identity-frontend' => '7ff78851aaf8821b32e2889d995af06963c10790e990544c85d38e76471f22aea:2:{i:0;s:18:\"_identity-frontend\";i:1;s:47:\"[12,\"3gAfdtcPyK420r6TuChGPfUm3xXYbFiW\",2592000]\";}'
+    '_identity-backend' => '36aa03bf0d914d6fcb67aed8bfe9dba27407284aaacde19b48057975db8f7cd8a:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[6,\"mMSIRWPg1WsHtjyIjruXql8Yz9Wru6aF\",2592000]\";}'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.88 Safari/537.36'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => 'Phpstorm-ec2f2421=140a38e4-8f90-4fdf-a858-e831048f2232; Phpstorm-54105100=563b3dd1-4c36-4a20-8f92-90cb690c0579; _identity-frontend=7ff78851aaf8821b32e2889d995af06963c10790e990544c85d38e76471f22aea%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A47%3A%22%5B12%2C%223gAfdtcPyK420r6TuChGPfUm3xXYbFiW%22%2C2592000%5D%22%3B%7D; _identity-backend=36aa03bf0d914d6fcb67aed8bfe9dba27407284aaacde19b48057975db8f7cd8a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B6%2C%22mMSIRWPg1WsHtjyIjruXql8Yz9Wru6aF%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'c:\\devkitPro\\msys2\\usr\\bin;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\wamp64\\bin\\php\\php7.3.5;C:\\Program Files\\Git\\cmd;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\dotnet\\;C:\\Users\\Samuel\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Samuel\\.dotnet\\tools'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) PHP/7.3.12 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) PHP/7.3.12'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/Alumi.IO-WebApp/api/web/index.php'
+    'REMOTE_PORT' => '50550'
+    'REDIRECT_URL' => '/Alumi.IO-WebApp/api/web/v1/recado'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/Alumi.IO-WebApp/api/web/v1/recado'
+    'SCRIPT_NAME' => '/Alumi.IO-WebApp/api/web/index.php'
+    'PHP_SELF' => '/Alumi.IO-WebApp/api/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1578406040.853
+    'REQUEST_TIME' => 1578406040
+]
+2020-01-07 14:21:11 [::1][1][-][error][yii\base\UnknownPropertyException] yii\base\UnknownPropertyException: Getting unknown property: api\resource\Recado::id_disciplina_turmac in C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Component.php:154
+Stack trace:
+#0 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\db\BaseActiveRecord.php(298): yii\base\Component->__get('id_disciplina_t...')
+#1 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\validators\ExistValidator.php(203): yii\db\BaseActiveRecord->__get('id_disciplina_t...')
+#2 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\validators\ExistValidator.php(156): yii\validators\ExistValidator->prepareConditions(Array, Object(api\resource\Recado), 'id_disciplina_t...')
+#3 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\validators\ExistValidator.php(113): yii\validators\ExistValidator->checkTargetAttributeExistence(Object(api\resource\Recado), 'id_disciplina_t...')
+#4 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\validators\Validator.php(257): yii\validators\ExistValidator->validateAttribute(Object(api\resource\Recado), 'id_disciplina_t...')
+#5 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Model.php(367): yii\validators\Validator->validateAttributes(Object(api\resource\Recado), Array)
+#6 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\db\ActiveRecord.php(670): yii\base\Model->validate(Array)
+#7 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\db\BaseActiveRecord.php(681): yii\db\ActiveRecord->update(true, NULL)
+#8 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\rest\UpdateAction.php(48): yii\db\BaseActiveRecord->save()
+#9 [internal function]: yii\rest\UpdateAction->run('1')
+#10 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Action.php(94): call_user_func_array(Array, Array)
+#11 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\Action->runWithParams(Array)
+#12 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('update', Array)
+#13 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('v1/recado/updat...', Array)
+#14 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#15 C:\wamp64\www\Alumi.IO-WebApp\api\web\index.php(17): yii\base\Application->run()
+#16 {main}
+2020-01-07 14:21:10 [::1][1][-][info][application] $_GET = [
+    'id' => '1'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'CONTENT_TYPE' => 'application/json'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.21.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => 'b2723c54-92d7-4f0a-b5f7-b4da5c5583d5'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'CONTENT_LENGTH' => '70'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'c:\\devkitPro\\msys2\\usr\\bin;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\wamp64\\bin\\php\\php7.3.5;C:\\Program Files\\Git\\cmd;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\dotnet\\;C:\\Users\\Samuel\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Samuel\\.dotnet\\tools'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) PHP/7.3.12 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) PHP/7.3.12'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/Alumi.IO-WebApp/api/web/index.php'
+    'REMOTE_PORT' => '50622'
+    'REDIRECT_URL' => '/Alumi.IO-WebApp/api/web/v1/recado/1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'PUT'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/Alumi.IO-WebApp/api/web/v1/recado/1'
+    'SCRIPT_NAME' => '/Alumi.IO-WebApp/api/web/index.php'
+    'PHP_SELF' => '/Alumi.IO-WebApp/api/web/index.php'
+    'PHP_AUTH_USER' => '***'
+    'PHP_AUTH_PW' => '***'
+    'REQUEST_TIME_FLOAT' => 1578406870.921
+    'REQUEST_TIME' => 1578406870
+]
+2020-01-07 14:22:05 [::1][1][-][error][yii\base\UnknownPropertyException] yii\base\UnknownPropertyException: Getting unknown property: api\resource\Recado::id_disciplina_turmac in C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Component.php:154
+Stack trace:
+#0 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\db\BaseActiveRecord.php(298): yii\base\Component->__get('id_disciplina_t...')
+#1 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\validators\ExistValidator.php(203): yii\db\BaseActiveRecord->__get('id_disciplina_t...')
+#2 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\validators\ExistValidator.php(156): yii\validators\ExistValidator->prepareConditions(Array, Object(api\resource\Recado), 'id_disciplina_t...')
+#3 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\validators\ExistValidator.php(113): yii\validators\ExistValidator->checkTargetAttributeExistence(Object(api\resource\Recado), 'id_disciplina_t...')
+#4 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\validators\Validator.php(257): yii\validators\ExistValidator->validateAttribute(Object(api\resource\Recado), 'id_disciplina_t...')
+#5 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Model.php(367): yii\validators\Validator->validateAttributes(Object(api\resource\Recado), Array)
+#6 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\db\ActiveRecord.php(670): yii\base\Model->validate(Array)
+#7 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\db\BaseActiveRecord.php(681): yii\db\ActiveRecord->update(true, NULL)
+#8 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\rest\UpdateAction.php(48): yii\db\BaseActiveRecord->save()
+#9 [internal function]: yii\rest\UpdateAction->run('1')
+#10 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Action.php(94): call_user_func_array(Array, Array)
+#11 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\Action->runWithParams(Array)
+#12 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('update', Array)
+#13 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('v1/recado/updat...', Array)
+#14 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#15 C:\wamp64\www\Alumi.IO-WebApp\api\web\index.php(17): yii\base\Application->run()
+#16 {main}
+2020-01-07 14:22:04 [::1][1][-][info][application] $_GET = [
+    'id' => '1'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'CONTENT_TYPE' => 'application/json'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.21.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => '0ba5a1fa-6dd3-402c-85a0-aabbd686bdec'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'CONTENT_LENGTH' => '70'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'c:\\devkitPro\\msys2\\usr\\bin;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\wamp64\\bin\\php\\php7.3.5;C:\\Program Files\\Git\\cmd;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\dotnet\\;C:\\Users\\Samuel\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Samuel\\.dotnet\\tools'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) PHP/7.3.12 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) PHP/7.3.12'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/Alumi.IO-WebApp/api/web/index.php'
+    'REMOTE_PORT' => '50627'
+    'REDIRECT_URL' => '/Alumi.IO-WebApp/api/web/v1/recado/1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'PUT'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/Alumi.IO-WebApp/api/web/v1/recado/1'
+    'SCRIPT_NAME' => '/Alumi.IO-WebApp/api/web/index.php'
+    'PHP_SELF' => '/Alumi.IO-WebApp/api/web/index.php'
+    'PHP_AUTH_USER' => '***'
+    'PHP_AUTH_PW' => '***'
+    'REQUEST_TIME_FLOAT' => 1578406924.846
+    'REQUEST_TIME' => 1578406924
+]
+2020-01-07 14:22:49 [::1][1][-][error][yii\base\UnknownPropertyException] yii\base\UnknownPropertyException: Getting unknown property: api\resource\Recado::id_disciplina_turmac in C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Component.php:154
+Stack trace:
+#0 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\db\BaseActiveRecord.php(298): yii\base\Component->__get('id_disciplina_t...')
+#1 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\validators\ExistValidator.php(203): yii\db\BaseActiveRecord->__get('id_disciplina_t...')
+#2 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\validators\ExistValidator.php(156): yii\validators\ExistValidator->prepareConditions(Array, Object(api\resource\Recado), 'id_disciplina_t...')
+#3 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\validators\ExistValidator.php(113): yii\validators\ExistValidator->checkTargetAttributeExistence(Object(api\resource\Recado), 'id_disciplina_t...')
+#4 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\validators\Validator.php(257): yii\validators\ExistValidator->validateAttribute(Object(api\resource\Recado), 'id_disciplina_t...')
+#5 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Model.php(367): yii\validators\Validator->validateAttributes(Object(api\resource\Recado), Array)
+#6 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\db\ActiveRecord.php(670): yii\base\Model->validate(Array)
+#7 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\db\BaseActiveRecord.php(681): yii\db\ActiveRecord->update(true, NULL)
+#8 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\rest\UpdateAction.php(48): yii\db\BaseActiveRecord->save()
+#9 [internal function]: yii\rest\UpdateAction->run('1')
+#10 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Action.php(94): call_user_func_array(Array, Array)
+#11 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\Action->runWithParams(Array)
+#12 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('update', Array)
+#13 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('v1/recado/updat...', Array)
+#14 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#15 C:\wamp64\www\Alumi.IO-WebApp\api\web\index.php(17): yii\base\Application->run()
+#16 {main}
+2020-01-07 14:22:48 [::1][1][-][info][application] $_GET = [
+    'id' => '1'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'CONTENT_TYPE' => 'application/json'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.21.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => 'f8851f20-b929-4001-a239-6e5290c78894'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'CONTENT_LENGTH' => '70'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'c:\\devkitPro\\msys2\\usr\\bin;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\wamp64\\bin\\php\\php7.3.5;C:\\Program Files\\Git\\cmd;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\dotnet\\;C:\\Users\\Samuel\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Samuel\\.dotnet\\tools'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) PHP/7.3.12 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) PHP/7.3.12'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/Alumi.IO-WebApp/api/web/index.php'
+    'REMOTE_PORT' => '50666'
+    'REDIRECT_URL' => '/Alumi.IO-WebApp/api/web/v1/recado/1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'PUT'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/Alumi.IO-WebApp/api/web/v1/recado/1'
+    'SCRIPT_NAME' => '/Alumi.IO-WebApp/api/web/index.php'
+    'PHP_SELF' => '/Alumi.IO-WebApp/api/web/index.php'
+    'PHP_AUTH_USER' => '***'
+    'PHP_AUTH_PW' => '***'
+    'REQUEST_TIME_FLOAT' => 1578406968.839
+    'REQUEST_TIME' => 1578406968
+]
+2020-01-07 14:23:18 [::1][1][-][error][yii\base\UnknownPropertyException] yii\base\UnknownPropertyException: Getting unknown property: api\resource\Recado::id_disciplina_turmac in C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Component.php:154
+Stack trace:
+#0 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\db\BaseActiveRecord.php(298): yii\base\Component->__get('id_disciplina_t...')
+#1 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\validators\ExistValidator.php(203): yii\db\BaseActiveRecord->__get('id_disciplina_t...')
+#2 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\validators\ExistValidator.php(156): yii\validators\ExistValidator->prepareConditions(Array, Object(api\resource\Recado), 'id_disciplina_t...')
+#3 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\validators\ExistValidator.php(113): yii\validators\ExistValidator->checkTargetAttributeExistence(Object(api\resource\Recado), 'id_disciplina_t...')
+#4 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\validators\Validator.php(257): yii\validators\ExistValidator->validateAttribute(Object(api\resource\Recado), 'id_disciplina_t...')
+#5 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Model.php(367): yii\validators\Validator->validateAttributes(Object(api\resource\Recado), Array)
+#6 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\db\ActiveRecord.php(670): yii\base\Model->validate(Array)
+#7 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\db\BaseActiveRecord.php(681): yii\db\ActiveRecord->update(true, NULL)
+#8 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\rest\UpdateAction.php(48): yii\db\BaseActiveRecord->save()
+#9 [internal function]: yii\rest\UpdateAction->run('1')
+#10 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Action.php(94): call_user_func_array(Array, Array)
+#11 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\Action->runWithParams(Array)
+#12 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('update', Array)
+#13 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('v1/recado/updat...', Array)
+#14 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#15 C:\wamp64\www\Alumi.IO-WebApp\api\web\index.php(17): yii\base\Application->run()
+#16 {main}
+2020-01-07 14:23:17 [::1][1][-][info][application] $_GET = [
+    'id' => '1'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'CONTENT_TYPE' => 'application/json'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.21.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => '4381259f-12c9-47ca-8d2d-efdd748ee709'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'CONTENT_LENGTH' => '70'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'c:\\devkitPro\\msys2\\usr\\bin;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\wamp64\\bin\\php\\php7.3.5;C:\\Program Files\\Git\\cmd;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\dotnet\\;C:\\Users\\Samuel\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Samuel\\.dotnet\\tools'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) PHP/7.3.12 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) PHP/7.3.12'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/Alumi.IO-WebApp/api/web/index.php'
+    'REMOTE_PORT' => '50671'
+    'REDIRECT_URL' => '/Alumi.IO-WebApp/api/web/v1/recado/1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'PUT'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/Alumi.IO-WebApp/api/web/v1/recado/1'
+    'SCRIPT_NAME' => '/Alumi.IO-WebApp/api/web/index.php'
+    'PHP_SELF' => '/Alumi.IO-WebApp/api/web/index.php'
+    'PHP_AUTH_USER' => '***'
+    'PHP_AUTH_PW' => '***'
+    'REQUEST_TIME_FLOAT' => 1578406997.975
+    'REQUEST_TIME' => 1578406997
+]
+2020-01-07 14:24:30 [::1][1][-][error][yii\base\UnknownPropertyException] yii\base\UnknownPropertyException: Getting unknown property: api\resource\Recado::id_disciplina_turmac in C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Component.php:154
+Stack trace:
+#0 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\db\BaseActiveRecord.php(298): yii\base\Component->__get('id_disciplina_t...')
+#1 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\validators\ExistValidator.php(203): yii\db\BaseActiveRecord->__get('id_disciplina_t...')
+#2 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\validators\ExistValidator.php(156): yii\validators\ExistValidator->prepareConditions(Array, Object(api\resource\Recado), 'id_disciplina_t...')
+#3 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\validators\ExistValidator.php(113): yii\validators\ExistValidator->checkTargetAttributeExistence(Object(api\resource\Recado), 'id_disciplina_t...')
+#4 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\validators\Validator.php(257): yii\validators\ExistValidator->validateAttribute(Object(api\resource\Recado), 'id_disciplina_t...')
+#5 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Model.php(367): yii\validators\Validator->validateAttributes(Object(api\resource\Recado), Array)
+#6 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\db\ActiveRecord.php(670): yii\base\Model->validate(Array)
+#7 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\db\BaseActiveRecord.php(681): yii\db\ActiveRecord->update(true, NULL)
+#8 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\rest\UpdateAction.php(48): yii\db\BaseActiveRecord->save()
+#9 [internal function]: yii\rest\UpdateAction->run('1')
+#10 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Action.php(94): call_user_func_array(Array, Array)
+#11 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\Action->runWithParams(Array)
+#12 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('update', Array)
+#13 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('v1/recado/updat...', Array)
+#14 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#15 C:\wamp64\www\Alumi.IO-WebApp\api\web\index.php(17): yii\base\Application->run()
+#16 {main}
+2020-01-07 14:24:29 [::1][1][-][info][application] $_GET = [
+    'id' => '1'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.21.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => '5efaab62-93c5-4fd1-bc9c-39f1a6207b67'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'CONTENT_LENGTH' => '73'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'c:\\devkitPro\\msys2\\usr\\bin;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\wamp64\\bin\\php\\php7.3.5;C:\\Program Files\\Git\\cmd;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\dotnet\\;C:\\Users\\Samuel\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Samuel\\.dotnet\\tools'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) PHP/7.3.12 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) PHP/7.3.12'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/Alumi.IO-WebApp/api/web/index.php'
+    'REMOTE_PORT' => '50676'
+    'REDIRECT_URL' => '/Alumi.IO-WebApp/api/web/v1/recado/1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'PUT'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/Alumi.IO-WebApp/api/web/v1/recado/1'
+    'SCRIPT_NAME' => '/Alumi.IO-WebApp/api/web/index.php'
+    'PHP_SELF' => '/Alumi.IO-WebApp/api/web/index.php'
+    'PHP_AUTH_USER' => '***'
+    'PHP_AUTH_PW' => '***'
+    'REQUEST_TIME_FLOAT' => 1578407069.799
+    'REQUEST_TIME' => 1578407069
+]
+2020-01-07 14:26:10 [::1][1][-][error][yii\web\HttpException:404] yii\web\NotFoundHttpException: Object not found: 5 in C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\rest\Action.php:104
+Stack trace:
+#0 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\rest\UpdateAction.php(40): yii\rest\Action->findModel('5')
+#1 [internal function]: yii\rest\UpdateAction->run('5')
+#2 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Action.php(94): call_user_func_array(Array, Array)
+#3 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\Action->runWithParams(Array)
+#4 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('update', Array)
+#5 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('v1/recado/updat...', Array)
+#6 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 C:\wamp64\www\Alumi.IO-WebApp\api\web\index.php(17): yii\base\Application->run()
+#8 {main}
+2020-01-07 14:26:09 [::1][1][-][info][application] $_GET = [
+    'id' => '5'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'CONTENT_TYPE' => 'application/json'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.21.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => '1001a473-1751-4671-b7a4-44797c8ee681'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'CONTENT_LENGTH' => '70'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'c:\\devkitPro\\msys2\\usr\\bin;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\wamp64\\bin\\php\\php7.3.5;C:\\Program Files\\Git\\cmd;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\dotnet\\;C:\\Users\\Samuel\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Samuel\\.dotnet\\tools'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) PHP/7.3.12 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) PHP/7.3.12'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/Alumi.IO-WebApp/api/web/index.php'
+    'REMOTE_PORT' => '50689'
+    'REDIRECT_URL' => '/Alumi.IO-WebApp/api/web/v1/recado/5'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'PUT'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/Alumi.IO-WebApp/api/web/v1/recado/5'
+    'SCRIPT_NAME' => '/Alumi.IO-WebApp/api/web/index.php'
+    'PHP_SELF' => '/Alumi.IO-WebApp/api/web/index.php'
+    'PHP_AUTH_USER' => '***'
+    'PHP_AUTH_PW' => '***'
+    'REQUEST_TIME_FLOAT' => 1578407169.294
+    'REQUEST_TIME' => 1578407169
+]
+2020-01-07 14:26:14 [::1][1][-][error][yii\base\UnknownPropertyException] yii\base\UnknownPropertyException: Getting unknown property: api\resource\Recado::id_disciplina_turmac in C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Component.php:154
+Stack trace:
+#0 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\db\BaseActiveRecord.php(298): yii\base\Component->__get('id_disciplina_t...')
+#1 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\validators\ExistValidator.php(203): yii\db\BaseActiveRecord->__get('id_disciplina_t...')
+#2 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\validators\ExistValidator.php(156): yii\validators\ExistValidator->prepareConditions(Array, Object(api\resource\Recado), 'id_disciplina_t...')
+#3 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\validators\ExistValidator.php(113): yii\validators\ExistValidator->checkTargetAttributeExistence(Object(api\resource\Recado), 'id_disciplina_t...')
+#4 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\validators\Validator.php(257): yii\validators\ExistValidator->validateAttribute(Object(api\resource\Recado), 'id_disciplina_t...')
+#5 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Model.php(367): yii\validators\Validator->validateAttributes(Object(api\resource\Recado), Array)
+#6 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\db\ActiveRecord.php(670): yii\base\Model->validate(Array)
+#7 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\db\BaseActiveRecord.php(681): yii\db\ActiveRecord->update(true, NULL)
+#8 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\rest\UpdateAction.php(48): yii\db\BaseActiveRecord->save()
+#9 [internal function]: yii\rest\UpdateAction->run('1')
+#10 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Action.php(94): call_user_func_array(Array, Array)
+#11 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\Action->runWithParams(Array)
+#12 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('update', Array)
+#13 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('v1/recado/updat...', Array)
+#14 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#15 C:\wamp64\www\Alumi.IO-WebApp\api\web\index.php(17): yii\base\Application->run()
+#16 {main}
+2020-01-07 14:26:14 [::1][1][-][info][application] $_GET = [
+    'id' => '1'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'CONTENT_TYPE' => 'application/json'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.21.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => '37b84469-ea5b-43db-aec8-53f92eea017e'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'CONTENT_LENGTH' => '70'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'c:\\devkitPro\\msys2\\usr\\bin;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\wamp64\\bin\\php\\php7.3.5;C:\\Program Files\\Git\\cmd;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\dotnet\\;C:\\Users\\Samuel\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Samuel\\.dotnet\\tools'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) PHP/7.3.12 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) PHP/7.3.12'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/Alumi.IO-WebApp/api/web/index.php'
+    'REMOTE_PORT' => '50689'
+    'REDIRECT_URL' => '/Alumi.IO-WebApp/api/web/v1/recado/1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'PUT'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/Alumi.IO-WebApp/api/web/v1/recado/1'
+    'SCRIPT_NAME' => '/Alumi.IO-WebApp/api/web/index.php'
+    'PHP_SELF' => '/Alumi.IO-WebApp/api/web/index.php'
+    'PHP_AUTH_USER' => '***'
+    'PHP_AUTH_PW' => '***'
+    'REQUEST_TIME_FLOAT' => 1578407174.021
+    'REQUEST_TIME' => 1578407174
+]

@@ -3,6 +3,7 @@
 namespace api\models;
 
 use api\models\query\TpcQuery;
+use app\mosquitto\phpMQTT;
 use yii\behaviors\BlameableBehavior;
 use yii\db\ActiveQuery;
 use yii\db\ActiveRecord;
@@ -92,5 +93,51 @@ class Tpc extends ActiveRecord
     public static function find()
     {
         return new TpcQuery(get_called_class());
+    }
+
+    public function afterSave($insert, $changedAttributes)
+    {
+        parent::afterSave($insert, $changedAttributes);
+
+        $myObj = new Tpc();
+
+
+        $myObj->id = $this->id;
+        $myObj->descricao = $this->descricao;
+        $myObj->id_disciplina_turma = $this->id_disciplina_turma;
+        $myObj->id_professor = $this->id_professor;
+        $myJSON = json_encode($myObj);
+
+        if($insert)
+            $this->FazPublish("INSERT",$myJSON);
+        else
+            $this->FazPublish("UPDATE",$myJSON);
+
+
+    }
+
+    public function afterDelete()
+    {
+        parent::afterDelete();
+        $prod_id = $this->id;
+        $myObj= new Tpc();
+        $myObj->id=$prod_id;
+        $myJSON = json_encode($myObj);
+        $this->FazPublish("DELETE",$myJSON);
+    }
+
+    public function FazPublish($canal,$msg){
+        $server = "127.0.0.1";
+        $port = 1883;
+        $username = ""; // set your username
+        $password = ""; // set your password
+        $client_id = uniqid(); // unique!
+        $mqtt = new phpMQTT($server, $port, $client_id);
+        if ($mqtt->connect(true, NULL, $username, $password))
+        {
+            $mqtt->publish($canal, $msg, 0);
+            $mqtt->close();
+        }
+        else { file_put_contents("debug.output","Time out!"); }
     }
 }
