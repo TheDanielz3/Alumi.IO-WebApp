@@ -36,7 +36,7 @@ class Teste extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['descricao', 'id_disciplina_turma','data_hora'], 'required'],
+            [['descricao', 'id_disciplina_turma', 'data_hora'], 'required'],
             [['data_hora', 'id_disciplina_turma', 'id_professor'], 'integer'],
             [['descricao'], 'string', 'max' => 45],
             [['id_disciplina_turma'], 'exist', 'skipOnError' => true, 'targetClass' => Disciplinaturma::className(), 'targetAttribute' => ['id_disciplina_turma' => 'id']],
@@ -94,8 +94,9 @@ class Teste extends \yii\db\ActiveRecord
         return new \api\models\query\TesteQuery(get_called_class());
     }
 
-    public function getDataHora(){
-        return Yii::$app->formatter->asRelativeTime($this->data_hora) ;
+    public function getDataHora()
+    {
+        return Yii::$app->formatter->asRelativeTime($this->data_hora);
     }
 
     public function afterSave($insert, $changedAttributes)
@@ -111,34 +112,38 @@ class Teste extends \yii\db\ActiveRecord
         $myObj->id_professor = $this->id_professor;
         $myJSON = Json::encode($myObj);
 
-        if($insert)
-            $this->FazPublish("INSERT",$myJSON);
+        if ($insert)
+            $this->FazPublish("INSERT", $myJSON);
         else
-            $this->FazPublish("UPDATE",$myJSON);
+            $this->FazPublish("UPDATE", $myJSON);
     }
 
     public function afterDelete()
     {
         parent::afterDelete();
         $prod_id = $this->id;
-        $myObj= new Teste();
-        $myObj->id=$prod_id;
+        $myObj = new Teste();
+        $myObj->id = $prod_id;
         $myJSON = Json::encode($myObj);
-        $this->FazPublish("DELETE",$myJSON);
+        $this->FazPublish("DELETE", $myJSON);
     }
 
-    public function FazPublish($canal,$msg){
+    public function FazPublish($canal, $msg)
+    {
         $server = "127.0.0.1";
         $port = 1883;
         $username = ""; // set your username
         $password = ""; // set your password
         $client_id = uniqid(); // unique!
         $mqtt = new phpMQTT($server, $port, $client_id);
-        if ($mqtt->connect(true, NULL, $username, $password))
-        {
-            $mqtt->publish($canal, $msg, 0);
-            $mqtt->close();
+        try {
+            if ($mqtt->connect(true, NULL, $username, $password)) {
+                $mqtt->publish($canal, $msg, 0);
+                $mqtt->close();
+            } else {
+                file_put_contents("debug.output", "Time out!");
+            }
+        } catch (\Exception $exception) {
         }
-        else { file_put_contents("debug.output","Time out!"); }
     }
 }
