@@ -102,7 +102,6 @@ class Tpc extends ActiveRecord
 
         $myObj = new Tpc();
 
-
         $myObj->id = $this->id;
         $myObj->descricao = $this->descricao;
         $myObj->id_disciplina_turma = $this->id_disciplina_turma;
@@ -113,8 +112,6 @@ class Tpc extends ActiveRecord
             $this->FazPublish("INSERT",$myJSON);
         else
             $this->FazPublish("UPDATE",$myJSON);
-
-
     }
 
     public function afterDelete()

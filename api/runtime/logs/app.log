@@ -23814,3 +23814,76 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1578587570.647
     'REQUEST_TIME' => 1578587570
 ]
+2020-01-09 16:58:52 [::1][1][-][error][yii\base\ErrorException:2] yii\base\ErrorException: stream_socket_client(): unable to connect to tcp://127.0.0.1:1883 (Nenhuma liga��o p�de ser feita porque o computador de destino
+as recusou ativamente.
+) in C:\wamp64\www\Alumi.IO-WebApp\api\mosquitto\phpMQTT.php:90
+Stack trace:
+#0 C:\wamp64\www\Alumi.IO-WebApp\api\mosquitto\phpMQTT.php(90): yii\web\ErrorHandler->handleError()
+#1 C:\wamp64\www\Alumi.IO-WebApp\api\mosquitto\phpMQTT.php(90): ::stream_socket_client()
+#2 C:\wamp64\www\Alumi.IO-WebApp\api\models\Recado.php(175): app\mosquitto\phpMQTT->connect()
+#3 C:\wamp64\www\Alumi.IO-WebApp\api\models\Recado.php(147): api\resource\Recado->FazPublish()
+#4 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\db\BaseActiveRecord.php(799): api\resource\Recado->afterSave()
+#5 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\db\ActiveRecord.php(676): api\resource\Recado->updateInternal()
+#6 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\db\BaseActiveRecord.php(681): api\resource\Recado->update()
+#7 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\rest\UpdateAction.php(48): api\resource\Recado->save()
+#8 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Action.php(94): yii\rest\UpdateAction->run()
+#9 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Action.php(94): ::call_user_func_array:{C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Action.php:94}()
+#10 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Controller.php(157): yii\rest\UpdateAction->runWithParams()
+#11 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Module.php(528): api\modules\v1\controllers\RecadoController->runAction()
+#12 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\web\Application.php(103): yii\web\Application->runAction()
+#13 C:\wamp64\www\Alumi.IO-WebApp\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest()
+#14 C:\wamp64\www\Alumi.IO-WebApp\api\web\index.php(17): yii\web\Application->run()
+#15 {main}
+2020-01-09 16:58:49 [::1][1][-][info][application] $_GET = [
+    'id' => '1'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'CONTENT_TYPE' => 'application/json'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.21.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => '483b69fd-91f2-4c36-837c-a3c231fb0fe7'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'CONTENT_LENGTH' => '70'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'c:\\devkitPro\\msys2\\usr\\bin;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\wamp64\\bin\\php\\php7.3.5;C:\\Program Files\\Git\\cmd;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\dotnet\\;C:\\Users\\Samuel\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Samuel\\.dotnet\\tools'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) PHP/7.3.12 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) PHP/7.3.12'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/Alumi.IO-WebApp/api/web/index.php'
+    'REMOTE_PORT' => '59137'
+    'REDIRECT_URL' => '/Alumi.IO-WebApp/api/web/v1/recado/1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'PUT'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/Alumi.IO-WebApp/api/web/v1/recado/1'
+    'SCRIPT_NAME' => '/Alumi.IO-WebApp/api/web/index.php'
+    'PHP_SELF' => '/Alumi.IO-WebApp/api/web/index.php'
+    'PHP_AUTH_USER' => '***'
+    'PHP_AUTH_PW' => '***'
+    'REQUEST_TIME_FLOAT' => 1578589129.381
+    'REQUEST_TIME' => 1578589129
+]

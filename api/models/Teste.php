@@ -104,7 +104,6 @@ class Teste extends \yii\db\ActiveRecord
 
         $myObj = new Teste();
 
-
         $myObj->id = $this->id;
         $myObj->descricao = $this->descricao;
         $myObj->data_hora = $this->data_hora;
@@ -116,8 +115,6 @@ class Teste extends \yii\db\ActiveRecord
             $this->FazPublish("INSERT",$myJSON);
         else
             $this->FazPublish("UPDATE",$myJSON);
-
-
     }
 
     public function afterDelete()

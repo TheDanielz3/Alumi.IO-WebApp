@@ -128,7 +128,6 @@ class Recado extends \yii\db\ActiveRecord
 
         $myObj = new Recado();
 
-
         $myObj->id = $this->id;
         $myObj->topico = $this->topico;
         $myObj->descricao = $this->descricao;
@@ -143,8 +142,6 @@ class Recado extends \yii\db\ActiveRecord
             $this->FazPublish("INSERT",$myJSON);
         else
             $this->FazPublish("UPDATE",$myJSON);
-
-
     }
 
     public function afterDelete()
