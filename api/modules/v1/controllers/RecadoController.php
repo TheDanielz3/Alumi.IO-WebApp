@@ -43,14 +43,14 @@ class RecadoController extends ActiveController
     public function actionAssinados()
     {
         $climodel = new $this->modelClass;
-        $recs = $climodel::find()->andwhere("assinado=1")->all();
+        $recs = $climodel::find()->andwhere("assinado=1")->andwhere(["id_professor" => Yii::$app->user->id])->all();
         return $recs;
     }
 
     public function actionPorassinar()
     {
         $climodel = new $this->modelClass;
-        $recs = $climodel::find()->andwhere("assinado=0")->all();
+        $recs = $climodel::find()->andwhere("assinado=0")->andwhere(["id_professor" => Yii::$app->user->id])->all();
         return $recs;
     }
 
