@@ -48,6 +48,7 @@ return [
                     'extraPatterns' => [
                         'GET assinados' => 'assinados',
                         'GET porassinar' => 'porassinar',
+                        'GET turmaspessoais' => 'turmaspessoais',
                     ],
                 ]
             ],

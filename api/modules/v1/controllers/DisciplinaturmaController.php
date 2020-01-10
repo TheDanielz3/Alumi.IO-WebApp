@@ -28,4 +28,11 @@ class DisciplinaturmaController extends ActiveController
 
         }
     }
+
+    public function actionTurmaspessoais()
+    {
+        $climodel = new $this->modelClass;
+        $recs = $climodel::find()->andwhere(["id_professor" => Yii::$app->user->id])->all();
+        return $recs;
+    }
 }
