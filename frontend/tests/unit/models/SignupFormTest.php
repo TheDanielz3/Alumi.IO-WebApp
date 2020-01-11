@@ -1,6 +1,7 @@
 <?php
 namespace frontend\tests\unit\models;
 
+use app\models\Aluno;
 use Codeception\Test\Unit;
 use common\fixtures\UserFixture;
 use common\models\User;
@@ -74,5 +75,7 @@ class SignupFormTest extends Unit
             ->equals('This username has already been taken.');
         expect($model->getFirstError('email'))
             ->equals('This email address has already been taken.');
+        Aluno::deleteAll();
+        Yii::$app->authManager->revokeAll(4002);
     }
 }

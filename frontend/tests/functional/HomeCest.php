@@ -8,8 +8,8 @@ class HomeCest
 {
     public function checkOpen(FunctionalTester $I)
     {
-        $I->amOnPage(\Yii::$app->homeUrl);
-        $I->see('Alumio');
+        $I->amOnPage('site/index');
+        $I->see('Alumio!');
         $I->seeLink('About');
         $I->click('About');
         $I->see('Alumio is a project created by:');

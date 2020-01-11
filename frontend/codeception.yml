@@ -13,3 +13,8 @@ modules:
     config:
         Yii2:
             configFile: 'config/codeception-local.php'
+        Db:
+            dsn: 'mysql:host=localhost;port=3306;dbname=alumio_test'
+            user: 'root'
+            password: ''
+            cleanup: true

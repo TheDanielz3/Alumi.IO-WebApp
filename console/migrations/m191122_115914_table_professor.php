@@ -19,7 +19,7 @@ class m191122_115914_table_professor extends Migration
         }
 
         $this->createTable('{{%professor}}', [
-            'id' => $this->primaryKey(),
+            'id' => $this->primaryKey()->notNull(),
             'nome' => $this->string(),
         ], $tableOptions);
     }

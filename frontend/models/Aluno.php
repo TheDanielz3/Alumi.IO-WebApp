@@ -35,6 +35,7 @@ class Aluno extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
+            [['id'], 'required'],
             [['id_encarregado_de_educacao', 'id_turma', 'numero_estudante'], 'integer'],
             [['nome'], 'string', 'max' => 255],
             [['id_encarregado_de_educacao'], 'exist', 'skipOnError' => true, 'targetClass' => Encarregadoeducacao::className(), 'targetAttribute' => ['id_encarregado_de_educacao' => 'id']],

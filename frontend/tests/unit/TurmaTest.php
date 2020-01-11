@@ -26,9 +26,7 @@ class TurmaTest extends \Codeception\Test\Unit
         $turma->ano = 1;
         $turma->letra = "P";
 
-        $this->assertTrue($turma->validate(['ano']));
-        $this->assertTrue($turma->validate(['letra']));
-
+        $this->assertTrue($turma->validate());
     }
     public function testAssertingFalse()
     {
@@ -36,11 +34,7 @@ class TurmaTest extends \Codeception\Test\Unit
         $turma->ano = null;
         $turma->letra = null;
 
-        $this->assertFalse($turma->validate(['ano']));
-        $this->assertFalse($turma->validate(['letra']));
+        $this->assertFalse($turma->validate());
     }
-    public function testAssertingOnDatabase()
-    {
 
-    }
 }

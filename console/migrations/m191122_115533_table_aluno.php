@@ -18,7 +18,7 @@ class m191122_115533_table_aluno extends Migration
             $tableOptions = 'CHARACTER SET utf8 COLLATE utf8_unicode_ci ENGINE=InnoDB';
         }
         $this->createTable('{{%aluno}}', [
-            'id' => $this->primaryKey(),
+            'id' => $this->primaryKey()->notNull(),
             'id_encarregado_de_educacao' => $this->integer(),
             'id_turma' => $this->integer(),
             'nome'=> $this->string(),

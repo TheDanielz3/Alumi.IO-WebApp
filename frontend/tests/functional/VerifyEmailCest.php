@@ -2,8 +2,10 @@
 
 namespace frontend\tests\functional;
 
+use app\models\Professor;
 use common\fixtures\UserFixture;
 use frontend\tests\FunctionalTester;
+use Yii;
 
 class VerifyEmailCest
 {
@@ -54,6 +56,14 @@ class VerifyEmailCest
 
     public function checkSuccessVerification(FunctionalTester $I)
     {
+        $auth = Yii::$app->authManager;
+        $UserNewRole = $auth->getRole('teacher');
+        $auth->assign($UserNewRole, 4000);
+        $userSecondaryTable = new Professor();
+        $userSecondaryTable->id = 4000;
+        $userSecondaryTable->nome = 'testName';
+        $userSecondaryTable->save();
+
         $I->amOnRoute('site/verify-email', ['token' => '4ch0qbfhvWwkcuWqjN8SWRq72SOw1KYT_1548675330']);
         $I->canSee('Your email has been confirmed!');
       //  $I->canSee('Congratulations!', 'h1');

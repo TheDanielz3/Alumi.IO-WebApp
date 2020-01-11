@@ -2,8 +2,10 @@
 
 namespace frontend\tests\functional;
 
+use app\models\Professor;
 use frontend\tests\FunctionalTester;
 use common\fixtures\UserFixture;
+use Yii;
 
 class LoginCest
 {
@@ -58,9 +60,17 @@ class LoginCest
 
     public function checkValidLogin(FunctionalTester $I)
     {
+        $auth = Yii::$app->authManager;
+        $UserNewRole = $auth->getRole('teacher');
+        $auth->assign($UserNewRole, 4000);
+        $userSecondaryTable = new Professor();
+        $userSecondaryTable->id = 4000;
+        $userSecondaryTable->nome = 'testName';
+        $userSecondaryTable->save();
+
         $I->submitForm('#login-form', $this->formParams('erau', 'password_0'));
         $I->see('Logout (erau)', 'form button[type=submit]');
-       // $I->dontSeeLink('Login');
+        $I->dontSeeLink('Login');
         $I->dontSeeLink('Signup');
     }
 }
