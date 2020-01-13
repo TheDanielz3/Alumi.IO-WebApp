@@ -4,6 +4,7 @@ namespace backend\tests\functional;
 
 use backend\tests\FunctionalTester;
 use common\fixtures\UserFixture;
+use Yii;
 
 /**
  * Class LoginCest
@@ -32,13 +33,20 @@ class LoginCest
      */
     public function loginUser(FunctionalTester $I)
     {
+        $auth = Yii::$app->authManager;
+        $UserNewRole = $auth->getRole('admin');
+        $auth->assign($UserNewRole, 5000);
+
         $I->amOnPage('/site/login');
         $I->fillField('Username', 'erau');
         $I->fillField('Password', 'password_0');
         $I->click('login-button');
 
         $I->see('Logout (erau)', 'form button[type=submit]');
+        $I->see('Access Tables:', 'h2');
         $I->dontSeeLink('Login');
         $I->dontSeeLink('Signup');
+        $I->click('Logout (erau)');
+
     }
 }

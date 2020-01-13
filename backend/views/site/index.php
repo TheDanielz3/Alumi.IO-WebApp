@@ -19,9 +19,13 @@ use yii\helpers\Url; ?>
         <a href="<?= Url::toRoute('disciplinaturma/index') ?>" class="btn btn-primary">Disciplina_Turmas</a>
         <a href="<?= Url::toRoute('encarregadoeducacao/index') ?>" class="btn btn-primary">Encarregados de Educação</a>
         <a href="<?= Url::toRoute('professor/index') ?>" class="btn btn-primary">Professores</a>
+    </div>
+    <br><br>
+    <div class="btn-group btn-group-toggle btn-group-lg">
         <a href="<?= Url::toRoute('recado/index') ?>" class="btn btn-primary">Recados</a>
         <a href="<?= Url::toRoute('teste/index') ?>" class="btn btn-primary">Testes</a>
         <a href="<?= Url::toRoute('tpc/index') ?>" class="btn btn-primary">TPC's</a>
         <a href="<?= Url::toRoute('turma/index') ?>" class="btn btn-primary">Turmas</a>
+        <a href="<?= Url::toRoute('user/index') ?>" class="btn btn-primary">Users</a>
     </div>
 </div>
