@@ -4,8 +4,6 @@ modules:
     enabled:
         - Filesystem
         - Yii2:
-        - Db:
-              cleanup: true
 
 
 

@@ -10,7 +10,7 @@ use Yii;
 /**
  * Class LoginCest
  */
-class LoginCest
+class TurmaCest
 {
     /**
      * Load fixtures before db transaction begin
@@ -36,7 +36,7 @@ class LoginCest
     /**
      * @param FunctionalTester $I
      */
-    public function loginUser(FunctionalTester $I)
+    public function disciplinaAdd(FunctionalTester $I)
     {
         $I->amOnPage('/site/login');
         $I->fillField('Username', 'erau');
@@ -47,7 +47,20 @@ class LoginCest
         $I->see('Access Tables:', 'h2');
         $I->dontSeeLink('Login');
         $I->dontSeeLink('Signup');
-        $I->click('Logout (erau)');
+        $I->click('Turmas');
+        $I->see('Turmas');
+        $I->see('Create Turma');
+
+        $I->click('Create Turma');
+
+        $I->fillField('Turma[ano]', '80');
+        $I->fillField('Turma[letra]', 'Z');
+        $I->click('Save');
+        $I->see('80');
+        $I->see('Z');
+        $I->see('Delete');
+        $I->click('Delete');
+        $I->see('Create Turma');
 
     }
 }

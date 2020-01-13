@@ -3,6 +3,7 @@
 namespace frontend\tests;
 
 use Codeception\Actor;
+use common\models\User;
 
 /**
  * Inherited Methods

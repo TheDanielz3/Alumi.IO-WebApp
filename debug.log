@@ -1,0 +1,80 @@
+[0113/171825.069:ERROR:process_info.cc(98)] ReadProcessMemory UNICODE_STRING: Somente uma parte de um pedido ReadProcessMemory ou WriteProcessMemory foi concluída. (0x12B)
+[0113/171825.104:ERROR:process_info.cc(98)] ReadProcessMemory UNICODE_STRING: Somente uma parte de um pedido ReadProcessMemory ou WriteProcessMemory foi concluída. (0x12B)
+[0113/171825.104:ERROR:process_info.cc(98)] ReadProcessMemory UNICODE_STRING: Somente uma parte de um pedido ReadProcessMemory ou WriteProcessMemory foi concluída. (0x12B)
+[0113/171825.104:ERROR:process_info.cc(98)] ReadProcessMemory UNICODE_STRING: Somente uma parte de um pedido ReadProcessMemory ou WriteProcessMemory foi concluída. (0x12B)
+[0113/171825.104:ERROR:process_info.cc(98)] ReadProcessMemory UNICODE_STRING: Somente uma parte de um pedido ReadProcessMemory ou WriteProcessMemory foi concluída. (0x12B)
+[0113/171825.104:ERROR:process_info.cc(98)] ReadProcessMemory UNICODE_STRING: Somente uma parte de um pedido ReadProcessMemory ou WriteProcessMemory foi concluída. (0x12B)
+[0113/171825.105:ERROR:process_info.cc(98)] ReadProcessMemory UNICODE_STRING: Somente uma parte de um pedido ReadProcessMemory ou WriteProcessMemory foi concluída. (0x12B)
+[0113/171825.105:ERROR:process_info.cc(98)] ReadProcessMemory UNICODE_STRING: Somente uma parte de um pedido ReadProcessMemory ou WriteProcessMemory foi concluída. (0x12B)
+[0113/171825.105:ERROR:process_info.cc(98)] ReadProcessMemory UNICODE_STRING: Somente uma parte de um pedido ReadProcessMemory ou WriteProcessMemory foi concluída. (0x12B)
+[0113/171825.105:ERROR:process_info.cc(98)] ReadProcessMemory UNICODE_STRING: Somente uma parte de um pedido ReadProcessMemory ou WriteProcessMemory foi concluída. (0x12B)
+[0113/171825.108:ERROR:process_info.cc(98)] ReadProcessMemory UNICODE_STRING: Somente uma parte de um pedido ReadProcessMemory ou WriteProcessMemory foi concluída. (0x12B)
+[0113/171825.108:ERROR:process_info.cc(98)] ReadProcessMemory UNICODE_STRING: Somente uma parte de um pedido ReadProcessMemory ou WriteProcessMemory foi concluída. (0x12B)
+[0113/171825.108:ERROR:process_info.cc(98)] ReadProcessMemory UNICODE_STRING: Somente uma parte de um pedido ReadProcessMemory ou WriteProcessMemory foi concluída. (0x12B)
+[0113/171825.108:ERROR:process_info.cc(98)] ReadProcessMemory UNICODE_STRING: Somente uma parte de um pedido ReadProcessMemory ou WriteProcessMemory foi concluída. (0x12B)
+[0113/171825.108:ERROR:process_info.cc(98)] ReadProcessMemory UNICODE_STRING: Somente uma parte de um pedido ReadProcessMemory ou WriteProcessMemory foi concluída. (0x12B)
+[0113/171825.108:ERROR:process_info.cc(98)] ReadProcessMemory UNICODE_STRING: Somente uma parte de um pedido ReadProcessMemory ou WriteProcessMemory foi concluída. (0x12B)
+[0113/171825.108:ERROR:process_info.cc(98)] ReadProcessMemory UNICODE_STRING: Somente uma parte de um pedido ReadProcessMemory ou WriteProcessMemory foi concluída. (0x12B)
+[0113/171825.108:ERROR:process_info.cc(98)] ReadProcessMemory UNICODE_STRING: Somente uma parte de um pedido ReadProcessMemory ou WriteProcessMemory foi concluída. (0x12B)
+[0113/171825.108:ERROR:process_info.cc(98)] ReadProcessMemory UNICODE_STRING: Somente uma parte de um pedido ReadProcessMemory ou WriteProcessMemory foi concluída. (0x12B)
+[0113/171825.108:ERROR:process_info.cc(98)] ReadProcessMemory UNICODE_STRING: Somente uma parte de um pedido ReadProcessMemory ou WriteProcessMemory foi concluída. (0x12B)
+[0113/171825.115:ERROR:process_info.cc(617)] range at 0x25ee686a020, size 0x3e fully unreadable
+[0113/171825.115:ERROR:process_info.cc(617)] range at 0x25ee686a048, size 0x16 fully unreadable
+[0113/171825.115:ERROR:process_info.cc(617)] range at 0x25ee685a570, size 0x62 fully unreadable
+[0113/171825.115:ERROR:process_info.cc(617)] range at 0x25ee685a598, size 0x3a fully unreadable
+[0113/171825.115:ERROR:process_info.cc(617)] range at 0x25ee686a3e0, size 0x46 fully unreadable
+[0113/171825.115:ERROR:process_info.cc(617)] range at 0x25ee686a408, size 0x1e fully unreadable
+[0113/171825.115:ERROR:process_info.cc(617)] range at 0x25ee686abb0, size 0x44 fully unreadable
+[0113/171825.115:ERROR:process_info.cc(617)] range at 0x25ee686abd8, size 0x1c fully unreadable
+[0113/171825.115:ERROR:process_info.cc(617)] range at 0x25ee6830620, size 0x36 fully unreadable
+[0113/171825.115:ERROR:process_info.cc(617)] range at 0x25ee6830648, size 0xe fully unreadable
+[0113/171825.115:ERROR:process_info.cc(617)] range at 0x25ee686ade0, size 0x38 fully unreadable
+[0113/171825.115:ERROR:process_info.cc(617)] range at 0x25ee686ae08, size 0x10 fully unreadable
+[0113/171825.115:ERROR:process_info.cc(617)] range at 0x25ee6869f80, size 0x3e fully unreadable
+[0113/171825.115:ERROR:process_info.cc(617)] range at 0x25ee6869fa8, size 0x16 fully unreadable
+[0113/171825.115:ERROR:process_info.cc(617)] range at 0x25ee6841fa0, size 0xf6 fully unreadable
+[0113/171825.115:ERROR:process_info.cc(617)] range at 0x25ee684207e, size 0x18 fully unreadable
+[0113/171825.115:ERROR:process_info.cc(617)] range at 0x25ee6822170, size 0x3c fully unreadable
+[0113/171825.115:ERROR:process_info.cc(617)] range at 0x25ee6822198, size 0x14 fully unreadable
+[0113/171825.115:ERROR:process_info.cc(617)] range at 0x25ee683d030, size 0x40 fully unreadable
+[0113/171825.115:ERROR:process_info.cc(617)] range at 0x25ee683d058, size 0x18 fully unreadable
+[0113/171825.116:ERROR:process_info.cc(617)] range at 0x25ee686a020, size 0x3e fully unreadable
+[0113/171825.116:ERROR:process_info.cc(617)] range at 0x25ee686a048, size 0x16 fully unreadable
+[0113/171825.116:ERROR:process_info.cc(617)] range at 0x25ee685a570, size 0x62 fully unreadable
+[0113/171825.116:ERROR:process_info.cc(617)] range at 0x25ee685a598, size 0x3a fully unreadable
+[0113/171825.116:ERROR:process_info.cc(617)] range at 0x25ee686a3e0, size 0x46 fully unreadable
+[0113/171825.116:ERROR:process_info.cc(617)] range at 0x25ee686a408, size 0x1e fully unreadable
+[0113/171825.116:ERROR:process_info.cc(617)] range at 0x25ee686abb0, size 0x44 fully unreadable
+[0113/171825.116:ERROR:process_info.cc(617)] range at 0x25ee686abd8, size 0x1c fully unreadable
+[0113/171825.116:ERROR:process_info.cc(617)] range at 0x25ee6830620, size 0x36 fully unreadable
+[0113/171825.116:ERROR:process_info.cc(617)] range at 0x25ee6830648, size 0xe fully unreadable
+[0113/171825.116:ERROR:process_info.cc(617)] range at 0x25ee686ade0, size 0x38 fully unreadable
+[0113/171825.116:ERROR:process_info.cc(617)] range at 0x25ee686ae08, size 0x10 fully unreadable
+[0113/171825.116:ERROR:process_info.cc(617)] range at 0x25ee6869f80, size 0x3e fully unreadable
+[0113/171825.116:ERROR:process_info.cc(617)] range at 0x25ee6869fa8, size 0x16 fully unreadable
+[0113/171825.116:ERROR:process_info.cc(617)] range at 0x25ee6841fa0, size 0xf6 fully unreadable
+[0113/171825.116:ERROR:process_info.cc(617)] range at 0x25ee684207e, size 0x18 fully unreadable
+[0113/171825.116:ERROR:process_info.cc(617)] range at 0x25ee6822170, size 0x3c fully unreadable
+[0113/171825.116:ERROR:process_info.cc(617)] range at 0x25ee6822198, size 0x14 fully unreadable
+[0113/171825.116:ERROR:process_info.cc(617)] range at 0x25ee683d030, size 0x40 fully unreadable
+[0113/171825.116:ERROR:process_info.cc(617)] range at 0x25ee683d058, size 0x18 fully unreadable
+[0113/171825.116:ERROR:process_info.cc(617)] range at 0x25ee686a020, size 0x3e fully unreadable
+[0113/171825.116:ERROR:process_info.cc(617)] range at 0x25ee686a048, size 0x16 fully unreadable
+[0113/171825.116:ERROR:process_info.cc(617)] range at 0x25ee685a570, size 0x62 fully unreadable
+[0113/171825.116:ERROR:process_info.cc(617)] range at 0x25ee685a598, size 0x3a fully unreadable
+[0113/171825.116:ERROR:process_info.cc(617)] range at 0x25ee686abb0, size 0x44 fully unreadable
+[0113/171825.116:ERROR:process_info.cc(617)] range at 0x25ee686abd8, size 0x1c fully unreadable
+[0113/171825.116:ERROR:process_info.cc(617)] range at 0x25ee686ade0, size 0x38 fully unreadable
+[0113/171825.116:ERROR:process_info.cc(617)] range at 0x25ee686ae08, size 0x10 fully unreadable
+[0113/171825.116:ERROR:process_info.cc(617)] range at 0x25ee6830620, size 0x36 fully unreadable
+[0113/171825.116:ERROR:process_info.cc(617)] range at 0x25ee6830648, size 0xe fully unreadable
+[0113/171825.116:ERROR:process_info.cc(617)] range at 0x25ee686a3e0, size 0x46 fully unreadable
+[0113/171825.116:ERROR:process_info.cc(617)] range at 0x25ee686a408, size 0x1e fully unreadable
+[0113/171825.116:ERROR:process_info.cc(617)] range at 0x25ee6869f80, size 0x3e fully unreadable
+[0113/171825.116:ERROR:process_info.cc(617)] range at 0x25ee6869fa8, size 0x16 fully unreadable
+[0113/171825.116:ERROR:process_info.cc(617)] range at 0x25ee6841fa0, size 0xf6 fully unreadable
+[0113/171825.116:ERROR:process_info.cc(617)] range at 0x25ee684207e, size 0x18 fully unreadable
+[0113/171825.116:ERROR:process_info.cc(617)] range at 0x25ee683d030, size 0x40 fully unreadable
+[0113/171825.116:ERROR:process_info.cc(617)] range at 0x25ee683d058, size 0x18 fully unreadable
+[0113/171825.116:ERROR:process_info.cc(617)] range at 0x25ee6822170, size 0x3c fully unreadable
+[0113/171825.116:ERROR:process_info.cc(617)] range at 0x25ee6822198, size 0x14 fully unreadable

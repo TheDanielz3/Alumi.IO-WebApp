@@ -8,5 +8,3 @@ modules:
         - Yii2:
             part: orm
             entryScript: index-test.php
-        - Db:
-              cleanup: true

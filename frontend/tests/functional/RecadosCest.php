@@ -7,11 +7,9 @@ use common\fixtures\UserFixture;
 use frontend\tests\FunctionalTester;
 use Yii;
 
-class UserLoginCest
+class RecadosCest
 {
-
     protected $formId = '#login-form';
-
 
     public function _fixtures()
     {
@@ -33,20 +31,10 @@ class UserLoginCest
 
     public function _before(FunctionalTester $I)
     {
-
-        $I->amOnRoute('site/login');
+        $I->amOnRoute('recado-teacher/index');
     }
 
-    public function loginWithEmptyFields(FunctionalTester $I)
-    {
-        $I->see('Login', 'h1');
-        $I->see('Please fill out the following fields to login:');
-        $I->submitForm($this->formId, []);
-        $I->seeValidationError('Username cannot be blank.');
-        $I->seeValidationError('Password cannot be blank.');
-    }
-
-    public function loginWithCorrectFields(FunctionalTester $I)
+    public function accessRecadoTeachersIndexWithPermissions(FunctionalTester $I)
     {
         $I->submitForm(
             $this->formId, [
@@ -57,6 +45,26 @@ class UserLoginCest
 
         $I->amOnPage('site/dashboard');
         $I->see('Logout (erau)');
+
+        $I->amOnRoute('recado-teacher/index');
+        $I->see('Recados');
+        $I->see('Create Recado');
+        $I->see('No results found.');
     }
 
+    public function accessRecadoGuadiansIndexWithoutPermissions(FunctionalTester $I)
+    {
+        $I->submitForm(
+            $this->formId, [
+                'LoginForm[username]'  => 'erau',
+                'LoginForm[password]'  => 'password_0',
+            ]
+        );
+
+        $I->amOnPage('site/dashboard');
+        $I->see('Logout (erau)');
+
+        $I->amOnRoute('recado-guardian/index');
+        $I->see('Forbidden (#403)');
+    }
 }

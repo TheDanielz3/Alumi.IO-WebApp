@@ -10,7 +10,7 @@ use Yii;
 /**
  * Class LoginCest
  */
-class LoginCest
+class DisciplinaCest
 {
     /**
      * Load fixtures before db transaction begin
@@ -36,7 +36,7 @@ class LoginCest
     /**
      * @param FunctionalTester $I
      */
-    public function loginUser(FunctionalTester $I)
+    public function disciplinaAdd(FunctionalTester $I)
     {
         $I->amOnPage('/site/login');
         $I->fillField('Username', 'erau');
@@ -47,7 +47,18 @@ class LoginCest
         $I->see('Access Tables:', 'h2');
         $I->dontSeeLink('Login');
         $I->dontSeeLink('Signup');
-        $I->click('Logout (erau)');
+        $I->click('Disciplinas');
+        $I->see('Disciplinas');
+        $I->see('Create Disciplina');
+
+        $I->click('Create Disciplina');
+
+        $I->fillField('Disciplina[nome]', 'Disciplina Teste Functional');
+        $I->click('Save');
+        $I->see('Disciplina Teste Functional');
+        $I->see('Delete');
+        $I->click('Delete');
+        $I->see('Create Disciplina');
 
     }
 }
