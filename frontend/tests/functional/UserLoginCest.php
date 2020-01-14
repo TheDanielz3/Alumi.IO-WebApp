@@ -9,9 +9,7 @@ use Yii;
 
 class UserLoginCest
 {
-
     protected $formId = '#login-form';
-
 
     public function _fixtures()
     {
@@ -33,7 +31,6 @@ class UserLoginCest
 
     public function _before(FunctionalTester $I)
     {
-
         $I->amOnRoute('site/login');
     }
 

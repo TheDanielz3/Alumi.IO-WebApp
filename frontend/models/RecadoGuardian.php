@@ -101,6 +101,8 @@ class RecadoGuardian extends \yii\db\ActiveRecord
 
     public static function getValidRecados(){
 
+        $IDTurmaAllMyAlunos[0] = -1;
+
         $queryAllMyAlunos = Aluno::find()
             ->andWhere(['id_encarregado_de_educacao' => Yii::$app->user->id])->all();
 
@@ -108,6 +110,8 @@ class RecadoGuardian extends \yii\db\ActiveRecord
             $IDTurmaAllMyAlunos[$i] = $queryAllMyAlunos[$i]->id_turma;
             $IDAllMyAlunos[$i] = $queryAllMyAlunos[$i]->id;
         }
+
+        if($IDTurmaAllMyAlunos[0] != -1){
 
         $queryAllDisciplinaTurmas = Disciplinaturma::find()
             ->andWhere(['id_turma' => $IDTurmaAllMyAlunos])->all();
@@ -119,6 +123,10 @@ class RecadoGuardian extends \yii\db\ActiveRecord
         $validRecados = RecadoGuardian::find()
             ->orderBy(['data_hora' => SORT_DESC, 'assinado' => SORT_ASC])
             ->andWhere(['id_disciplina_turma' => $IDDisciplinaTurmas])->andWhere(['id_aluno' => null])->orWhere(['id_aluno' => $IDAllMyAlunos]);
+        }
+        elseif ($IDTurmaAllMyAlunos[0] == -1){
+            $validRecados = RecadoGuardian::find()->andWhere(['id' => null]);
+        }
 
         return $validRecados;
     }

@@ -74,7 +74,9 @@ class TpcGuardian extends \yii\db\ActiveRecord
         return Html::encode($this->descricao);
     }
 
-    public static function getValidTpc(){
+    public static function getValidTpc()
+    {
+        $IDTurmaAllMyAlunos[0] = -1;
 
         $queryAllMyAlunos = Aluno::find()
             ->andWhere(['id_encarregado_de_educacao' => Yii::$app->user->id])->all();
@@ -82,18 +84,22 @@ class TpcGuardian extends \yii\db\ActiveRecord
         for ($i = 0; $i < count($queryAllMyAlunos); $i++) {
             $IDTurmaAllMyAlunos[$i] = $queryAllMyAlunos[$i]->id_turma;
         }
+        if ($IDTurmaAllMyAlunos[0] != -1) {
 
-        $queryAllDisciplinaTurmas = Disciplinaturma::find()
-            ->andWhere(['id_turma' => $IDTurmaAllMyAlunos])->all();
+            $queryAllDisciplinaTurmas = Disciplinaturma::find()
+                ->andWhere(['id_turma' => $IDTurmaAllMyAlunos])->all();
 
-        for ($i = 0; $i < count($queryAllDisciplinaTurmas); $i++) {
-            $IDDisciplinaTurmas[$i] = $queryAllDisciplinaTurmas[$i]->id;
+            for ($i = 0; $i < count($queryAllDisciplinaTurmas); $i++) {
+                $IDDisciplinaTurmas[$i] = $queryAllDisciplinaTurmas[$i]->id;
+            }
+
+            $validTpc = TpcGuardian::find()
+                ->orderBy(['id' => SORT_DESC])
+                ->andWhere(['id_disciplina_turma' => $IDDisciplinaTurmas]);
+
+        } elseif ($IDTurmaAllMyAlunos[0] == -1) {
+            $validTpc = RecadoGuardian::find()->andWhere(['id' => null]);
         }
-
-        $validTpc = TpcGuardian::find()
-            ->orderBy(['id' => SORT_DESC])
-            ->andWhere(['id_disciplina_turma' => $IDDisciplinaTurmas]);
-
         return $validTpc;
     }
 }

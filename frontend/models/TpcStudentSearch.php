@@ -41,14 +41,18 @@ class TpcStudentSearch extends TpcStudent
      */
     public function search($params)
     {
-        $currentStudent =  Aluno::find()->andWhere('id=' . \Yii::$app->user->id)->one();
+        $currentDisciplinasTurmasIDS[0] = -1;
+        $currentStudent = Aluno::find()->andWhere('id=' . \Yii::$app->user->id)->one();
         $currentDisciplinasTurmas = Disciplinaturma::find()->andWhere(['id_turma' => $currentStudent->id_turma])->all();
 
-        for ($i = 0; $i < count($currentDisciplinasTurmas); $i++){
+        for ($i = 0; $i < count($currentDisciplinasTurmas); $i++) {
             $currentDisciplinasTurmasIDS[$i] = $currentDisciplinasTurmas[$i]->id;
         }
-
-        $query = TpcStudent::find()->andWhere(['id_disciplina_turma' => $currentDisciplinasTurmasIDS ] );
+        if ($currentDisciplinasTurmasIDS[0] != -1) {
+            $query = TpcStudent::find()->andWhere(['id_disciplina_turma' => $currentDisciplinasTurmasIDS]);
+        } elseif ($currentDisciplinasTurmasIDS[0] == -1) {
+            $query = TpcStudent::find()->orderBy(['data_hora' => SORT_DESC])->andWhere(['id' => null]);
+        }
 
         // add conditions that should always apply here
 

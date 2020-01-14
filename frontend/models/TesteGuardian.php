@@ -77,7 +77,10 @@ class TesteGuardian extends \yii\db\ActiveRecord
         return Html::encode($this->descricao);
     }
 
-    public static function getValidTestes(){
+    public static function getValidTestes()
+    {
+
+        $IDTurmaAllMyAlunos[0] = -1;
 
         $queryAllMyAlunos = Aluno::find()
             ->andWhere(['id_encarregado_de_educacao' => Yii::$app->user->id])->all();
@@ -86,17 +89,23 @@ class TesteGuardian extends \yii\db\ActiveRecord
             $IDTurmaAllMyAlunos[$i] = $queryAllMyAlunos[$i]->id_turma;
         }
 
-        $queryAllDisciplinaTurmas = Disciplinaturma::find()
-            ->andWhere(['id_turma' => $IDTurmaAllMyAlunos])->all();
+        if ($IDTurmaAllMyAlunos[0] != -1) {
 
-        for ($i = 0; $i < count($queryAllDisciplinaTurmas); $i++) {
-            $IDDisciplinaTurmas[$i] = $queryAllDisciplinaTurmas[$i]->id;
+            $queryAllDisciplinaTurmas = Disciplinaturma::find()
+                ->andWhere(['id_turma' => $IDTurmaAllMyAlunos])->all();
+
+            for ($i = 0; $i < count($queryAllDisciplinaTurmas); $i++) {
+                $IDDisciplinaTurmas[$i] = $queryAllDisciplinaTurmas[$i]->id;
+            }
+
+            $validTestes = TesteGuardian::find()
+                ->orderBy(['data_hora' => SORT_DESC])
+                ->andWhere(['id_disciplina_turma' => $IDDisciplinaTurmas]);
+        }
+        elseif ($IDTurmaAllMyAlunos[0] == -1){
+            $validTestes = RecadoGuardian::find()->andWhere(['id' => null]);
         }
 
-        $validRecados = TesteGuardian::find()
-            ->orderBy(['data_hora' => SORT_DESC])
-            ->andWhere(['id_disciplina_turma' => $IDDisciplinaTurmas]);
-
-        return $validRecados;
+        return $validTestes;
     }
 }

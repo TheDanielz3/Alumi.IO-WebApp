@@ -2,9 +2,9 @@
 
 namespace app\models;
 
+use app\models\TesteStudent;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use app\models\TesteStudent;
 use yii\helpers\VarDumper;
 
 /**
@@ -41,6 +41,7 @@ class TesteStudentSeach extends TesteStudent
      */
     public function search($params)
     {
+        $currentDisciplinasTurmasIDS[0] = -1;
         $currentStudent =  Aluno::find()->andWhere('id=' . \Yii::$app->user->id)->one();
         $currentDisciplinasTurmas = Disciplinaturma::find()->andWhere(['id_turma' => $currentStudent->id_turma])->all();
 
@@ -48,7 +49,11 @@ class TesteStudentSeach extends TesteStudent
             $currentDisciplinasTurmasIDS[$i] = $currentDisciplinasTurmas[$i]->id;
         }
 
-        $query = TesteStudent::find()->orderBy(['data_hora' => SORT_DESC])->andWhere(['id_disciplina_turma' => $currentDisciplinasTurmasIDS ] );
+        if ($currentDisciplinasTurmasIDS[0] != -1) {
+            $query = TesteStudent::find()->orderBy(['data_hora' => SORT_DESC])->andWhere(['id_disciplina_turma' => $currentDisciplinasTurmasIDS]);
+        } elseif ($currentDisciplinasTurmasIDS[0] == -1) {
+            $query = TesteStudent::find()->orderBy(['data_hora' => SORT_DESC])->andWhere(['id' => null]);
+        }
 
         // add conditions that should always apply here
 
