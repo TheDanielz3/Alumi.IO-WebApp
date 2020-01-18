@@ -8,7 +8,10 @@ use api\models\Tpc;
 use common\models\User;
 use Yii;
 use yii\base\Module;
+use yii\filters\auth\CompositeAuth;
 use yii\filters\auth\HttpBasicAuth;
+use yii\filters\auth\HttpBearerAuth;
+use yii\filters\auth\QueryParamAuth;
 use yii\web\ForbiddenHttpException;
 
 /**
@@ -36,8 +39,12 @@ class api extends Module
     {
         $behaviors = parent::behaviors();
         $behaviors['authenticator'] = [
-            'class' => HttpBasicAuth::class,
-            'auth' => [$this, 'auth']
+            'class' => CompositeAuth::class,
+            'authMethods' => [
+                ['class' => HttpBasicAuth::class,
+                    'auth' => [$this, 'auth']],
+                HttpBearerAuth::class,
+            ]
         ];
         return $behaviors;
     }
