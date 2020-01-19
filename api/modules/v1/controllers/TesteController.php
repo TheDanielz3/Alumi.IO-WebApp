@@ -27,4 +27,15 @@ class TesteController extends ActiveController
         }
     }
 
+    public function actions()
+    {
+        $actions = parent::actions();
+        unset($actions['index']);
+        return $actions;
+    }
+
+    public function actionIndex(){
+        return Teste::find()->andWhere(['id_professor' => Yii::$app->user->id])->all();
+    }
+
 }
