@@ -8,6 +8,10 @@ class Disciplinaturma extends \api\models\Disciplinaturma
 {
     public function fields()
     {
-        return ['disciplina','turma'];
+        return ['id','id_turma','id_disciplina','id_professor'];
+    }
+    public function extraFields()
+    {
+        return ['disciplina', 'turma'];
     }
 }

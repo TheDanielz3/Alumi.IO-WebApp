@@ -8,11 +8,7 @@ class Teste extends \api\models\Teste
 {
     public function fields()
     {
-        return ['id','descricao','datahora','disciplinaTurma','professor'];
+        return ['id','descricao','data_hora','id_disciplina_turma','id_professor'];
     }
 
-    public function extraFields()
-    {
-        return ['id_professor','id_disciplinaTurma','data_hora'];
-    }
 }

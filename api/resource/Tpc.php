@@ -8,11 +8,6 @@ class Tpc extends \api\models\Tpc
 {
     public function fields()
     {
-        return ['id','descricao','disciplinaTurma','professor'];
-    }
-
-    public function extraFields()
-    {
-        return ['id_disciplinaturma','id_professor'];
+        return ['id','descricao','id_disciplina_turma','id_professor'];
     }
 }
