@@ -39,12 +39,7 @@ class api extends Module
     {
         $behaviors = parent::behaviors();
         $behaviors['authenticator'] = [
-            'class' => CompositeAuth::class,
-            'authMethods' => [
-                ['class' => HttpBasicAuth::class,
-                    'auth' => [$this, 'auth']],
-                HttpBearerAuth::class,
-            ]
+            'class' => HttpBasicAuth::class, 'auth' => [$this, 'auth'],
         ];
         return $behaviors;
     }
